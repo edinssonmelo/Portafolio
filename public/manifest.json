@@ -1,0 +1,18 @@
+{
+    "name": "Edinsson Melo - AI-First Software Engineer",
+    "short_name": "Edinsson Melo",
+    "description": "AI-First Software Engineer and Fullstack Developer based in Colombia",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#DCFF31",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

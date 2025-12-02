@@ -11,7 +11,7 @@ export const HeroImage = () => {
             <img
               sizes="246px"
               src="https://c.animaapp.com/mih2ldgveCT36V/assets/11.png"
-              alt=""
+              alt="Edinsson Melo - AI-First Software Engineer"
               className="aspect-[auto_1024_/_1024] box-border caret-transparent h-full object-contain w-full rounded-[185px]"
             />
           </div>

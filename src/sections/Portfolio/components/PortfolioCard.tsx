@@ -28,7 +28,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
           <img
             sizes={props.imageSizes}
             src={props.imageUrl}
-            alt=""
+            alt={`${props.title} - ${props.description}`}
             className={`box-content caret-black h-auto object-fill object-[50%_50%] align-middle w-auto rounded-none md:box-border md:caret-transparent md:h-full md:object-cover md:object-[50%_0%] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[20px] ${props.imageVariant}`}
           />
         </div>

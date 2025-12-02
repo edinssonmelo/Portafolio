@@ -77,7 +77,7 @@ export const TestimonialCarousel = () => {
       const currentIdx = currentIndexRef.current;
       const newIndex = currentIdx < testimonials.length - 1 ? currentIdx + 1 : 0;
       scrollToIndex(newIndex);
-    }, 5000); // 5 seconds
+    }, 3000); // 3 seconds
   };
 
   // Update current index when scroll happens (for manual scrolling)

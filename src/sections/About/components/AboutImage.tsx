@@ -6,7 +6,7 @@ export const AboutImage = () => {
           <img
             sizes="432px"
             src="https://c.animaapp.com/mih2ldgveCT36V/assets/20.png"
-            alt=""
+            alt="Edinsson Melo - Fullstack Developer based in Colombia"
             className="box-content caret-black h-auto object-fill align-middle w-auto rounded-none md:aspect-[auto_1024_/_1024] md:box-border md:caret-transparent md:h-full md:object-contain md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[50%]"
           />
         </div>

@@ -1,6 +1,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @font-face {
   font-family: 'DM Sans';
   src: url('https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2') format("woff2");

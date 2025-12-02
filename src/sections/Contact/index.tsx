@@ -2,7 +2,7 @@ import { ContactForm } from "@/sections/Contact/components/ContactForm";
 
 export const Contact = () => {
   return (
-    <section className="relative content-center items-center bg-neutral-100 box-border caret-transparent gap-x-2.5 flex shrink-0 h-min justify-center gap-y-2.5 w-full pt-[100px] px-[30px] scroll-mt-10 md:pt-[150px] md:scroll-mt-0">
+    <section id="contact" className="relative content-center items-center bg-neutral-100 box-border caret-transparent gap-x-2.5 flex shrink-0 h-min justify-center gap-y-2.5 w-full pt-[100px] px-[30px] scroll-mt-10 md:pt-[150px] md:scroll-mt-0">
       <div className="relative content-center items-center box-border caret-transparent gap-x-[90px] flex basis-0 flex-col grow shrink-0 h-min justify-end max-w-[1140px] gap-y-[90px] w-px">
         <div className="relative content-center items-center bg-white box-border caret-transparent gap-x-[50px] flex flex-col shrink-0 h-min justify-center max-w-[600px] gap-y-[50px] w-full z-[1] overflow-hidden px-10 py-[50px] rounded-[20px] md:max-w-[900px] md:p-[90px] after:accent-auto after:box-border after:caret-transparent after:text-black after:block after:text-xs after:not-italic after:normal-nums after:font-normal after:h-full after:tracking-[normal] after:leading-[normal] after:list-outside after:list-disc after:pointer-events-none after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-full after:border-stone-900 after:rounded-[20px] after:border-separate after:border-2 after:border-solid after:left-0 after:top-0 after:font-sans_serif">
           <div className="absolute bottom-[-206px] box-border caret-transparent shrink-0 h-[440px] w-[467px] left-[25px]">

@@ -6,7 +6,7 @@ export const PortfolioGrid = () => {
       <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
         <div className="static self-auto box-content caret-black shrink h-auto justify-self-auto min-h-0 min-w-0 w-auto md:relative md:self-start md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-full md:justify-self-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
           <PortfolioCard
-            href="./projects/snowlake-social-media-website"
+            href="/projects"
             imageUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/2.avif"
             imageSizes="max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)"
             imageVariant="md:aspect-[auto_1297_/_905]"
@@ -19,7 +19,7 @@ export const PortfolioGrid = () => {
       <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
         <div className="static self-auto box-content caret-black shrink h-auto justify-self-auto min-h-0 min-w-0 w-auto md:relative md:self-start md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-full md:justify-self-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
           <PortfolioCard
-            href="./projects/meeko-company-networking-website"
+            href="/projects"
             imageUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/1.avif"
             imageSizes="max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)"
             imageVariant="md:aspect-[auto_1607_/_852]"
@@ -32,7 +32,7 @@ export const PortfolioGrid = () => {
       <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
         <div className="static self-auto box-content caret-black shrink h-auto justify-self-auto min-h-0 min-w-0 w-auto md:relative md:self-start md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-full md:justify-self-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
           <PortfolioCard
-            href="./projects/sandbox-banking-application-website"
+            href="/projects"
             imageUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/7.png"
             imageVariant="md:aspect-[auto_1277_/_872]"
             title="Sandbox Banking Application Website"
@@ -44,7 +44,7 @@ export const PortfolioGrid = () => {
       <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
         <div className="static self-auto box-content caret-black shrink h-auto justify-self-auto min-h-0 min-w-0 w-auto md:relative md:self-start md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-full md:justify-self-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
           <PortfolioCard
-            href="./projects/creatink-creative-agency-website"
+            href="/projects"
             imageUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/10.png"
             imageVariant="md:aspect-[auto_1019_/_747]"
             title="Creatink Website Portfolio Template"

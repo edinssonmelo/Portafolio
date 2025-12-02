@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { Services } from "@/sections/Services";
@@ -6,11 +7,13 @@ import { About } from "@/sections/About";
 import { Testimonials } from "@/sections/Testimonials";
 import { Portfolio } from "@/sections/Portfolio";
 import { Stats } from "@/sections/Stats";
+// import { Badges } from "@/sections/Badges";
 import { CTA } from "@/sections/CTA";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
-import { ProjectDetail } from "@/pages/ProjectDetail";
 import { ProjectsPage } from "@/pages/ProjectsPage";
+import { SEOHead } from "@/components/SEO/SEOHead";
+import { StructuredData } from "@/components/SEO/StructuredData";
 
 const HomePage = () => {
   return (
@@ -24,6 +27,7 @@ const HomePage = () => {
         <Testimonials />
         <Portfolio />
         <Stats />
+        {/* <Badges /> */}
         <CTA />
         <Contact />
       </div>
@@ -34,10 +38,49 @@ const HomePage = () => {
   );
 };
 
+const ScrollToHash = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
+  return null;
+};
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 export const App = () => {
   return (
-    <body className="text-black text-xs not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-[normal] list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-sans_serif">
+    <div className="text-black text-xs not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-[normal] list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-sans_serif min-h-screen">
+      <SEOHead />
+      <StructuredData />
       <div className="box-border caret-transparent">
+        <ScrollToHash />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={
             <div className="relative content-center items-center bg-white box-border caret-transparent gap-x-0 flex flex-col h-min justify-start min-h-[1000px] gap-y-0 overflow-clip">
@@ -45,7 +88,6 @@ export const App = () => {
             </div>
           } />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
         </Routes>
         <div className="box-border caret-transparent"></div>
       </div>
@@ -191,18 +233,6 @@ export const App = () => {
           className="box-border caret-transparent"
         />
       </div>
-      <div className="fixed items-center box-border caret-transparent gap-x-2 flex gap-y-2 translate-y-[50.0%] z-[2147483647] right-2.5 bottom-2/4">
-        <button
-          type="button"
-          className="text-white items-center backdrop-blur-[10px] bg-neutral-800/80 shadow-[rgba(0,0,0,0.1)_0px_2px_4px_0px,rgba(0,0,0,0.05)_0px_1px_0px_0px,rgba(255,255,255,0.15)_0px_0px_0px_1px] caret-transparent flex h-[30px] justify-center w-[30px] p-0 rounded-[15px]"
-        >
-          <img
-            src="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-62.svg"
-            alt="Icon"
-            className="box-border caret-transparent h-3.5 w-3.5"
-          />
-        </button>
-      </div>
-    </body>
+    </div>
   );
 };
