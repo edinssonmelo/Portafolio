@@ -22,13 +22,31 @@ export const Logo = () => {
   return (
     <div
       onClick={handleClick}
-      className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto cursor-pointer md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[57px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[188px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
+      className="relative cursor-pointer opacity-100 h-[55px] w-[110px] md:h-[57px] md:w-[150px]"
     >
-      <div className="static box-content caret-black inset-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-0">
+      <div
+        data-framer-background-image-wrapper="true"
+        style={{
+          position: 'absolute',
+          borderRadius: 'inherit',
+          inset: '0px'
+        }}
+      >
         <img
-          src="https://c.animaapp.com/mih2ldgveCT36V/assets/8.png"
+          decoding="auto"
+          width="500"
+          height="500"
+          src="/assets/logo.png"
           alt="EdinssonMelo"
-          className="box-content caret-black h-auto object-fill align-middle w-auto md:aspect-[auto_500_/_500] md:box-border md:caret-transparent md:h-full md:object-cover md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
+          style={{
+            display: 'block',
+            width: '100%',
+            height: '100%',
+            borderRadius: 'inherit',
+            objectPosition: 'center center',
+            objectFit: 'cover',
+            aspectRatio: 'auto 500 / 500'
+          }}
         />
       </div>
     </div>

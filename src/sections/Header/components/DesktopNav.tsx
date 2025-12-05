@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { NavLink } from "@/sections/Header/components/NavLink";
 
-export const DesktopNav = () => {
+export const DesktopNav = ({ className = "" }: { className?: string }) => {
   const [activeSection, setActiveSection] = useState<string>("home");
   const location = useLocation();
 
@@ -58,7 +58,7 @@ export const DesktopNav = () => {
   }, [location]);
 
   return (
-    <nav className="static [align-items:normal] box-content caret-black gap-x-[normal] block basis-auto grow-0 shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-[35px] md:flex md:basis-0 md:grow md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-[35px] md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+    <nav className={`flex items-center justify-center gap-[35px] ${className}`}>
       <NavLink href="#home" text="Home" isActive={activeSection === 'home'} />
       <NavLink href="#services" text="Services" isActive={activeSection === 'services'} />
       <NavLink href="#about" text="About" isActive={activeSection === 'about'} />

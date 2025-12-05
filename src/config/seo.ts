@@ -49,6 +49,12 @@ export const seoConfig: Record<string, SEOConfig> = {
         path: '/projects',
         type: 'website',
     },
+    '/cotizacion/sistema-barber': {
+        title: 'Cotización Sistema Barber - Edinsson Melo',
+        description: 'Cotización detallada para el desarrollo del Sistema Barber. Incluye especificaciones técnicas, alcance del proyecto y propuesta de valor.',
+        path: '/cotizacion/sistema-barber',
+        type: 'website',
+    },
 };
 
 export const getSEOConfig = (pathname: string): SEOConfig => {

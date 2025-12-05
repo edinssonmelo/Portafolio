@@ -22,6 +22,7 @@
   AddType image/gif gif
   AddType image/webp webp
   AddType application/manifest+json webmanifest
+  AddType application/pdf pdf
 </IfModule>
 
 # Habilitar CORS para módulos ES6 (si es necesario)

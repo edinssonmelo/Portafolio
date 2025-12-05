@@ -31,6 +31,13 @@ export const StructuredData = () => {
         });
     }
 
+    if (location.pathname === '/cotizacion/sistema-barber') {
+        breadcrumbItems.push({
+            name: 'Cotización Sistema Barber',
+            url: `${SITE_CONFIG.url}/cotizacion/sistema-barber`,
+        });
+    }
+
     const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 
     return (

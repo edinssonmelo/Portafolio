@@ -12,6 +12,7 @@ import { CTA } from "@/sections/CTA";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { ProjectsPage } from "@/pages/ProjectsPage";
+import { CotizacionPage } from "@/pages/CotizacionPage";
 import { SEOHead } from "@/components/SEO/SEOHead";
 import { StructuredData } from "@/components/SEO/StructuredData";
 
@@ -88,6 +89,7 @@ export const App = () => {
             </div>
           } />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/cotizacion/sistema-barber" element={<CotizacionPage />} />
         </Routes>
         <div className="box-border caret-transparent"></div>
       </div>
