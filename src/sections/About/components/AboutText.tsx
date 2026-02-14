@@ -10,7 +10,7 @@ export const AboutText = () => {
       <div className="relative content-center items-center box-border caret-transparent gap-x-[25px] flex flex-col shrink-0 h-min justify-center gap-y-[25px] w-full overflow-hidden">
         <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start break-words w-full">
           <p className="text-stone-900 text-lg box-border caret-transparent leading-[30px] break-words font-dm_sans">
-            Edinsson Adrian Melo Calvo is a Full-Stack Engineer specializing in software product development for different platforms, with extensive experience in e-commerce, fintech, SaaS, and AI solutions. He currently focuses his work on supporting entrepreneurs, business owners, and anyone who wants to build digital products and make a living from this wonderful profession.
+            Software Engineer with over 7 years of experience delivering software aligned with business needs. Specialized in Software Development Web / Mobile, with a disciplined approach to scale systems and support business growth. Currently I work as a freelance developer in software product development, web/mobile apps and automations. I am in the process of becoming a coach and mentor to share my experience and help others grow in the profession.
           </p>
         </div>
       </div>

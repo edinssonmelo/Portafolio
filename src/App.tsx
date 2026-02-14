@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
@@ -13,10 +13,13 @@ import { CTA } from "@/sections/CTA";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { ProjectsPage } from "@/pages/ProjectsPage";
+import { ProjectDetail } from "@/pages/ProjectDetail";
 import { CotizacionPage } from "@/pages/CotizacionPage";
 import { PlanesPage } from "@/pages/PlanesPage";
+import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEO/SEOHead";
 import { StructuredData } from "@/components/SEO/StructuredData";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 const HomePage = () => {
   return (
@@ -95,9 +98,21 @@ export const App = () => {
               <HomePage />
             </div>
           } />
-          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects" element={<Outlet />}>
+            <Route index element={<ProjectsPage />} />
+            <Route path=":slug" element={<ErrorBoundary><ProjectDetail /></ErrorBoundary>} />
+          </Route>
           <Route path="/cotizacion/sistema-barber" element={<CotizacionPage />} />
           <Route path="/planes" element={<PlanesPage />} />
+          <Route path="*" element={
+            <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-neutral-100 px-6">
+              <h1 className="text-stone-900 text-2xl font-bold font-cabinet_grotesk">Page not found</h1>
+              <div className="flex gap-4">
+                <Link to="/" className="text-blue-700 font-dm_sans font-semibold hover:underline">Home</Link>
+                <Link to="/projects" className="text-blue-700 font-dm_sans font-semibold hover:underline">Projects</Link>
+              </div>
+            </div>
+          } />
         </Routes>
         <div className="box-border caret-transparent"></div>
       </div>

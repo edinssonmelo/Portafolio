@@ -3,14 +3,15 @@
   RewriteEngine On
   RewriteBase /
   
-  # Ruta /planes y /planes/ → index.html (evita 403 por carpeta física planes/)
+  # Rutas SPA: enviar index.html para que React Router las resuelva
   RewriteRule ^planes/?$ /index.html [L]
+  RewriteRule ^projects/ /index.html [L]
 
   # No reescribir si es un archivo o directorio existente
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Redirigir todo a index.html para React Router
+  # Redirigir todo lo demás a index.html para React Router
   RewriteRule . /index.html [L]
 </IfModule>
 

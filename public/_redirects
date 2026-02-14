@@ -1,0 +1,6 @@
+# Netlify: SPA fallback - todas las rutas a index.html
+/projects/*  /index.html  200
+/planes      /index.html  200
+/planes/     /index.html  200
+/cotizacion/* /index.html  200
+/*    /index.html  200
