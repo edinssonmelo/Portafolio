@@ -3,30 +3,75 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Homepage -->
+
   <url>
     <loc>https://edinssonmelo.com/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Projects Page -->
+
   <url>
     <loc>https://edinssonmelo.com/projects</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/projects/wordjet-ai</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Cotización Sistema Barber -->
+
   <url>
-    <loc>https://edinssonmelo.com/cotizacion/sistema-barber</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://edinssonmelo.com/projects/overup</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/projects/declaramelo</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/projects/bernal-tech-b2b</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/projects/openwhispr</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/projects/superapp-mobile</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/planes</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-</urlset>
 
+  <url>
+    <loc>https://edinssonmelo.com/cotizacion/sistema-barber</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

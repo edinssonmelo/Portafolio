@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "generate:icons": "python3 scripts/generate-icons.py",
     "preview": "vite preview",
     "serve": "node server.js",
     "open": "node abrir-navegador.js",

@@ -8,7 +8,7 @@ export const colors = {
     // Color principal/accento (usado en hover, estados activos, etc.)
     primary: '#DCFF31',
 
-    // Color secundario (usado en backgrounds de iconos sociales, timeline dots, etc.)
+    // Color secundario (usado en backgrounds de iconos sociales, etc.)
     secondary: '#DCFF31',
 
     // Color de hover para enlaces de navegación
@@ -23,9 +23,6 @@ export const colors = {
     // Color de fondo para iconos sociales por defecto
     socialIconBackground: '#DCFF31',
 
-    // Color de las bolitas del timeline
-    timelineDot: '#4BFBBA',
-
 } as const;
 
 // Exportar valores individuales para uso directo
@@ -34,5 +31,4 @@ export const NAV_HOVER_COLOR = colors.navHover;
 export const NAV_ACTIVE_COLOR = colors.navActive;
 export const SOCIAL_ICON_HOVER_COLOR = colors.socialIconHover;
 export const SOCIAL_ICON_BACKGROUND_COLOR = colors.socialIconBackground;
-export const TIMELINE_DOT_COLOR = colors.timelineDot;
 

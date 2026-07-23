@@ -10,8 +10,9 @@ export const getPersonSchema = () => {
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'Edinsson Melo',
-        jobTitle: 'AI-First Software Engineer',
-        description: 'AI-First Software Engineer and Fullstack Developer specializing in building software products that solve real problems with an AI approach.',
+        jobTitle: 'AI Software Engineer',
+        description:
+            'AI Software Engineer and CTO with 8+ years of experience building AI powered SaaS, enterprise platforms, and mobile products across fintech, insurance, and consumer technology.',
         email: SITE_CONFIG.email,
         url: SITE_CONFIG.url,
         image: SITE_CONFIG.image,
@@ -29,16 +30,43 @@ export const getPersonSchema = () => {
             SITE_CONFIG.social.buymeacoffee,
         ],
         knowsAbout: [
-            'Software Engineering',
             'Artificial Intelligence',
+            'AI Product Engineering',
+            'Large Language Models',
+            'RAG',
+            'Software Architecture',
+            'Startup Building',
+            'SaaS Development',
+            'MVP Development',
             'Fullstack Development',
-            'Web Development',
             'Mobile Development',
-            'Machine Learning',
-            'React',
-            'TypeScript',
+            'Fintech',
+            'Cloud Computing',
+            'AWS',
             'Python',
             'Node.js',
+            'React',
+            'TypeScript',
+        ],
+        hasOccupation: [
+            {
+                '@type': 'Occupation',
+                name: 'AI Software Engineer',
+            },
+            {
+                '@type': 'Occupation',
+                name: 'CTO',
+            },
+            {
+                '@type': 'Occupation',
+                name: 'Software Architect',
+            },
+        ],
+        alumniOf: [
+            {
+                '@type': 'CollegeOrUniversity',
+                name: 'Universidad Francisco de Paula Santander (UFPS)',
+            },
         ],
     };
 };
@@ -50,9 +78,11 @@ export const getWebSiteSchema = () => {
         name: SITE_CONFIG.name,
         url: SITE_CONFIG.url,
         description: SITE_CONFIG.description,
+        inLanguage: 'en',
         author: {
             '@type': 'Person',
             name: 'Edinsson Melo',
+            jobTitle: 'AI Software Engineer',
         },
         potentialAction: {
             '@type': 'SearchAction',
@@ -69,11 +99,13 @@ export const getProfessionalServiceSchema = () => {
     return {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
-        name: 'Edinsson Melo - Software Engineering Services',
-        description: 'AI-First Software Engineering and Fullstack Development services including MVP development, web applications, mobile apps, and AI integration.',
+        name: 'Edinsson Melo | AI Product Engineering and Technical Leadership',
+        description:
+            'AI product engineering, startup MVP development, technical leadership, and fullstack software for founders and companies. Specializing in AI agents, SaaS, web/mobile apps, and enterprise integrations.',
         provider: {
             '@type': 'Person',
             name: 'Edinsson Melo',
+            jobTitle: 'AI Software Engineer',
             email: SITE_CONFIG.email,
             address: {
                 '@type': 'PostalAddress',
@@ -86,12 +118,14 @@ export const getProfessionalServiceSchema = () => {
             name: 'Colombia',
         },
         serviceType: [
-            'Software Development',
+            'AI Product Engineering',
+            'CTO Advisory',
+            'Startup MVP Development',
+            'Software Architecture',
             'Fullstack Development',
-            'MVP Development',
-            'AI Integration',
-            'Web Development',
             'Mobile Development',
+            'AI Integration',
+            'SaaS Development',
         ],
         url: SITE_CONFIG.url,
     };
@@ -109,4 +143,3 @@ export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>)
         })),
     };
 };
-

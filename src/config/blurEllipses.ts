@@ -18,11 +18,11 @@ export type BlurEllipseConfig = BlurEllipseProps;
 export const heroEllipses: BlurEllipseConfig[] = [
     {
         color: "rgba(220, 255, 49, 0.4)", // Amarillo-verde
-        blur: 100,
+        blur: 90,
         size: {
             mobile: {
-                width: "609px",
-                height: "560px",
+                width: "260px",
+                height: "240px",
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
@@ -33,9 +33,8 @@ export const heroEllipses: BlurEllipseConfig[] = [
         },
         position: {
             mobile: {
-                bottom: "-85px",
-                right: "-221px",
-                top: "auto",
+                top: "28%",
+                left: "calc(50% - 130px)",
             },
             desktop: {
                 top: "-116px",
@@ -46,11 +45,11 @@ export const heroEllipses: BlurEllipseConfig[] = [
     },
     {
         color: "rgba(127, 230, 217, 0.4)", // Cyan/turquesa
-        blur: 100,
+        blur: 90,
         size: {
             mobile: {
-                width: "577px",
-                height: "540px",
+                width: "250px",
+                height: "230px",
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
@@ -61,12 +60,11 @@ export const heroEllipses: BlurEllipseConfig[] = [
         },
         position: {
             mobile: {
-                bottom: "-124px",
-                left: "-181px",
-                transform: "transform-none",
+                bottom: "12%",
+                left: "calc(50% - 125px)",
             },
             desktop: {
-                bottom: "-156px",
+                bottom: "-40px",
                 left: "51%",
                 transform: "translate-x-[-50.0%]",
             },

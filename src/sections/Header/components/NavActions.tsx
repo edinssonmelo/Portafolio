@@ -33,7 +33,7 @@ export const NavActions = ({ className = "" }: { className?: string }) => {
   return (
     <nav className={`flex items-center justify-center gap-3 ${className}`}>
       <SocialIcon href="https://github.com/edinssonmelo" iconSrc="/assets/github-icon.png" iconAlt="GitHub" name="GitHub" />
-      <SocialIcon href="https://www.instagram.com/edinssonmelo/" iconSrc="/assets/ig-icon.svg" iconAlt="Instagram" name="Instagram" />
+      <SocialIcon href="https://codeforces.com/profile/Mackenzie" iconSrc="/assets/codeforces-icon.svg" iconAlt="Codeforces" name="Codeforces" />
       <SocialIcon href="https://www.linkedin.com/in/edinssonmelo/" iconSrc="/assets/linkedin-icon.png" iconAlt="LinkedIn" name="LinkedIn" />
     </nav>
   );

@@ -1,6 +1,6 @@
 export const HeroButton = () => {
   return (
-    <div className="relative box-border caret-transparent shrink-0 z-0">
+    <div className="relative z-10 box-border caret-transparent shrink-0">
       <button className="relative content-center items-center bg-transparent caret-transparent gap-x-2.5 flex flex-col h-min justify-center gap-y-2.5 text-center w-min p-0">
         <a
           href="./#portfolio"

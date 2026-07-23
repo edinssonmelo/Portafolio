@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const FORMSPREE_URL = "https://formspree.io/f/mqedzkko";
+
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     Name: "",
@@ -21,12 +23,16 @@ export const ContactForm = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:3000/api/send-email", {
+      const response = await fetch(FORMSPREE_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.Name,
+          email: formData.Email,
+          message: formData.Message,
+        }),
       });
 
       if (response.ok) {
@@ -58,7 +64,7 @@ export const ContactForm = () => {
                 placeholder="Your name *"
                 value={formData.Name}
                 onChange={handleChange}
-                className="text-stone-900 text-lg bg-transparent box-border caret-transparent h-full leading-[21.6px] text-ellipsis text-nowrap w-full bg-[position:0px_0px] px-0 py-3 font-dm_sans outline-none focus:border-b-2 focus:border-[#4BFBBA] transition-colors"
+                className="text-stone-900 text-lg bg-transparent box-border caret-stone-900 h-full leading-[21.6px] text-ellipsis text-nowrap w-full bg-[position:0px_0px] px-0 py-3 font-dm_sans outline-none focus:border-b-2 focus:border-[#4BFBBA] transition-colors"
                 required
               />
             </div>
@@ -76,7 +82,7 @@ export const ContactForm = () => {
                 placeholder="Email address *"
                 value={formData.Email}
                 onChange={handleChange}
-                className="text-stone-900 text-lg bg-transparent box-border caret-transparent h-full leading-[21.6px] text-ellipsis text-nowrap w-full bg-[position:0px_0px] px-0 py-3 font-dm_sans outline-none focus:border-b-2 focus:border-[#4BFBBA] transition-colors"
+                className="text-stone-900 text-lg bg-transparent box-border caret-stone-900 h-full leading-[21.6px] text-ellipsis text-nowrap w-full bg-[position:0px_0px] px-0 py-3 font-dm_sans outline-none focus:border-b-2 focus:border-[#4BFBBA] transition-colors"
                 required
               />
             </div>
@@ -94,7 +100,7 @@ export const ContactForm = () => {
               placeholder="Tell me about your project *"
               value={formData.Message}
               onChange={handleChange}
-              className="text-stone-900 text-lg bg-transparent box-border caret-transparent flex leading-[21.6px] min-h-[150px] overflow-x-hidden resize-y text-ellipsis w-full bg-[position:0px_0px] px-0 py-3 font-dm_sans outline-none focus:border-b-2 focus:border-[#4BFBBA] transition-colors"
+              className="text-stone-900 text-lg bg-transparent box-border caret-stone-900 flex leading-[21.6px] min-h-[150px] overflow-x-hidden resize-y text-ellipsis w-full bg-[position:0px_0px] px-0 py-3 font-dm_sans outline-none focus:border-b-2 focus:border-[#4BFBBA] transition-colors"
               required
             ></textarea>
           </div>

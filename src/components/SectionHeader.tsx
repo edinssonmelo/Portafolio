@@ -6,38 +6,35 @@ export type SectionHeaderProps = {
   variant: string;
 };
 
+const badgeClassName =
+  "relative inline-flex items-center justify-center gap-1 rounded-[20px] border-2 border-stone-900 bg-white px-4 py-1.5";
+
 export const SectionHeader = (props: SectionHeaderProps) => {
   return (
     <div
-      className={`relative box-border caret-transparent shrink-0 ${props.variant}`}
+      className={`relative flex w-full flex-col items-center gap-6 overflow-visible ${props.variant}`}
     >
-      <div className="relative box-border caret-transparent shrink-0 z-[1]">
-        <div
-          className={`relative box-border caret-transparent ${props.title ? "content-center items-center bg-neutral-100 gap-x-1 flex h-min justify-center gap-y-1 w-min overflow-hidden px-[15px] py-[5px] rounded-[20px] after:accent-auto after:box-border after:caret-transparent after:text-black after:block after:text-xs after:not-italic after:normal-nums after:font-normal after:h-full after:tracking-[normal] after:leading-[normal] after:list-outside after:list-disc after:pointer-events-none after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-full after:border-stone-900 after:rounded-[20px] after:border-separate after:border-2 after:border-solid after:left-0 after:top-0 after:font-sans_serif" : "content-center items-center bg-white gap-x-1 flex h-min justify-center gap-y-1 w-min overflow-hidden px-[15px] py-[5px] rounded-[20px] after:accent-auto after:box-border after:caret-transparent after:text-black after:block after:text-xs after:not-italic after:normal-nums after:font-normal after:h-full after:tracking-[normal] after:leading-[normal] after:list-outside after:list-disc after:pointer-events-none after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-full after:border-stone-900 after:rounded-[20px] after:border-separate after:border-2 after:border-solid after:left-0 after:top-0 after:font-sans_serif"}`}
-        >
-          <div className="box-border caret-transparent relative shrink-0 h-3 w-[11px]">
-            <div className="box-border caret-transparent h-full w-full">
-              <img
-                src={props.iconUrl}
-                alt="Icon"
-                className="box-border caret-transparent h-full w-full"
-              />
-            </div>
+      <div className="relative z-[2] shrink-0">
+        <div className={badgeClassName}>
+          <div className="relative h-3 w-[11px] shrink-0">
+            <img
+              src={props.iconUrl}
+              alt=""
+              className="h-full w-full"
+            />
           </div>
-          <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
-            <p className="text-stone-900 text-[13px] font-black box-border caret-transparent tracking-[0.65px] leading-[23px] uppercase text-nowrap font-dm_sans">
-              {props.label}
-            </p>
-          </div>
+          <p className="text-stone-900 text-[13px] font-black tracking-[0.65px] leading-[23px] uppercase font-dm_sans whitespace-nowrap">
+            {props.label}
+          </p>
         </div>
       </div>
       {props.title && (
-        <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start break-words w-full z-[1]">
-          <h2 className="text-stone-900 text-4xl font-bold box-border caret-transparent tracking-[-0.36px] leading-[42px] break-words text-center font-cabinet_grotesk md:text-[44px] md:tracking-[-0.44px] md:leading-[50px]">
+        <div className="relative z-[1] flex w-full flex-col justify-start">
+          <h2 className="text-stone-900 text-4xl font-bold tracking-[-0.36px] leading-[42px] break-words text-center font-dm_sans md:text-[44px] md:tracking-[-0.44px] md:leading-[50px]">
             {props.showBreak ? (
               <>
                 {props.title.split("<br />")[0]}
-                <br className="text-4xl box-border caret-transparent tracking-[-0.36px] leading-[42px] break-words md:text-[44px] md:tracking-[-0.44px] md:leading-[50px]" />
+                <br />
                 {props.title.split("<br />")[1]}
               </>
             ) : (

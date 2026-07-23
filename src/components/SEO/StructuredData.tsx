@@ -38,6 +38,13 @@ export const StructuredData = () => {
         });
     }
 
+    if (location.pathname === '/planes') {
+        breadcrumbItems.push({
+            name: 'Planes',
+            url: `${SITE_CONFIG.url}/planes`,
+        });
+    }
+
     const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
 
     return (

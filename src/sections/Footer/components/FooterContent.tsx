@@ -13,7 +13,7 @@ export const FooterContent = () => {
       {/* Bottom section: Copyright */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 pt-4 border-t border-black/10">
         <p className="text-black text-sm md:text-stone-900 md:text-base font-dm_sans">
-          © 2024 Edinsson Melo. Todos los derechos reservados.
+          © 2026 Edinsson Melo. Todos los derechos reservados.
         </p>
         <div className="flex items-center gap-4">
           <span className="text-black text-sm md:text-stone-900 hidden md:inline">•</span>

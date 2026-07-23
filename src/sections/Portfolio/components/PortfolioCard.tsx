@@ -1,4 +1,20 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+
+const PREVIEW_WORD_COUNT = 14;
+
+const getPreviewText = (text: string) => {
+  const words = text.trim().split(/\s+/);
+  if (words.length <= PREVIEW_WORD_COUNT) {
+    return { preview: text, canExpand: false };
+  }
+
+  return {
+    preview: words.slice(0, PREVIEW_WORD_COUNT).join(" "),
+    canExpand: true,
+  };
+};
 
 export type PortfolioCardProps = {
   href: string;
@@ -7,71 +23,79 @@ export type PortfolioCardProps = {
   imageVariant: string;
   title: string;
   description: string;
-  iconUrl: string;
 };
 
 export const PortfolioCard = (props: PortfolioCardProps) => {
-  // Convert relative href to route path
-  const routePath = props.href.startsWith('./')
-    ? props.href.replace('./', '/')
-    : props.href.startsWith('/')
+  const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
+  const routePath = props.href.startsWith("./")
+    ? props.href.replace("./", "/")
+    : props.href.startsWith("/")
       ? props.href
       : `/${props.href}`;
 
+  const { preview, canExpand } = getPreviewText(props.description);
+
+  const handleImageClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(routePath);
+  };
+
   return (
-    <article className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto md:relative md:content-start md:items-start md:aspect-auto md:box-border md:caret-transparent md:gap-x-[30px] md:flex md:flex-col md:h-min md:justify-start md:overscroll-x-auto md:overscroll-y-auto md:gap-y-[30px] md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-      <Link
-        to={routePath}
-        className="static text-black box-content caret-black inline shrink min-h-0 min-w-0 w-auto rounded-none md:relative md:text-blue-700 md:aspect-[1.34146_/_1] md:box-border md:caret-transparent md:block md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[20px] after:md:accent-auto after:md:box-border after:md:caret-transparent after:md:text-blue-700 after:md:block after:md:text-xs after:md:not-italic after:md:normal-nums after:md:font-normal after:md:h-full after:md:tracking-[normal] after:md:leading-[normal] after:md:list-outside after:md:list-disc after:md:pointer-events-none after:md:absolute after:md:text-start after:md:no-underline after:md:indent-[0px] after:md:normal-case after:md:visible after:md:w-full after:md:border-teal-300 after:md:rounded-[20px] after:md:border-separate after:md:border-2 after:md:border-solid after:md:left-0 after:md:top-0 after:md:font-sans_serif"
+    <article className="relative z-10 flex w-full flex-col gap-5 md:gap-[30px]">
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={handleImageClick}
+        onKeyDown={(e) => e.key === "Enter" && navigate(routePath)}
+        className="relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-[20px] border-2 border-teal-300 bg-neutral-100 aspect-[16/9]"
       >
-        <div className="static box-content caret-black rounded-none inset-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[20px] md:inset-0">
-          <img
-            sizes={props.imageSizes}
-            src={props.imageUrl}
-            alt={`${props.title} - ${props.description}`}
-            className={`box-content caret-black h-auto object-fill object-[50%_50%] align-middle w-auto rounded-none md:box-border md:caret-transparent md:h-full md:object-cover md:object-[50%_0%] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[20px] ${props.imageVariant}`}
+        <img
+          sizes={props.imageSizes}
+          src={props.imageUrl}
+          alt={`${props.title} - ${props.description}`}
+          className={`h-full w-full object-contain object-center p-1 md:p-2 ${props.imageVariant}`}
+        />
+      </div>
+
+      <div className="relative z-10 flex w-full flex-col gap-4 md:gap-5">
+        <div className="flex flex-col gap-2.5">
+          <h3 className="text-xl font-bold leading-snug text-stone-900 font-dm_sans md:text-2xl md:leading-[30px]">
+            <Link
+              to={routePath}
+              className="hover:text-yellow-300 transition-colors"
+            >
+              {props.title}
+            </Link>
+          </h3>
+          <p className="text-stone-900 text-base leading-relaxed font-dm_sans md:text-lg md:leading-[30px]">
+            {expanded || !canExpand ? props.description : `${preview}...`}
+            {canExpand ? (
+              <>
+                {" "}
+                <button
+                  type="button"
+                  onClick={() => setExpanded((open) => !open)}
+                  className="ml-0.5 inline font-semibold text-stone-900 underline decoration-stone-400 underline-offset-2 transition-colors hover:decoration-stone-900"
+                >
+                  {expanded ? "Show less" : "Read more"}
+                </button>
+              </>
+            ) : null}
+          </p>
+        </div>
+
+        <Link
+          to={routePath}
+          className="group inline-flex w-fit items-center gap-2 text-base font-semibold tracking-[-0.36px] text-stone-900 transition-colors font-dm_sans hover:text-teal-600 md:text-lg"
+        >
+          View Case Study
+          <ArrowRight
+            className="h-[18px] w-[18px] shrink-0 transition-transform group-hover:translate-x-1"
+            strokeWidth={2.25}
+            aria-hidden
           />
-        </div>
-      </Link>
-      <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-start md:items-start md:aspect-auto md:box-border md:caret-transparent md:gap-x-5 md:flex md:flex-col md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-        <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-2.5 md:flex md:flex-col md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-          <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <h3 className="text-black text-[18.72px] font-bold box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 break-normal font-times md:text-stone-900 md:text-2xl md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.12px] md:leading-[30px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-cabinet_grotesk">
-              <Link
-                to={routePath}
-                className="box-content caret-black break-normal md:aspect-auto md:box-border md:caret-transparent md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] hover:text-yellow-300 hover:border-yellow-300"
-              >
-                {props.title}
-              </Link>
-            </h3>
-          </div>
-          <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <p className="text-black text-base box-content caret-black leading-[normal] min-h-0 min-w-0 break-normal font-times md:text-stone-900 md:text-lg md:aspect-auto md:box-border md:caret-transparent md:leading-[30px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-dm_sans">
-              {props.description}
-            </p>
-          </div>
-        </div>
-        <div className="static box-content caret-black shrink min-h-0 min-w-0 md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-          <Link
-            to={routePath}
-            className="static text-black [align-items:normal] box-content caret-black gap-x-[normal] inline h-auto justify-normal gap-y-[normal] w-auto md:relative md:text-blue-700 md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-[7px] md:flex md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-[7px] md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-          >
-            <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-              <h3 className="text-black text-[18.72px] font-bold box-content caret-black leading-[normal] min-h-0 min-w-0 text-wrap font-times md:text-stone-900 md:text-[19px] md:aspect-auto md:box-border md:caret-transparent md:leading-[19px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-cabinet_grotesk">
-                View Case Study
-              </h3>
-            </div>
-            <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[19px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[19px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-              <div className="box-content caret-black h-auto w-auto md:aspect-auto md:box-border md:caret-transparent md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <img
-                  src={props.iconUrl}
-                  alt="Icon"
-                  className="box-content caret-black h-auto align-middle w-auto md:aspect-auto md:box-border md:caret-transparent md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                />
-              </div>
-            </div>
-          </Link>
-        </div>
+        </Link>
       </div>
     </article>
   );

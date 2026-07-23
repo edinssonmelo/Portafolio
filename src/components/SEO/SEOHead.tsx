@@ -14,7 +14,8 @@ export const SEOHead = () => {
             <title>{seo.title}</title>
             <meta name="title" content={seo.title} />
             <meta name="description" content={seo.description} />
-            {seo.noindex && <meta name="robots" content="noindex, nofollow" />}
+            <meta name="keywords" content={SITE_CONFIG.keywords} />
+            <meta name="robots" content={seo.noindex ? 'noindex, nofollow' : 'index, follow'} />
 
             {/* Canonical URL */}
             <link rel="canonical" href={fullUrl} />
@@ -41,6 +42,13 @@ export const SEOHead = () => {
             {/* Additional Meta Tags */}
             <meta name="author" content={SITE_CONFIG.name} />
             <meta name="theme-color" content="#DCFF31" />
+
+            {/* Favicon */}
+            <link rel="icon" href="/favicon.ico" sizes="48x48" />
+            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         </Helmet>
     );
 };
