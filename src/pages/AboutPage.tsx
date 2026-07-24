@@ -22,6 +22,16 @@ export const AboutPage = () => {
 
                 <PageSection>
                     <SurfaceCard className="px-6 py-8 md:px-10 md:py-10">
+                        <div className="mb-8 flex justify-center">
+                            <div className="relative h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-stone-900 md:h-[220px] md:w-[220px]">
+                                <img
+                                    src="/assets/hero.png"
+                                    alt="Edinsson Melo"
+                                    className="h-full w-full object-cover object-center"
+                                />
+                            </div>
+                        </div>
+
                         <div className="space-y-6">
                             <p className={bodyText}>
                                 Soy Edinsson Melo, un AI Software Engineer en Colombia.
