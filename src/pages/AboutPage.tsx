@@ -46,8 +46,8 @@ export const AboutPage = () => {
                                 productos.
                             </p>
                             <p className={bodyText}>
-                                Mi deseo es conectar, compartir y servir a personas que estén
-                                construyendo, creciendo y buscando hacer un trabajo con propósito.
+                                Mi deseo es conectar, compartir y servir a personas que disfruten
+                                construir en este mundo y de verdad les apasione.
                             </p>
                         </div>
 
