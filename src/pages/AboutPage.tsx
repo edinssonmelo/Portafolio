@@ -46,7 +46,7 @@ export const AboutPage = () => {
                                 productos.
                             </p>
                             <p className={bodyText}>
-                                También quiero conectar y compartir con personas que estén
+                                Mi deseo es conectar, compartir y servir a personas que estén
                                 construyendo, creciendo y buscando hacer un trabajo con propósito.
                             </p>
                         </div>
