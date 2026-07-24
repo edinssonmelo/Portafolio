@@ -1,5 +1,5 @@
 # Despliegue del portafolio en ai-server.
-# Patrón: /srv/apps/openwhispr — Traefik en net_internal, entrypoint web,
+# Patrón: /srv/apps/openwhispr. Traefik en net_internal, entrypoint web,
 # TLS en Cloudflare Tunnel (infra-cloudflared), sin ACME en el contenedor.
 #
 # En ai-server:

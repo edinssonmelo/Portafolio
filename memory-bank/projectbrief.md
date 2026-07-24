@@ -19,11 +19,11 @@ Personal portfolio and product site for **Edinsson Melo** at [edinssonmelo.com](
 
 ## Key routes
 
-- `/` — Home (sections: Hero, Services, About, Portfolio, Contact)
-- `/projects` — Full portfolio grid
-- `/projects/:slug` — Case study detail
-- `/about` — Canonical profile page
-- `/blog` — Blog scaffold (posts in `src/data/blog.ts`)
+- `/`: Home (sections: Hero, Services, About, Portfolio, Contact)
+- `/projects`: Full portfolio grid
+- `/projects/:slug`: Case study detail
+- `/about`: Canonical profile page
+- `/blog`: Blog scaffold (posts in `src/data/blog.ts`)
 
 ## Repo
 

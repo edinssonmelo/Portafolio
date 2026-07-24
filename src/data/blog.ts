@@ -10,7 +10,7 @@ export type BlogPost = {
 
 /**
  * Blog posts are added here after outline approval.
- * Keep content original — no auto-generated filler posts.
+ * Keep content original. No auto-generated filler posts.
  */
 export const BLOG_POSTS: BlogPost[] = [];
 

@@ -75,7 +75,7 @@ export const AboutPage = () => {
                             </p>
                             <p className="text-lg leading-[30px] text-stone-900">
                                 I apply AI-assisted and agentic engineering to move faster without
-                                sacrificing quality — integrating LLMs, RAG, agents, and automation
+                                sacrificing quality while integrating LLMs, RAG, agents, and automation
                                 into products that solve real business problems.
                             </p>
                             <p className="text-lg leading-[30px] text-stone-900">

@@ -1,4 +1,4 @@
-/** Native dimensions for /screenshots assets — keeps layout stable and avoids forced stretch. */
+/** Native dimensions for /screenshots assets. Keeps layout stable and avoids forced stretch. */
 export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }

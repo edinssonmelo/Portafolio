@@ -6,8 +6,8 @@ Patterns discovered while building this project. Update when new conventions eme
 
 ### Colors
 
-- **Navbar**: `bg-stone-900` (#1c1917 area) — dark header, white nav links
-- **Accent**: neon lime `rgb(220, 255, 49)` / `#DCFF31` — theme-color, carousel buttons, gradients
+- **Navbar**: `bg-stone-900` (#1c1917 area): dark header, white nav links
+- **Accent**: neon lime `rgb(220, 255, 49)` / `#DCFF31`: theme-color, carousel buttons, gradients
 - **Hero sections**: `rgba(75, 251, 186, 0.7)` mint overlay on project/about/blog heroes
 - **Logo brand green**: `#DFFF00`–`#CCFF00` range in logo assets (white + lime on transparent)
 
@@ -23,14 +23,14 @@ Patterns discovered while building this project. Update when new conventions eme
 
 ### Design system primitives
 
-- **Tokens**: [`src/config/designTokens.ts`](../src/config/designTokens.ts) — ink, lime `#DCFF31`, mint `#4BFBBA`, radii, compact spacing
+- **Tokens**: [`src/config/designTokens.ts`](../src/config/designTokens.ts): ink, lime `#DCFF31`, mint `#4BFBBA`, radii, compact spacing
 - **Tailwind**: `brand.lime`, `brand.mint`, `rounded-card`, `rounded-btn`
 - **Components**:
-  - `SurfaceCard` — white + `border-2 border-stone-900` + `rounded-[20px]`
-  - `SectionBadge` — uppercase label pill (Contact, Case study)
-  - `TagChip` — stack tags in case studies
-  - `Field` / `TextAreaField` — compact underline inputs (~40px, textarea min 96px)
-  - `GradientButton` — supports `type="submit"` for forms
+  - `SurfaceCard`: white + `border-2 border-stone-900` + `rounded-[20px]`
+  - `SectionBadge`: uppercase label pill (Contact, Case study)
+  - `TagChip`: stack tags in case studies
+  - `Field` / `TextAreaField`: compact underline inputs (~40px, textarea min 96px)
+  - `GradientButton`: supports `type="submit"` for forms
 
 ### Density (compact UI)
 
@@ -45,8 +45,8 @@ Patterns discovered while building this project. Update when new conventions eme
 ### Logo
 
 - **Never** set `background`, `bg-*`, or `object-cover` on logo images
-- Mobile (`< md`): `/assets/logo-mobile.png` — `h-12` / `h-14` (sm), aligned left (`object-left`, slight negative margin)
-- Tablet/desktop (`md+`): `/assets/logo-full.png` — up to ~90px height, `object-left`
+- Mobile (`< md`): `/assets/logo-mobile.png`: `h-12` / `h-14` (sm), aligned left (`object-left`, slight negative margin)
+- Tablet/desktop (`md+`): `/assets/logo-full.png`: up to ~90px height, `object-left`
 - Use `object-contain`, `bg-transparent`, no border on wrapper
 
 ### Responsive
@@ -56,9 +56,10 @@ Patterns discovered while building this project. Update when new conventions eme
 
 ## Content
 
-- First person (`I`, `my`) — not "we" unless representing a client team
+- First person (`I`, `my`), not "we" unless representing a client team
+- **No em dashes (`—`)** in user-facing copy. Use periods, commas, colons, or parentheses instead
 - Project images: use native aspect via `src/config/screenshotMeta.ts`; never force `aspect-[16/9]` on mismatched screenshots
-- SURA mobile shots are 140×296px — display at native width, centered (no upscale)
+- SURA mobile shots are 140×296px. Display at native width, centered (no upscale)
 
 ## Deploy
 

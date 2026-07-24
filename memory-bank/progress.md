@@ -14,7 +14,7 @@
 - [x] Portfolio: 4 projects on home, hover gallery, uniform card frames
 - [x] CTA + Contact combined section; blur ellipses fixed
 - [x] Screenshot updates: Declaramelo hero/features, Bernal dashboard
-- [x] `AGENTS.md` — commit + push after every meaningful task
+- [x] `AGENTS.md`: commit + push after every meaningful task
 
 ## Pending
 
@@ -25,5 +25,5 @@
 
 ## Known issues
 
-- Logo black box on production if old assets cached — redeploy clears it; logos must stay `bg-transparent`
-- SURA screenshots native resolution is small (140px wide) — display uses native size, no upscale
+- Logo black box on production if old assets cached: redeploy clears it; logos must stay `bg-transparent`
+- SURA screenshots native resolution is small (140px wide): display uses native size, no upscale

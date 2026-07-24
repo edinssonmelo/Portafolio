@@ -56,7 +56,7 @@ const projects: Record<string, {
             author: "Jonas Erikkson",
             role: "Head of Product, Snowlake Agency"
         },
-        thingsIDid: "I designed and implemented the website structure and layout using Framer's visual canvas and CMS features. I customized components for blog entries and testimonial displays and built responsive sections tailored for performance across devices. I was also responsible for integrating animations that improved user engagement without compromising performance. The final product was delivered on time with a lightweight, future-ready architecture — ready to scale as the brand evolves.",
+        thingsIDid: "I designed and implemented the website structure and layout using Framer's visual canvas and CMS features. I customized components for blog entries and testimonial displays and built responsive sections tailored for performance across devices. I was also responsible for integrating animations that improved user engagement without compromising performance. The final product was delivered on time with a lightweight, future-ready architecture, ready to scale as the brand evolves.",
         mainImage: "https://framerusercontent.com/images/OaSyAHYFx1huHnJnTUs2WX3sJA.png?width=1297&height=905",
         images: [
             "https://framerusercontent.com/images/l3agFCrvI3KrXfMpLJohJ7ur9e0.png?width=2938&height=1722",
@@ -146,11 +146,11 @@ const projects: Record<string, {
         },
         thingsIDid: "Developed the AI writing workspace, embedded assistant, editor experience, and marketing research flows for briefs, articles, essays, and content production.",
         story: {
-            hook: "An AI writing workspace for marketing teams — from market research to briefs, copy, and social-ready formats.",
+            hook: "An AI writing workspace for marketing teams: from market research to briefs, copy, and social-ready formats.",
             body: [
                 "Wordjet was designed for agencies and marketers who live in documents: briefs, outlines, market research, articles, and the social formats that come from a solid base. One editor, AI-assisted workflows, and a path from research to publishable output.",
-                "The vision was ambitious — consolidate research, writing, and repurposing in a single workspace. I built the landing, editor, Jet AI assistant, and content production flows before the partnership with a marketing specialist did not work out.",
-                "The project is paused for now, not because the idea was weak, but because the product needed deep domain expertise on the business side. It remains a direction I may return to — a strong proof of building complex AI product surfaces for marketing teams.",
+                "The vision was ambitious: consolidate research, writing, and repurposing in a single workspace. I built the landing, editor, Jet AI assistant, and content production flows before the partnership with a marketing specialist did not work out.",
+                "The project is paused for now, not because the idea was weak, but because the product needed deep domain expertise on the business side. It remains a direction I may return to. It is a strong proof of building complex AI product surfaces for marketing teams.",
             ],
             stack: ["AI", "SaaS", "Fullstack"],
             pullQuote:
@@ -180,9 +180,9 @@ const projects: Record<string, {
         },
         thingsIDid: "Developed the e-commerce experience including landing page, catalog, product pages, cart, and checkout flow.",
         story: {
-            hook: "An urban streetwear store born from entrepreneurship in Medellín — brand, catalog, and checkout in one place.",
+            hook: "An urban streetwear store born from entrepreneurship in Medellín, with brand, catalog, and checkout in one place.",
             body: [
-                "OverUP started as a small venture with my wife and a friend from school: oversized streetwear with real brand energy, sold online and visible on Instagram as @overappoficial. I built the e-commerce experience — landing, catalog, product pages, and purchase flow.",
+                "OverUP started as a small venture with my wife and a friend from school: oversized streetwear with real brand energy, sold online and visible on Instagram as @overappoficial. I built the e-commerce experience: landing, catalog, product pages, and purchase flow.",
                 "The brand had momentum in Medellín. After moving to Cúcuta, climate and inventory did not match the product we had produced, and the textile market grew tougher with global competition. We made the call to close the project with lessons learned rather than force something that no longer fit.",
                 "It was not the outcome we hoped for, but the experience reinforced what I love building: products, brands, and software. OverUP is no longer active; the skills and judgment from that chapter carry into everything I ship today.",
             ],
@@ -215,9 +215,9 @@ const projects: Record<string, {
         story: {
             hook: "A financial ally for Colombians who need expert help filing income tax with DIAN.",
             body: [
-                "Declaramelo was born from a simple need: people facing their annual income tax declaration in Colombia need more than a form — they need a trusted accountant who can answer questions, clarify their situation, and guide them through a process tied to the state.",
+                "Declaramelo was born from a simple need: people facing their annual income tax declaration in Colombia need more than a form. They need a trusted accountant who can answer questions, clarify their situation, and guide them through a process tied to the state.",
                 "Every person's finances are different. The product treats each case with care, pairing modern technology with human expertise so a rigorous process feels approachable. Free tools, guided flows, and accountant support help users declare with confidence.",
-                "It is a young startup still growing — focused today on individuals, with a path toward serving companies too. The goal has stayed the same: offer great service, keep the best talent available, and be the ally people trust with their declaration.",
+                "It is a young startup still growing, focused today on individuals, with a path toward serving companies too. The goal has stayed the same: offer great service, keep the best talent available, and be the ally people trust with their declaration.",
             ],
             stack: ["Fullstack", "Web", "Product"],
             pullQuote:
@@ -250,8 +250,8 @@ const projects: Record<string, {
         story: {
             hook: "A wholesale portal that turns a decade-strong manufacturer's catalog into a guided B2B buying experience.",
             body: [
-                "Bernal Tech manufactures automotive floor mats and accessories for every type of vehicle. Their wholesale allies needed more than a product list — they wanted a personalized flow: choose a product line, brand, and vehicle model across more than 4,000 SKUs.",
-                "We built a robust platform with role-based admin, catalog management, analytics, quotations, and notifications — from quote through dispatch and delivery. The client invested heavily in product photography; the portal made that catalog searchable, organized, and easy to order from.",
+                "Bernal Tech manufactures automotive floor mats and accessories for every type of vehicle. Their wholesale allies needed more than a product list. They wanted a personalized flow: choose a product line, brand, and vehicle model across more than 4,000 SKUs.",
+                "We built a robust platform with role-based admin, catalog management, analytics, quotations, and notifications, from quote through dispatch and delivery. The client invested heavily in product photography; the portal made that catalog searchable, organized, and easy to order from.",
                 "Exclusive to wholesale clients, the system is live in production. Allies have welcomed the experience, and it has become a strong digital channel for a company with more than ten years in the market.",
             ],
             stack: ["B2B", "Web", "Fullstack"],
@@ -286,8 +286,8 @@ const projects: Record<string, {
         story: {
             hook: "An AI meeting assistant built to keep context when planning, brainstorming, and shipping real work.",
             body: [
-                "OpenWhispr started in my own workflow. Planning sessions and brainstorming meetings generate ideas fast — but details slip. I needed a way to capture conversations, keep them organized, and revisit them later for summaries, insights, and follow-ups.",
-                "The app transcribes meetings, stores them by category, and helps surface what matters for the next conversation — anticipating questions, tracking decisions, and supporting leadership workflows from deep planning sessions to daily standups.",
+                "OpenWhispr started in my own workflow. Planning sessions and brainstorming meetings generate ideas fast, but details slip. I needed a way to capture conversations, keep them organized, and revisit them later for summaries, insights, and follow-ups.",
+                "The app transcribes meetings, stores them by category, and helps surface what matters for the next conversation: anticipating questions, tracking decisions, and supporting leadership workflows from deep planning sessions to daily standups.",
                 "It is in early beta on Mac, with Windows planned. I built it for myself first and plan to open-source it: a capable meeting assistant I wanted to exist and to share with others working in AI-heavy, context-rich environments.",
             ],
             stack: ["AI", "Desktop", "Product"],
@@ -319,11 +319,11 @@ const projects: Record<string, {
         },
         thingsIDid: "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported operations and incident resolution for end users, ensuring service continuity and quality.",
         story: {
-            hook: "Shipping inside Seguros SURA's SuperApp — the main mobile surface for insurance businesses at scale.",
+            hook: "Shipping inside Seguros SURA's SuperApp, the main mobile surface for insurance businesses at scale.",
             body: [
                 "At SURA I joined one of the strongest teams behind the SuperApp: the primary channel where multiple insurance businesses meet customers on iOS and Android. It was an environment with serious engineering standards, modern tools, and real operational pressure.",
-                "Beyond feature work, I spent meaningful time close to production support and end users — resolving incidents and keeping service continuity when problems reached real people. That mix of build and operate across Health, Mobility, Home, Wallet, Refunds, and Claims was among the most formative chapters of my career.",
-                "I worked across several areas at SURA — architecture, mobile assistance, the SuperApp, DOCS/controls/OX, and bolsa — but the SuperApp remains the most memorable. I am grateful to Seguros SURA and to Ceiba Software, the consultancy that supported me through that growth.",
+                "Beyond feature work, I spent meaningful time close to production support and end users, resolving incidents and keeping service continuity when problems reached real people. That mix of build and operate across Health, Mobility, Home, Wallet, Refunds, and Claims was among the most formative chapters of my career.",
+                "I worked across several areas at SURA (architecture, mobile assistance, the SuperApp, DOCS/controls/OX, and bolsa), but the SuperApp remains the most memorable. I am grateful to Seguros SURA and to Ceiba Software, the consultancy that supported me through that growth.",
             ],
             stack: ["Mobile", "Flutter", "iOS", "Android"],
             pullQuote:

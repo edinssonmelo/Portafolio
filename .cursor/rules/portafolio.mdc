@@ -1,5 +1,5 @@
 ---
-description: Portafolio project context — read memory-bank before meaningful work
+description: Portafolio project context. Read memory-bank before meaningful work.
 alwaysApply: true
 ---
 
@@ -10,13 +10,14 @@ Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, 
 ## Must-know
 
 - **Identity**: AI Product Builder / AI Software Engineer
-- **Logos**: transparent PNG only — `bg-transparent` on Logo component; no background on logo `img`
-- **Screenshots**: `public/screenshots/` — never `public/projects/`
+- **Logos**: transparent PNG only. `bg-transparent` on Logo component; no background on logo `img`
+- **Screenshots**: `public/screenshots/`. Never `public/projects/`
 - **Deploy**: push to `main` auto-deploys via self-hosted runner on ai-server (`/srv/apps/portafolio`)
 - **Style**: Cabinet Grotesk headings, DM Sans body, stone-900 navbar, lime accent `#DCFF31`
-- **Design system**: `src/config/designTokens.ts` + primitives `SurfaceCard`, `SectionBadge`, `TagChip`, `Field` — use for new UI instead of Framer `after:border` boilerplate
+- **Design system**: `src/config/designTokens.ts` + primitives `SurfaceCard`, `SectionBadge`, `TagChip`, `Field`. Use for new UI instead of Framer `after:border` boilerplate
+- **Copy**: no em dashes (`—`) in site text. Use periods, commas, colons, or parentheses. See `AGENTS.md` Copy style.
 
 ## After meaningful tasks
 
 1. Update `memory-bank/activeContext.md` and `progress.md` with what changed.
-2. **Commit and push to `main`** — always, unless the user explicitly asks not to. See `AGENTS.md` for the full workflow.
+2. **Commit and push to `main`**. Always, unless the user explicitly asks not to. See `AGENTS.md` for the full workflow.

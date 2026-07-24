@@ -40,6 +40,6 @@ npm run build   # output: dist/
 
 ## SEO / crawl
 
-- `public/robots.txt` — allows `OAI-SearchBot`, `GPTBot`
-- `public/sitemap.xml` — includes `/`, `/about`, `/blog`, `/projects`, project slugs
+- `public/robots.txt`: allows `OAI-SearchBot`, `GPTBot`
+- `public/sitemap.xml`: includes `/`, `/about`, `/blog`, `/projects`, project slugs
 - Schema: `Person` `#person`, `ProfilePage` on `/about`

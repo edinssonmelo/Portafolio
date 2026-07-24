@@ -16,7 +16,7 @@
 - CTA + Contact combined side-by-side (`CTAContact`); portfolio hover gallery on home
 - Hero: reverted to original layout (two-line title, original spacing/sizes/ellipses)
 - Project detail: "Visit live site" beside carousel; narrative `ProjectStory` replaces rigid case study
-- All 6 portfolio projects have custom `story` copy (honest + positive tone; Wordjet paused, OverUP closed noted briefly)
+- Copy style: no em dashes in site text; rule added to AGENTS.md and portafolio.mdc
 
 ## Next steps (user-driven)
 

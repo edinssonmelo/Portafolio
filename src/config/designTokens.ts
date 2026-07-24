@@ -1,5 +1,5 @@
 /**
- * Design tokens — single source for brand UI primitives.
+ * Design tokens: single source for brand UI primitives.
  * Sync with tailwind.config.js `brand` colors and memory-bank/learnedPatterns.md
  */
 
@@ -21,7 +21,7 @@ export const designTokens = {
         color: '#1c1917',
     },
     spacing: {
-        /** Compact vertical rhythm — use across all home sections */
+        /** Compact vertical rhythm. Use across all home sections */
         sectionY: '4rem',
         sectionYMd: '5rem',
         sectionGap: '2.5rem',
@@ -39,7 +39,7 @@ export const designTokens = {
     },
 } as const;
 
-/** Tailwind class strings — use for consistent type scale sitewide */
+/** Tailwind class strings. Use for consistent type scale sitewide */
 export const typographyClasses = {
     heroTitle:
         'font-cabinet_grotesk text-[28px] font-bold leading-tight tracking-tight text-stone-900 sm:text-[32px] md:text-5xl md:leading-[1.12]',

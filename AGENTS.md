@@ -1,10 +1,10 @@
-# Agent workflow — Portafolio
+# Agent workflow for Portafolio
 
 ## After every meaningful task
 
-1. **Memory bank** — Update `memory-bank/activeContext.md` and `progress.md` (and `learnedPatterns.md` / `systemPatterns.md` when patterns change).
-2. **Commit + push** — Always commit and push to `main` when the task is complete. Do not leave finished work only in the working tree.
-3. **Deploy** — Push to `main` triggers auto-deploy on ai-server via GitHub Actions (self-hosted runner).
+1. **Memory bank**: Update `memory-bank/activeContext.md` and `progress.md` (and `learnedPatterns.md` / `systemPatterns.md` when patterns change).
+2. **Commit + push**: Always commit and push to `main` when the task is complete. Do not leave finished work only in the working tree.
+3. **Deploy**: Push to `main` triggers auto-deploy on ai-server via GitHub Actions (self-hosted runner).
 
 ## Commit protocol
 
@@ -19,8 +19,14 @@
 - **Design tokens**: `src/config/designTokens.ts` + `layoutClasses` for section rhythm.
 - **Primitives**: `SurfaceCard`, `SectionBadge`, `TagChip`, `Field`, `GradientButton`.
 - **Screenshots**: `public/screenshots/` + `src/config/screenshotMeta.ts` (native aspect, no forced stretch).
-- **Sections**: `src/sections/` — home blocks; `src/pages/` — routes.
+- **Sections**: `src/sections/` for home blocks; `src/pages/` for routes.
 - **Memory bank**: single source of persistent context in `memory-bank/`.
+
+## Copy style
+
+- **No em dashes (`—`)** in user-facing copy (hero, about, project stories, blog, CTAs, meta descriptions). They read as AI-generated.
+- Use periods, commas, colons, or parentheses instead. Avoid joining clauses with an em dash (e.g. prefer "teams: from research" or two short sentences).
+- Applies to new and edited site text. Internal docs should also avoid em dashes for consistency.
 
 ## Must-know
 
