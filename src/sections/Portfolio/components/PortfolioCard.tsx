@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { getScreenshotMeta, isMobileScreenshot } from "@/config/screenshotMeta";
 
 const PREVIEW_WORD_COUNT = 14;
 
@@ -25,6 +26,8 @@ export type PortfolioCardProps = {
   imageSizes?: string;
   imageVariant?: string;
   imageAspect?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   title: string;
   description: string;
 };
@@ -39,6 +42,12 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
       : `/${props.href}`;
 
   const { preview, canExpand } = getPreviewText(props.description);
+  const meta = getScreenshotMeta(props.imageUrl);
+  const width = props.imageWidth ?? meta?.width;
+  const height = props.imageHeight ?? meta?.height;
+  const mobileShot = isMobileScreenshot(props.imageUrl);
+  const aspectRatio =
+    width && height ? `${width} / ${height}` : undefined;
 
   const handleImageClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -52,13 +61,24 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
         tabIndex={0}
         onClick={handleImageClick}
         onKeyDown={(e) => e.key === "Enter" && navigate(routePath)}
-        className={`relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-[20px] border-2 border-teal-300 bg-neutral-100 ${props.imageAspect ?? "aspect-[16/9]"}`}
+        className={`relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-[20px] border-2 border-teal-300 bg-neutral-100 ${
+          mobileShot ? "min-h-[280px] py-6" : ""
+        } ${props.imageAspect ?? ""}`}
+        style={aspectRatio && !mobileShot ? { aspectRatio } : undefined}
       >
         <img
           sizes={props.imageSizes}
           src={props.imageUrl}
-          alt={`${props.title} - ${props.description}`}
-          className={`h-full w-full object-contain object-center p-1 md:p-2 ${props.imageVariant ?? ""}`}
+          alt={props.title}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
+          className={
+            mobileShot
+              ? `h-auto w-[140px] max-w-[42%] object-contain object-center ${props.imageVariant ?? ""}`
+              : `block h-auto w-full object-contain object-center ${props.imageVariant ?? ""}`
+          }
         />
       </div>
 

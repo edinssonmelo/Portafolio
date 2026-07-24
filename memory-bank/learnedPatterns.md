@@ -20,8 +20,8 @@ Patterns discovered while building this project. Update when new conventions eme
 ### Logo
 
 - **Never** set `background`, `bg-*`, or `object-cover` on logo images
-- Mobile (`< md`): `/assets/logo-mobile.png` — square EM initials
-- Tablet/desktop (`md+`): `/assets/logo-full.png` — wide wordmark
+- Mobile (`< md`): `/assets/logo-mobile.png` — `h-12` / `h-14` (sm), aligned left (`object-left`, slight negative margin)
+- Tablet/desktop (`md+`): `/assets/logo-full.png` — up to ~90px height, `object-left`
 - Use `object-contain`, `bg-transparent`, no border on wrapper
 
 ### Responsive
@@ -32,7 +32,8 @@ Patterns discovered while building this project. Update when new conventions eme
 ## Content
 
 - First person (`I`, `my`) — not "we" unless representing a client team
-- Project images path: `/screenshots/*.png` in code and SEO OG URLs
+- Project images: use native aspect via `src/config/screenshotMeta.ts`; never force `aspect-[16/9]` on mismatched screenshots
+- SURA mobile shots are 140×296px — display at native width, centered (no upscale)
 
 ## Deploy
 

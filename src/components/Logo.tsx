@@ -20,7 +20,7 @@ export const Logo = () => {
   return (
     <div
       onClick={handleClick}
-      className="relative flex shrink-0 cursor-pointer items-center bg-transparent"
+      className="relative -ml-0.5 flex shrink-0 cursor-pointer items-center bg-transparent md:-ml-1"
     >
       <img
         src="/assets/logo-mobile.png"
@@ -29,7 +29,7 @@ export const Logo = () => {
         height={1254}
         decoding="async"
         draggable={false}
-        className="block h-10 w-10 bg-transparent object-contain object-center md:hidden"
+        className="block h-12 w-12 bg-transparent object-contain object-left sm:h-14 sm:w-14 md:hidden"
       />
       <img
         src="/assets/logo-full.png"
@@ -38,8 +38,8 @@ export const Logo = () => {
         height={941}
         decoding="async"
         draggable={false}
-        className="hidden h-[58px] w-auto bg-transparent object-contain object-left md:block md:h-[68px] lg:h-[76px]"
-        style={{ maxWidth: "min(320px, 48vw)" }}
+        className="hidden h-[72px] w-auto bg-transparent object-contain object-left md:block md:h-[82px] lg:h-[90px]"
+        style={{ maxWidth: "min(380px, 52vw)" }}
       />
     </div>
   );

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import { ProjectImageLightbox } from "@/components/ProjectImageLightbox";
 import { CaseStudySections } from "@/components/CaseStudySections";
+import { getScreenshotMeta, isMobileScreenshot } from "@/config/screenshotMeta";
 
 // Project data - in a real app, this would come from an API or CMS
 const projects: Record<string, {
@@ -268,8 +269,8 @@ const projects: Record<string, {
             "/screenshots/sura-resuelve.png",
             "/screenshots/sura-avanza.png"
         ],
-        imageAspect: "aspect-[140/296]",
-        imageFrameClassName: "w-[140px] shrink-0 max-w-[140px]",
+        imageAspect: undefined,
+        imageFrameClassName: undefined,
         previousProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/screenshots/wordjet-landing.png" },
         nextProject: { slug: "overup", title: "OverUP", image: "/screenshots/overup-hero.png" }
     }
@@ -487,7 +488,7 @@ const ProjectDetailContent = ({
         });
     }, [slides]);
 
-    const slidePadding = project.imageAspect ? "p-0" : "p-2 md:p-3";
+    const slidePadding = "p-2 md:p-4";
 
     const openLightbox = (slideIndex: number) => {
         setAutoPlay(false);
@@ -525,36 +526,52 @@ const ProjectDetailContent = ({
                             </button>
                         ) : null}
 
-                        <div
-                            className={`relative min-w-0 overflow-hidden rounded-2xl border-2 border-stone-900 bg-neutral-100 ${project.imageFrameClassName ?? "w-full flex-1"} ${project.imageAspect ?? "aspect-[16/9]"}`}
-                        >
+                        <div className="relative min-w-0 flex-1 overflow-hidden rounded-2xl border-2 border-stone-900 bg-neutral-100">
                             <div
-                                className="flex h-full transition-transform duration-500 ease-out"
+                                className="flex transition-transform duration-500 ease-out"
                                 style={{
                                     width: `${slideCount * 100}%`,
                                     transform: `translateX(-${(index / slideCount) * 100}%)`,
                                 }}
                             >
-                                {slides.map((image, i) => (
+                                {slides.map((image, i) => {
+                                    const meta = getScreenshotMeta(image);
+                                    const mobileShot = isMobileScreenshot(image);
+                                    const aspectRatio =
+                                        meta && !mobileShot
+                                            ? `${meta.width} / ${meta.height}`
+                                            : undefined;
+
+                                    return (
                                     <button
                                         key={image}
                                         type="button"
                                         onClick={() => openLightbox(i)}
-                                        className={`flex h-full shrink-0 cursor-zoom-in items-center justify-center ${slidePadding}`}
-                                        style={{ width: `${100 / slideCount}%` }}
+                                        className={`flex h-full shrink-0 cursor-zoom-in items-center justify-center ${slidePadding} ${
+                                            mobileShot ? "min-h-[320px] md:min-h-[420px]" : ""
+                                        }`}
+                                        style={{
+                                            width: `${100 / slideCount}%`,
+                                            aspectRatio: aspectRatio,
+                                        }}
                                         aria-label={`View ${project.title} image ${i + 1} in full size`}
                                     >
                                         <img
                                             src={image}
                                             alt={`${project.title} - ${i + 1}`}
-                                            loading="eager"
-                                            decoding="sync"
-                                            width={project.imageAspect ? 140 : undefined}
-                                            height={project.imageAspect ? 296 : undefined}
-                                            className={`pointer-events-none max-h-full max-w-full object-contain object-center ${project.imageAspect ? "h-full w-full" : ""}`}
+                                            loading={i === 0 ? "eager" : "lazy"}
+                                            decoding="async"
+                                            width={meta?.width}
+                                            height={meta?.height}
+                                            className={
+                                                mobileShot
+                                                    ? "pointer-events-none h-auto w-[140px] max-w-[38%] object-contain object-center"
+                                                    : "pointer-events-none block h-auto w-full max-h-[min(70vh,720px)] object-contain object-center"
+                                            }
                                         />
                                     </button>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
 

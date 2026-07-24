@@ -44,7 +44,6 @@ const PROJECTS = [
   {
     href: "/projects/superapp-mobile",
     imageUrl: "/screenshots/sura-explora.png",
-    imageVariant: "h-auto w-[140px] max-h-[92%] object-contain object-center p-0",
     title: "SuperApp Mobile",
     description:
       "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA, building features across Health, Mobility, Home, Wallet, Refunds, and Claims while supporting live operations for end users.",
