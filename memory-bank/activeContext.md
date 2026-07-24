@@ -15,7 +15,8 @@
 - Portfolio home shows 4 projects; SURA card uses uniform 16:9 frame; Bernal dashboard cover updated
 - CTA + Contact combined side-by-side (`CTAContact`); portfolio hover gallery on home
 - Hero: reverted to original layout (two-line title, original spacing/sizes/ellipses)
-- Project detail: "Visit live site" moved to top-right of hero (removed bottom CTA block)
+- Project detail: "Visit live site" beside carousel; narrative `ProjectStory` replaces rigid case study
+- All 6 portfolio projects have custom `story` copy (honest + positive tone; Wordjet paused, OverUP closed noted briefly)
 
 ## Next steps (user-driven)
 

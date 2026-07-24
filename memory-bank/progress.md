@@ -5,7 +5,7 @@
 - [x] Docker deploy on ai-server (Traefik + Cloudflare Tunnel)
 - [x] Screenshots moved to `/screenshots/` (SPA `/projects` fix)
 - [x] Identity copy: AI Product Builder, Projects copy, `/about`, schema
-- [x] Case study sections in project detail
+- [x] Case study sections in project detail → narrative `ProjectStory` for all 6 real projects
 - [x] Blog scaffold (`/blog`, empty `BLOG_POSTS`)
 - [x] Design system + compact Contact, Stats, Case study UI
 - [x] Transparent logos (mobile + full)
