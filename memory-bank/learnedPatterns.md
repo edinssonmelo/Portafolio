@@ -14,8 +14,12 @@ Patterns discovered while building this project. Update when new conventions eme
 ### Typography
 
 - Headings: `font-cabinet_grotesk`, bold, tight tracking
-- Body: `font-dm_sans`, `text-lg leading-[30px]` for paragraphs
+- Body: `font-dm_sans`, `text-base md:text-lg leading-relaxed`
 - Section badges: uppercase DM Sans, `text-[13px] font-black tracking-[0.65px]`
+- **Scale** (`typographyClasses` in `designTokens.ts`):
+  - Hero: `md:text-5xl` title, `md:text-xl` lead
+  - Sections: `md:text-4xl` title (Cabinet), `md:text-lg` description
+  - Cards: `md:text-2xl` / `md:text-xl` titles, body `md:text-lg`
 
 ### Design system primitives
 

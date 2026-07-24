@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { isMobileScreenshot } from "@/config/screenshotMeta";
+import { typographyClasses } from "@/config/designTokens";
 
 const PREVIEW_WORD_COUNT = 14;
 const HOVER_CYCLE_MS = 900;
@@ -128,12 +129,12 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
 
       <div className="relative z-10 flex w-full flex-col gap-3 md:gap-4">
         <div className="flex flex-col gap-2">
-          <h3 className="font-dm_sans text-xl font-bold leading-snug text-stone-900 md:text-2xl">
+          <h3 className={typographyClasses.cardTitle}>
             <Link to={routePath} className={portfolioLinkClassName}>
               {props.title}
             </Link>
           </h3>
-          <p className="font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg">
+          <p className={typographyClasses.body}>
             {expanded || !canExpand ? props.description : `${preview}...`}
             {canExpand ? (
               <>

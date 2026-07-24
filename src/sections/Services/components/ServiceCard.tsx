@@ -1,3 +1,5 @@
+import { typographyClasses } from "@/config/designTokens";
+
 export type ServiceCardProps = {
   iconUrl: string;
   iconAlt: string;
@@ -27,10 +29,10 @@ export const ServiceCard = (props: ServiceCardProps) => {
         </div>
 
         <div className="relative flex min-w-0 flex-1 flex-col items-start gap-1.5 md:gap-2">
-          <h3 className="font-cabinet_grotesk text-lg font-bold leading-snug tracking-[-0.5px] text-stone-900 md:text-xl">
+          <h3 className={typographyClasses.cardTitleSm}>
             {props.title}
           </h3>
-          <p className="break-words font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg">
+          <p className={`break-words ${typographyClasses.body}`}>
             {props.description}
           </p>
         </div>

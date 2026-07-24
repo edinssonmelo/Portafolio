@@ -1,4 +1,4 @@
-import { layoutClasses } from "@/config/designTokens";
+import { layoutClasses, typographyClasses } from "@/config/designTokens";
 import { BlurEllipses } from "@/components/BlurEllipses";
 import { ctaContactEllipses } from "@/config/blurEllipses";
 import { CTACard } from "@/sections/CTA/components/CTACard";
@@ -27,7 +27,7 @@ export const CTAContact = () => {
           <SurfaceCard className="w-full px-6 py-7 md:px-8 md:py-8">
             <div className="flex flex-col items-center gap-4 md:gap-5">
               <SectionBadge label="Contact" iconUrl={SECTION_ICON} />
-              <h2 className="max-w-[440px] text-center font-cabinet_grotesk text-2xl font-bold tracking-tight text-stone-900 md:text-3xl">
+              <h2 className={`max-w-[440px] text-center ${typographyClasses.sectionTitle}`}>
                 Got a project in mind? Let&apos;s get in touch.
               </h2>
               <ContactForm />

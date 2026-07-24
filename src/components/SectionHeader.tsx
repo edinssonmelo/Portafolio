@@ -1,3 +1,5 @@
+import { typographyClasses } from "@/config/designTokens";
+
 export type SectionHeaderProps = {
   iconUrl: string;
   label: string;
@@ -32,7 +34,9 @@ export const SectionHeader = (props: SectionHeaderProps) => {
       </div>
       {props.title && (
         <div className={`relative z-[1] flex w-full flex-col justify-start gap-3 md:gap-4 ${alignClass}`}>
-          <h2 className={`break-words font-dm_sans text-2xl font-bold leading-tight tracking-tight text-stone-900 md:text-3xl md:leading-snug ${align === "start" ? "text-left" : "text-center"}`}>
+          <h2
+            className={`break-words ${typographyClasses.sectionTitle} ${align === "start" ? "text-left" : "text-center"}`}
+          >
             {props.showBreak ? (
               <>
                 {props.title.split("<br />")[0]}
@@ -44,7 +48,9 @@ export const SectionHeader = (props: SectionHeaderProps) => {
             )}
           </h2>
           {props.description ? (
-            <p className={`font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg ${align === "start" ? "text-left" : "text-center"}`}>
+            <p
+              className={`${typographyClasses.sectionDesc} ${align === "start" ? "text-left" : "text-center"}`}
+            >
               {props.description}
             </p>
           ) : null}

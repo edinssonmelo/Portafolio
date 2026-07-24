@@ -32,11 +32,30 @@ export const designTokens = {
     },
     typography: {
         badge: 'text-[13px] font-black uppercase tracking-[0.65px] leading-[23px]',
-        body: 'text-base leading-relaxed',
+        body: 'text-base leading-relaxed md:text-lg md:leading-7',
         bodyLg: 'text-lg leading-7',
-        headingSection: 'text-2xl font-bold tracking-tight md:text-3xl',
-        headingHero: 'text-[28px] font-bold leading-tight sm:text-[32px] md:text-5xl md:leading-[1.1]',
+        headingSection: 'text-[26px] font-bold tracking-tight md:text-4xl',
+        headingHero: 'text-[28px] font-bold leading-tight sm:text-[32px] md:text-5xl md:leading-[1.12]',
     },
+} as const;
+
+/** Tailwind class strings — use for consistent type scale sitewide */
+export const typographyClasses = {
+    heroTitle:
+        'font-cabinet_grotesk text-[28px] font-bold leading-tight tracking-tight text-stone-900 sm:text-[32px] md:text-5xl md:leading-[1.12]',
+    heroLead:
+        'font-dm_sans text-base leading-relaxed text-stone-900 md:text-xl md:leading-8',
+    sectionTitle:
+        'font-cabinet_grotesk text-[26px] font-bold leading-tight tracking-tight text-stone-900 md:text-4xl md:leading-tight',
+    sectionDesc:
+        'font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg md:leading-7',
+    cardTitle:
+        'font-cabinet_grotesk text-xl font-bold leading-snug text-stone-900 md:text-2xl',
+    cardTitleSm:
+        'font-cabinet_grotesk text-lg font-bold leading-snug text-stone-900 md:text-xl',
+    body: 'font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg md:leading-7',
+    statValue:
+        'font-cabinet_grotesk text-3xl font-bold leading-none tracking-tight text-stone-900 md:text-[2.25rem]',
 } as const;
 
 /** Shared layout classes for proportional, compact sections */
