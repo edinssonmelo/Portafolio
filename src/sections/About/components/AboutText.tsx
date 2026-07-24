@@ -6,7 +6,7 @@ export const AboutText = () => {
       <h2 className={`text-left ${typographyClasses.sectionTitle}`}>Biography</h2>
       <div className="flex flex-col gap-3 md:gap-4">
         <p className={typographyClasses.body}>
-          I&apos;m an AI Software Engineer with more than 10 years of experience.
+          I&apos;m an AI Software Engineer with more than 8 years of experience.
           I work with companies, startups, founders, and software engineers to ship
           AI-powered SaaS, web, and mobile products.
         </p>

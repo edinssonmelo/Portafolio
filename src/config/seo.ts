@@ -11,7 +11,7 @@ export const SITE_CONFIG = {
     tagline: 'An AI Software Engineer',
     title: 'Edinsson Melo | AI Software Engineer',
     description:
-        'An AI Software Engineer with more than 10 years of experience shipping SaaS, web, and mobile products. I build AI-powered solutions for companies, startups, founders, and software engineers.',
+        'An AI Software Engineer with more than 8 years of experience shipping SaaS, web, and mobile products. I build AI-powered solutions for companies, startups, founders, and software engineers.',
     url: 'https://edinssonmelo.com',
     image: 'https://edinssonmelo.com/assets/logo-full.png',
     locale: 'en_US',

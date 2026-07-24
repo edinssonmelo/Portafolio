@@ -34,19 +34,16 @@ export const AboutPage = () => {
 
                         <div className="space-y-6">
                             <p className={bodyText}>
-                                Soy Edinsson Melo, un AI Software Engineer en Colombia.
-                            </p>
-                            <p className={bodyText}>
                                 Uno de los recuerdos que más marcó mi camino fue la primera vez que
-                                tuve un computador frente a mí. Me quedé observando cada detalle de
-                                la pantalla: los íconos, los enlaces, la pequeña casa del navegador
-                                y las páginas que se abrían frente a mí. Sentía que estaba entrando
-                                en un mundo completamente nuevo.
+                                tuve un computador frente a mí. Me quedé mirando los íconos, los
+                                enlaces, la pequeña casa del navegador y las páginas que se abrían.
+                                Sentía que estaba entrando a un mundo completamente nuevo.
                             </p>
                             <p className={bodyText}>
-                                Con el tiempo, esa curiosidad se convirtió en mi profesión. Llevo
-                                más de 10 años en tecnología, aprendiendo, resolviendo
-                                problemas y construyendo soluciones.
+                                Esa curiosidad no se fue. Con el tiempo se convirtió en mi
+                                profesión. Hoy soy AI Software Engineer en Colombia, y llevo más de
+                                8 años desarrollando software, resolviendo problemas y construyendo
+                                productos.
                             </p>
                             <p className={bodyText}>
                                 También quiero conectar y compartir con personas que estén
