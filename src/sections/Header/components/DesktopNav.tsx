@@ -57,12 +57,16 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
     };
   }, [location]);
 
+  const isBlogActive =
+    location.pathname === '/blog' || location.pathname.startsWith('/blog/');
+
   return (
     <nav className={`flex items-center justify-center gap-[35px] ${className}`}>
       <NavLink href="#home" text="Home" isActive={activeSection === 'home'} />
       <NavLink href="#services" text="Services" isActive={activeSection === 'services'} />
       <NavLink href="#about" text="About" isActive={activeSection === 'about'} />
       <NavLink href="#portfolio" text="Portfolio" isActive={activeSection === 'portfolio'} />
+      <NavLink href="/blog" text="Blog" isActive={isBlogActive} />
       <NavLink href="#contact" text="Contact" isActive={activeSection === 'contact'} />
     </nav>
   );

@@ -10,6 +10,13 @@ const MobileNavLink = ({ href, text, onClick }: { href: string; text: string; on
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+
+    if (href.startsWith('/')) {
+      navigate(href);
+      onClick();
+      return;
+    }
+
     const sectionId = href.replace(/^\.\/#/, '').replace(/^#/, '');
 
     // Si estamos en otra página, navegar primero a home
@@ -160,6 +167,7 @@ export const Navbar = () => {
               <MobileNavLink href="#services" text="Services" onClick={handleNavClick} />
               <MobileNavLink href="#about" text="About" onClick={handleNavClick} />
               <MobileNavLink href="#portfolio" text="Portfolio" onClick={handleNavClick} />
+              <MobileNavLink href="/blog" text="Blog" onClick={handleNavClick} />
               <MobileNavLink href="#contact" text="Contact" onClick={handleNavClick} />
 
               {/* Mobile Social Icons */}

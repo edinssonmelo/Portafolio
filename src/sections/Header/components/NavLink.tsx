@@ -13,6 +13,12 @@ export const NavLink = (props: NavLinkProps) => {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+
+    if (props.href.startsWith('/')) {
+      navigate(props.href);
+      return;
+    }
+
     const sectionId = props.href.replace(/^\.\/#/, '').replace(/^#/, '');
 
     // Si estamos en otra página, navegar primero a home
@@ -49,7 +55,7 @@ export const NavLink = (props: NavLinkProps) => {
             style={props.isActive ? { color: NAV_ACTIVE_COLOR } : {}}
           >
             <a
-              href={`#${props.href.replace(/^\.\/#/, '').replace(/^#/, '')}`}
+              href={props.href.startsWith('/') ? props.href : `#${props.href.replace(/^\.\/#/, '').replace(/^#/, '')}`}
               onClick={handleClick}
               className={`box-content caret-black text-wrap md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] cursor-pointer md:transition-colors`}
               onMouseEnter={(e) => {

@@ -7,6 +7,7 @@
 - [x] Identity copy: AI Product Builder, Projects copy, `/about`, schema
 - [x] Case study sections in project detail → narrative `ProjectStory` for all 6 real projects
 - [x] Blog scaffold (`/blog`, empty `BLOG_POSTS`)
+- [x] First blog post: rich `BlogBlock` model, `BlogBody`, Spanish career article published
 - [x] Design system + compact Contact, Stats, Case study UI
 - [x] Transparent logos (mobile + full)
 - [x] Auto-deploy workflow + self-hosted runner on ai-server
@@ -18,7 +19,6 @@
 
 ## Pending
 
-- [ ] First blog post (awaiting user outline)
 - [ ] Search Console / Bing manual setup
 - [ ] LinkedIn/GitHub bio alignment
 - [ ] Optional: favicon refresh from new EM logo

@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
-import { BLOG_POSTS } from '@/data/blog';
+import { SectionBadge } from '@/components/SectionBadge';
+import { TagChip } from '@/components/TagChip';
+import { BLOG_POSTS, formatReadingTime } from '@/data/blog';
 import { layoutClasses } from '@/config/designTokens';
 
 export const BlogPage = () => {
@@ -11,17 +13,13 @@ export const BlogPage = () => {
             <main>
                 <section className={layoutClasses.pageHero}>
                     <div className="relative z-[1] flex w-full max-w-[800px] flex-col items-center gap-5 text-center md:gap-6">
-                        <div className="inline-flex items-center gap-2 rounded-[20px] border-2 border-stone-900 bg-white px-4 py-1.5">
-                            <p className="text-[13px] font-black uppercase tracking-[0.65px] text-stone-900">
-                                Blog
-                            </p>
-                        </div>
+                        <SectionBadge label="Blog" />
                         <h1 className="font-cabinet_grotesk text-3xl font-bold tracking-tight text-stone-900 md:text-5xl md:leading-tight">
-                            Writing on AI products and software
+                            Writing on building software
                         </h1>
                         <p className="max-w-[650px] text-lg leading-[30px] text-stone-900">
-                            Notes on building AI-first products, SaaS architecture, and shipping
-                            software that works in production.
+                            Notes on building software, AI products, and career lessons from more
+                            than a decade shipping in production.
                         </p>
                     </div>
                 </section>
@@ -39,16 +37,20 @@ export const BlogPage = () => {
                                     key={post.slug}
                                     className="border-b border-stone-900/10 pb-8 last:border-b-0"
                                 >
-                                    <time
-                                        dateTime={post.datePublished}
-                                        className="text-sm text-stone-600"
-                                    >
-                                        {new Date(post.datePublished).toLocaleDateString('en-US', {
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric',
-                                        })}
-                                    </time>
+                                    <div className="flex flex-wrap items-center gap-3 text-sm text-stone-600">
+                                        <time dateTime={post.datePublished}>
+                                            {new Date(post.datePublished).toLocaleDateString(
+                                                'en-US',
+                                                {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                }
+                                            )}
+                                        </time>
+                                        <span aria-hidden="true">·</span>
+                                        <span>{formatReadingTime(post)}</span>
+                                    </div>
                                     <h2 className="mt-2 font-cabinet_grotesk text-2xl font-bold text-stone-900">
                                         <Link
                                             to={`/blog/${post.slug}`}
@@ -60,6 +62,11 @@ export const BlogPage = () => {
                                     <p className="mt-2 text-lg leading-[30px] text-stone-900">
                                         {post.description}
                                     </p>
+                                    <div className="mt-3 flex flex-wrap gap-2">
+                                        {post.tags.map((tag) => (
+                                            <TagChip key={tag} label={tag} />
+                                        ))}
+                                    </div>
                                 </article>
                             ))
                         )}
