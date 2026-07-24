@@ -9,7 +9,7 @@ Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, 
 
 ## Must-know
 
-- **Identity**: AI Product Builder / AI Software Engineer
+- **Identity**: An AI Software Engineer (`SITE_CONFIG.tagline` in `src/config/seo.ts`)
 - **Logos**: transparent PNG only. `bg-transparent` on Logo component; no background on logo `img`
 - **Screenshots**: `public/screenshots/`. Never `public/projects/`
 - **Deploy**: push to `main` auto-deploys via self-hosted runner on ai-server (`/srv/apps/portafolio`)
@@ -20,4 +20,4 @@ Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, 
 ## After meaningful tasks
 
 1. Update `memory-bank/activeContext.md` and `progress.md` with what changed.
-2. **Commit and push to `main`**. Always, unless the user explicitly asks not to. See `AGENTS.md` for the full workflow.
+2. **Commit and push to `main`**. Always, unless the user explicitly asks not to. **Do not ask** if they want deploy; just ship. See `AGENTS.md` for the full workflow.

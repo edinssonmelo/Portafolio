@@ -7,6 +7,11 @@
 3. **Deploy**: Push to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on the self-hosted runner (`runs-on: [self-hosted, linux, portafolio]`). It runs `git pull`, `docker compose build`, and `docker compose up` in `/srv/apps/portafolio`.
 4. **Verify deploy**: After every push, confirm `git push origin main` succeeded and check Actions: `gh run list --workflow=deploy.yml --limit 3`. Do not end a task with uncommitted files or unpushed commits.
 
+## Communication
+
+- **Do not ask** whether to commit, push, or deploy at the end of a task. Ship it: commit + push to `main` when the work is done.
+- Only skip push if the user **explicitly** says not to (e.g. "no push", "commit locally only").
+
 ## Commit protocol
 
 - Run `git status` and `git diff` before committing.
@@ -31,6 +36,6 @@
 
 ## Must-know
 
-- Identity: **AI Product Builder** / **AI Software Engineer**
+- Identity: **An AI Software Engineer** (`SITE_CONFIG.tagline` in `src/config/seo.ts`; hero, About, and SEO stay in sync)
 - Logos: transparent PNG, `bg-transparent`, no background on `img`
 - Deploy path on server: `/srv/apps/portafolio`
