@@ -304,18 +304,6 @@ const buildCaseStudySections = (project: {
     return sections;
 };
 
-const formatLiveSiteLabel = (url: string) => {
-    try {
-        const parsed = new URL(url);
-        if (parsed.hostname.includes("play.google.com")) {
-            return "Google Play";
-        }
-        return parsed.hostname.replace(/^www\./, "");
-    } catch {
-        return url;
-    }
-};
-
 const getLiveLinkLabel = (url: string) => {
     try {
         if (new URL(url).hostname.includes("play.google.com")) {
@@ -328,22 +316,12 @@ const getLiveLinkLabel = (url: string) => {
 };
 
 const ProjectLiveLink = ({ url }: { url: string }) => (
-    <div className="flex flex-col items-end gap-2">
-        <GradientButton href={url} external>
-            <span className="text-base font-semibold leading-[19px] tracking-[-0.64px] text-stone-900 font-dm_sans md:text-lg md:tracking-[-0.72px]">
-                {getLiveLinkLabel(url)}
-            </span>
-            <ExternalLink className="h-[17px] w-[17px] shrink-0 text-stone-900 md:h-[19px] md:w-[19px]" aria-hidden />
-        </GradientButton>
-        <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-stone-700 underline-offset-2 transition-colors hover:text-stone-900 hover:underline font-dm_sans md:text-sm"
-        >
-            {formatLiveSiteLabel(url)}
-        </a>
-    </div>
+    <GradientButton href={url} external>
+        <span className="text-base font-semibold leading-[19px] tracking-[-0.64px] text-stone-900 font-dm_sans md:text-lg md:tracking-[-0.72px]">
+            {getLiveLinkLabel(url)}
+        </span>
+        <ExternalLink className="h-[17px] w-[17px] shrink-0 text-stone-900 md:h-[19px] md:w-[19px]" aria-hidden />
+    </GradientButton>
 );
 
 const projectDetailStyles = `
@@ -510,15 +488,9 @@ const ProjectDetailContent = ({
                     onClose={() => setLightboxIndex(null)}
                 />
             ) : null}
-            <div className="mx-auto w-full max-w-[1060px]">
-                {hasLivePreview ? (
-                    <div className="mb-4 flex justify-end md:hidden">
-                        <ProjectLiveLink url={livePreviewUrl!} />
-                    </div>
-                ) : null}
-                <div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-8">
-                    <div className="flex w-full min-w-0 max-w-[800px] flex-col items-center gap-4">
-                    <div className="flex w-full items-center justify-center gap-3 md:gap-5">
+            <div className="mx-auto w-full max-w-[800px]">
+                <div className="flex flex-col items-center gap-4">
+                    <div className="flex w-full items-start justify-center gap-2 md:gap-3">
                         {slideCount > 1 ? (
                             <button
                                 type="button"
@@ -599,6 +571,12 @@ const ProjectDetailContent = ({
                                 />
                             </button>
                         ) : null}
+
+                        {hasLivePreview ? (
+                            <div className="shrink-0 self-start pt-0.5">
+                                <ProjectLiveLink url={livePreviewUrl!} />
+                            </div>
+                        ) : null}
                     </div>
 
                     <p className="text-sm text-stone-600 font-dm_sans">
@@ -619,12 +597,6 @@ const ProjectDetailContent = ({
                                 />
                             ))}
                         </div>
-                    ) : null}
-                    </div>
-                    {hasLivePreview ? (
-                        <aside className="hidden shrink-0 md:block md:pt-1">
-                            <ProjectLiveLink url={livePreviewUrl!} />
-                        </aside>
                     ) : null}
                 </div>
             </div>
