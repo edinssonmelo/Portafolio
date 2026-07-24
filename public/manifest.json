@@ -3,10 +3,9 @@
     "short_name": "Edinsson Melo",
     "description": "An AI Software Engineer shipping AI-powered SaaS, web, and mobile products.",
     "start_url": "/",
-    "display": "standalone",
+    "display": "browser",
     "background_color": "#ffffff",
     "theme_color": "#DCFF31",
-    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "/favicon.svg",
