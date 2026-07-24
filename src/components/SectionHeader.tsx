@@ -2,6 +2,7 @@ export type SectionHeaderProps = {
   iconUrl: string;
   label: string;
   title?: string;
+  description?: string;
   showBreak?: boolean;
   variant: string;
 };
@@ -29,7 +30,7 @@ export const SectionHeader = (props: SectionHeaderProps) => {
         </div>
       </div>
       {props.title && (
-        <div className="relative z-[1] flex w-full flex-col justify-start">
+        <div className="relative z-[1] flex w-full flex-col justify-start gap-4">
           <h2 className="text-stone-900 text-4xl font-bold tracking-[-0.36px] leading-[42px] break-words text-center font-dm_sans md:text-[44px] md:tracking-[-0.44px] md:leading-[50px]">
             {props.showBreak ? (
               <>
@@ -41,6 +42,11 @@ export const SectionHeader = (props: SectionHeaderProps) => {
               props.title
             )}
           </h2>
+          {props.description ? (
+            <p className="text-stone-900 text-lg leading-[30px] text-center font-dm_sans">
+              {props.description}
+            </p>
+          ) : null}
         </div>
       )}
     </div>

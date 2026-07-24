@@ -7,14 +7,14 @@ const SERVICES = [
     iconVariant: "md:w-[34px]",
     title: "From Idea to MVP",
     description:
-      "I help turn ideas into clear, testable MVPs. We define what matters, build fast, and learn from real users early in the process.",
+      "I turn ideas into clear, testable MVPs. I define what matters, build fast, and help teams learn from real users early.",
   },
   {
     iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-13.svg",
     iconVariant: "",
-    title: "CTO & Technical Leadership",
+    title: "Technical Leadership",
     description:
-      "Architecture, alignment, and delivery for growing products. Enterprise judgment and startup speed to support sound technical decisions.",
+      "Architecture, alignment, and delivery for growing products. Enterprise judgment and startup speed for sound technical decisions.",
   },
   {
     iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-14.svg",

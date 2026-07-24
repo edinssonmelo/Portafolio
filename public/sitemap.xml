@@ -12,6 +12,20 @@
   </url>
 
   <url>
+    <loc>https://edinssonmelo.com/about</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://edinssonmelo.com/blog</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://edinssonmelo.com/projects</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>

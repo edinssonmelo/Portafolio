@@ -1,0 +1,23 @@
+name: Deploy to ai-server
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy-portafolio
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, linux, portafolio]
+    steps:
+      - name: Pull and deploy
+        run: |
+          cd /srv/apps/portafolio
+          git pull --ff-only origin main
+          docker compose -p portafolio build
+          docker compose -p portafolio up -d --remove-orphans
+
+      - name: Verify container
+        run: docker ps --filter name=portafolio-web --format '{{.Names}} {{.Status}}'

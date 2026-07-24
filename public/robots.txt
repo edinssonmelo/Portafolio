@@ -3,10 +3,11 @@
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas if any
-# Disallow: /admin/
-# Disallow: /private/
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
 
 # Sitemap location
 Sitemap: https://edinssonmelo.com/sitemap.xml
-

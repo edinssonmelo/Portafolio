@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FooterSocial } from "@/sections/Footer/components/FooterSocial";
 import { FooterContact } from "@/sections/Footer/components/FooterContact";
 
@@ -15,7 +16,20 @@ export const FooterContent = () => {
         <p className="text-black text-sm md:text-stone-900 md:text-base font-dm_sans">
           © 2026 Edinsson Melo. Todos los derechos reservados.
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
+          <Link
+            to="/about"
+            className="text-black text-sm md:text-stone-700 md:text-base font-dm_sans hover:underline"
+          >
+            About
+          </Link>
+          <span className="text-black text-sm md:text-stone-900 hidden md:inline">•</span>
+          <Link
+            to="/blog"
+            className="text-black text-sm md:text-stone-700 md:text-base font-dm_sans hover:underline"
+          >
+            Blog
+          </Link>
           <span className="text-black text-sm md:text-stone-900 hidden md:inline">•</span>
           <a
             href="https://buymeacoffee.com/edinssonmelo"

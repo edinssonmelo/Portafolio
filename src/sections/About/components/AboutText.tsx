@@ -9,14 +9,14 @@ export const AboutText = () => {
       <div className="relative content-center items-center box-border caret-transparent gap-x-[25px] flex flex-col shrink-0 h-min justify-center gap-y-[25px] w-full overflow-hidden">
         <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start break-words w-full">
           <p className="text-stone-900 text-lg box-border caret-transparent leading-[30px] break-words font-dm_sans">
-            AI Software Engineer with over 8 years of experience, focused on
-            solving real business needs. Specialized in enterprise product
-            development and{" "}
-            <span className="whitespace-nowrap">product vision</span>.
+            I&apos;m an AI Software Engineer and AI Product Builder with over 8
+            years of experience. I work with companies, startups, founders, and
+            software engineers to ship AI-powered SaaS, web, and mobile products.
           </p>
           <p className="text-stone-900 text-lg box-border caret-transparent leading-[30px] break-words font-dm_sans mt-4">
-            I apply AI assisted and agentic engineering to accelerate delivery,
-            explore and validate ideas, and multiply 10x execution.
+            From MVP definition to production launch, I combine software
+            architecture, AI integration, and product thinking to build tools
+            that solve real business problems.
           </p>
         </div>
       </div>

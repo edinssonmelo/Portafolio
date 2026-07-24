@@ -1,0 +1,20 @@
+---
+description: Portafolio project context — read memory-bank before meaningful work
+alwaysApply: true
+---
+
+# Portafolio (edinssonmelo.com)
+
+Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, `learnedPatterns.md`, `systemPatterns.md`).
+
+## Must-know
+
+- **Identity**: AI Product Builder / AI Software Engineer
+- **Logos**: transparent PNG only — `bg-transparent` on Logo component; no background on logo `img`
+- **Screenshots**: `public/screenshots/` — never `public/projects/`
+- **Deploy**: push to `main` auto-deploys via self-hosted runner on ai-server (`/srv/apps/portafolio`)
+- **Style**: Cabinet Grotesk headings, DM Sans body, stone-900 navbar, lime accent `#DCFF31`
+
+## After meaningful tasks
+
+Update `memory-bank/activeContext.md` and `progress.md` with what changed.

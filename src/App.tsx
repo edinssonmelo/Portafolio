@@ -13,6 +13,9 @@ import { Contact } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { ProjectsPage } from "@/pages/ProjectsPage";
 import { ProjectDetail } from "@/pages/ProjectDetail";
+import { AboutPage } from "@/pages/AboutPage";
+import { BlogPage } from "@/pages/BlogPage";
+import { BlogPostPage } from "@/pages/BlogPostPage";
 import { CotizacionPage } from "@/pages/CotizacionPage";
 import { PlanesPage } from "@/pages/PlanesPage";
 import { Link } from "react-router-dom";
@@ -92,6 +95,11 @@ export const App = () => {
               <HomePage />
             </div>
           } />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/blog" element={<Outlet />}>
+            <Route index element={<BlogPage />} />
+            <Route path=":slug" element={<BlogPostPage />} />
+          </Route>
           <Route path="/projects" element={<Outlet />}>
             <Route index element={<ProjectsPage />} />
             <Route path=":slug" element={<ErrorBoundary><ProjectDetail /></ErrorBoundary>} />

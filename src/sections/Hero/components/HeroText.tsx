@@ -4,7 +4,7 @@ export const HeroText = () => {
       <div className="w-full">
         <h1 className="text-[28px] font-bold leading-tight text-stone-900 font-cabinet_grotesk sm:text-[32px] md:text-[62px] md:tracking-[-0.62px] md:leading-[68px]">
           <span className="block md:whitespace-nowrap">I&apos;m Edinsson Melo.</span>
-          <span className="block md:whitespace-nowrap">AI Software Engineer</span>
+          <span className="block md:whitespace-nowrap">AI Product Builder</span>
         </h1>
       </div>
       <div className="w-full space-y-1 md:space-y-0">

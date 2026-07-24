@@ -9,7 +9,8 @@ export const Portfolio = () => {
         <SectionHeader
           iconUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"
           label="My Works"
-          title="Projects that inspired me and were genuinely fun to build."
+          title="Projects that were genuinely fun to build."
+          description="Apps and products I've shipped."
           variant="relative content-center items-center box-border caret-transparent gap-x-[25px] flex flex-col shrink-0 h-min justify-center max-w-[650px] gap-y-[25px] w-full overflow-hidden md:max-w-[700px]"
         />
         <div className="hidden md:block absolute z-0 box-border caret-transparent shrink-0 h-[760px] w-[625px] right-0 bottom-[15px] pointer-events-none">

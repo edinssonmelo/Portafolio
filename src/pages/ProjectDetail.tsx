@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import { ProjectImageLightbox } from "@/components/ProjectImageLightbox";
+import { CaseStudySections } from "@/components/CaseStudySections";
 
 // Project data - in a real app, this would come from an API or CMS
 const projects: Record<string, {
@@ -22,6 +23,8 @@ const projects: Record<string, {
         role: string;
     };
     thingsIDid: string;
+    outcome?: string;
+    whatILearned?: string;
     mainImage: string;
     images: string[];
     imageAspect?: string;
@@ -270,6 +273,32 @@ const projects: Record<string, {
         previousProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/screenshots/wordjet-landing.png" },
         nextProject: { slug: "overup", title: "OverUP", image: "/screenshots/overup-hero.png" }
     }
+};
+
+const buildCaseStudySections = (project: {
+    aboutText: string;
+    thingsIDid: string;
+    projectDetails: string;
+    services: string[];
+    outcome?: string;
+    whatILearned?: string;
+    testimonial: { quote: string };
+    livePreviewUrl: string;
+}) => {
+    const outcome = project.outcome ?? project.testimonial.quote;
+    const sections = [
+        { title: "Problem", content: project.aboutText },
+        { title: "My role", content: project.thingsIDid },
+        { title: "Technical decisions", content: project.projectDetails },
+        { title: "Stack", items: project.services },
+        { title: "Outcome", content: outcome },
+    ];
+
+    if (project.whatILearned) {
+        sections.push({ title: "What I learned", content: project.whatILearned });
+    }
+
+    return sections;
 };
 
 const formatLiveSiteLabel = (url: string) => {
@@ -620,6 +649,8 @@ export const ProjectDetail = () => {
 
                     {/* Image carousel */}
                     <ProjectDetailContent project={project} />
+
+                    <CaseStudySections sections={buildCaseStudySections(project)} />
 
                     {hasLivePreview && (
                         <ProjectLiveLink url={project.livePreviewUrl} />

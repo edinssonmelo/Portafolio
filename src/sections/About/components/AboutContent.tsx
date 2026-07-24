@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SectionHeader } from "@/components/SectionHeader";
 import { AboutText } from "@/sections/About/components/AboutText";
 
@@ -10,6 +11,12 @@ export const AboutContent = () => {
         variant=""
       />
       <AboutText />
+      <Link
+        to="/about"
+        className="text-stone-900 text-base font-semibold underline-offset-2 hover:underline font-dm_sans"
+      >
+        Read full profile →
+      </Link>
     </div>
   );
 };

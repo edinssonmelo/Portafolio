@@ -20,15 +20,26 @@ export const Logo = () => {
   return (
     <div
       onClick={handleClick}
-      className="relative h-[55px] w-[110px] cursor-pointer md:h-[57px] md:w-[150px]"
+      className="relative flex shrink-0 cursor-pointer items-center bg-transparent"
     >
       <img
-        src="/assets/logo.png"
+        src="/assets/logo-mobile.png"
         alt="Edinsson Melo"
-        width={500}
-        height={500}
+        width={1254}
+        height={1254}
         decoding="async"
-        className="block h-full w-full object-cover object-center"
+        draggable={false}
+        className="block h-10 w-10 bg-transparent object-contain object-center md:hidden"
+      />
+      <img
+        src="/assets/logo-full.png"
+        alt="Edinsson Melo"
+        width={1672}
+        height={941}
+        decoding="async"
+        draggable={false}
+        className="hidden h-[58px] w-auto bg-transparent object-contain object-left md:block md:h-[68px] lg:h-[76px]"
+        style={{ maxWidth: "min(320px, 48vw)" }}
       />
     </div>
   );

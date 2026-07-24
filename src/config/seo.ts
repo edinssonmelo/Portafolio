@@ -3,20 +3,22 @@
  * Centralized SEO settings for all routes
  */
 
+import { getBlogPost } from '@/data/blog';
+
 export const SITE_CONFIG = {
     name: 'Edinsson Melo',
-    title: 'Edinsson Melo | AI Software Engineer & CTO',
+    title: 'Edinsson Melo | AI Product Builder',
     description:
-        'AI Software Engineer and CTO with 8+ years of experience. I build AI-powered SaaS, MVPs, and enterprise software from architecture to production.',
+        'AI Software Engineer and AI Product Builder with 8+ years of experience. I ship AI-powered SaaS, web, and mobile products for companies, startups, founders, and software engineers.',
     url: 'https://edinssonmelo.com',
-    image: 'https://edinssonmelo.com/assets/logo.png',
+    image: 'https://edinssonmelo.com/assets/logo-full.png',
     locale: 'en_US',
     type: 'website',
     twitterHandle: '@edinssonmelo',
     email: 'edinssonadrian@gmail.com',
     keywords: [
+        'AI Product Builder',
         'AI Software Engineer',
-        'CTO',
         'software architect',
         'AI SaaS',
         'MVP development',
@@ -62,16 +64,30 @@ export type SEOConfig = {
 
 export const seoConfig: Record<string, SEOConfig> = {
     '/': {
-        title: 'Edinsson Melo | AI Software Engineer & CTO',
+        title: 'Edinsson Melo | AI Product Builder',
         description:
-            'AI Software Engineer and CTO with 8+ years of experience. I help companies build AI-powered products, SaaS platforms, and MVPs from architecture to launch.',
+            'AI Software Engineer and AI Product Builder with 8+ years of experience. I ship AI-powered products, SaaS platforms, and MVPs for companies, startups, founders, and software engineers.',
         path: '/',
         type: 'website',
     },
-    '/projects': {
-        title: 'Projects | Edinsson Melo | AI SaaS and Product Portfolio',
+    '/about': {
+        title: 'About Edinsson Melo | AI Product Builder',
         description:
-            'Case studies: Declaramelo, OpenWhispr, Bernal Tech B2B, Wordjet.ai, Seguros SURA SuperApp, OverUP, and more. AI native apps, SaaS, and fullstack software.',
+            'Learn about Edinsson Melo, an AI Software Engineer and AI Product Builder based in Cúcuta, Colombia. Background, specialties, and selected work.',
+        path: '/about',
+        type: 'profile',
+    },
+    '/blog': {
+        title: 'Blog | Edinsson Melo',
+        description:
+            'Articles on AI-first product development, SaaS architecture, MVP building, and software engineering by Edinsson Melo.',
+        path: '/blog',
+        type: 'website',
+    },
+    '/projects': {
+        title: 'Projects | Edinsson Melo',
+        description:
+            'Apps and products I have shipped: Declaramelo, OpenWhispr, Bernal Tech B2B, Wordjet.ai, Seguros SURA SuperApp, OverUP, and more.',
         path: '/projects',
         type: 'website',
     },
@@ -137,6 +153,20 @@ export const projectSeoConfig: Record<string, SEOConfig> = {
 };
 
 export const getSEOConfig = (pathname: string): SEOConfig => {
+    const blogMatch = pathname.match(/^\/blog\/([^/]+)$/);
+    if (blogMatch) {
+        const slug = blogMatch[1];
+        const post = getBlogPost(slug);
+        if (post) {
+            return {
+                title: `${post.title} | Edinsson Melo`,
+                description: post.description,
+                path: pathname,
+                type: 'article',
+            };
+        }
+    }
+
     const projectMatch = pathname.match(/^\/projects\/([^/]+)$/);
     if (projectMatch) {
         const slug = projectMatch[1];
