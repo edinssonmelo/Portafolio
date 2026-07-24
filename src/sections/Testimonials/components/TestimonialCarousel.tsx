@@ -143,7 +143,7 @@ export const TestimonialCarousel = () => {
 
   return (
     <section
-      className="relative flex w-full flex-col gap-4 px-4 py-8 md:gap-0 md:px-12 md:py-20 lg:px-[120px]"
+      className="relative flex w-full flex-col gap-4 px-4 py-6 md:gap-0 md:px-10 md:py-10 lg:px-14"
       aria-roledescription="carousel"
     >
       <ul
@@ -160,7 +160,7 @@ export const TestimonialCarousel = () => {
             key={index}
             aria-label={`${index + 1} of ${testimonials.length}`}
             aria-hidden={index !== currentIndex}
-            className="box-border shrink-0 snap-center snap-always w-full min-w-full px-2 md:px-14"
+            className="box-border shrink-0 snap-center snap-always w-full min-w-full px-2 md:px-10"
           >
             <TestimonialCard
               name={testimonial.name}
@@ -208,7 +208,7 @@ export const TestimonialCarousel = () => {
       {/* Desktop: side overlay controls */}
       <fieldset
         aria-label="Carousel pagination controls"
-        className="pointer-events-none absolute inset-0 hidden items-center justify-between border-0 p-[30px] md:flex"
+        className="pointer-events-none absolute inset-0 hidden items-center justify-between border-0 p-5 md:flex"
       >
         <button
           type="button"

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { getScreenshotMeta, isMobileScreenshot } from "@/config/screenshotMeta";
+import { isMobileScreenshot } from "@/config/screenshotMeta";
 
 const PREVIEW_WORD_COUNT = 14;
+const HOVER_CYCLE_MS = 1400;
 
 const portfolioLinkClassName =
   "font-semibold text-stone-900 underline decoration-stone-400 underline-offset-2 transition-colors hover:decoration-stone-900";
@@ -23,6 +24,7 @@ const getPreviewText = (text: string) => {
 export type PortfolioCardProps = {
   href: string;
   imageUrl: string;
+  galleryImages?: readonly string[];
   imageSizes?: string;
   imageVariant?: string;
   imageAspect?: string;
@@ -30,10 +32,13 @@ export type PortfolioCardProps = {
   imageHeight?: number;
   title: string;
   description: string;
+  enableHoverGallery?: boolean;
 };
 
 export const PortfolioCard = (props: PortfolioCardProps) => {
   const [expanded, setExpanded] = useState(false);
+  const [imageIndex, setImageIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
   const navigate = useNavigate();
   const routePath = props.href.startsWith("./")
     ? props.href.replace("./", "/")
@@ -42,54 +47,92 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
       : `/${props.href}`;
 
   const { preview, canExpand } = getPreviewText(props.description);
-  const meta = getScreenshotMeta(props.imageUrl);
-  const width = props.imageWidth ?? meta?.width;
-  const height = props.imageHeight ?? meta?.height;
-  const mobileShot = isMobileScreenshot(props.imageUrl);
-  const aspectRatio =
-    width && height ? `${width} / ${height}` : undefined;
+
+  const images = useMemo(() => {
+    const gallery = props.galleryImages?.length
+      ? [...props.galleryImages]
+      : [props.imageUrl];
+    return gallery;
+  }, [props.galleryImages, props.imageUrl]);
+
+  const canCycle = props.enableHoverGallery !== false && images.length > 1;
+
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
+
+  useEffect(() => {
+    if (!isHovering || !canCycle) return;
+
+    const timer = window.setInterval(() => {
+      setImageIndex((current) => (current + 1) % images.length);
+    }, HOVER_CYCLE_MS);
+
+    return () => window.clearInterval(timer);
+  }, [isHovering, canCycle, images.length]);
 
   const handleImageClick = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate(routePath);
   };
 
+  const handleMouseEnter = () => {
+    if (!canCycle) return;
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    setImageIndex(0);
+  };
+
   return (
-    <article className="relative z-10 flex w-full flex-col gap-5 md:gap-[30px]">
+    <article className="relative z-10 flex h-full w-full flex-col gap-4 md:gap-5">
       <div
         role="button"
         tabIndex={0}
         onClick={handleImageClick}
         onKeyDown={(e) => e.key === "Enter" && navigate(routePath)}
-        className={`relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-[20px] border-2 border-teal-300 bg-neutral-100 ${
-          mobileShot ? "min-h-[280px] py-6" : ""
-        } ${props.imageAspect ?? ""}`}
-        style={aspectRatio && !mobileShot ? { aspectRatio } : undefined}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="relative flex aspect-[16/9] w-full cursor-pointer items-center justify-center overflow-hidden rounded-[20px] border-2 border-teal-300 bg-neutral-100"
       >
-        <img
-          sizes={props.imageSizes}
-          src={props.imageUrl}
-          alt={props.title}
-          width={width}
-          height={height}
-          loading="lazy"
-          decoding="async"
-          className={
-            mobileShot
-              ? `h-auto w-[140px] max-w-[42%] object-contain object-center ${props.imageVariant ?? ""}`
-              : `block h-auto w-full object-contain object-center ${props.imageVariant ?? ""}`
-          }
-        />
+        {images.map((src, index) => {
+          const shotIsMobile = isMobileScreenshot(src);
+          const isActive = index === imageIndex;
+
+          return (
+            <img
+              key={src}
+              sizes={props.imageSizes}
+              src={src}
+              alt={`${props.title}${index === 0 ? "" : ` - ${index + 1}`}`}
+              loading={index === 0 ? "lazy" : "eager"}
+              decoding="async"
+              aria-hidden={!isActive}
+              className={`absolute inset-0 m-auto transition-opacity duration-700 ease-in-out ${
+                isActive ? "opacity-100" : "opacity-0"
+              } ${
+                shotIsMobile
+                  ? "h-full w-auto max-w-[32%] object-contain object-center sm:max-w-[28%] md:max-w-[24%]"
+                  : "h-full w-full object-contain object-top p-1 md:p-2"
+              }`}
+            />
+          );
+        })}
       </div>
 
-      <div className="relative z-10 flex w-full flex-col gap-4 md:gap-5">
-        <div className="flex flex-col gap-2.5">
-          <h3 className="text-xl font-bold leading-snug text-stone-900 font-dm_sans md:text-2xl md:leading-[30px]">
+      <div className="relative z-10 flex w-full flex-col gap-3 md:gap-4">
+        <div className="flex flex-col gap-2">
+          <h3 className="font-dm_sans text-xl font-bold leading-snug text-stone-900 md:text-2xl">
             <Link to={routePath} className={portfolioLinkClassName}>
               {props.title}
             </Link>
           </h3>
-          <p className="text-stone-900 text-base leading-relaxed font-dm_sans md:text-lg md:leading-[30px]">
+          <p className="font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg">
             {expanded || !canExpand ? props.description : `${preview}...`}
             {canExpand ? (
               <>

@@ -4,16 +4,16 @@ import { AboutText } from "@/sections/About/components/AboutText";
 
 export const AboutContent = () => {
   return (
-    <div className="relative content-start items-start box-border caret-transparent gap-x-[25px] flex basis-auto flex-col grow-0 shrink-0 h-min justify-center gap-y-[25px] w-full overflow-hidden md:basis-0 md:grow md:w-px">
+    <div className="relative flex w-full flex-col items-start gap-4 overflow-hidden md:gap-5 lg:flex-1">
       <SectionHeader
         iconUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"
         label="About"
-        variant=""
+        align="start"
       />
       <AboutText />
       <Link
         to="/about"
-        className="text-stone-900 text-base font-semibold underline-offset-2 hover:underline font-dm_sans"
+        className="font-dm_sans text-base font-semibold text-stone-900 underline-offset-2 hover:underline"
       >
         Read full profile →
       </Link>

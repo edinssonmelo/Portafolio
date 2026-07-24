@@ -84,7 +84,7 @@ export const ContactForm = () => {
         onChange={handleChange}
         required
       />
-      <div>
+      <div className="flex w-full flex-col items-center gap-4 md:gap-5">
         <GradientButton type="submit" disabled={isSending}>
           <span className="text-lg font-semibold tracking-[-0.72px] leading-[19px] text-stone-900 font-dm_sans">
             {isSending ? "Sending..." : "Submit"}
@@ -92,7 +92,7 @@ export const ContactForm = () => {
         </GradientButton>
       </div>
       {status && !isSending ? (
-        <p className="text-sm text-stone-700 font-dm_sans">{status}</p>
+        <p className="text-center text-sm text-stone-700 font-dm_sans">{status}</p>
       ) : null}
     </form>
   );

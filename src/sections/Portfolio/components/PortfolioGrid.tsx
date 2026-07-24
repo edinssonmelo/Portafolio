@@ -1,9 +1,14 @@
 import { PortfolioCard } from "@/sections/Portfolio/components/PortfolioCard";
 
-const PROJECTS = [
+export const PORTFOLIO_PROJECTS = [
   {
     href: "/projects/declaramelo",
     imageUrl: "/screenshots/declaramelo-hero.png",
+    galleryImages: [
+      "/screenshots/declaramelo-hero.png",
+      "/screenshots/declaramelo-features.png",
+      "/screenshots/declaramelo-process.png",
+    ],
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -14,6 +19,11 @@ const PROJECTS = [
   {
     href: "/projects/openwhispr",
     imageUrl: "/screenshots/openwhispr-hero.png",
+    galleryImages: [
+      "/screenshots/openwhispr-hero.png",
+      "/screenshots/openwhispr-meetings.png",
+      "/screenshots/openwhispr-transcription.png",
+    ],
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -24,6 +34,12 @@ const PROJECTS = [
   {
     href: "/projects/bernal-tech-b2b",
     imageUrl: "/screenshots/bernal-dashboard.png",
+    galleryImages: [
+      "/screenshots/bernal-dashboard.png",
+      "/screenshots/bernal-login.png",
+      "/screenshots/bernal-catalog.png",
+      "/screenshots/bernal-product.png",
+    ],
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -34,6 +50,10 @@ const PROJECTS = [
   {
     href: "/projects/wordjet-ai",
     imageUrl: "/screenshots/wordjet-landing.png",
+    galleryImages: [
+      "/screenshots/wordjet-landing.png",
+      "/screenshots/wordjet-editor.png",
+    ],
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -44,6 +64,12 @@ const PROJECTS = [
   {
     href: "/projects/superapp-mobile",
     imageUrl: "/screenshots/sura-explora.png",
+    galleryImages: [
+      "/screenshots/sura-explora.png",
+      "/screenshots/sura-ingresa.png",
+      "/screenshots/sura-resuelve.png",
+      "/screenshots/sura-avanza.png",
+    ],
     title: "SuperApp Mobile",
     description:
       "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA, building features across Health, Mobility, Home, Wallet, Refunds, and Claims while supporting live operations for end users.",
@@ -51,6 +77,11 @@ const PROJECTS = [
   {
     href: "/projects/overup",
     imageUrl: "/screenshots/overup-hero.png",
+    galleryImages: [
+      "/screenshots/overup-hero.png",
+      "/screenshots/overup-catalog.png",
+      "/screenshots/overup-product.png",
+    ],
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -60,11 +91,25 @@ const PROJECTS = [
   },
 ] as const;
 
-export const PortfolioGrid = () => {
+type PortfolioGridProps = {
+  limit?: number;
+  enableHoverGallery?: boolean;
+};
+
+export const PortfolioGrid = ({
+  limit,
+  enableHoverGallery = false,
+}: PortfolioGridProps) => {
+  const projects = limit ? PORTFOLIO_PROJECTS.slice(0, limit) : PORTFOLIO_PROJECTS;
+
   return (
-    <div className="relative z-10 grid w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-[70px]">
-      {PROJECTS.map((project) => (
-        <PortfolioCard key={project.href} {...project} />
+    <div className="relative z-10 grid w-full grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-x-12 md:gap-y-10">
+      {projects.map((project) => (
+        <PortfolioCard
+          key={project.href}
+          {...project}
+          enableHoverGallery={enableHoverGallery}
+        />
       ))}
     </div>
   );

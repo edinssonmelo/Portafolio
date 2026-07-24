@@ -3,13 +3,13 @@ export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
 > = {
-    "declaramelo-hero.png": { width: 1024, height: 440 },
-    "declaramelo-features.png": { width: 1024, height: 556 },
+    "declaramelo-hero.png": { width: 1024, height: 580 },
+    "declaramelo-features.png": { width: 1024, height: 580 },
     "declaramelo-process.png": { width: 1024, height: 555 },
     "openwhispr-hero.png": { width: 1024, height: 557 },
     "openwhispr-meetings.png": { width: 1024, height: 615 },
     "openwhispr-transcription.png": { width: 898, height: 464 },
-    "bernal-dashboard.png": { width: 1024, height: 479 },
+    "bernal-dashboard.png": { width: 1024, height: 576 },
     "bernal-login.png": { width: 1024, height: 553 },
     "bernal-catalog.png": { width: 1024, height: 556 },
     "bernal-product.png": { width: 1024, height: 576 },

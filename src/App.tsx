@@ -8,8 +8,7 @@ import { Testimonials } from "@/sections/Testimonials";
 import { Portfolio } from "@/sections/Portfolio";
 import { Stats } from "@/sections/Stats";
 // import { Badges } from "@/sections/Badges";
-import { CTA } from "@/sections/CTA";
-import { Contact } from "@/sections/Contact";
+import { CTAContact } from "@/sections/CTAContact";
 import { Footer } from "@/sections/Footer";
 import { ProjectsPage } from "@/pages/ProjectsPage";
 import { ProjectDetail } from "@/pages/ProjectDetail";
@@ -28,7 +27,7 @@ const HomePage = () => {
     <>
       <Header />
       <div className="relative flex w-full min-w-0 flex-col overflow-x-clip">
-        <div className="static box-content caret-black shrink h-auto w-auto left-auto top-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-8 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:left-0 md:top-[100px]"></div>
+        <div className="static box-content caret-black shrink h-auto w-auto left-auto top-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-8 md:w-full md:left-0 md:top-[84px]"></div>
         <Hero />
         <Services />
         <About />
@@ -36,8 +35,7 @@ const HomePage = () => {
         <Portfolio />
         <Stats />
         {/* <Badges /> */}
-        <CTA />
-        <Contact />
+        <CTAContact />
       </div>
       <div className="box-border caret-transparent"></div>
       <div className="relative box-border caret-transparent grow h-0 w-0 bg-[position:0px_0px]"></div>
@@ -55,7 +53,7 @@ const ScrollToHash = () => {
       setTimeout(() => {
         const element = document.getElementById(elementId);
         if (element) {
-          const headerOffset = 100;
+          const headerOffset = 84;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

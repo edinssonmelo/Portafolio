@@ -4,34 +4,35 @@ export type SectionHeaderProps = {
   title?: string;
   description?: string;
   showBreak?: boolean;
-  variant: string;
+  align?: "center" | "start";
+  variant?: string;
 };
 
 const badgeClassName =
   "relative inline-flex items-center justify-center gap-1 rounded-[20px] border-2 border-stone-900 bg-white px-4 py-1.5";
 
 export const SectionHeader = (props: SectionHeaderProps) => {
+  const align = props.align ?? "center";
+  const alignClass =
+    align === "start" ? "items-start text-left" : "items-center text-center";
+
   return (
     <div
-      className={`relative flex w-full flex-col items-center gap-6 overflow-visible ${props.variant}`}
+      className={`relative flex w-full flex-col gap-4 overflow-visible md:gap-5 ${alignClass} ${props.variant ?? ""}`}
     >
       <div className="relative z-[2] shrink-0">
         <div className={badgeClassName}>
           <div className="relative h-3 w-[11px] shrink-0">
-            <img
-              src={props.iconUrl}
-              alt=""
-              className="h-full w-full"
-            />
+            <img src={props.iconUrl} alt="" className="h-full w-full" />
           </div>
-          <p className="text-stone-900 text-[13px] font-black tracking-[0.65px] leading-[23px] uppercase font-dm_sans whitespace-nowrap">
+          <p className="whitespace-nowrap font-dm_sans text-[13px] font-black uppercase leading-[23px] tracking-[0.65px] text-stone-900">
             {props.label}
           </p>
         </div>
       </div>
       {props.title && (
-        <div className="relative z-[1] flex w-full flex-col justify-start gap-4">
-          <h2 className="text-stone-900 text-4xl font-bold tracking-[-0.36px] leading-[42px] break-words text-center font-dm_sans md:text-[44px] md:tracking-[-0.44px] md:leading-[50px]">
+        <div className={`relative z-[1] flex w-full flex-col justify-start gap-3 md:gap-4 ${alignClass}`}>
+          <h2 className={`break-words font-dm_sans text-2xl font-bold leading-tight tracking-tight text-stone-900 md:text-3xl md:leading-snug ${align === "start" ? "text-left" : "text-center"}`}>
             {props.showBreak ? (
               <>
                 {props.title.split("<br />")[0]}
@@ -43,7 +44,7 @@ export const SectionHeader = (props: SectionHeaderProps) => {
             )}
           </h2>
           {props.description ? (
-            <p className="text-stone-900 text-lg leading-[30px] text-center font-dm_sans">
+            <p className={`font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg ${align === "start" ? "text-left" : "text-center"}`}>
               {props.description}
             </p>
           ) : null}

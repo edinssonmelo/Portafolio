@@ -129,7 +129,7 @@ export const TestimonialCard = (props: TestimonialCardProps) => {
           </div>
         </div>
         <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-          <p className="text-black text-base box-content caret-black leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-stone-900 md:text-2xl md:aspect-auto md:box-border md:caret-transparent md:leading-9 md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-dm_sans">
+          <p className="min-h-0 min-w-0 break-normal font-dm_sans text-base leading-relaxed text-stone-900 md:min-h-[auto] md:min-w-[auto] md:text-center md:text-xl md:leading-8">
             {props.quote}
           </p>
         </div>

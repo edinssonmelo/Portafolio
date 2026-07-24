@@ -22,7 +22,7 @@ export const GradientButton = ({
   onClick,
 }: GradientButtonProps) => {
   const faceClassName =
-    "relative z-10 flex shrink-0 items-center justify-center gap-2 whitespace-nowrap bg-white px-[30px] py-[18px] rounded-[10px] after:pointer-events-none after:absolute after:inset-0 after:rounded-[10px] after:border-2 after:border-stone-900 after:border-solid disabled:opacity-60";
+    "relative z-10 flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-[10px] bg-white px-6 py-4 after:pointer-events-none after:absolute after:inset-0 after:rounded-[10px] after:border-2 after:border-solid after:border-stone-900 disabled:opacity-60";
 
   const shadowClassName =
     "pointer-events-none absolute left-0 top-1.5 h-full w-full rounded-[10px] bg-[conic-gradient(rgb(126,230,216)_0deg,rgb(220,255,49)_360deg)] after:absolute after:inset-0 after:rounded-[10px] after:border-2 after:border-stone-900 after:border-solid";

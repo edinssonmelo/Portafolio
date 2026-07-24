@@ -34,8 +34,8 @@ const SERVICES = [
 
 export const ServiceGrid = () => {
   return (
-    <div className="relative flex flex-col items-center gap-8 w-full max-w-[1140px] md:gap-[69px]">
-      <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 md:gap-[30px] lg:gap-[35px]">
+    <div className="relative flex w-full max-w-[1140px] flex-col items-center gap-8 md:gap-10">
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:gap-6">
         {SERVICES.map((service) => (
           <ServiceCard
             key={service.title}
@@ -48,7 +48,7 @@ export const ServiceGrid = () => {
         ))}
       </div>
       <GradientButton to="/projects">
-        <span className="text-lg font-semibold tracking-[-0.72px] leading-[19px] text-stone-900 font-dm_sans">
+        <span className="font-dm_sans text-lg font-semibold leading-[19px] tracking-[-0.72px] text-stone-900">
           Check Portfolio
         </span>
       </GradientButton>

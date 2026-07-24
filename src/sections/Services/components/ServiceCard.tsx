@@ -8,24 +8,14 @@ export type ServiceCardProps = {
 
 export const ServiceCard = (props: ServiceCardProps) => {
   return (
-    <div className="w-full h-full">
+    <div className="h-full w-full">
       <div
-        className="relative flex flex-row items-start gap-4 p-5 w-full rounded-[20px] md:gap-5 md:p-[30px]"
-        style={{
-          border: "2px solid rgb(29, 29, 29)",
-          backgroundColor: "rgb(245, 245, 245)",
-        }}
+        className="relative flex w-full flex-row items-start gap-3 rounded-[20px] border-2 border-stone-900 bg-neutral-100 p-4 md:gap-4 md:p-5"
       >
-        <div className="relative shrink-0 h-14 w-14 md:h-[74px] md:w-[74px]">
-          <div
-            className="relative flex items-center justify-center h-full w-full rounded-full"
-            style={{
-              border: "2px solid rgb(29, 29, 29)",
-              backgroundColor: "rgb(255, 255, 255)",
-            }}
-          >
+        <div className="relative h-12 w-12 shrink-0 md:h-14 md:w-14">
+          <div className="relative flex h-full w-full items-center justify-center rounded-full border-2 border-stone-900 bg-white">
             <div
-              className={`relative shrink-0 h-7 w-7 md:h-[34px] ${props.iconVariant || "md:w-[34px] w-7"}`}
+              className={`relative h-6 w-6 shrink-0 md:h-7 md:w-7 ${props.iconVariant || "md:w-7"}`}
             >
               <img
                 src={props.iconUrl}
@@ -36,11 +26,11 @@ export const ServiceCard = (props: ServiceCardProps) => {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-start gap-2 flex-1 min-w-0 md:gap-[10px]">
-          <h3 className="text-stone-900 text-lg font-bold tracking-[-0.5px] leading-snug font-cabinet_grotesk md:text-xl md:leading-[30px]">
+        <div className="relative flex min-w-0 flex-1 flex-col items-start gap-1.5 md:gap-2">
+          <h3 className="font-cabinet_grotesk text-lg font-bold leading-snug tracking-[-0.5px] text-stone-900 md:text-xl">
             {props.title}
           </h3>
-          <p className="text-stone-900 text-base leading-relaxed break-words font-dm_sans min-h-[6rem] md:text-lg md:leading-[30px] md:min-h-[120px]">
+          <p className="break-words font-dm_sans text-base leading-relaxed text-stone-900 md:text-lg">
             {props.description}
           </p>
         </div>

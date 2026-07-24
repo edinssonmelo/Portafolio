@@ -1,6 +1,7 @@
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { PortfolioGrid } from "@/sections/Portfolio/components/PortfolioGrid";
+import { layoutClasses } from "@/config/designTokens";
 
 // Framer styles - matching exact HTML structure with provided styles
 const framerStyles = `
@@ -486,9 +487,9 @@ export const ProjectsPage = () => {
                     </section>
 
                     {/* Projects Section */}
-                    <section className="relative content-center items-center bg-neutral-100 box-border caret-transparent gap-x-2.5 flex shrink-0 h-min justify-center gap-y-2.5 w-full px-[30px] py-[100px] scroll-mt-10 md:py-[150px] md:scroll-mt-0">
-                        <div className="relative content-center items-center box-border caret-transparent gap-x-[50px] flex basis-0 flex-col grow shrink-0 h-min justify-center max-w-[1140px] gap-y-[50px] w-px">
-                            <div className="absolute box-border caret-transparent shrink-0 h-[760px] w-[625px] right-0 bottom-[15px]">
+                    <section className={`${layoutClasses.section} ${layoutClasses.sectionNeutral}`}>
+                        <div className={`${layoutClasses.sectionInner} relative`}>
+                            <div className="pointer-events-none absolute bottom-0 right-0 hidden h-[400px] w-[400px] md:block">
                                 {/* Yellow-green gradient ellipse with blur */}
                                 <svg
                                     className="absolute bottom-[-282px] box-border caret-transparent blur-[100px] shrink-0 left-[-477px] w-[377px] h-[340px] right-0 top-auto pointer-events-none md:top-[-251px] md:left-[-306px] md:right-[328px] md:bottom-[383px] md:w-[603px] md:h-[628px]"

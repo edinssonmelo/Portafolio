@@ -10,6 +10,10 @@
 
 - Design system: `designTokens.ts`, `SurfaceCard`, `SectionBadge`, `TagChip`, `Field`
 - Contact + Stats compacted; Case study panel with brand badges/callout
+- UI bug fixes: Contact blur restored + centered submit; Stats gradient band (no white overlay); CTA compact + CTACard restored; Portfolio grid uniform `aspect-[16/9]` frames for alignment
+- Global compact rhythm: `layoutClasses` in designTokens (`py-16 md:py-20`, `gap-10 md:gap-12`); SectionHeader `text-2xl md:text-3xl`; navbar `84px`; all home sections aligned
+- Portfolio home shows 4 projects; SURA card uses uniform 16:9 frame; Bernal dashboard cover updated
+- CTA + Contact combined side-by-side (`CTAContact`); portfolio hover gallery on home
 
 ## Next steps (user-driven)
 

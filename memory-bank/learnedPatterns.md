@@ -30,9 +30,13 @@ Patterns discovered while building this project. Update when new conventions eme
 
 ### Density (compact UI)
 
-- Contact card: `max-w-[640px]`, `px-6 py-8 md:px-10 md:py-10`
+- **Layout scale** (`layoutClasses` in `designTokens.ts`): sections `py-16 md:py-20`, inner `gap-10 md:gap-12`, `max-w-[1140px]`, `px-[30px]`
+- **Section headers**: `text-2xl md:text-3xl` (was 44px+)
+- **Navbar**: `md:h-[84px]`; scroll offset `84px`
+- Contact card: `max-w-[600px]`, `px-6 py-7 md:px-9 md:py-9`
 - Stats card: `p-6 md:p-8`, numbers `text-3xl md:text-4xl`
 - Case study: `SurfaceCard` on `bg-neutral-100`, section labels uppercase 13px, Outcome in mint callout
+- Secondary pages: `pageHero` / `pageContent` tokens for About, Blog, Projects
 
 ### Logo
 
@@ -43,7 +47,7 @@ Patterns discovered while building this project. Update when new conventions eme
 
 ### Responsive
 
-- Header height: `md:h-[100px]`
+- Header height: `md:h-[84px]`
 - Portfolio carousel arrows: yellow circle buttons outside image frame (match testimonials pattern)
 
 ## Content

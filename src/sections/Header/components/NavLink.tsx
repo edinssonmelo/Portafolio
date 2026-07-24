@@ -29,7 +29,7 @@ export const NavLink = (props: NavLinkProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 100; // Altura del header fijo
+      const headerOffset = 84;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

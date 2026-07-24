@@ -10,6 +10,11 @@
 - [x] Design system + compact Contact, Stats, Case study UI
 - [x] Transparent logos (mobile + full)
 - [x] Auto-deploy workflow + self-hosted runner on ai-server
+- [x] Global compact layout (`layoutClasses`), navbar 84px
+- [x] Portfolio: 4 projects on home, hover gallery, uniform card frames
+- [x] CTA + Contact combined section; blur ellipses fixed
+- [x] Screenshot updates: Declaramelo hero/features, Bernal dashboard
+- [x] `AGENTS.md` — commit + push after every meaningful task
 
 ## Pending
 

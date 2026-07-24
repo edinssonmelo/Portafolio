@@ -19,7 +19,7 @@ const MobileNavLink = ({ href, text, onClick }: { href: string; text: string; on
       // Si ya estamos en home, hacer scroll directamente
       const element = document.getElementById(sectionId);
       if (element) {
-        const headerOffset = 100;
+        const headerOffset = 84;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -74,7 +74,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className="relative bg-stone-900 w-full opacity-100 md:h-[100px] md:px-[30px]"
+      className="relative w-full bg-stone-900 opacity-100 md:h-[84px] md:px-[30px]"
       style={{
         borderBottom: '2px solid rgb(29, 29, 29)',
         borderLeft: '0px',
@@ -86,7 +86,7 @@ export const Navbar = () => {
       <div className="relative max-w-[1140px] mx-auto opacity-100">
         <div className="opacity-100">
           {/* Top bar with logo and hamburger */}
-          <div className="flex items-center justify-between px-3 py-2.5 md:px-0 md:py-0 md:h-[100px] opacity-100">
+          <div className="flex items-center justify-between px-3 py-2.5 opacity-100 md:h-[84px] md:px-0 md:py-0">
             {/* Logo */}
             <div className="opacity-100">
               <Logo />

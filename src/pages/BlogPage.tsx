@@ -2,20 +2,21 @@ import { Link } from 'react-router-dom';
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
 import { BLOG_POSTS } from '@/data/blog';
+import { layoutClasses } from '@/config/designTokens';
 
 export const BlogPage = () => {
     return (
         <div className="text-black text-xs not-italic normal-nums font-normal bg-white min-h-screen font-dm_sans">
             <Header />
             <main>
-                <section className="relative flex w-full flex-col items-center justify-center gap-12 overflow-hidden bg-[rgba(75,251,186,0.7)] px-[30px] pb-[120px] pt-[200px] after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:w-full after:border-b-2 after:border-stone-900">
-                    <div className="relative z-[1] flex w-full max-w-[800px] flex-col items-center gap-6 text-center">
+                <section className={layoutClasses.pageHero}>
+                    <div className="relative z-[1] flex w-full max-w-[800px] flex-col items-center gap-5 text-center md:gap-6">
                         <div className="inline-flex items-center gap-2 rounded-[20px] border-2 border-stone-900 bg-white px-4 py-1.5">
                             <p className="text-[13px] font-black uppercase tracking-[0.65px] text-stone-900">
                                 Blog
                             </p>
                         </div>
-                        <h1 className="font-cabinet_grotesk text-4xl font-bold tracking-[-0.44px] text-stone-900 md:text-[52px] md:leading-[58px]">
+                        <h1 className="font-cabinet_grotesk text-3xl font-bold tracking-tight text-stone-900 md:text-5xl md:leading-tight">
                             Writing on AI products and software
                         </h1>
                         <p className="max-w-[650px] text-lg leading-[30px] text-stone-900">
@@ -25,7 +26,7 @@ export const BlogPage = () => {
                     </div>
                 </section>
 
-                <section className="bg-neutral-100 px-[30px] py-[100px] md:py-[120px]">
+                <section className={layoutClasses.pageContent}>
                     <div className="mx-auto flex max-w-[800px] flex-col gap-8">
                         {BLOG_POSTS.length === 0 ? (
                             <p className="text-lg leading-[30px] text-stone-700">

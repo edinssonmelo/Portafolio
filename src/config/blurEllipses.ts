@@ -393,6 +393,36 @@ export const contactEllipses: BlurEllipseConfig[] = [
 ];
 
 // ============================================
+// CTA + CONTACT (combined section)
+// ============================================
+export const ctaContactEllipses: BlurEllipseConfig[] = [
+    {
+        color: "rgba(220, 255, 49, 0.38)",
+        blur: 90,
+        size: {
+            mobile: { width: "260px", height: "235px", aspectRatio: "1.108_/_1" },
+            desktop: { width: "340px", height: "306px", aspectRatio: "1.108_/_1" },
+        },
+        position: {
+            mobile: { top: "18%", left: "50%", transform: "translate-x-[-50%]" },
+            desktop: { top: "38%", left: "22%" },
+        },
+    },
+    {
+        color: "rgba(127, 230, 217, 0.38)",
+        blur: 90,
+        size: {
+            mobile: { width: "260px", height: "235px", aspectRatio: "1.108_/_1" },
+            desktop: { width: "340px", height: "306px", aspectRatio: "1.108_/_1" },
+        },
+        position: {
+            mobile: { bottom: "12%", left: "50%", transform: "translate-x-[-50%]" },
+            desktop: { top: "38%", right: "22%", left: "auto" },
+        },
+    },
+];
+
+// ============================================
 // CONFIGURACIÓN DE ELIPSES PARA PROJECTS PAGE
 // ============================================
 export const projectsPageEllipses: BlurEllipseConfig[] = [

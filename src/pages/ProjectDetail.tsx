@@ -217,8 +217,8 @@ const projects: Record<string, {
         thingsIDid: "Developed the B2B portal including login, dashboard, catalog, product pages, quotes, and operational modules for wholesale clients.",
         mainImage: "/screenshots/bernal-dashboard.png",
         images: [
-            "/screenshots/bernal-login.png",
             "/screenshots/bernal-dashboard.png",
+            "/screenshots/bernal-login.png",
             "/screenshots/bernal-catalog.png",
             "/screenshots/bernal-product.png"
         ],

@@ -18,4 +18,5 @@ Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, 
 
 ## After meaningful tasks
 
-Update `memory-bank/activeContext.md` and `progress.md` with what changed.
+1. Update `memory-bank/activeContext.md` and `progress.md` with what changed.
+2. **Commit and push to `main`** — always, unless the user explicitly asks not to. See `AGENTS.md` for the full workflow.
