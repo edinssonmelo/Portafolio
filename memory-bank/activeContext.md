@@ -9,7 +9,7 @@
 
 ## Recent changes
 
-- About: story-first bio (curiosity → craft → connection) with hero photo; 8 years software experience
+- About: story-first bio (first PC, Encarta, Stronghold + YouTube link, Chilean mentor → AI Software Engineer); hero photo; 8 years
 - Blog post title: 8 años (not 10); AI callout on prompting with examples
 - SEO/manifest/schema/index.html aligned to AI Software Engineer identity
 - `PageHeader` + `PageSection` on About, Projects, Plans, Blog, project detail

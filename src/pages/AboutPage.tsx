@@ -35,9 +35,38 @@ export const AboutPage = () => {
                         <div className="space-y-6">
                             <p className={bodyText}>
                                 Uno de los recuerdos que más marcó mi camino fue la primera vez que
-                                tuve un computador frente a mí. Me quedé mirando los íconos, los
-                                enlaces, la pequeña casa del navegador y las páginas que se abrían.
-                                Sentía que estaba entrando a un mundo completamente nuevo.
+                                tuve un computador frente a mí. Recuerdo ver una pestaña de Google
+                                abierta, y me pareció sencillamente intrigante: la casita del
+                                navegador, los enlaces y todos los íconos que había ahí. Sentía que
+                                estaba entrando a un mundo completamente nuevo.
+                            </p>
+                            <p className={bodyText}>
+                                Ese computador dinosaurio me lo regaló mi tía. Tenía instalados
+                                Stronghold Crusader y mi primera Encarta. Curioseé Encarta entera.
+                                Me abrió una enciclopedia de cosas, juegos y contenido didáctico, y
+                                fue apasionante.
+                            </p>
+                            <p className={bodyText}>
+                                Stronghold Crusader era un juego de estrategia: construir una
+                                economía y cuidar un castillo. Todavía recuerdo las frases:
+                                &ldquo;Falta madera, mi Señor&rdquo;, &ldquo;Se necesita
+                                oro&rdquo;, &ldquo;La gente se va del castillo, mi Señor&rdquo;.
+                                Llegué a jugar como Expert Player. Puedes ver un partido mío de dos
+                                expertos con una estrategia ya desarrollada en{' '}
+                                <a
+                                    href="https://www.youtube.com/watch?v=vb8bto2vaaA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold text-stone-900 underline underline-offset-2 hover:text-stone-700"
+                                >
+                                    YouTube
+                                </a>
+                                .
+                            </p>
+                            <p className={bodyText}>
+                                Ese juego me enseñó mucho. En general quienes jugaban eran de
+                                Europa, pero tuve un maestro de Chile que me enseñó casi todo. Así
+                                me fui adentrando en la tecnología.
                             </p>
                             <p className={bodyText}>
                                 Esa curiosidad no se fue. Con el tiempo se convirtió en mi
@@ -46,8 +75,8 @@ export const AboutPage = () => {
                                 productos.
                             </p>
                             <p className={bodyText}>
-                                Mi deseo es conectar, compartir y servir a personas que disfruten
-                                construir en este mundo y de verdad les apasione.
+                                Mi deseo es conectar, compartir y servir a personas y empresas que
+                                estén construyendo, creciendo y buscando dar propósito a su trabajo.
                             </p>
                         </div>
 
