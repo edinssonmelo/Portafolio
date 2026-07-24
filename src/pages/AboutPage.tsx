@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
+import { PageHeader } from '@/components/PageHeader';
+import { PageSection } from '@/components/PageSection';
 import { SITE_CONFIG } from '@/config/seo';
-import { layoutClasses } from '@/config/designTokens';
 
 const FEATURED_PROJECTS = [
     { slug: 'declaramelo', title: 'Declaramelo' },
@@ -26,31 +27,17 @@ const LAST_UPDATED = 'July 2026';
 
 export const AboutPage = () => {
     return (
-        <div className="text-black text-xs not-italic normal-nums font-normal bg-white min-h-screen font-dm_sans">
+        <div className="min-h-screen bg-neutral-100 font-dm_sans">
             <Header />
             <main>
-                <section className={layoutClasses.pageHero}>
-                    <div className="relative z-[1] flex w-full max-w-[800px] flex-col items-center gap-5 text-center md:gap-6">
-                        <div className="inline-flex items-center gap-2 rounded-[20px] border-2 border-stone-900 bg-white px-4 py-1.5">
-                            <p className="text-[13px] font-black uppercase tracking-[0.65px] text-stone-900">
-                                About
-                            </p>
-                        </div>
-                        <h1 className="font-cabinet_grotesk text-3xl font-bold tracking-tight text-stone-900 md:text-5xl md:leading-tight">
-                            Edinsson Melo
-                        </h1>
-                        <p className="text-xl font-semibold text-stone-900 md:text-2xl">
-                            An AI Product Builder
-                        </p>
-                        <p className="max-w-[650px] text-lg leading-[30px] text-stone-900">
-                            AI Software Engineer based in {SITE_CONFIG.location.city},{' '}
-                            {SITE_CONFIG.location.country}.
-                        </p>
-                    </div>
-                </section>
+                <PageHeader
+                    badge="About"
+                    title="Edinsson Melo"
+                    kicker="An AI Product Builder"
+                    description={`AI Software Engineer based in ${SITE_CONFIG.location.city}, ${SITE_CONFIG.location.country}.`}
+                />
 
-                <section className={layoutClasses.pageContent}>
-                    <div className="mx-auto flex max-w-[800px] flex-col gap-10 md:gap-12">
+                <PageSection innerClassName="gap-10 md:gap-12">
                         <div className="space-y-4">
                             <h2 className="font-cabinet_grotesk text-3xl font-bold text-stone-900">
                                 Short bio
@@ -161,8 +148,7 @@ export const AboutPage = () => {
                         <p className="border-t border-stone-900/10 pt-6 text-sm text-stone-600">
                             Last updated: {LAST_UPDATED}
                         </p>
-                    </div>
-                </section>
+                </PageSection>
             </main>
             <Footer />
         </div>

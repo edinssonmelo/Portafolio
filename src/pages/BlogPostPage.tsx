@@ -2,6 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
 import { BlogBody } from '@/components/BlogBody';
+import { PageHeader } from '@/components/PageHeader';
+import { PageSection } from '@/components/PageSection';
 import { SurfaceCard } from '@/components/SurfaceCard';
 import { TagChip } from '@/components/TagChip';
 import { formatReadingTime, getBlogPost } from '@/data/blog';
@@ -34,49 +36,47 @@ export const BlogPostPage = () => {
         <div className="min-h-screen bg-neutral-100 font-dm_sans">
             <Header />
             <main>
-                <header className="border-b-2 border-stone-900 bg-white px-[30px] pb-10 pt-32 md:pb-12 md:pt-36">
-                    <div className="mx-auto max-w-[720px]">
+                <PageHeader
+                    badge="Blog"
+                    title={post.title}
+                    description={post.description}
+                    align="left"
+                    backLink={
                         <Link
                             to="/blog"
                             className="inline-flex items-center gap-1 text-sm font-semibold text-stone-600 underline-offset-2 transition-colors hover:text-stone-900 hover:underline"
                         >
                             ← Blog
                         </Link>
-
-                        <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-stone-600">
-                            <time dateTime={post.datePublished}>
-                                {new Date(post.datePublished).toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric',
-                                })}
-                            </time>
-                            <span aria-hidden="true">·</span>
-                            <span>{formatReadingTime(post)}</span>
-                            <span aria-hidden="true">·</span>
-                            <span className="uppercase tracking-wide">
-                                {post.lang === 'es' ? 'Español' : 'English'}
-                            </span>
-                        </div>
-
-                        <h1 className="mt-5 text-balance font-cabinet_grotesk text-[1.75rem] font-bold leading-tight tracking-tight text-stone-900 sm:text-3xl md:text-[2.125rem] md:leading-[1.2]">
-                            {post.title}
-                        </h1>
-
-                        <p className="mt-4 max-w-[640px] font-dm_sans text-base leading-relaxed text-stone-700 md:text-lg">
-                            {post.description}
-                        </p>
-
-                        <div className="mt-5 flex flex-wrap gap-2">
+                    }
+                    footer={
+                        <div className="flex flex-wrap gap-2">
                             {post.tags.map((tag) => (
                                 <TagChip key={tag} label={tag} />
                             ))}
                         </div>
+                    }
+                >
+                    <div className="flex flex-wrap items-center gap-3 text-sm text-stone-600">
+                        <time dateTime={post.datePublished}>
+                            {new Date(post.datePublished).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                            })}
+                        </time>
+                        <span aria-hidden="true">·</span>
+                        <span>{formatReadingTime(post)}</span>
+                        <span aria-hidden="true">·</span>
+                        <span className="uppercase tracking-wide">
+                            {post.lang === 'es' ? 'Español' : 'English'}
+                        </span>
                     </div>
-                </header>
+                </PageHeader>
 
-                <article lang={post.lang} className="px-[30px] py-10 md:py-12">
-                    <SurfaceCard className="mx-auto max-w-[720px] px-6 py-8 md:px-10 md:py-10">
+                <PageSection>
+                    <article lang={post.lang}>
+                        <SurfaceCard className="px-6 py-8 md:px-10 md:py-10">
                         <BlogBody blocks={post.body} />
 
                         <div className="mt-12 space-y-4 border-t border-stone-200 pt-8">
@@ -104,8 +104,9 @@ export const BlogPostPage = () => {
                                 ← Back to Blog
                             </Link>
                         </div>
-                    </SurfaceCard>
-                </article>
+                        </SurfaceCard>
+                    </article>
+                </PageSection>
             </main>
             <Footer />
         </div>

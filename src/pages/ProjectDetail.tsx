@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import { ProjectImageLightbox } from "@/components/ProjectImageLightbox";
 import { ProjectStory, type ProjectStoryData } from "@/components/ProjectStory";
+import { PageHeader } from "@/components/PageHeader";
+import { PageSection } from "@/components/PageSection";
 import { getScreenshotMeta, isMobileScreenshot, screenshotSrc } from "@/config/screenshotMeta";
 
 // Project data - in a real app, this would come from an API or CMS
@@ -402,97 +404,6 @@ const ProjectLiveLink = ({ url }: { url: string }) => (
     </GradientButton>
 );
 
-const projectDetailStyles = `
-.project-detail-hero {
-  font-size: 12px;
-  box-sizing: border-box;
-  place-content: center;
-  align-items: center;
-  background-color: rgba(75, 251, 186, 0.7);
-  display: flex;
-  flex: 0 0 auto;
-  flex-flow: row;
-  gap: 10px;
-  height: min-content;
-  overflow: clip;
-  padding: 200px 30px 120px;
-  position: relative;
-  width: 100%;
-}
-.project-detail-hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 2px solid rgb(29, 29, 29);
-  pointer-events: none;
-}
-.project-detail-hero-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  gap: 50px;
-  overflow: visible;
-}
-.project-detail-hero-text {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 25px;
-  overflow: visible;
-  z-index: 1;
-}
-.project-detail-hero-badge {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 5px 15px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  border: 2px solid rgb(29, 29, 29);
-}
-.project-detail-hero-title {
-  font-family: "Cabinet Grotesk", sans-serif;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 50px;
-  letter-spacing: -0.44px;
-  color: rgb(29, 29, 29);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-@media (max-width: 767px) {
-  .project-detail-hero-title {
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: -0.36px;
-  }
-}
-.project-detail-hero-subtitle {
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  color: rgb(29, 29, 29);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  max-width: 650px;
-  width: 100%;
-}
-`;
 
 const PROJECT_CAROUSEL_BTN_CLASS =
     "flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border-none bg-yellow-300 cursor-pointer md:h-[50px] md:w-[50px]";
@@ -704,30 +615,15 @@ export const ProjectDetail = () => {
 
     return (
         <>
-            <style>{projectDetailStyles}</style>
-            <div className="text-black text-xs not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-[normal] list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-sans_serif">
-                <div className="box-border caret-transparent">
-                    <Header />
+            <div className="min-h-screen bg-neutral-100 font-dm_sans">
+                <Header />
 
-                    {/* Hero Section - same design as /projects and /planes */}
-                    <section className="project-detail-hero" data-border="true">
-                        <div className="project-detail-hero-container">
-                            <div className="project-detail-hero-text">
-                                <div className="project-detail-hero-badge">
-                                    <div className="w-[11px] h-3 flex-shrink-0 flex items-center justify-center">
-                                        <img src="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg" alt="" className="w-full h-full" />
-                                    </div>
-                                    <p className="font-dm_sans text-[13px] font-black tracking-widest uppercase text-stone-900">
-                                        Project
-                                    </p>
-                                </div>
-                                <div className="relative flex flex-col items-center justify-start w-full gap-6">
-                                    <h1 className="project-detail-hero-title">{project.title}</h1>
-                                    <p className="project-detail-hero-subtitle">{project.subtitle}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                <main>
+                    <PageHeader
+                        badge="Project"
+                        title={project.title}
+                        description={project.subtitle}
+                    />
 
                     {/* Image carousel */}
                     <ProjectDetailContent
@@ -736,9 +632,9 @@ export const ProjectDetail = () => {
                     />
 
                     <ProjectStory story={buildProjectStory(project)} />
+                </main>
 
-                    <Footer />
-                </div>
+                <Footer />
             </div>
         </>
     );

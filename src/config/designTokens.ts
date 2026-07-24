@@ -67,8 +67,14 @@ export const layoutClasses = {
     sectionNeutral: 'bg-neutral-100',
     sectionWhite: 'bg-white',
     pageHero:
-        'relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden bg-[rgba(75,251,186,0.7)] px-[30px] pb-16 pt-32 after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:w-full after:border-b-2 after:border-stone-900 md:gap-10 md:pb-20 md:pt-36',
-    pageContent: 'bg-neutral-100 px-[30px] py-16 md:py-20',
+        'border-b-2 border-stone-900 bg-white px-[30px] pb-10 pt-32 md:pb-12 md:pt-36',
+    pageHeader:
+        'border-b-2 border-stone-900 bg-white px-[30px] pb-10 pt-32 md:pb-12 md:pt-36',
+    pageHeaderInner:
+        'mx-auto flex max-w-[800px] flex-col gap-5 md:gap-6',
+    pageSection: 'bg-neutral-100 px-[30px] py-10 md:py-12',
+    pageSectionInner: 'mx-auto flex max-w-[800px] flex-col gap-6',
+    pageSectionWide: 'mx-auto w-full max-w-[1140px]',
 } as const;
 
 export const brandBorderClass = 'border-2 border-stone-900';

@@ -212,7 +212,7 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Gracias a Dios, conseguí mi primera experiencia profesional en SOFO Solutions, una consultora internacional, y tuve la oportunidad de trabajar en un proyecto para Bancolombia.',
+            text: 'Gracias a Dios, conseguí mi primera experiencia profesional en Sophos Solutions, una consultora internacional, y tuve la oportunidad de trabajar en un proyecto para Bancolombia.',
         },
         {
             type: 'p',

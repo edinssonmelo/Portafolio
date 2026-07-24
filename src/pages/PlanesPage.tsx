@@ -1,140 +1,16 @@
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
+import { PageHeader } from "@/components/PageHeader";
+import { PageSection } from "@/components/PageSection";
 import { useEffect, useState } from "react";
 import { PRIMARY_COLOR } from "@/config/colors";
 import { getWhatsAppLink, SITE_CONFIG } from "@/config/seo";
 
 const planesStyles = `
-/* Hero/cover section - same design as /projects */
-.planes-hero-section {
-  font-size: 12px;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  -webkit-font-smoothing: inherit;
-  place-content: center;
-  align-items: center;
-  background-color: rgba(75, 251, 186, 0.7);
-  display: flex;
-  flex: 0 0 auto;
-  flex-flow: row;
-  gap: 10px;
-  height: min-content;
-  overflow: clip;
-  padding: 200px 30px 120px;
-  position: relative;
-  width: 100%;
-}
-.planes-hero-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 2px solid rgb(29, 29, 29);
-  pointer-events: none;
-}
-.planes-hero-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  gap: 50px;
-  overflow: visible;
-}
-.planes-hero-text-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 25px;
-  overflow: visible;
-  z-index: 1;
-}
-.planes-hero-badge {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 5px 15px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  border: 2px solid rgb(29, 29, 29);
-}
-.planes-hero-badge-icon {
-  width: 11px;
-  height: 12px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.planes-hero-badge-icon img {
-  width: 100%;
-  height: 100%;
-}
-.planes-hero-badge-text {
-  font-family: "DM Sans", sans-serif;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  line-height: 23px;
-  color: rgb(29, 29, 29);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.planes-hero-heading-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  gap: 25px;
-  z-index: 1;
-}
-.planes-hero-title {
-  font-family: "Cabinet Grotesk", sans-serif;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 50px;
-  letter-spacing: -0.44px;
-  color: rgb(29, 29, 29);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-@media (max-width: 767px) {
-  .planes-hero-title {
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: -0.36px;
-  }
-}
-.planes-hero-subtitle {
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  color: rgb(29, 29, 29);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  max-width: 550px;
-  width: 100%;
-}
-
 .planes-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 0;
 }
 
 .planes-title {
@@ -490,37 +366,17 @@ export const PlanesPage = () => {
             <script type="application/ld+json">
                 {JSON.stringify(plansSchema)}
             </script>
-            <div className="text-black text-xs not-italic normal-nums font-normal accent-auto bg-white box-border caret-transparent block tracking-[normal] leading-[normal] list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-sans_serif min-h-screen">
+            <div className="min-h-screen bg-neutral-100 font-dm_sans">
                 <Header />
 
-                {/* Hero / cover section - same design as /projects */}
-                <section className="planes-hero-section">
-                    <div className="planes-hero-container">
-                        <div className="planes-hero-text-wrapper">
-                            <div className="planes-hero-badge">
-                                <div className="planes-hero-badge-icon">
-                                    <img
-                                        src="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"
-                                        alt=""
-                                        aria-hidden
-                                    />
-                                </div>
-                                <span className="planes-hero-badge-text">Plans</span>
-                            </div>
-                            <div className="planes-hero-heading-wrapper">
-                                <h2 className="planes-hero-title">
-                                    Web Development Plans
-                                </h2>
-                                <p className="planes-hero-subtitle">
-                                    I offer comprehensive web development packages designed to help businesses establish and grow their digital presence.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <main>
+                    <PageHeader
+                        badge="Plans"
+                        title="Web Development Plans"
+                        description="I offer comprehensive web development packages designed to help businesses establish and grow their digital presence."
+                    />
 
-                <div className="relative content-center items-center bg-neutral-100 box-border caret-transparent gap-x-0 flex flex-col h-auto justify-start min-h-screen gap-y-0 overflow-clip pt-[100px] pb-20 px-[30px] md:py-20 after:absolute after:left-0 after:bottom-0 after:w-full after:border-b-2 after:border-stone-900 after:border-solid after:pointer-events-none">
-                    <div className="w-full max-w-full mx-auto px-0 max-w-[1140px]">
+                    <PageSection width="wide">
                         <div className="planes-container">
                             <div className="planes-grid">
                                 {plans.map((plan) => (
@@ -665,8 +521,8 @@ export const PlanesPage = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </PageSection>
+                </main>
 
                 <Footer />
             </div>
