@@ -68,10 +68,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
     if (!isHovering || !canCycle) return;
 
     const timer = window.setInterval(() => {
-      setImageIndex((current) => {
-        const next = (current + 1) % images.length;
-        return next === 0 ? 1 : next;
-      });
+      setImageIndex((current) => (current + 1) % images.length);
     }, HOVER_CYCLE_MS);
 
     return () => window.clearInterval(timer);
