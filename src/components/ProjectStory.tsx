@@ -1,10 +1,13 @@
+import type { ReactNode } from "react";
 import { SectionBadge } from "@/components/SectionBadge";
 import { TagChip } from "@/components/TagChip";
 import { typographyClasses } from "@/config/designTokens";
 
+const storyParagraphClass = `${typographyClasses.body} text-stone-800 first:text-stone-900`;
+
 export type ProjectStoryData = {
     hook: string;
-    body: string[];
+    body: ReactNode[];
     stack: string[];
     pullQuote?: string;
 };
@@ -14,7 +17,9 @@ type ProjectStoryProps = {
 };
 
 export const ProjectStory = ({ story }: ProjectStoryProps) => {
-    const paragraphs = story.body.filter((p) => p.trim().length > 0);
+    const paragraphs = story.body.filter((paragraph) =>
+        typeof paragraph === "string" ? paragraph.trim().length > 0 : Boolean(paragraph)
+    );
 
     if (paragraphs.length === 0 && story.stack.length === 0) return null;
 
@@ -33,7 +38,7 @@ export const ProjectStory = ({ story }: ProjectStoryProps) => {
                     {paragraphs.map((paragraph, index) => (
                         <p
                             key={index}
-                            className={`${typographyClasses.body} text-stone-800 first:text-stone-900`}
+                            className={storyParagraphClass}
                         >
                             {paragraph}
                         </p>

@@ -182,7 +182,20 @@ const projects: Record<string, {
         story: {
             hook: "An urban streetwear store born from entrepreneurship in Medellín, with brand, catalog, and checkout in one place.",
             body: [
-                "OverUP started as a small venture with my wife and a friend from school: oversized streetwear with real brand energy, sold online and visible on Instagram as @overappoficial. I built the e-commerce experience: landing, catalog, product pages, and purchase flow.",
+                <>
+                    OverUP started as a small venture with my wife and a friend from school: oversized
+                    streetwear with real brand energy, sold online and on{" "}
+                    <a
+                        href="https://www.instagram.com/overup.official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-stone-900 underline-offset-2 hover:underline"
+                    >
+                        Instagram @overup.official
+                    </a>
+                    . I built the e-commerce experience: landing, catalog, product pages, and purchase
+                    flow.
+                </>,
                 "The brand had momentum in Medellín. After moving to Cúcuta, climate and inventory did not match the product we had produced, and the textile market grew tougher with global competition. We made the call to close the project with lessons learned rather than force something that no longer fit.",
                 "It was not the outcome we hoped for, but the experience reinforced what I love building: products, brands, and software. OverUP is no longer active; the skills and judgment from that chapter carry into everything I ship today.",
             ],
