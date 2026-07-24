@@ -321,9 +321,9 @@ const projects: Record<string, {
         story: {
             hook: "Shipping inside Seguros SURA's SuperApp, the main mobile surface for insurance businesses at scale.",
             body: [
-                "At SURA I joined one of the strongest teams behind the SuperApp: the primary channel where multiple insurance businesses meet customers on iOS and Android. It was an environment with serious engineering standards, modern tools, and real operational pressure.",
-                "Beyond feature work, I spent meaningful time close to production support and end users, resolving incidents and keeping service continuity when problems reached real people. That mix of build and operate across Health, Mobility, Home, Wallet, Refunds, and Claims was among the most formative chapters of my career.",
-                "I worked across several areas at SURA (architecture, mobile assistance, the SuperApp, DOCS/controls/OX, and bolsa), but the SuperApp remains the most memorable. I am grateful to Seguros SURA and to Ceiba Software, the consultancy that supported me through that growth.",
+                "At SURA I joined one of the strongest teams behind the SuperApp: the main channel where multiple insurance businesses connect with customers on iOS and Android. It was an environment with high engineering standards, modern tools, and real operational pressure.",
+                "SURA offers many services across the company, and the SuperApp was the front door for customers. Coordinating with every area and business unit was a real challenge, and it demanded close collaboration every day. I was lucky to work with an excellent team, both on the human side and on the technical side.",
+                "I also spent meaningful time close to production support and end users, resolving incidents and keeping service continuity when problems reached real people. I worked across several areas at SURA (architecture, mobile assistance, the SuperApp, DOCS/controls/OX, and bolsa), but the SuperApp remains the most memorable. I am grateful to Seguros SURA and to Ceiba Software, the consultancy that supported me through that growth.",
             ],
             stack: ["Mobile", "Flutter", "iOS", "Android"],
             pullQuote:
