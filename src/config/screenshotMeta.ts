@@ -5,7 +5,7 @@ export const SCREENSHOT_META: Record<
 > = {
     "declaramelo-hero.png": { width: 1024, height: 580 },
     "declaramelo-features.png": { width: 1024, height: 580 },
-    "declaramelo-process.png": { width: 1024, height: 555 },
+    "declaramelo-process.png": { width: 1024, height: 580 },
     "openwhispr-hero.png": { width: 1024, height: 557 },
     "openwhispr-meetings.png": { width: 1024, height: 615 },
     "openwhispr-transcription.png": { width: 898, height: 464 },
