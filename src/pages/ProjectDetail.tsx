@@ -328,7 +328,7 @@ const getLiveLinkLabel = (url: string) => {
 };
 
 const ProjectLiveLink = ({ url }: { url: string }) => (
-    <div className="project-detail-hero-live">
+    <div className="flex flex-col items-end gap-2">
         <GradientButton href={url} external>
             <span className="text-base font-semibold leading-[19px] tracking-[-0.64px] text-stone-900 font-dm_sans md:text-lg md:tracking-[-0.72px]">
                 {getLiveLinkLabel(url)}
@@ -339,7 +339,7 @@ const ProjectLiveLink = ({ url }: { url: string }) => (
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 block text-right text-xs text-stone-700 underline-offset-2 transition-colors hover:text-stone-900 hover:underline font-dm_sans md:text-sm"
+            className="text-xs text-stone-700 underline-offset-2 transition-colors hover:text-stone-900 hover:underline font-dm_sans md:text-sm"
         >
             {formatLiveSiteLabel(url)}
         </a>
@@ -395,22 +395,6 @@ const projectDetailStyles = `
   overflow: visible;
   z-index: 1;
 }
-.project-detail-hero-live {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-@media (max-width: 767px) {
-  .project-detail-hero-live {
-    position: static;
-    align-self: flex-end;
-    margin-bottom: 4px;
-  }
-}
 .project-detail-hero-badge {
   display: flex;
   flex-direction: row;
@@ -459,6 +443,7 @@ const PROJECT_CAROUSEL_BTN_CLASS =
 
 const ProjectDetailContent = ({
     project,
+    livePreviewUrl,
 }: {
     project: {
         title: string;
@@ -468,6 +453,7 @@ const ProjectDetailContent = ({
         imageAspect?: string;
         imageFrameClassName?: string;
     };
+    livePreviewUrl?: string;
 }) => {
     const slides =
         project.images && project.images.length > 0
@@ -512,6 +498,8 @@ const ProjectDetailContent = ({
         setLightboxIndex(slideIndex);
     };
 
+    const hasLivePreview = Boolean(livePreviewUrl && livePreviewUrl !== "#");
+
     return (
         <section className="relative bg-neutral-100 w-full overflow-hidden px-4 sm:px-6 md:px-8 py-12 md:py-16">
             {lightboxIndex !== null ? (
@@ -522,8 +510,14 @@ const ProjectDetailContent = ({
                     onClose={() => setLightboxIndex(null)}
                 />
             ) : null}
-            <div className="mx-auto w-full max-w-[800px]">
-                <div className="flex flex-col items-center gap-4">
+            <div className="mx-auto w-full max-w-[1060px]">
+                {hasLivePreview ? (
+                    <div className="mb-4 flex justify-end md:hidden">
+                        <ProjectLiveLink url={livePreviewUrl!} />
+                    </div>
+                ) : null}
+                <div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-8">
+                    <div className="flex w-full min-w-0 max-w-[800px] flex-col items-center gap-4">
                     <div className="flex w-full items-center justify-center gap-3 md:gap-5">
                         {slideCount > 1 ? (
                             <button
@@ -626,6 +620,12 @@ const ProjectDetailContent = ({
                             ))}
                         </div>
                     ) : null}
+                    </div>
+                    {hasLivePreview ? (
+                        <aside className="hidden shrink-0 md:block md:pt-1">
+                            <ProjectLiveLink url={livePreviewUrl!} />
+                        </aside>
+                    ) : null}
                 </div>
             </div>
         </section>
@@ -664,9 +664,6 @@ export const ProjectDetail = () => {
                     <section className="project-detail-hero" data-border="true">
                         <div className="project-detail-hero-container">
                             <div className="project-detail-hero-text">
-                                {hasLivePreview && (
-                                    <ProjectLiveLink url={project.livePreviewUrl} />
-                                )}
                                 <div className="project-detail-hero-badge">
                                     <div className="w-[11px] h-3 flex-shrink-0 flex items-center justify-center">
                                         <img src="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg" alt="" className="w-full h-full" />
@@ -684,7 +681,10 @@ export const ProjectDetail = () => {
                     </section>
 
                     {/* Image carousel */}
-                    <ProjectDetailContent project={project} />
+                    <ProjectDetailContent
+                        project={project}
+                        livePreviewUrl={hasLivePreview ? project.livePreviewUrl : undefined}
+                    />
 
                     <CaseStudySections sections={buildCaseStudySections(project)} />
 
