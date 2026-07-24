@@ -15,14 +15,16 @@ export const CTAContact = () => {
       className={`${layoutClasses.section} ${layoutClasses.sectionNeutral} overflow-hidden`}
     >
       <div className="relative mx-auto w-full max-w-[1140px] px-[30px]">
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 overflow-visible">
           <BlurEllipses ellipses={ctaContactEllipses} />
         </div>
 
-        <div className="relative z-[1] grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
-          <CTACard className="h-full" />
+        <div className="relative z-[1] grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:items-center lg:gap-10">
+          <div className="flex w-full justify-center lg:justify-end">
+            <CTACard className="w-full max-w-[520px]" />
+          </div>
 
-          <SurfaceCard className="flex h-full w-full flex-col px-6 py-7 md:px-8 md:py-8">
+          <SurfaceCard className="w-full px-6 py-7 md:px-8 md:py-8">
             <div className="flex flex-col items-center gap-4 md:gap-5">
               <SectionBadge label="Contact" iconUrl={SECTION_ICON} />
               <h2 className="max-w-[440px] text-center font-cabinet_grotesk text-2xl font-bold tracking-tight text-stone-900 md:text-3xl">

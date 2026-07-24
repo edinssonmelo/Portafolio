@@ -8,7 +8,7 @@ type CTACardProps = {
 export const CTACard = ({ className = "" }: CTACardProps) => {
   return (
     <SurfaceCard
-      className={`flex w-full flex-col items-center justify-center gap-5 px-6 py-7 text-center md:gap-6 md:px-8 md:py-8 ${className}`}
+      className={`flex w-full flex-col items-center gap-5 px-6 py-7 text-center md:gap-6 md:px-8 md:py-8 ${className}`}
     >
       <div className="flex max-w-[520px] flex-col items-center gap-3">
         <h2 className="font-cabinet_grotesk text-2xl font-bold tracking-tight text-stone-900 md:text-3xl">

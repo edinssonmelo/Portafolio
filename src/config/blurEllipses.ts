@@ -213,8 +213,8 @@ export const portfolioEllipses: BlurEllipseConfig[] = [
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "603px",
-                height: "628px",
+                width: "660px",
+                height: "694px",
                 aspectRatio: "1.108_/_1",
             },
         },
@@ -225,8 +225,8 @@ export const portfolioEllipses: BlurEllipseConfig[] = [
                 right: "0",
             },
             desktop: {
-                left: "-306px",
-                top: "-251px",
+                left: "-220px",
+                top: "-80px",
                 right: "auto",
                 bottom: "auto",
             },
@@ -242,8 +242,8 @@ export const portfolioEllipses: BlurEllipseConfig[] = [
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "596px",
-                height: "542px",
+                width: "657px",
+                height: "592px",
                 aspectRatio: "1.108_/_1",
             },
         },
@@ -254,8 +254,8 @@ export const portfolioEllipses: BlurEllipseConfig[] = [
                 left: "0",
             },
             desktop: {
-                right: "-97px",
-                top: "-202px",
+                right: "-60px",
+                top: "-60px",
                 left: "auto",
                 bottom: "auto",
             },
@@ -397,27 +397,61 @@ export const contactEllipses: BlurEllipseConfig[] = [
 // ============================================
 export const ctaContactEllipses: BlurEllipseConfig[] = [
     {
-        color: "rgba(220, 255, 49, 0.38)",
-        blur: 90,
+        color: "rgba(220, 255, 49, 0.4)",
+        blur: 100,
         size: {
-            mobile: { width: "260px", height: "235px", aspectRatio: "1.108_/_1" },
-            desktop: { width: "340px", height: "306px", aspectRatio: "1.108_/_1" },
+            mobile: {
+                width: "340px",
+                height: "310px",
+                aspectRatio: "1.108_/_1",
+            },
+            desktop: {
+                width: "620px",
+                height: "560px",
+                aspectRatio: "1.108_/_1",
+            },
         },
         position: {
-            mobile: { top: "18%", left: "50%", transform: "translate-x-[-50%]" },
-            desktop: { top: "38%", left: "22%" },
+            mobile: {
+                top: "8%",
+                left: "50%",
+                transform: "translate-x-[-50%]",
+            },
+            desktop: {
+                left: "-160px",
+                top: "28%",
+                bottom: "auto",
+                right: "auto",
+            },
         },
     },
     {
-        color: "rgba(127, 230, 217, 0.38)",
-        blur: 90,
+        color: "rgba(127, 230, 217, 0.4)",
+        blur: 100,
         size: {
-            mobile: { width: "260px", height: "235px", aspectRatio: "1.108_/_1" },
-            desktop: { width: "340px", height: "306px", aspectRatio: "1.108_/_1" },
+            mobile: {
+                width: "340px",
+                height: "310px",
+                aspectRatio: "1.108_/_1",
+            },
+            desktop: {
+                width: "660px",
+                height: "620px",
+                aspectRatio: "1.108_/_1",
+            },
         },
         position: {
-            mobile: { bottom: "12%", left: "50%", transform: "translate-x-[-50%]" },
-            desktop: { top: "38%", right: "22%", left: "auto" },
+            mobile: {
+                bottom: "0%",
+                left: "50%",
+                transform: "translate-x-[-50%]",
+            },
+            desktop: {
+                right: "-140px",
+                top: "22%",
+                left: "auto",
+                bottom: "auto",
+            },
         },
     },
 ];
