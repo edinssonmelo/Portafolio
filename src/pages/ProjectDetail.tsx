@@ -196,8 +196,8 @@ const projects: Record<string, {
                     . I built the e-commerce experience: landing, catalog, product pages, and purchase
                     flow.
                 </>,
-                "The brand had momentum in Medellín. After moving to Cúcuta, climate and inventory did not match the product we had produced, and the textile market grew tougher with global competition. We made the call to close the project with lessons learned rather than force something that no longer fit.",
-                "It was not the outcome we hoped for, but the experience reinforced what I love building: products, brands, and software. OverUP is no longer active; the skills and judgment from that chapter carry into everything I ship today.",
+                "The brand had momentum in Medellín. After we moved to Cúcuta, the mismatch hurt us: Cúcuta is much hotter, and most of what we had produced was streetwear built for cooler weather like Medellín's. A lot of inventory did not move, and we took heavy losses. The textile market was also getting harder with global competition.",
+                "We were honest with ourselves: we were no longer motivated to keep manufacturing clothes. Garment production is a demanding, often exhausting sector. We closed OverUP. It was not the outcome we wanted, but it left a real lesson about business, timing, and knowing when to step back.",
             ],
             stack: ["E-commerce", "Web", "Shopify"],
         },
