@@ -5,7 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import { ProjectImageLightbox } from "@/components/ProjectImageLightbox";
-import { CaseStudySections } from "@/components/CaseStudySections";
+import { ProjectStory, type ProjectStoryData } from "@/components/ProjectStory";
 import { getScreenshotMeta, isMobileScreenshot } from "@/config/screenshotMeta";
 
 // Project data - in a real app, this would come from an API or CMS
@@ -26,6 +26,7 @@ const projects: Record<string, {
     thingsIDid: string;
     outcome?: string;
     whatILearned?: string;
+    story?: ProjectStoryData;
     mainImage: string;
     images: string[];
     imageAspect?: string;
@@ -278,30 +279,30 @@ const projects: Record<string, {
     }
 };
 
-const buildCaseStudySections = (project: {
+const buildProjectStory = (project: {
+    subtitle: string;
     aboutText: string;
     thingsIDid: string;
     projectDetails: string;
     services: string[];
     outcome?: string;
-    whatILearned?: string;
     testimonial: { quote: string };
-    livePreviewUrl: string;
-}) => {
-    const outcome = project.outcome ?? project.testimonial.quote;
-    const sections = [
-        { title: "Problem", content: project.aboutText },
-        { title: "My role", content: project.thingsIDid },
-        { title: "Technical decisions", content: project.projectDetails },
-        { title: "Stack", items: project.services },
-        { title: "Outcome", content: outcome },
-    ];
-
-    if (project.whatILearned) {
-        sections.push({ title: "What I learned", content: project.whatILearned });
+    story?: ProjectStoryData;
+}): ProjectStoryData => {
+    if (project.story) {
+        return project.story;
     }
 
-    return sections;
+    const outcome = project.outcome ?? project.testimonial.quote;
+
+    return {
+        hook: project.subtitle,
+        body: [project.aboutText, project.thingsIDid, project.projectDetails, outcome].filter(
+            (p) => p.trim().length > 0
+        ),
+        stack: project.services,
+        pullQuote: project.testimonial.quote,
+    };
 };
 
 const getLiveLinkLabel = (url: string) => {
@@ -479,7 +480,7 @@ const ProjectDetailContent = ({
     const hasLivePreview = Boolean(livePreviewUrl && livePreviewUrl !== "#");
 
     return (
-        <section className="relative bg-neutral-100 w-full overflow-hidden px-4 sm:px-6 md:px-8 py-12 md:py-16">
+        <section className="relative bg-neutral-100 w-full px-4 sm:px-6 md:px-8 py-12 md:py-16">
             {lightboxIndex !== null ? (
                 <ProjectImageLightbox
                     images={slides}
@@ -488,13 +489,13 @@ const ProjectDetailContent = ({
                     onClose={() => setLightboxIndex(null)}
                 />
             ) : null}
-            <div className="mx-auto flex w-full max-w-[980px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-3">
+            <div className="relative mx-auto w-full max-w-[800px]">
                 {hasLivePreview ? (
-                    <div className="flex w-full max-w-[800px] justify-end md:hidden">
+                    <div className="mb-3 flex justify-end md:absolute md:left-full md:top-0 md:z-10 md:mb-0 md:ml-3">
                         <ProjectLiveLink url={livePreviewUrl!} />
                     </div>
                 ) : null}
-                <div className="flex w-full max-w-[800px] flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-4">
                     <div className="flex w-full items-center justify-center gap-3 md:gap-5">
                         {slideCount > 1 ? (
                             <button
@@ -598,11 +599,6 @@ const ProjectDetailContent = ({
                         </div>
                     ) : null}
                 </div>
-                {hasLivePreview ? (
-                    <aside className="hidden shrink-0 md:block md:pt-1">
-                        <ProjectLiveLink url={livePreviewUrl!} />
-                    </aside>
-                ) : null}
             </div>
         </section>
     );
@@ -662,7 +658,7 @@ export const ProjectDetail = () => {
                         livePreviewUrl={hasLivePreview ? project.livePreviewUrl : undefined}
                     />
 
-                    <CaseStudySections sections={buildCaseStudySections(project)} />
+                    <ProjectStory story={buildProjectStory(project)} />
 
                     <Footer />
                 </div>
