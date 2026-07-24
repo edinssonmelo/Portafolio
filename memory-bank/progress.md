@@ -16,6 +16,7 @@
 - [x] CTA + Contact combined section; blur ellipses fixed
 - [x] Screenshot updates: Declaramelo hero/features, Bernal dashboard
 - [x] `AGENTS.md`: commit + push after every meaningful task
+- [x] YouTube social link (@EdinssonMelo) in nav, footer, and schema
 
 ## Pending
 

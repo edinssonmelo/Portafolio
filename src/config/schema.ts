@@ -27,6 +27,7 @@ export const getPersonSchema = () => {
             SITE_CONFIG.social.github,
             SITE_CONFIG.social.instagram,
             SITE_CONFIG.social.linkedin,
+            SITE_CONFIG.social.youtube,
             SITE_CONFIG.social.workana,
             SITE_CONFIG.social.codeforces,
             SITE_CONFIG.social.buymeacoffee,

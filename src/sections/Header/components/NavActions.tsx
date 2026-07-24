@@ -1,4 +1,5 @@
 import { SOCIAL_ICON_BACKGROUND_COLOR } from "@/config/colors";
+import { SITE_CONFIG } from "@/config/seo";
 
 const SocialIcon = ({ href, iconSrc, iconAlt, name }: { href: string; iconSrc: string; iconAlt: string; name: string }) => {
   return (
@@ -32,9 +33,10 @@ const SocialIcon = ({ href, iconSrc, iconAlt, name }: { href: string; iconSrc: s
 export const NavActions = ({ className = "" }: { className?: string }) => {
   return (
     <nav className={`flex items-center justify-center gap-3 ${className}`}>
-      <SocialIcon href="https://github.com/edinssonmelo" iconSrc="/assets/github-icon.png" iconAlt="GitHub" name="GitHub" />
-      <SocialIcon href="https://codeforces.com/profile/Mackenzie" iconSrc="/assets/codeforces-icon.svg" iconAlt="Codeforces" name="Codeforces" />
-      <SocialIcon href="https://www.linkedin.com/in/edinssonmelo/" iconSrc="/assets/linkedin-icon.png" iconAlt="LinkedIn" name="LinkedIn" />
+      <SocialIcon href={SITE_CONFIG.social.github} iconSrc="/assets/github-icon.png" iconAlt="GitHub" name="GitHub" />
+      <SocialIcon href={SITE_CONFIG.social.codeforces} iconSrc="/assets/codeforces-icon.svg" iconAlt="Codeforces" name="Codeforces" />
+      <SocialIcon href={SITE_CONFIG.social.linkedin} iconSrc="/assets/linkedin-icon.png" iconAlt="LinkedIn" name="LinkedIn" />
+      <SocialIcon href={SITE_CONFIG.social.youtube} iconSrc="/assets/youtube-icon.svg" iconAlt="YouTube" name="YouTube" />
     </nav>
   );
 };
