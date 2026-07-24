@@ -2,7 +2,7 @@ import type { BlogPost } from '@/data/blog';
 
 export const primerEmpleoSoftwarePost: BlogPost = {
     slug: 'como-conseguir-tu-primer-empleo-en-software-sin-experiencia',
-    title: 'Cómo conseguir tu primer empleo en software sin experiencia: lo que aprendí después de más de 10 años',
+    title: 'Cómo conseguir tu primer empleo en software sin experiencia: lo que aprendí en más de 10 años',
     description:
         'Lecciones reales para conseguir tu primera oportunidad en software sin experiencia laboral: proyectos, redes, sinceridad y un perfil orientado a IA.',
     datePublished: '2026-07-24',
@@ -12,126 +12,95 @@ export const primerEmpleoSoftwarePost: BlogPost = {
     body: [
         {
             type: 'p',
-            text: 'Durante meses tuve un computador dañado, desarmado y vuelto a armar en mi habitación.',
+            text: 'Durante un tiempo tuve un computador dañado en mi habitación.',
         },
         {
             type: 'p',
-            text: 'No funcionaba. En mi casa tampoco teníamos los recursos para reemplazarlo. Aun así, yo lo desarmaba, revisaba sus piezas, intentaba entenderlas y volvía a ensamblarlo con la esperanza de que, en algún momento, encendiera nuevamente.',
+            text: 'Lo desarmaba, lo volvía a armar y esperaba que algún día funcionara otra vez. En ese momento no teníamos cómo comprar uno nuevo, pero a mí me daba mucha curiosidad entender qué tenía por dentro y cómo funcionaba.',
         },
         {
             type: 'p',
-            text: 'Mucho antes de comprender qué era una API, una arquitectura de software o un algoritmo, ya sentía una profunda curiosidad por la tecnología.',
+            text: 'Esa curiosidad por la tecnología empezó mucho antes de que yo supiera qué era una API, una base de datos o una arquitectura de software.',
         },
         {
             type: 'p',
-            text: 'Recuerdo la primera vez que estuve frente a un computador. Me quedé mirando la pantalla de Google: la pequeña casa del navegador, los íconos, los enlaces y cada elemento que aparecía frente a mí. Tal vez para otra persona era solamente una pantalla. Para mí era un mundo completamente nuevo.',
+            text: 'Recuerdo también la primera vez que vi Google en un computador. Me quedé mirando los íconos, los enlaces, la casita del navegador y cada cosa que aparecía en la pantalla.',
         },
         {
             type: 'p',
-            text: 'No sabía exactamente cómo funcionaba, pero quería descubrirlo.',
+            text: 'Para alguien más podía ser algo normal. Para mí era un mundo nuevo.',
         },
         {
             type: 'p',
-            text: 'Esa curiosidad fue mi verdadera entrada al desarrollo de software.',
-        },
-        { type: 'p', text: 'No fue una vacante.' },
-        { type: 'p', text: 'No fue una certificación.' },
-        { type: 'p', text: 'No fue un título universitario.' },
-        {
-            type: 'p',
-            text: 'Fue la necesidad de entender lo que tenía frente a mí.',
-        },
-        {
-            type: 'h2',
-            text: 'También me dijeron que el mercado estaba saturado',
+            text: 'Con el tiempo decidí estudiar Ingeniería de Sistemas. Al principio me interesaba mucho el hardware, pero después el software se fue convirtiendo en una parte muy importante de mi vida.',
         },
         {
             type: 'p',
-            text: 'Desde pequeño decía que quería ser empresario. Cuando llegó el momento de escoger una carrera, decidí estudiar Ingeniería de Sistemas porque la tecnología realmente me apasionaba.',
+            text: 'Lo curioso es que, cuando tomé esa decisión, muchas personas me decían que no lo hiciera.',
         },
         {
             type: 'p',
-            text: 'Al principio me interesaba especialmente el hardware. No imaginaba que el software terminaría ocupando una parte tan importante de mi vida, ni que algún día podría especializarme y construir una carrera alrededor de él.',
+            text: 'Me decían que el mercado estaba saturado, que había demasiados ingenieros de sistemas y que sería difícil conseguir trabajo. Incluso una profesora me dijo que la profesión estaba sobreofertada.',
         },
         {
             type: 'p',
-            text: 'Cuando tomé la decisión, muchas personas no hablaban bien de la profesión.',
+            text: 'Yo seguí porque realmente me gustaba.',
         },
         {
             type: 'p',
-            text: 'Todavía no había ocurrido el crecimiento tecnológico que se vivió durante y después de la pandemia. Recuerdo que me decían que el mercado estaba saturado, que existían demasiados ingenieros de sistemas y que sería difícil encontrar oportunidades.',
+            text: 'Antes de entrar a la universidad había hecho una técnica en sistemas con el SENA. Allí aprendí un poco de Visual Basic, HTML y algoritmos. Gracias a eso, algunos temas de la universidad se me hicieron más fáciles.',
         },
         {
             type: 'p',
-            text: 'Incluso una profesora me advirtió que los ingenieros de sistemas sobreabundaban.',
+            text: 'También veía a muchos compañeros frustrarse porque era la primera vez que se enfrentaban a esa forma de pensar.',
         },
         {
             type: 'p',
-            text: 'Decidí continuar de todas formas.',
-        },
-        {
-            type: 'p',
-            text: 'No porque tuviera la certeza de que me iría bien, sino porque me gustaba lo que estaba aprendiendo. Antes de ingresar a la universidad había realizado una técnica en sistemas con el SENA. Allí tuve mis primeros acercamientos a Visual Basic, HTML y algoritmos.',
-        },
-        {
-            type: 'p',
-            text: 'Llegué a la universidad con algunos conocimientos previos. Por eso, cuando comenzamos a estudiar algoritmos, algunos temas se me facilitaron. Al mismo tiempo, observaba cómo varios de mis compañeros se frustraban al encontrarse por primera vez con esa forma de pensar.',
-        },
-        {
-            type: 'p',
-            text: 'Con el tiempo entendí algo importante:',
+            text: 'Con los años entendí algo sencillo:',
         },
         {
             type: 'callout',
-            text: 'Que algo sea difícil al comienzo no significa que no sea para ti. Significa que todavía estás aprendiendo a verlo.',
+            text: 'Que algo sea difícil al comienzo no significa que no sea para ti. Solo significa que todavía estás aprendiendo.',
         },
         {
             type: 'h2',
-            text: 'El momento en el que casi tomé otro camino',
+            text: 'El momento en el que casi cambié de camino',
         },
         {
             type: 'p',
-            text: 'Durante la universidad también comencé a interesarme profundamente por las matemáticas y la física. Tanto, que llegué a estudiar una Licenciatura en Matemáticas al mismo tiempo.',
+            text: 'Durante la universidad también me interesé mucho por las matemáticas y la física. Tanto, que llegué a estudiar una Licenciatura en Matemáticas.',
         },
         {
             type: 'p',
-            text: 'Hubo un momento en el que no sabía cuál camino seguir.',
+            text: 'Hubo un momento en el que no sabía si continuar por ese camino o seguir en Ingeniería de Sistemas.',
         },
         {
             type: 'p',
-            text: 'Por un lado estaba la ingeniería. Por otro, las matemáticas. Ambas me apasionaban, pero no sabía dónde podía unirlas.',
+            text: 'La respuesta apareció cuando entré a un semillero de programación competitiva.',
         },
         {
             type: 'p',
-            text: 'La respuesta apareció cuando ingresé a un semillero de programación competitiva.',
+            text: 'Durante unos cinco o seis años participé en maratones y competencias de programación. Llegué a competir en instancias nacionales y regionales latinoamericanas.',
         },
         {
             type: 'p',
-            text: 'Durante aproximadamente cinco o seis años participé en maratones y competencias de programación. Llegué a competir en instancias nacionales y regionales latinoamericanas.',
+            text: 'Allí encontré una forma de unir las matemáticas con la programación.',
         },
         {
             type: 'p',
-            text: 'Allí encontré lo que estaba buscando.',
+            text: 'Aprendí sobre simulaciones, programación dinámica, algoritmos greedy, grafos, geometría y muchas otras cosas. Me gustó tanto que decidí continuar completamente por el camino del software.',
         },
         {
             type: 'p',
-            text: 'Podía combinar programación y matemáticas para resolver problemas mediante simulaciones, búsquedas completas, programación dinámica, algoritmos greedy, grafos y geometría.',
+            text: 'Después tuve la oportunidad de enseñar en la universidad y de liderar SILUX, un semillero de investigación y desarrollo de software libre de la Universidad Francisco de Paula Santander.',
         },
         {
             type: 'p',
-            text: 'Se abrió frente a mí un universo de posibilidades.',
+            text: 'Todavía no tenía un empleo formal en una empresa, pero ya estaba construyendo experiencia.',
         },
         {
             type: 'p',
-            text: 'Me obsesioné con aprender. Me retiré de la Licenciatura en Matemáticas y decidí continuar por el camino de la Ingeniería de Sistemas. Después tuve la oportunidad de enseñar en la universidad y de liderar SILUX, un semillero de investigación y desarrollo de software libre de la Universidad Francisco de Paula Santander.',
-        },
-        {
-            type: 'p',
-            text: 'Todavía no tenía el empleo que cambiaría mi vida, pero ya estaba construyendo experiencia.',
-        },
-        {
-            type: 'p',
-            text: 'Esta es una de las ideas que quiero compartir con quienes hoy están buscando su primera oportunidad:',
+            text: 'Y esta es una de las primeras cosas que quiero decirle a alguien que está buscando su primera oportunidad:',
         },
         {
             type: 'h2',
@@ -139,43 +108,35 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Muchas personas creen que no pueden conseguir empleo porque no tienen experiencia laboral.',
+            text: 'Muchas personas sienten que no pueden conseguir empleo porque no tienen experiencia.',
         },
         {
             type: 'p',
-            text: 'El problema es que también creen que solamente pueden adquirir experiencia después de ser contratadas.',
+            text: 'El problema es que también creen que solo pueden conseguir experiencia después de ser contratadas.',
         },
         {
             type: 'p',
-            text: 'Ese pensamiento las deja atrapadas.',
+            text: 'Pero la experiencia puede empezar antes.',
         },
         {
             type: 'p',
-            text: 'Antes de mi primer empleo formal participé en competencias, resolví problemas, enseñé, lideré un semillero y desarrollé proyectos universitarios. Nada de eso aparecía necesariamente como varios años de experiencia profesional en una hoja de vida, pero sí estaba desarrollando capacidades reales.',
-        },
-        { type: 'p', text: 'Estaba aprendiendo a pensar.' },
-        { type: 'p', text: 'Estaba aprendiendo a resolver.' },
-        { type: 'p', text: 'Estaba aprendiendo a explicar.' },
-        { type: 'p', text: 'Estaba aprendiendo a trabajar con otras personas.' },
-        {
-            type: 'p',
-            text: 'Estaba aprendiendo a no rendirme frente a un problema difícil.',
+            text: 'Puedes construir proyectos, ayudar a un conocido, participar en una comunidad, colaborar con otras personas, enseñar lo que sabes o resolver un problema real.',
         },
         {
             type: 'p',
-            text: 'No necesitas esperar a que una empresa te dé permiso para comenzar a adquirir experiencia.',
+            text: 'Antes de mi primer empleo yo había participado en competencias, había enseñado, había liderado un semillero y había trabajado en proyectos universitarios.',
         },
         {
             type: 'p',
-            text: 'Puedes construir un proyecto propio, ayudar a un conocido, colaborar con un pequeño negocio, participar en una comunidad, contribuir a un proyecto abierto o resolver un problema que tengas en tu vida cotidiana.',
+            text: 'Eso no era lo mismo que tener experiencia profesional dentro de una empresa, pero sí me había ayudado a desarrollar habilidades reales.',
         },
         {
             type: 'p',
-            text: 'Quizás todavía no tengas experiencia laboral.',
+            text: 'Había aprendido a resolver problemas, a trabajar con otras personas, a explicar ideas y a insistir cuando algo no salía bien.',
         },
         {
             type: 'p',
-            text: 'Pero puedes comenzar a crear evidencia de que sabes aprender y construir.',
+            text: 'No necesitas esperar a que una empresa te dé permiso para empezar.',
         },
         {
             type: 'h2',
@@ -183,91 +144,67 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Mi primera oportunidad profesional no llegó cuando todo estaba bajo control.',
+            text: 'Mi primera oportunidad llegó en un momento complicado.',
         },
         {
             type: 'p',
-            text: 'Llegó durante una situación muy difícil.',
+            text: 'Yo seguía estudiando, me estaba independizando y tenía que pagar arriendo. Hasta ese momento había trabajado como tutor académico, pero la universidad dejó de contratarme.',
         },
         {
             type: 'p',
-            text: 'Yo seguía en la universidad, me estaba independizando y tenía que pagar arriendo. Hasta ese momento había trabajado como tutor o amigo académico, pero la universidad dejó de contratarme.',
+            text: 'Me quedé sin trabajo y sin dinero.',
         },
         {
             type: 'p',
-            text: 'De repente me encontré sin trabajo y sin dinero.',
+            text: 'Mientras tanto, veía que varios amigos empezaban a entrar a empresas conocidas en Colombia.',
         },
         {
             type: 'p',
-            text: 'Ya no podía continuar esperando tranquilamente a sentirme preparado. Necesitaba conseguir una oportunidad.',
+            text: 'Entonces empecé a preguntarles cómo lo habían logrado.',
         },
         {
             type: 'p',
-            text: 'Al mismo tiempo, veía que varios de mis amigos comenzaban a trabajar en empresas reconocidas de Colombia. Entonces hice algo que hoy sigo recomendando:',
-        },
-        {
-            type: 'callout',
-            text: 'Les pregunté cómo lo habían conseguido.',
+            text: 'No traté de aparentar que ya sabía todo. Más bien intenté entender cómo funcionaba el mundo laboral.',
         },
         {
             type: 'p',
-            text: 'No intenté aparentar que ya lo sabía todo. Comencé a contactar a las personas que habían avanzado antes que yo y a preguntarles cómo era realmente el mundo laboral.',
+            text: 'Uno de esos amigos fue Jose Manolo Pinzón, quien trabajaba en un proyecto relacionado con Bancolombia.',
         },
         {
             type: 'p',
-            text: 'Uno de ellos fue mi amigo José Manuel Pinzón, quien trabajaba en un proyecto relacionado con Bancolombia.',
+            text: 'Lo llamé y le pregunté de todo.',
         },
         {
             type: 'p',
-            text: 'Lo llamé y le pregunté prácticamente todo.',
+            text: 'Qué era una API, cuál era la diferencia entre GET y POST, cómo se enviaba información por internet, qué era una clase, un objeto, un método, una interfaz, los principios SOLID, las propiedades ACID y la arquitectura modelo-vista-controlador.',
         },
         {
             type: 'p',
-            text: '¿Qué es una API? ¿Qué diferencia existe entre GET y POST? ¿Cómo se comunica una aplicación a través de internet? ¿Qué es la idempotencia? ¿Qué son los principios SOLID? ¿Qué significan las propiedades ACID de una base de datos? ¿Cómo funciona una arquitectura modelo-vista-controlador?',
+            text: 'Algunas cosas ya las había estudiado. Otras las entendía solo desde la teoría.',
         },
         {
             type: 'p',
-            text: 'Algunas de esas cosas las había visto anteriormente. Otras las conocía de una forma demasiado académica. El problema era que todavía no entendía cómo se conectaban dentro de un entorno profesional.',
+            text: 'Lo que me faltaba era comprender cómo se utilizaban esos conceptos en un trabajo real.',
         },
         {
             type: 'p',
-            text: 'La universidad me había dado fundamentos importantes, pero el mercado utilizaba un lenguaje, unas herramientas y unas prácticas que yo todavía no dominaba completamente.',
+            text: 'La universidad me había dado fundamentos importantes, pero el mercado tenía otras herramientas, otras prácticas y otra forma de comunicarse.',
         },
         {
             type: 'p',
-            text: 'José Manuel me ayudó a cerrar una parte de esa distancia.',
+            text: 'Jose Manolo me ayudó a entender mejor ese contexto.',
         },
         {
             type: 'p',
-            text: 'Esa conversación me enseñó otra lección:',
-        },
-        {
-            type: 'h2',
-            text: 'No tienes que recorrer el camino completamente solo',
+            text: 'Por eso creo que hablar con personas que ya están trabajando puede ayudarte muchísimo.',
         },
         {
             type: 'p',
-            text: 'Cuando estás buscando tu primer empleo, hablar con alguien que ya trabaja en la industria puede ahorrarte meses de desorientación.',
+            text: 'No para memorizar respuestas ni para fingir experiencia.',
         },
         {
             type: 'p',
-            text: 'No se trata de pedir que te entreguen las respuestas de una entrevista. Tampoco de memorizar conceptos para aparentar conocimientos que no tienes.',
-        },
-        {
-            type: 'p',
-            text: 'Se trata de entender el contexto.',
-        },
-        {
-            type: 'p',
-            text: 'Pregúntales a otros desarrolladores cómo es su trabajo, qué herramientas utilizan, qué conocimientos les pidieron, cómo fue su entrevista y qué habrían estudiado de manera diferente.',
-        },
-        {
-            type: 'p',
-            text: 'Yo no necesitaba inventar experiencia. Necesitaba comprender mejor el mundo al que quería entrar.',
-        },
-        {
-            type: 'p',
-            text: 'Investigar, preguntar y aprender de otras personas no es hacer trampa. Es reconocer que alguien ya enfrentó muchas de las preguntas que hoy te están bloqueando.',
+            text: 'Para entender mejor qué se hace en una empresa, qué conocimientos se utilizan y cómo puedes prepararte.',
         },
         {
             type: 'h2',
@@ -275,51 +212,47 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Gracias a Dios, finalmente conseguí mi primera experiencia profesional en una consultora internacional y tuve la oportunidad de trabajar en un proyecto para Bancolombia.',
+            text: 'Gracias a Dios, conseguí mi primera experiencia profesional en SOFO Solutions, una consultora internacional, y tuve la oportunidad de trabajar en un proyecto para Bancolombia.',
         },
         {
             type: 'p',
-            text: 'La sensación fue difícil de explicar.',
+            text: 'Para mí fue algo muy grande.',
         },
         {
             type: 'p',
-            text: 'Yo todavía estaba intentando asimilar que una organización de ese nivel confiara en mí. Pasé de estar preocupado porque no tenía cómo pagar mis gastos a recibir un salario de aproximadamente 2.300.000 pesos colombianos.',
+            text: 'Venía de estar preocupado porque no tenía dinero y pasé a recibir un salario de aproximadamente 2.300.000 pesos colombianos.',
         },
         {
             type: 'p',
-            text: 'En ese momento, para mí era muchísimo dinero.',
+            text: 'En ese momento sentía que era muchísimo.',
         },
         {
             type: 'p',
-            text: 'Recuerdo pensar que quería avanzar con calma, vivir el proceso y aprender a agradecer cada etapa. Tenía grandes aspiraciones, pero también quería entender el valor del camino que estaba comenzando.',
+            text: 'También recuerdo que quería vivir el proceso con calma. Tenía grandes metas, pero no quería perder la gratitud ni sentir que todo tenía que llegar de inmediato.',
         },
         {
             type: 'p',
-            text: 'La experiencia fue enriquecedora y, al mismo tiempo, desafiante.',
+            text: 'La experiencia fue muy buena, aunque también fue difícil.',
         },
         {
             type: 'p',
-            text: 'Era mi primer trabajo profesional y estaba entrando a un entorno con responsabilidades reales. Había conceptos, arquitecturas y dinámicas que todavía tenía que aprender.',
+            text: 'Era mi primer trabajo profesional y estaba entrando a un entorno con responsabilidades reales. Había muchas cosas que todavía no sabía.',
         },
         {
             type: 'p',
-            text: 'Pero ocurrió algo que he comprobado muchas veces desde entonces:',
-        },
-        {
-            type: 'callout',
-            text: 'La barrera más difícil suele ser la primera oportunidad.',
+            text: 'Pero esa primera oportunidad cambió todo.',
         },
         {
             type: 'p',
-            text: 'Cuando una empresa confía en ti, te capacita y te permite participar en proyectos reales, comienzas a entender cómo se construye software dentro de una organización. Aprendes sobre arquitectura, equipos, entregas, calidad, producción y comunicación.',
+            text: 'Cuando una empresa confía en ti, empiezas a aprender sobre proyectos reales, arquitectura, equipos, entregas, producción, calidad y comunicación.',
         },
         {
             type: 'p',
-            text: 'Después de esa primera experiencia, las siguientes oportunidades comenzaron a ser más accesibles.',
+            text: 'Después de esa primera experiencia, conseguir otras oportunidades fue más fácil.',
         },
         {
             type: 'p',
-            text: 'No porque de repente supiera todo, sino porque ya existía evidencia de que podía trabajar dentro de un entorno profesional.',
+            text: 'La primera barrera suele ser la más complicada.',
         },
         {
             type: 'h2',
@@ -327,11 +260,11 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Uno de los errores que veo con frecuencia en personas que buscan su primer empleo es la falta de confianza.',
+            text: 'Uno de los errores que veo en quienes buscan su primer empleo es que no saben explicar lo que saben.',
         },
         {
             type: 'p',
-            text: 'Algunas no saben explicar lo que han aprendido. Otras intentan compensar la inseguridad exagerando sus conocimientos.',
+            text: 'Algunas personas se quedan cortas por falta de confianza. Otras exageran para intentar parecer más preparadas.',
         },
         {
             type: 'p',
@@ -339,99 +272,111 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Una persona con experiencia suele notar rápidamente cuando alguien habla de un tema que realmente no comprende. Sin embargo, también puede reconocer cuando un candidato es sincero, tiene buenos fundamentos y está dispuesto a aprender.',
+            text: 'Alguien con experiencia suele notar cuando una persona está hablando de algo que no conoce. Pero también puede notar cuando alguien es sincero, tiene buenos fundamentos y quiere aprender.',
         },
         {
             type: 'p',
-            text: 'Puedes decir: "Todavía no tengo experiencia profesional, pero he construido estos proyectos."',
+            text: 'Puedes decir algo como:',
         },
         {
             type: 'p',
-            text: '"He estudiado estos fundamentos y actualmente estoy profundizando en esta tecnología."',
+            text: '“Todavía no tengo experiencia profesional, pero he construido estos proyectos.”',
         },
         {
             type: 'p',
-            text: '"No conozco la respuesta, pero te explicaría cómo intentaría encontrarla."',
+            text: '“Estoy aprendiendo esta tecnología y ya hice esto con ella.”',
         },
         {
             type: 'p',
-            text: '"Este fue el problema que resolví, estas fueron mis decisiones y esto fue lo que aprendí."',
+            text: '“No conozco la respuesta, pero buscaría resolverla de esta manera.”',
         },
         {
             type: 'p',
-            text: 'Venderte no significa fingir que eres un desarrollador senior.',
+            text: '“Este fue el problema que encontré y esto fue lo que aprendí.”',
         },
         {
             type: 'p',
-            text: 'Significa aprender a comunicar el valor real que ya puedes aportar.',
+            text: 'Venderte bien no significa aparentar que eres senior.',
+        },
+        {
+            type: 'p',
+            text: 'Significa explicar con claridad lo que ya puedes hacer.',
         },
         {
             type: 'h2',
-            text: '¿Cómo puedes construir experiencia antes del primer empleo?',
+            text: '¿Cómo construir experiencia antes del primer empleo?',
         },
         {
             type: 'p',
-            text: 'No existe una única ruta. La universidad puede ser valiosa para algunas personas, especialmente por sus fundamentos, relaciones y experiencias. Para otras, una formación técnica, tecnológica o un programa más corto puede ser una vía más rápida y accesible.',
+            text: 'No existe una única ruta.',
         },
         {
             type: 'p',
-            text: 'Lo importante es que la formación esté acompañada por práctica.',
+            text: 'Para algunas personas la universidad puede ser una buena experiencia. Para otras, una técnica, una tecnología o un programa más corto puede ser suficiente para empezar.',
         },
         {
             type: 'p',
-            text: 'Puedes comenzar con cinco acciones:',
+            text: 'Lo importante es no quedarse únicamente en los cursos.',
         },
         {
             type: 'h3',
-            text: '1. Aprende los fundamentos',
+            text: 'Aprende los fundamentos',
         },
         {
             type: 'p',
-            text: 'Antes de perseguir cada tecnología nueva, comprende programación, estructuras de datos, orientación a objetos, bases de datos, APIs, control de versiones, pruebas y funcionamiento básico de la web.',
+            text: 'Estudia programación, bases de datos, APIs, control de versiones, pruebas, orientación a objetos y funcionamiento básico de la web.',
         },
         {
             type: 'p',
-            text: 'Las herramientas cambian. Los fundamentos te permiten adaptarte.',
+            text: 'Las herramientas cambian, pero los fundamentos te ayudan a adaptarte.',
         },
         {
             type: 'h3',
-            text: '2. Construye proyectos terminados',
+            text: 'Construye proyectos terminados',
         },
         {
             type: 'p',
-            text: 'No necesitas crear una gran plataforma.',
+            text: 'No necesitas crear una aplicación enorme.',
         },
         {
             type: 'p',
-            text: 'Un proyecto pequeño, publicado y bien explicado puede demostrar más que diez cursos incompletos. Debes poder contar qué problema resuelve, cómo lo construiste, qué dificultades encontraste y qué cambiarías en una segunda versión.',
+            text: 'Un proyecto pequeño, bien terminado y publicado puede decir mucho más que varios cursos incompletos.',
+        },
+        {
+            type: 'p',
+            text: 'Debes poder explicar qué problema resuelve, cómo lo hiciste, qué dificultad encontraste y qué aprendiste.',
         },
         {
             type: 'h3',
-            text: '3. Publica un portafolio',
+            text: 'Crea un portafolio',
         },
         {
             type: 'p',
-            text: 'Actualmente crear un portafolio es mucho más fácil gracias a las herramientas de inteligencia artificial.',
+            text: 'Hoy es mucho más fácil crear uno con ayuda de inteligencia artificial.',
         },
         {
             type: 'p',
-            text: 'Puedes construir una página sencilla, publicar el código en GitHub y alojarla gratuitamente. No necesitas comenzar comprando un dominio. Lo importante es tener un lugar donde una empresa pueda conocer tus proyectos, tus aprendizajes y tu forma de pensar.',
+            text: 'Puedes hacer una página sencilla, publicar tu código en GitHub y compartir tus proyectos. No necesitas pagar un dominio al comienzo.',
+        },
+        {
+            type: 'p',
+            text: 'Lo importante es tener algo que mostrar.',
         },
         {
             type: 'h3',
-            text: '4. Busca un problema real',
+            text: 'Busca un problema real',
         },
         {
             type: 'p',
-            text: 'Ayuda a un amigo, un familiar, un emprendimiento o una pequeña empresa.',
+            text: 'Puedes ayudar a un familiar, un amigo, un negocio pequeño o un emprendimiento.',
         },
         {
             type: 'p',
-            text: 'No se trata de regalar indefinidamente tu trabajo. Se trata de conseguir una primera experiencia verificable: una necesidad real, un usuario real y un resultado que puedas explicar.',
+            text: 'No se trata de trabajar gratis para siempre. Se trata de tener una primera experiencia real que puedas mostrar y explicar.',
         },
         {
             type: 'h3',
-            text: '5. Considera diferentes puertas de entrada',
+            text: 'Considera otras puertas de entrada',
         },
         {
             type: 'p',
@@ -439,84 +384,55 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Un rol de QA puede ser una buena entrada para alguien interesado en probar software, reportar errores y certificar la calidad de un producto. Más adelante puede evolucionar hacia automatización de pruebas y convertirse en QA Automation Engineer.',
+            text: 'Por ejemplo, QA puede ser una buena opción para alguien interesado en probar software, reportar errores y validar que un producto funcione correctamente.',
         },
         {
             type: 'p',
-            text: 'También existen caminos relacionados con datos, soporte técnico, infraestructura, producto y automatización.',
+            text: 'Más adelante ese camino puede avanzar hacia automatización de pruebas y roles como QA Automation Engineer.',
         },
         {
             type: 'p',
-            text: 'Lo importante es entrar, aprender cómo funciona la industria y comenzar a construir una trayectoria.',
+            text: 'También existen oportunidades en soporte, datos, infraestructura, automatización y producto.',
         },
         {
             type: 'h2',
-            text: 'El mercado está difícil, pero tu preparación todavía importa',
+            text: 'El mercado cambió y la inteligencia artificial ya es parte del trabajo',
         },
         {
             type: 'p',
-            text: 'No quiero decirte que conseguir empleo será fácil.',
+            text: 'No quiero decir que conseguir empleo sea fácil.',
         },
         {
             type: 'p',
-            text: 'El mercado atraviesa un momento de incertidumbre. Las empresas están revisando sus equipos, sus metodologías y la forma en que construyen productos. La inteligencia artificial está acelerando tareas que anteriormente tomaban días o semanas.',
+            text: 'El mercado está complejo y existe mucha incertidumbre. Las empresas están cambiando su forma de trabajar y la inteligencia artificial está acelerando muchas tareas.',
         },
         {
             type: 'p',
-            text: 'Eso cambia las expectativas.',
+            text: 'Eso también cambia lo que se espera de un desarrollador.',
         },
         {
             type: 'p',
-            text: 'Pero no creo que signifique que el software dejará de necesitar personas.',
+            text: 'Hoy no basta con aprender exactamente lo mismo que se enseñaba hace algunos años.',
         },
         {
             type: 'p',
-            text: 'Creo que veremos más productos, más automatizaciones, más conexiones entre sistemas y una necesidad creciente de verificar que todo funcione correctamente.',
+            text: 'Por eso recomiendo empezar a construir un perfil orientado a inteligencia artificial.',
         },
         {
             type: 'p',
-            text: 'El trabajo no simplemente desaparece: se transforma.',
+            text: 'No significa dejar de aprender los fundamentos ni depender completamente de una herramienta.',
         },
         {
             type: 'p',
-            text: 'Por eso, además de aprender desarrollo tradicional, te recomiendo comenzar a construir un perfil orientado a inteligencia artificial.',
+            text: 'Significa aprender a utilizar la IA para investigar, programar, analizar errores, hacer pruebas, documentar y automatizar tareas.',
         },
         {
             type: 'p',
-            text: 'No significa abandonar los fundamentos ni permitir que una herramienta piense por ti.',
+            text: 'También significa aprender a trabajar con agentes de programación y revisar con criterio lo que generan.',
         },
         {
             type: 'p',
-            text: 'Significa aprender a utilizar la IA para:',
-        },
-        {
-            type: 'ul',
-            items: [
-                'Investigar y comprender sistemas más rápidamente.',
-                'Generar primeras versiones de una solución.',
-                'Analizar errores y hacer debugging.',
-                'Crear y ejecutar pruebas.',
-                'Documentar código y decisiones.',
-                'Automatizar tareas repetitivas.',
-                'Trabajar con agentes de programación.',
-                'Construir productos que incorporen capacidades de IA.',
-            ],
-        },
-        {
-            type: 'p',
-            text: 'Hoy un desarrollador no solamente escribe líneas de código. Cada vez más, también dirige herramientas y agentes, revisa sus resultados y toma decisiones sobre arquitectura, seguridad, calidad y producto.',
-        },
-        {
-            type: 'p',
-            text: 'La inteligencia artificial puede producir código rápidamente.',
-        },
-        {
-            type: 'p',
-            text: 'Pero todavía necesitamos personas capaces de identificar el problema correcto, dar buenas instrucciones, validar lo generado y asumir responsabilidad por el resultado.',
-        },
-        {
-            type: 'p',
-            text: 'Ese criterio será cada vez más importante.',
+            text: 'La inteligencia artificial puede ayudarte a avanzar más rápido, pero todavía necesitas entender el problema, tomar decisiones y verificar que el resultado esté bien.',
         },
         {
             type: 'h2',
@@ -524,35 +440,31 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'He ayudado a amigos y familiares a conseguir oportunidades en tecnología. Incluso acompañé a un primo que venía de la ingeniería civil para prepararse y entrar en un rol de QA.',
+            text: 'He ayudado a varias personas cercanas a prepararse para conseguir oportunidades en tecnología.',
         },
         {
             type: 'p',
-            text: 'Cuando hablo con alguien que todavía no tiene experiencia, no espero que lo sepa todo.',
+            text: 'Incluso ayudé a un primo que venía de la ingeniería civil a entrar en un rol de QA.',
         },
         {
             type: 'p',
-            text: 'Busco otras señales.',
+            text: 'Cuando hablo con alguien sin experiencia, no espero que lo sepa todo.',
         },
         {
             type: 'p',
-            text: 'Quiero ver sinceridad, energía, curiosidad, disposición, proactividad y apertura para aprender. Quiero saber si esa persona hizo el esfuerzo de estudiar los fundamentos y si puede mostrar algo que haya construido.',
+            text: 'Me fijo en su actitud, su sinceridad, su disposición para aprender, la forma en que se comunica y el esfuerzo que ha hecho para prepararse.',
         },
         {
             type: 'p',
-            text: 'También observo cómo se comunica.',
+            text: 'También me interesa saber qué ha construido y cómo enfrenta algo que no conoce.',
         },
         {
             type: 'p',
-            text: 'Hay personas que todavía tienen vacíos técnicos, pero transmiten una disposición genuina para aprender, ayudar y recibir retroalimentación. Esa actitud puede hacer que alguien decida darles una oportunidad.',
+            text: 'Hay personas que todavía tienen vacíos técnicos, pero se nota que tienen ganas de aprender, recibir retroalimentación y ayudar al equipo.',
         },
         {
             type: 'p',
-            text: 'Un junior no tiene que presentarse como senior.',
-        },
-        {
-            type: 'p',
-            text: 'Tiene que demostrar que vale la pena invertir en su crecimiento.',
+            text: 'Eso puede ser suficiente para que alguien decida darles una oportunidad.',
         },
         {
             type: 'h2',
@@ -560,41 +472,31 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Después de más de diez años desarrollando software, todavía enfrento problemas complejos.',
+            text: 'Después de más de diez años desarrollando software, todavía me encuentro con problemas difíciles.',
         },
         {
             type: 'p',
-            text: 'He tenido entregas críticas, salidas a producción prioritarias y situaciones en las que la presión parecía superar mi capacidad del momento. He tenido que integrar herramientas, configurar sistemas, revisar variables, analizar errores y encontrar soluciones bajo presión.',
+            text: 'He pasado por entregas importantes, salidas a producción y momentos de mucha presión.',
         },
         {
             type: 'p',
-            text: 'Antes estos procesos podían tomar mucho más tiempo. Actualmente la inteligencia artificial nos ayuda a investigar, analizar, monitorear y hacer debugging con mayor velocidad.',
+            text: 'Antes podía tardar mucho más investigando o encontrando la causa de un error. Hoy la inteligencia artificial ayuda a analizar, monitorear y hacer debugging más rápido.',
         },
         {
             type: 'p',
-            text: 'Pero la lección principal no ha cambiado:',
-        },
-        {
-            type: 'callout',
-            text: 'Siempre hay una salida.',
+            text: 'Pero la forma de enfrentar los problemas sigue siendo parecida.',
         },
         {
             type: 'p',
-            text: 'Cuando no sepas cómo continuar, no te alarmes.',
-        },
-        { type: 'p', text: 'Divide el problema.' },
-        { type: 'p', text: 'Investiga.' },
-        { type: 'p', text: 'Pregunta.' },
-        { type: 'p', text: 'Prueba una alternativa.' },
-        { type: 'p', text: 'Descansa si es necesario.' },
-        { type: 'p', text: 'Vuelve a intentarlo.' },
-        {
-            type: 'p',
-            text: 'Ten paciencia, perseverancia y constancia.',
+            text: 'Cuando no sepas cómo continuar, trata de no alarmarte.',
         },
         {
             type: 'p',
-            text: 'La frustración no significa que no seas capaz. Muchas veces significa que estás justo en el punto en el que estás creciendo.',
+            text: 'Divide el problema, investiga, pregunta, prueba otra opción y vuelve a intentarlo.',
+        },
+        {
+            type: 'p',
+            text: 'La frustración también hace parte del aprendizaje.',
         },
         {
             type: 'h2',
@@ -602,47 +504,43 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Quizás hoy estás enviando hojas de vida y nadie responde.',
+            text: 'Tal vez hoy estás enviando hojas de vida y no recibes respuestas.',
         },
         {
             type: 'p',
-            text: 'Quizás estás terminando un curso y sientes que todavía te falta demasiado.',
+            text: 'Tal vez terminaste un curso, pero todavía sientes que te falta demasiado.',
         },
         {
             type: 'p',
-            text: 'Tal vez observas las vacantes y piensas que todas exigen conocimientos que no tienes.',
+            text: 'Yo también estuve confundido y también llegué a un punto en el que necesitaba una oportunidad sin saber exactamente cómo conseguirla.',
         },
         {
             type: 'p',
-            text: 'Yo también tuve miedo. También estuve confundido. También llegué a un punto en el que necesitaba una oportunidad y no sabía exactamente cómo conseguirla.',
+            text: 'Mi camino empezó con curiosidad, un computador dañado, una técnica en sistemas, competencias de programación, proyectos, clases y muchas preguntas.',
         },
         {
             type: 'p',
-            text: 'Mi camino comenzó mirando con curiosidad los íconos de un computador. Continuó con una máquina dañada en mi habitación, una técnica en sistemas, algoritmos, competencias de programación, clases, preguntas a mis amigos y muchas horas de aprendizaje.',
+            text: 'No fue un proceso perfectamente planeado.',
         },
         {
             type: 'p',
-            text: 'No fue un camino perfectamente planeado.',
+            text: 'Pero cada etapa me ayudó a prepararme.',
         },
         {
             type: 'p',
-            text: 'Pero cada paso me estaba preparando.',
+            text: 'Haz tu parte. Estudia, construye, pregunta, comparte tu trabajo y aprende a explicar lo que sabes.',
         },
         {
             type: 'p',
-            text: 'Haz tu parte. Estudia, construye, pregunta, comparte tu trabajo y aprende a explicar lo que sabes. Prepárate para el mercado que existe ahora, no solamente para el que existía hace algunos años. Incluye inteligencia artificial en tu perfil y úsala para aumentar tu capacidad, no para ocultar tus vacíos.',
+            text: 'Prepárate también para el mercado actual. Aprende inteligencia artificial y úsala para mejorar tu capacidad, no para esconder lo que todavía no entiendes.',
         },
         {
             type: 'p',
-            text: 'Y, sobre todo, no pierdas la fe.',
+            text: 'Y pídele mucho a Dios.',
         },
         {
             type: 'p',
-            text: 'Pídele mucho a Dios. Él puede guiarte, presentarte las personas correctas y abrir oportunidades que hoy todavía no puedes ver.',
-        },
-        {
-            type: 'p',
-            text: 'Pero mientras llega esa oportunidad, continúa trabajando.',
+            text: 'Él puede guiarte, acercarte a las personas correctas y abrir oportunidades que hoy todavía no ves.',
         },
         {
             type: 'p',
@@ -650,19 +548,7 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Pon de tu parte con disciplina y constancia. Cuando la oportunidad aparezca, procura que te encuentre aprendiendo, construyendo y preparado para recibirla.',
-        },
-        {
-            type: 'p',
             text: 'Que Dios bendiga tu proceso y te permita conseguir esa primera oportunidad.',
-        },
-        {
-            type: 'p',
-            text: 'Puede ser difícil.',
-        },
-        {
-            type: 'p',
-            text: 'Pero sí se puede.',
         },
     ],
 };

@@ -6,24 +6,33 @@ type BlogBodyProps = {
 };
 
 export const BlogBody = ({ blocks }: BlogBodyProps) => {
+    let h2Index = 0;
+
     return (
-        <div className="mx-auto max-w-[720px] space-y-6">
+        <div className="space-y-5">
             {blocks.map((block, index) => {
                 switch (block.type) {
-                    case 'h2':
+                    case 'h2': {
+                        h2Index += 1;
+                        const isFirstSection = h2Index === 1;
                         return (
                             <h2
                                 key={index}
-                                className="font-cabinet_grotesk text-2xl font-bold tracking-tight text-stone-900 md:text-3xl md:leading-tight"
+                                className={`font-cabinet_grotesk text-[1.65rem] font-bold leading-snug tracking-tight text-stone-900 md:text-[1.85rem] ${
+                                    isFirstSection
+                                        ? 'mt-4'
+                                        : 'mt-12 border-t border-stone-200 pt-10'
+                                }`}
                             >
                                 {block.text}
                             </h2>
                         );
+                    }
                     case 'h3':
                         return (
                             <h3
                                 key={index}
-                                className="font-cabinet_grotesk text-xl font-bold tracking-tight text-stone-900 md:text-2xl"
+                                className="mt-6 font-cabinet_grotesk text-xl font-bold leading-snug tracking-tight text-stone-900"
                             >
                                 {block.text}
                             </h3>
@@ -63,7 +72,7 @@ export const BlogBody = ({ blocks }: BlogBodyProps) => {
                         return (
                             <blockquote
                                 key={index}
-                                className="border-l-4 border-brand-lime bg-brand-mint/10 px-5 py-4"
+                                className="my-6 rounded-[12px] border-2 border-stone-900 bg-neutral-50 px-5 py-4"
                             >
                                 <p className="font-dm_sans text-base font-semibold leading-relaxed text-stone-900 md:text-lg">
                                     {block.text}
