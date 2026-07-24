@@ -14,7 +14,7 @@ export const CTACard = ({ className = "" }: CTACardProps) => {
       <div className="flex max-w-[520px] flex-col items-center gap-3">
         <h2 className={typographyClasses.sectionTitle}>Let&apos;s Talk</h2>
         <p className={typographyClasses.sectionDesc}>
-          If you&apos;d like to talk about your product, startup idea, or how AI
+          Let's talk about your product, startup idea, or how AI
           can accelerate your roadmap, book a short call.
         </p>
       </div>
