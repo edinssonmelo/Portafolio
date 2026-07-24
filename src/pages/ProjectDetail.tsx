@@ -308,7 +308,7 @@ const projects: Record<string, {
         subtitle: "Part of the team behind Seguros SURA's enterprise SuperApp on iOS and Android, serving millions of insurance customers in Colombia.",
         livePreviewUrl: "https://play.google.com/store/apps/details?id=co.com.sura.seguros&hl=es_CO",
         aboutText: "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA. It is a cross platform iOS and Android app used at scale for insurance services, benefits, and daily customer operations.",
-        date: "2023 – 2025",
+        date: "2022 – 2024",
         client: "Seguros SURA",
         services: ["Mobile", "Flutter", "iOS", "Android"],
         projectDetails: "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported live operations and incident resolution for end users to keep service continuity and quality high.",
@@ -323,7 +323,7 @@ const projects: Record<string, {
             body: [
                 "At Seguros SURA I worked on the SuperApp team. The SuperApp is the company's main mobile app: the place where customers on iOS and Android access health, mobility, home, wallet, refunds, claims, and other SURA services. It is a large, live product with modern tooling, clear engineering standards, and real operational pressure.",
                 "SURA offers many services across the company, and the SuperApp was the front door for customers. Coordinating with every area and business unit was a real challenge, and it demanded close collaboration every day. I was lucky to work with an excellent team, both on the human side and on the technical side.",
-                "I also spent meaningful time close to production support and end users, resolving incidents and keeping service continuity when problems reached real people. I worked across several areas at SURA (architecture, mobile assistance, the SuperApp, DOCS/controls/OX, and bolsa), but the SuperApp remains the most memorable. I am grateful to Seguros SURA and to Ceiba Software, the consultancy that supported me through that growth.",
+                "My work at SURA through Ceiba Software grew over time. Earlier I helped build a SOX-compliant portal for monitoring transactional operations and controls, CapabilitiesApp for internal workforce and skills management, and integrations for mobile assistance with providers such as Konecta and Medallia. On the SuperApp I later developed features across Health, Mobility, Home, Wallet, Refunds, and Claims, and supported operations and incident resolution for end users in production. I am grateful to Seguros SURA and to Ceiba Software for that experience.",
             ],
             stack: ["Mobile", "Flutter", "iOS", "Android"],
             pullQuote:
