@@ -2,16 +2,14 @@
 
 ## Current focus (Jul 2026)
 
-- Identity/copy coherence (AI Product Builder)
+- Design system primitives (SurfaceCard, tokens, compact Contact/Stats/Case study)
 - Transparent logo assets (mobile + full)
 - Auto-deploy on push to `main` via self-hosted GitHub Actions runner on ai-server
 
 ## Recent changes
 
-- Logo: `public/assets/logo-mobile.png`, `logo-full.png` from Downloads (transparent)
-- `/about`, `/blog` pages + schema ProfilePage
-- Case study sections in `ProjectDetail.tsx`
-- Deploy: `.github/workflows/deploy.yml` → runner `ai-server-portafolio`
+- Design system: `designTokens.ts`, `SurfaceCard`, `SectionBadge`, `TagChip`, `Field`
+- Contact + Stats compacted; Case study panel with brand badges/callout
 
 ## Next steps (user-driven)
 

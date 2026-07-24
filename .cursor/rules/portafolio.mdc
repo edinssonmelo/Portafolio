@@ -14,6 +14,7 @@ Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, 
 - **Screenshots**: `public/screenshots/` — never `public/projects/`
 - **Deploy**: push to `main` auto-deploys via self-hosted runner on ai-server (`/srv/apps/portafolio`)
 - **Style**: Cabinet Grotesk headings, DM Sans body, stone-900 navbar, lime accent `#DCFF31`
+- **Design system**: `src/config/designTokens.ts` + primitives `SurfaceCard`, `SectionBadge`, `TagChip`, `Field` — use for new UI instead of Framer `after:border` boilerplate
 
 ## After meaningful tasks
 

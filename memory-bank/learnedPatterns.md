@@ -17,6 +17,23 @@ Patterns discovered while building this project. Update when new conventions eme
 - Body: `font-dm_sans`, `text-lg leading-[30px]` for paragraphs
 - Section badges: uppercase DM Sans, `text-[13px] font-black tracking-[0.65px]`
 
+### Design system primitives
+
+- **Tokens**: [`src/config/designTokens.ts`](../src/config/designTokens.ts) — ink, lime `#DCFF31`, mint `#4BFBBA`, radii, compact spacing
+- **Tailwind**: `brand.lime`, `brand.mint`, `rounded-card`, `rounded-btn`
+- **Components**:
+  - `SurfaceCard` — white + `border-2 border-stone-900` + `rounded-[20px]`
+  - `SectionBadge` — uppercase label pill (Contact, Case study)
+  - `TagChip` — stack tags in case studies
+  - `Field` / `TextAreaField` — compact underline inputs (~40px, textarea min 96px)
+  - `GradientButton` — supports `type="submit"` for forms
+
+### Density (compact UI)
+
+- Contact card: `max-w-[640px]`, `px-6 py-8 md:px-10 md:py-10`
+- Stats card: `p-6 md:p-8`, numbers `text-3xl md:text-4xl`
+- Case study: `SurfaceCard` on `bg-neutral-100`, section labels uppercase 13px, Outcome in mint callout
+
 ### Logo
 
 - **Never** set `background`, `bg-*`, or `object-cover` on logo images

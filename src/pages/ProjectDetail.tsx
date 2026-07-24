@@ -136,8 +136,10 @@ const projects: Record<string, {
         client: "WordJet.ai",
         services: ["AI", "SaaS", "Fullstack"],
         projectDetails: "Built the product landing, writing workspace, Jet AI assistant, project organization, and research oriented workflows for marketing content production.",
+        outcome:
+            "A focused writing product that helps marketing teams turn research into briefs, articles, and client-ready content faster.",
         testimonial: {
-            quote: "A focused writing product that helps our team turn research into briefs, articles, and client ready content much faster.",
+            quote: "A focused writing product that helps marketing teams turn research into briefs, articles, and client ready content much faster.",
             author: "WordJet Team",
             role: "Product"
         },

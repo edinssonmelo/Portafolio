@@ -7,6 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        brand: {
+          lime: "#DCFF31",
+          mint: "#4BFBBA",
+          ink: "#1c1917",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -42,6 +47,8 @@ module.exports = {
         },
       },
       borderRadius: {
+        card: "20px",
+        btn: "10px",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
@@ -59,6 +66,11 @@ module.exports = {
         "dm_sans": ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
         "inter": ["Inter", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
         "cabinet_grotesk": ["Cabinet Grotesk", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
+      },
+      spacing: {
+        "section-y": "100px",
+        "card-pad": "1.5rem",
+        "card-pad-md": "2rem",
       },
       keyframes: {
         "accordion-down": {

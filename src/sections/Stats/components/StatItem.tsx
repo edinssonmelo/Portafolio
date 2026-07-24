@@ -6,22 +6,20 @@ export type StatItemProps = {
 
 export const StatItem = (props: StatItemProps) => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center gap-[5px] md:grow md:basis-0 md:gap-2.5">
-      <div className="flex items-baseline justify-center text-center">
-        <span className="text-stone-900 text-[50px] font-bold leading-[50px] tracking-[-0.5px] text-nowrap font-cabinet_grotesk">
+    <div className="relative flex flex-col items-center justify-center gap-1 text-center md:gap-1.5">
+      <div className="flex items-baseline justify-center">
+        <span className="text-3xl font-bold leading-none tracking-tight text-stone-900 font-cabinet_grotesk md:text-4xl">
           {props.value}
         </span>
         {props.suffix ? (
-          <span className="text-stone-900 text-[50px] font-bold leading-[50px] tracking-[-0.5px] text-nowrap font-cabinet_grotesk">
+          <span className="text-3xl font-bold leading-none tracking-tight text-stone-900 font-cabinet_grotesk md:text-4xl">
             {props.suffix}
           </span>
         ) : null}
       </div>
-      <div className="relative flex w-full shrink-0 flex-col justify-start break-words">
-        <p className="text-stone-900 text-lg leading-6 break-words text-center font-dm_sans">
-          {props.description}
-        </p>
-      </div>
+      <p className="text-sm leading-snug text-stone-900 font-dm_sans md:text-base">
+        {props.description}
+      </p>
     </div>
   );
 };

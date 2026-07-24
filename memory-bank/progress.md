@@ -7,6 +7,7 @@
 - [x] Identity copy: AI Product Builder, Projects copy, `/about`, schema
 - [x] Case study sections in project detail
 - [x] Blog scaffold (`/blog`, empty `BLOG_POSTS`)
+- [x] Design system + compact Contact, Stats, Case study UI
 - [x] Transparent logos (mobile + full)
 - [x] Auto-deploy workflow + self-hosted runner on ai-server
 
