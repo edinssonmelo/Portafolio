@@ -40,7 +40,7 @@ export const AboutPage = () => {
                             Edinsson Melo
                         </h1>
                         <p className="text-xl font-semibold text-stone-900 md:text-2xl">
-                            AI Product Builder
+                            An AI Product Builder
                         </p>
                         <p className="max-w-[650px] text-lg leading-[30px] text-stone-900">
                             AI Software Engineer based in {SITE_CONFIG.location.city},{' '}

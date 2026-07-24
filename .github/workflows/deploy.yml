@@ -3,6 +3,7 @@ name: Deploy to ai-server
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 concurrency:
   group: deploy-portafolio
@@ -16,6 +17,7 @@ jobs:
         run: |
           cd /srv/apps/portafolio
           git pull --ff-only origin main
+          echo "Deployed commit: $(git rev-parse --short HEAD): $(git log -1 --format=%s)"
           docker compose -p portafolio build
           docker compose -p portafolio up -d --remove-orphans
 

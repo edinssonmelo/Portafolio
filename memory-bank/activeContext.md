@@ -16,7 +16,7 @@
 - CTA + Contact combined side-by-side (`CTAContact`); portfolio hover gallery on home
 - Hero: reverted to original layout (two-line title, original spacing/sizes/ellipses)
 - Project detail: "Visit live site" beside carousel; narrative `ProjectStory` replaces rigid case study
-- Copy style: no em dashes in site text; rule added to AGENTS.md and portafolio.mdc
+- About page subtitle aligned with hero: An AI Product Builder
 
 ## Next steps (user-driven)
 

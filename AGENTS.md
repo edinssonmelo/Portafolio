@@ -4,7 +4,8 @@
 
 1. **Memory bank**: Update `memory-bank/activeContext.md` and `progress.md` (and `learnedPatterns.md` / `systemPatterns.md` when patterns change).
 2. **Commit + push**: Always commit and push to `main` when the task is complete. Do not leave finished work only in the working tree.
-3. **Deploy**: Push to `main` triggers auto-deploy on ai-server via GitHub Actions (self-hosted runner).
+3. **Deploy**: Push to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on the self-hosted runner (`runs-on: [self-hosted, linux, portafolio]`). It runs `git pull`, `docker compose build`, and `docker compose up` in `/srv/apps/portafolio`.
+4. **Verify deploy**: After every push, confirm `git push origin main` succeeded and check Actions: `gh run list --workflow=deploy.yml --limit 3`. Do not end a task with uncommitted files or unpushed commits.
 
 ## Commit protocol
 
