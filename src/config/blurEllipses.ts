@@ -204,7 +204,7 @@ export const aboutEllipses: BlurEllipseConfig[] = [
 // ============================================
 export const portfolioEllipses: BlurEllipseConfig[] = [
     {
-        color: "rgba(127, 230, 217, 0.4)", // Cyan/turquesa (verdoso)
+        color: "rgba(127, 230, 217, 0.4)",
         blur: 100,
         size: {
             mobile: {
@@ -213,8 +213,38 @@ export const portfolioEllipses: BlurEllipseConfig[] = [
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "660px",
-                height: "694px",
+                width: "624px",
+                height: "657px",
+                aspectRatio: "1.108_/_1",
+            },
+        },
+        position: {
+            mobile: {
+                bottom: "-210px",
+                right: "-333px",
+                left: "0",
+                top: "auto",
+            },
+            desktop: {
+                left: "-23px",
+                top: "-98px",
+                bottom: "auto",
+                right: "auto",
+            },
+        },
+    },
+    {
+        color: "rgba(220, 255, 49, 0.4)",
+        blur: 100,
+        size: {
+            mobile: {
+                width: "377px",
+                height: "340px",
+                aspectRatio: "1.108_/_1",
+            },
+            desktop: {
+                width: "624px",
+                height: "570px",
                 aspectRatio: "1.108_/_1",
             },
         },
@@ -225,39 +255,10 @@ export const portfolioEllipses: BlurEllipseConfig[] = [
                 right: "0",
             },
             desktop: {
-                left: "-220px",
-                top: "-80px",
+                left: "-23px",
+                bottom: "-5px",
                 right: "auto",
-                bottom: "auto",
-            },
-        },
-    },
-    {
-        color: "rgba(220, 255, 49, 0.4)", // Amarillo-verde
-        blur: 100,
-        size: {
-            mobile: {
-                width: "377px",
-                height: "340px",
-                aspectRatio: "1.108_/_1",
-            },
-            desktop: {
-                width: "657px",
-                height: "592px",
-                aspectRatio: "1.108_/_1",
-            },
-        },
-        position: {
-            mobile: {
-                bottom: "-210px",
-                right: "-333px",
-                left: "0",
-            },
-            desktop: {
-                right: "-60px",
-                top: "-60px",
-                left: "auto",
-                bottom: "auto",
+                top: "auto",
             },
         },
     },
@@ -397,60 +398,61 @@ export const contactEllipses: BlurEllipseConfig[] = [
 // ============================================
 export const ctaContactEllipses: BlurEllipseConfig[] = [
     {
-        color: "rgba(220, 255, 49, 0.4)",
+        color: "rgba(127, 230, 217, 0.4)",
         blur: 100,
         size: {
             mobile: {
-                width: "340px",
-                height: "310px",
+                width: "377px",
+                height: "340px",
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "620px",
-                height: "560px",
+                width: "624px",
+                height: "657px",
                 aspectRatio: "1.108_/_1",
             },
         },
         position: {
             mobile: {
-                top: "8%",
-                left: "50%",
-                transform: "translate-x-[-50%]",
+                bottom: "-210px",
+                right: "-333px",
+                left: "0",
+                top: "auto",
             },
             desktop: {
-                left: "-160px",
-                top: "28%",
+                left: "-23px",
+                top: "-98px",
                 bottom: "auto",
                 right: "auto",
             },
         },
     },
     {
-        color: "rgba(127, 230, 217, 0.4)",
+        color: "rgba(220, 255, 49, 0.4)",
         blur: 100,
         size: {
             mobile: {
-                width: "340px",
-                height: "310px",
+                width: "377px",
+                height: "340px",
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "660px",
-                height: "620px",
+                width: "624px",
+                height: "570px",
                 aspectRatio: "1.108_/_1",
             },
         },
         position: {
             mobile: {
-                bottom: "0%",
-                left: "50%",
-                transform: "translate-x-[-50%]",
+                bottom: "-282px",
+                left: "-477px",
+                right: "0",
             },
             desktop: {
-                right: "-140px",
-                top: "22%",
-                left: "auto",
-                bottom: "auto",
+                left: "-23px",
+                bottom: "-5px",
+                right: "auto",
+                top: "auto",
             },
         },
     },

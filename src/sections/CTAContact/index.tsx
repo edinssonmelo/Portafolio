@@ -15,7 +15,7 @@ export const CTAContact = () => {
       className={`${layoutClasses.section} ${layoutClasses.sectionNeutral} overflow-hidden`}
     >
       <div className="relative mx-auto w-full max-w-[1140px] px-[30px]">
-        <div className="pointer-events-none absolute inset-0 overflow-visible">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[min(100%,560px)] w-[min(100%,660px)] -translate-x-1/2 -translate-y-1/2">
           <BlurEllipses ellipses={ctaContactEllipses} />
         </div>
 

@@ -20,7 +20,12 @@ export const Portfolio = () => {
           variant="max-w-[650px] md:max-w-[700px]"
         />
         <div className="relative w-full">
-          <BlurEllipses ellipses={portfolioEllipses} />
+          <div className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-[700px] w-[700px] -translate-y-1/2 md:block">
+            <BlurEllipses ellipses={portfolioEllipses} />
+          </div>
+          <div className="pointer-events-none absolute bottom-[-120px] left-1/2 z-0 h-[420px] w-[min(100%,520px)] -translate-x-1/2 md:hidden">
+            <BlurEllipses ellipses={portfolioEllipses} />
+          </div>
           <div className="relative z-10 flex flex-col items-center gap-10 md:gap-12">
             <PortfolioGrid limit={4} enableHoverGallery />
             <GradientButton to="/projects">
