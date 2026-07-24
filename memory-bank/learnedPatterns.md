@@ -59,6 +59,7 @@ Patterns discovered while building this project. Update when new conventions eme
 - First person (`I`, `my`), not "we" unless representing a client team
 - **No em dashes (`—`)** in user-facing copy. Use periods, commas, colons, or parentheses instead
 - Project images: use native aspect via `src/config/screenshotMeta.ts`; never force `aspect-[16/9]` on mismatched screenshots
+- When replacing a screenshot file, bump `SCREENSHOT_CACHE_VERSION` in `screenshotMeta.ts` so production fetches the new image (nginx used to cache PNGs as `immutable` for 1 year)
 - SURA mobile shots are 140×296px. Display at native width, centered (no upscale)
 
 ## Deploy

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
+import { screenshotSrc } from "@/config/screenshotMeta";
+
 const LIGHTBOX_BTN_CLASS =
     "flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border-none bg-yellow-300 cursor-pointer md:h-[50px] md:w-[50px]";
 
@@ -95,7 +97,7 @@ export const ProjectImageLightbox = ({
 
                 <figure className="flex min-w-0 flex-1 flex-col items-center gap-3">
                     <img
-                        src={images[index]}
+                        src={screenshotSrc(images[index])}
                         alt={`${title} - ${index + 1}`}
                         className="max-h-[80dvh] w-auto max-w-full object-contain"
                     />

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { isMobileScreenshot } from "@/config/screenshotMeta";
+import { isMobileScreenshot, screenshotSrc } from "@/config/screenshotMeta";
 import { typographyClasses } from "@/config/designTokens";
 
 const PREVIEW_WORD_COUNT = 14;
@@ -61,7 +61,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
   useEffect(() => {
     images.forEach((src) => {
       const img = new Image();
-      img.src = src;
+      img.src = screenshotSrc(src);
     });
   }, [images]);
 
@@ -110,7 +110,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
             <img
               key={src}
               sizes={props.imageSizes}
-              src={src}
+              src={screenshotSrc(src)}
               alt={`${props.title}${index === 0 ? "" : ` - ${index + 1}`}`}
               loading={index === 0 ? "lazy" : "eager"}
               decoding="async"

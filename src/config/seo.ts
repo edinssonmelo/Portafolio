@@ -4,6 +4,7 @@
  */
 
 import { getBlogPost } from '@/data/blog';
+import { screenshotSrc } from '@/config/screenshotMeta';
 
 export const SITE_CONFIG = {
     name: 'Edinsson Melo',
@@ -113,42 +114,42 @@ export const projectSeoConfig: Record<string, SEOConfig> = {
         description:
             'Online tax filing platform for Colombia with expert accountants, free tools, and a guided DIAN declaration flow.',
         path: '/projects/declaramelo',
-        image: 'https://edinssonmelo.com/screenshots/declaramelo-hero.png',
+        image: screenshotSrc('https://edinssonmelo.com/screenshots/declaramelo-hero.png'),
     },
     openwhispr: {
         title: 'OpenWhispr | Edinsson Melo',
         description:
             'AI native macOS desktop app to transcribe meetings, save them, and analyze them with ease.',
         path: '/projects/openwhispr',
-        image: 'https://edinssonmelo.com/screenshots/openwhispr-hero.png',
+        image: screenshotSrc('https://edinssonmelo.com/screenshots/openwhispr-hero.png'),
     },
     'bernal-tech-b2b': {
         title: 'Bernal Tech B2B | Edinsson Melo',
         description:
             'Wholesale B2B portal for a Colombian car mat manufacturer with catalog, quotes, orders, and admin dashboard.',
         path: '/projects/bernal-tech-b2b',
-        image: 'https://edinssonmelo.com/screenshots/bernal-dashboard.png',
+        image: screenshotSrc('https://edinssonmelo.com/screenshots/bernal-dashboard.png'),
     },
     'wordjet-ai': {
         title: 'Wordjet.ai | Edinsson Melo',
         description:
             'AI writing workspace for marketing agencies to create briefs, articles, essays, and market research.',
         path: '/projects/wordjet-ai',
-        image: 'https://edinssonmelo.com/screenshots/wordjet-landing.png',
+        image: screenshotSrc('https://edinssonmelo.com/screenshots/wordjet-landing.png'),
     },
     'superapp-mobile': {
         title: 'Seguros SURA SuperApp | Edinsson Melo',
         description:
             'Mobile contribution to Seguros SURA SuperApp on iOS and Android across Health, Mobility, Home, Wallet, Refunds, and Claims.',
         path: '/projects/superapp-mobile',
-        image: 'https://edinssonmelo.com/screenshots/sura-explora.png',
+        image: screenshotSrc('https://edinssonmelo.com/screenshots/sura-explora.png'),
     },
     overup: {
         title: 'OverUP | Edinsson Melo',
         description:
             'Oversized streetwear e-commerce store with catalog, product pages, and checkout for OverUP in Colombia.',
         path: '/projects/overup',
-        image: 'https://edinssonmelo.com/screenshots/overup-hero.png',
+        image: screenshotSrc('https://edinssonmelo.com/screenshots/overup-hero.png'),
     },
 };
 

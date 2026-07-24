@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import { ProjectImageLightbox } from "@/components/ProjectImageLightbox";
 import { ProjectStory, type ProjectStoryData } from "@/components/ProjectStory";
-import { getScreenshotMeta, isMobileScreenshot } from "@/config/screenshotMeta";
+import { getScreenshotMeta, isMobileScreenshot, screenshotSrc } from "@/config/screenshotMeta";
 
 // Project data - in a real app, this would come from an API or CMS
 const projects: Record<string, {
@@ -542,7 +542,7 @@ const ProjectDetailContent = ({
     useEffect(() => {
         slides.forEach((src) => {
             const img = new Image();
-            img.src = src;
+            img.src = screenshotSrc(src);
         });
     }, [slides]);
 
@@ -622,7 +622,7 @@ const ProjectDetailContent = ({
                                         aria-label={`View ${project.title} image ${i + 1} in full size`}
                                     >
                                         <img
-                                            src={image}
+                                            src={screenshotSrc(image)}
                                             alt={`${project.title} - ${i + 1}`}
                                             loading={i === 0 ? "eager" : "lazy"}
                                             decoding="async"

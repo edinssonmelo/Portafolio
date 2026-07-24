@@ -1,4 +1,31 @@
 /** Native dimensions for /screenshots assets. Keeps layout stable and avoids forced stretch. */
+
+/** Bump when replacing files in public/screenshots/ so browsers/CDN fetch fresh assets. */
+export const SCREENSHOT_CACHE_VERSION = "20260724";
+
+export const screenshotSrc = (path: string) => {
+    if (path.startsWith("http://") || path.startsWith("https://")) {
+        try {
+            const url = new URL(path);
+            if (url.pathname.startsWith("/screenshots/")) {
+                url.searchParams.set("v", SCREENSHOT_CACHE_VERSION);
+                return url.toString();
+            }
+        } catch {
+            return path;
+        }
+        return path;
+    }
+
+    const [base, query] = path.split("?");
+    if (!base.startsWith("/screenshots/")) {
+        return path;
+    }
+    const params = new URLSearchParams(query);
+    params.set("v", SCREENSHOT_CACHE_VERSION);
+    return `${base}?${params.toString()}`;
+};
+
 export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
@@ -25,7 +52,7 @@ export const SCREENSHOT_META: Record<
 };
 
 export const getScreenshotMeta = (src: string) => {
-    const filename = src.split("/").pop() ?? "";
+    const filename = src.split("/").pop()?.split("?")[0] ?? "";
     return SCREENSHOT_META[filename];
 };
 
