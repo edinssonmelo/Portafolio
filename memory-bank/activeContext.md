@@ -14,7 +14,7 @@
 - Global compact rhythm: `layoutClasses` in designTokens (`py-16 md:py-20`, `gap-10 md:gap-12`); SectionHeader `text-2xl md:text-3xl`; navbar `84px`; all home sections aligned
 - Portfolio home shows 4 projects; SURA card uses uniform 16:9 frame; Bernal dashboard cover updated
 - CTA + Contact combined side-by-side (`CTAContact`); portfolio hover gallery on home
-- Hero: unified headline ("I'm Edinsson Melo, an AI Product Builder"), text shifted left, larger portrait + ellipses
+- Hero: reverted to original layout (two-line title, original spacing/sizes/ellipses)
 - Project detail: "Visit live site" moved to top-right of hero (removed bottom CTA block)
 
 ## Next steps (user-driven)

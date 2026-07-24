@@ -21,13 +21,13 @@ export const heroEllipses: BlurEllipseConfig[] = [
         blur: 90,
         size: {
             mobile: {
-                width: "290px",
-                height: "268px",
+                width: "260px",
+                height: "240px",
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "680px",
-                height: "625px",
+                width: "609px",
+                height: "560px",
                 aspectRatio: "1.108_/_1",
             },
         },
@@ -48,13 +48,13 @@ export const heroEllipses: BlurEllipseConfig[] = [
         blur: 90,
         size: {
             mobile: {
-                width: "278px",
-                height: "256px",
+                width: "250px",
+                height: "230px",
                 aspectRatio: "1.108_/_1",
             },
             desktop: {
-                width: "645px",
-                height: "605px",
+                width: "577px",
+                height: "540px",
                 aspectRatio: "1.108_/_1",
             },
         },
