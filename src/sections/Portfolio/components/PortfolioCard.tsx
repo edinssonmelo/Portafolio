@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { isMobileScreenshot } from "@/config/screenshotMeta";
 
 const PREVIEW_WORD_COUNT = 14;
-const HOVER_CYCLE_MS = 1400;
+const HOVER_CYCLE_MS = 900;
 
 const portfolioLinkClassName =
   "font-semibold text-stone-900 underline decoration-stone-400 underline-offset-2 transition-colors hover:decoration-stone-900";
@@ -68,7 +68,10 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
     if (!isHovering || !canCycle) return;
 
     const timer = window.setInterval(() => {
-      setImageIndex((current) => (current + 1) % images.length);
+      setImageIndex((current) => {
+        const next = (current + 1) % images.length;
+        return next === 0 ? 1 : next;
+      });
     }, HOVER_CYCLE_MS);
 
     return () => window.clearInterval(timer);
@@ -82,6 +85,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
   const handleMouseEnter = () => {
     if (!canCycle) return;
     setIsHovering(true);
+    setImageIndex(1);
   };
 
   const handleMouseLeave = () => {
@@ -113,7 +117,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
               loading={index === 0 ? "lazy" : "eager"}
               decoding="async"
               aria-hidden={!isActive}
-              className={`absolute inset-0 m-auto transition-opacity duration-700 ease-in-out ${
+              className={`absolute inset-0 m-auto transition-opacity duration-300 ease-out ${
                 isActive ? "opacity-100" : "opacity-0"
               } ${
                 shotIsMobile
