@@ -65,6 +65,7 @@ Patterns discovered while building this project. Update when new conventions eme
 ## Deploy
 
 - Push to `main` → auto deploy on ai-server (no manual `dist` upload)
+- After meaningful tasks: commit + push without asking the user; skip only if they explicitly say not to
 - Do not commit `.env` (gitignored)
 
 ## SPA / static hosting
