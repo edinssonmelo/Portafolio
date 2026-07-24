@@ -17,7 +17,7 @@ export const AboutPage = () => {
                     badge="About"
                     title="Edinsson Melo"
                     kicker={SITE_CONFIG.tagline}
-                    description={`${SITE_CONFIG.tagline} based in ${SITE_CONFIG.location.city}, ${SITE_CONFIG.location.country}.`}
+                    description={`Based in ${SITE_CONFIG.location.city}, ${SITE_CONFIG.location.country}.`}
                 />
 
                 <PageSection>
