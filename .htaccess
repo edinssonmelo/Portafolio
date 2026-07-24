@@ -3,15 +3,11 @@
   RewriteEngine On
   RewriteBase /
   
-  # Rutas SPA: enviar index.html para que React Router las resuelva
-  RewriteRule ^planes/?$ /index.html [L]
-  RewriteRule ^projects/ /index.html [L]
-
-  # No reescribir si es un archivo o directorio existente
+  # Solo reescribir rutas que no sean archivos o carpetas reales
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Redirigir todo lo demás a index.html para React Router
+  # Enviar rutas de la app a index.html para React Router
   RewriteRule . /index.html [L]
 </IfModule>
 

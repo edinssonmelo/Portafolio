@@ -4,6 +4,7 @@ import { GradientButton } from "@/components/GradientButton";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
+import { ProjectImageLightbox } from "@/components/ProjectImageLightbox";
 
 // Project data - in a real app, this would come from an API or CMS
 const projects: Record<string, {
@@ -23,6 +24,8 @@ const projects: Record<string, {
     thingsIDid: string;
     mainImage: string;
     images: string[];
+    imageAspect?: string;
+    imageFrameClassName?: string;
     previousProject?: {
         slug: string;
         title: string;
@@ -135,13 +138,13 @@ const projects: Record<string, {
             role: "Product"
         },
         thingsIDid: "Developed the AI writing workspace, embedded assistant, editor experience, and marketing research flows for briefs, articles, essays, and content production.",
-        mainImage: "/projects/wordjet-landing.png",
+        mainImage: "/screenshots/wordjet-landing.png",
         images: [
-            "/projects/wordjet-landing.png",
-            "/projects/wordjet-editor.png"
+            "/screenshots/wordjet-landing.png",
+            "/screenshots/wordjet-editor.png"
         ],
-        nextProject: { slug: "superapp-mobile", title: "SuperApp Mobile", image: "/projects/sura-explora.png" },
-        previousProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/projects/bernal-dashboard.png" }
+        nextProject: { slug: "superapp-mobile", title: "SuperApp Mobile", image: "/screenshots/sura-explora.png" },
+        previousProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-dashboard.png" }
     },
     "overup": {
         title: "OverUP",
@@ -158,14 +161,14 @@ const projects: Record<string, {
             role: "Brand"
         },
         thingsIDid: "Developed the e-commerce experience including landing page, catalog, product pages, cart, and checkout flow.",
-        mainImage: "/projects/overup-hero.png",
+        mainImage: "/screenshots/overup-hero.png",
         images: [
-            "/projects/overup-hero.png",
-            "/projects/overup-catalog.png",
-            "/projects/overup-product.png"
+            "/screenshots/overup-hero.png",
+            "/screenshots/overup-catalog.png",
+            "/screenshots/overup-product.png"
         ],
-        previousProject: { slug: "superapp-mobile", title: "SuperApp Mobile", image: "/projects/sura-explora.png" },
-        nextProject: { slug: "declaramelo", title: "Declaramelo", image: "/projects/declaramelo-hero.png" }
+        previousProject: { slug: "superapp-mobile", title: "SuperApp Mobile", image: "/screenshots/sura-explora.png" },
+        nextProject: { slug: "declaramelo", title: "Declaramelo", image: "/screenshots/declaramelo-hero.png" }
     },
     declaramelo: {
         title: "Declaramelo",
@@ -182,14 +185,14 @@ const projects: Record<string, {
             role: "Product"
         },
         thingsIDid: "Developed the web platform including hero, tools, onboarding, and declaration support flows for Colombian taxpayers.",
-        mainImage: "/projects/declaramelo-hero.png",
+        mainImage: "/screenshots/declaramelo-hero.png",
         images: [
-            "/projects/declaramelo-hero.png",
-            "/projects/declaramelo-features.png",
-            "/projects/declaramelo-process.png"
+            "/screenshots/declaramelo-hero.png",
+            "/screenshots/declaramelo-features.png",
+            "/screenshots/declaramelo-process.png"
         ],
-        previousProject: { slug: "overup", title: "OverUP", image: "/projects/overup-hero.png" },
-        nextProject: { slug: "openwhispr", title: "OpenWhispr", image: "/projects/openwhispr-hero.png" }
+        previousProject: { slug: "overup", title: "OverUP", image: "/screenshots/overup-hero.png" },
+        nextProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-hero.png" }
     },
     "bernal-tech-b2b": {
         title: "Bernal Tech B2B",
@@ -206,15 +209,15 @@ const projects: Record<string, {
             role: "Operations"
         },
         thingsIDid: "Developed the B2B portal including login, dashboard, catalog, product pages, quotes, and operational modules for wholesale clients.",
-        mainImage: "/projects/bernal-dashboard.png",
+        mainImage: "/screenshots/bernal-dashboard.png",
         images: [
-            "/projects/bernal-login.png",
-            "/projects/bernal-dashboard.png",
-            "/projects/bernal-catalog.png",
-            "/projects/bernal-product.png"
+            "/screenshots/bernal-login.png",
+            "/screenshots/bernal-dashboard.png",
+            "/screenshots/bernal-catalog.png",
+            "/screenshots/bernal-product.png"
         ],
-        previousProject: { slug: "openwhispr", title: "OpenWhispr", image: "/projects/openwhispr-hero.png" },
-        nextProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/projects/wordjet-landing.png" }
+        previousProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-hero.png" },
+        nextProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/screenshots/wordjet-landing.png" }
     },
     openwhispr: {
         title: "OpenWhispr",
@@ -231,14 +234,14 @@ const projects: Record<string, {
             role: "Product"
         },
         thingsIDid: "Developed the marketing site, beta onboarding, waitlist capture, and product messaging for an AI native macOS meeting transcription app.",
-        mainImage: "/projects/openwhispr-hero.png",
+        mainImage: "/screenshots/openwhispr-hero.png",
         images: [
-            "/projects/openwhispr-hero.png",
-            "/projects/openwhispr-features.png",
-            "/projects/openwhispr-beta.png"
+            "/screenshots/openwhispr-hero.png",
+            "/screenshots/openwhispr-meetings.png",
+            "/screenshots/openwhispr-transcription.png",
         ],
-        previousProject: { slug: "declaramelo", title: "Declaramelo", image: "/projects/declaramelo-hero.png" },
-        nextProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/projects/bernal-dashboard.png" }
+        previousProject: { slug: "declaramelo", title: "Declaramelo", image: "/screenshots/declaramelo-hero.png" },
+        nextProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-dashboard.png" }
     },
     "superapp-mobile": {
         title: "SuperApp Mobile",
@@ -255,15 +258,17 @@ const projects: Record<string, {
             role: "Mobile"
         },
         thingsIDid: "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported operations and incident resolution for end users, ensuring service continuity and quality.",
-        mainImage: "/projects/sura-explora.png",
+        mainImage: "/screenshots/sura-explora.png",
         images: [
-            "/projects/sura-ingresa.png",
-            "/projects/sura-explora.png",
-            "/projects/sura-resuelve.png",
-            "/projects/sura-avanza.png"
+            "/screenshots/sura-ingresa.png",
+            "/screenshots/sura-explora.png",
+            "/screenshots/sura-resuelve.png",
+            "/screenshots/sura-avanza.png"
         ],
-        previousProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/projects/wordjet-landing.png" },
-        nextProject: { slug: "overup", title: "OverUP", image: "/projects/overup-hero.png" }
+        imageAspect: "aspect-[140/296]",
+        imageFrameClassName: "w-[140px] shrink-0 max-w-[140px]",
+        previousProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/screenshots/wordjet-landing.png" },
+        nextProject: { slug: "overup", title: "OverUP", image: "/screenshots/overup-hero.png" }
     }
 };
 
@@ -403,10 +408,20 @@ const projectDetailStyles = `
 }
 `;
 
+const PROJECT_CAROUSEL_BTN_CLASS =
+    "flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border-none bg-yellow-300 cursor-pointer md:h-[50px] md:w-[50px]";
+
 const ProjectDetailContent = ({
     project,
 }: {
-    project: { title: string; subtitle: string; mainImage: string; images?: string[] };
+    project: {
+        title: string;
+        subtitle: string;
+        mainImage: string;
+        images?: string[];
+        imageAspect?: string;
+        imageFrameClassName?: string;
+    };
 }) => {
     const slides =
         project.images && project.images.length > 0
@@ -414,6 +429,7 @@ const ProjectDetailContent = ({
             : [project.mainImage];
     const [index, setIndex] = useState(0);
     const [autoPlay, setAutoPlay] = useState(true);
+    const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
     const slideCount = slides.length;
 
     const goToSlide = (nextIndex: number) => {
@@ -435,58 +451,119 @@ const ProjectDetailContent = ({
         return () => clearInterval(t);
     }, [autoPlay, slideCount]);
 
+    useEffect(() => {
+        slides.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, [slides]);
+
+    const slidePadding = project.imageAspect ? "p-0" : "p-2 md:p-3";
+
+    const openLightbox = (slideIndex: number) => {
+        setAutoPlay(false);
+        setIndex(slideIndex);
+        setLightboxIndex(slideIndex);
+    };
+
     return (
         <section className="relative bg-neutral-100 w-full overflow-hidden px-4 sm:px-6 md:px-8 py-12 md:py-16">
-            <div className="max-w-[800px] mx-auto">
-                <div className="relative w-full overflow-hidden rounded-2xl border-2 border-stone-900 bg-neutral-100 aspect-[16/9]">
-                    {slides.map((image, i) => (
-                        <div
-                            key={`${image}-${i}`}
-                            className="absolute inset-0 flex items-center justify-center p-2 transition-transform duration-500 ease-out md:p-3"
-                            style={{
-                                transform: `translateX(${(i - index) * 100}%)`,
-                            }}
-                        >
-                            <img
-                                src={image}
-                                alt={`${project.title} - ${i + 1}`}
-                                className="max-h-full max-w-full object-contain object-center"
-                            />
-                        </div>
-                    ))}
-                    {slideCount > 1 && (
-                        <>
+            {lightboxIndex !== null ? (
+                <ProjectImageLightbox
+                    images={slides}
+                    initialIndex={lightboxIndex}
+                    title={project.title}
+                    onClose={() => setLightboxIndex(null)}
+                />
+            ) : null}
+            <div className="mx-auto w-full max-w-[800px]">
+                <div className="flex flex-col items-center gap-4">
+                    <div className="flex w-full items-center justify-center gap-3 md:gap-5">
+                        {slideCount > 1 ? (
                             <button
                                 type="button"
                                 onClick={() =>
                                     goToSlide((index - 1 + slideCount) % slideCount)
                                 }
-                                className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border-2 border-stone-900 flex items-center justify-center hover:bg-white transition-colors"
+                                className={PROJECT_CAROUSEL_BTN_CLASS}
                                 aria-label="Anterior"
                             >
-                                <span className="text-stone-900 text-xl font-bold">‹</span>
+                                <img
+                                    alt=""
+                                    src="https://c.animaapp.com/mih2ldgveCT36V/assets/3.avif"
+                                    className="h-full w-full"
+                                />
                             </button>
+                        ) : null}
+
+                        <div
+                            className={`relative min-w-0 overflow-hidden rounded-2xl border-2 border-stone-900 bg-neutral-100 ${project.imageFrameClassName ?? "w-full flex-1"} ${project.imageAspect ?? "aspect-[16/9]"}`}
+                        >
+                            <div
+                                className="flex h-full transition-transform duration-500 ease-out"
+                                style={{
+                                    width: `${slideCount * 100}%`,
+                                    transform: `translateX(-${(index / slideCount) * 100}%)`,
+                                }}
+                            >
+                                {slides.map((image, i) => (
+                                    <button
+                                        key={image}
+                                        type="button"
+                                        onClick={() => openLightbox(i)}
+                                        className={`flex h-full shrink-0 cursor-zoom-in items-center justify-center ${slidePadding}`}
+                                        style={{ width: `${100 / slideCount}%` }}
+                                        aria-label={`View ${project.title} image ${i + 1} in full size`}
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={`${project.title} - ${i + 1}`}
+                                            loading="eager"
+                                            decoding="sync"
+                                            width={project.imageAspect ? 140 : undefined}
+                                            height={project.imageAspect ? 296 : undefined}
+                                            className={`pointer-events-none max-h-full max-w-full object-contain object-center ${project.imageAspect ? "h-full w-full" : ""}`}
+                                        />
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {slideCount > 1 ? (
                             <button
                                 type="button"
                                 onClick={() => goToSlide((index + 1) % slideCount)}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border-2 border-stone-900 flex items-center justify-center hover:bg-white transition-colors"
+                                className={PROJECT_CAROUSEL_BTN_CLASS}
                                 aria-label="Siguiente"
                             >
-                                <span className="text-stone-900 text-xl font-bold">›</span>
+                                <img
+                                    alt=""
+                                    src="https://c.animaapp.com/mih2ldgveCT36V/assets/4.avif"
+                                    className="h-full w-full"
+                                />
                             </button>
-                            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                                {slides.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        type="button"
-                                        onClick={() => goToSlide(i)}
-                                        className={`w-2.5 h-2.5 rounded-full transition-colors ${i === index ? "bg-stone-900" : "bg-white/80 border border-stone-900"}`}
-                                        aria-label={`Ir a slide ${i + 1}`}
-                                    />
-                                ))}
-                            </div>
-                        </>
-                    )}
+                        ) : null}
+                    </div>
+
+                    <p className="text-sm text-stone-600 font-dm_sans">
+                        {slideCount > 1
+                            ? "Tap an image to view it in full size"
+                            : "Tap the image to view it in full size"}
+                    </p>
+
+                    {slideCount > 1 ? (
+                        <div className="flex gap-2">
+                            {slides.map((_, i) => (
+                                <button
+                                    key={i}
+                                    type="button"
+                                    onClick={() => goToSlide(i)}
+                                    className={`h-2.5 w-2.5 rounded-full transition-colors ${i === index ? "bg-stone-900" : "bg-white/80 border border-stone-900"}`}
+                                    aria-label={`Ir a slide ${i + 1}`}
+                                />
+                            ))}
+                        </div>
+                    ) : null}
                 </div>
             </div>
         </section>

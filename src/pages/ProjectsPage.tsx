@@ -463,7 +463,7 @@ export const ProjectsPage = () => {
                                         style={{ willChange: 'transform', opacity: 1, transform: 'none' }}
                                     >
                                         <h2 className="framer-text framer-styles-preset-7ix8th" data-styles-preset="jUzg5bhdC">
-                                            Smart, Creative &amp; Awesome.
+                                            Projects that inspired me and were genuinely fun to build.
                                         </h2>
                                     </div>
                                     <div
@@ -477,7 +477,7 @@ export const ProjectsPage = () => {
                                             data-styles-preset="AiKfkrYFk"
                                             style={{ '--framer-text-alignment': 'center', textAlign: 'center' } as React.CSSProperties & Record<string, any>}
                                         >
-                                            Bringing ideas to life. Explore our work and see how creativity shapes meaningful, innovative solutions.
+                                            A selection of apps and products I have helped ship, with a short note on what I did and what I learned along the way.
                                         </p>
                                     </div>
                                 </div>

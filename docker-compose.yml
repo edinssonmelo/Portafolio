@@ -1,0 +1,32 @@
+# Despliegue del portafolio en ai-server.
+# Patrón: /srv/apps/openwhispr — Traefik en net_internal, entrypoint web,
+# TLS en Cloudflare Tunnel (infra-cloudflared), sin ACME en el contenedor.
+#
+# En ai-server:
+#   cd /srv/apps/portafolio
+#   git pull
+#   docker compose -p portafolio up -d --build
+#
+# En Cloudflare Zero Trust → Tunnel → Public Hostname:
+#   edinssonmelo.com, www.edinssonmelo.com → http://traefik:80
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portafolio:latest
+    container_name: portafolio-web
+    restart: unless-stopped
+    networks:
+      - net_internal
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=net_internal
+      - traefik.http.routers.portafolio.rule=Host(`edinssonmelo.com`) || Host(`www.edinssonmelo.com`)
+      - traefik.http.routers.portafolio.entrypoints=web
+      - traefik.http.services.portafolio.loadbalancer.server.port=80
+
+networks:
+  net_internal:
+    external: true

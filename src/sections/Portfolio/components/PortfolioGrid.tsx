@@ -3,7 +3,7 @@ import { PortfolioCard } from "@/sections/Portfolio/components/PortfolioCard";
 const PROJECTS = [
   {
     href: "/projects/declaramelo",
-    imageUrl: "/projects/declaramelo-hero.png",
+    imageUrl: "/screenshots/declaramelo-hero.png",
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -13,7 +13,7 @@ const PROJECTS = [
   },
   {
     href: "/projects/openwhispr",
-    imageUrl: "/projects/openwhispr-hero.png",
+    imageUrl: "/screenshots/openwhispr-hero.png",
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -23,7 +23,7 @@ const PROJECTS = [
   },
   {
     href: "/projects/bernal-tech-b2b",
-    imageUrl: "/projects/bernal-dashboard.png",
+    imageUrl: "/screenshots/bernal-dashboard.png",
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -33,7 +33,7 @@ const PROJECTS = [
   },
   {
     href: "/projects/wordjet-ai",
-    imageUrl: "/projects/wordjet-landing.png",
+    imageUrl: "/screenshots/wordjet-landing.png",
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",
@@ -43,15 +43,15 @@ const PROJECTS = [
   },
   {
     href: "/projects/superapp-mobile",
-    imageUrl: "/projects/sura-explora.png",
-    imageVariant: "",
+    imageUrl: "/screenshots/sura-explora.png",
+    imageVariant: "h-auto w-[140px] max-h-[92%] object-contain object-center p-0",
     title: "SuperApp Mobile",
     description:
       "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA, building features across Health, Mobility, Home, Wallet, Refunds, and Claims while supporting live operations for end users.",
   },
   {
     href: "/projects/overup",
-    imageUrl: "/projects/overup-hero.png",
+    imageUrl: "/screenshots/overup-hero.png",
     imageSizes:
       "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
     imageVariant: "",

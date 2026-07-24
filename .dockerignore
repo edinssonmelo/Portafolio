@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+*.md
+.cursor
+memory-bank
+terminals
+.DS_Store
+openwhispr-app.png
