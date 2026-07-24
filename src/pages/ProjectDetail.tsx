@@ -488,9 +488,14 @@ const ProjectDetailContent = ({
                     onClose={() => setLightboxIndex(null)}
                 />
             ) : null}
-            <div className="mx-auto w-full max-w-[800px]">
-                <div className="flex flex-col items-center gap-4">
-                    <div className="flex w-full items-start justify-center gap-2 md:gap-3">
+            <div className="mx-auto flex w-full max-w-[980px] flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-3">
+                {hasLivePreview ? (
+                    <div className="flex w-full max-w-[800px] justify-end md:hidden">
+                        <ProjectLiveLink url={livePreviewUrl!} />
+                    </div>
+                ) : null}
+                <div className="flex w-full max-w-[800px] flex-col items-center gap-4">
+                    <div className="flex w-full items-center justify-center gap-3 md:gap-5">
                         {slideCount > 1 ? (
                             <button
                                 type="button"
@@ -571,12 +576,6 @@ const ProjectDetailContent = ({
                                 />
                             </button>
                         ) : null}
-
-                        {hasLivePreview ? (
-                            <div className="shrink-0 self-start pt-0.5">
-                                <ProjectLiveLink url={livePreviewUrl!} />
-                            </div>
-                        ) : null}
                     </div>
 
                     <p className="text-sm text-stone-600 font-dm_sans">
@@ -599,6 +598,11 @@ const ProjectDetailContent = ({
                         </div>
                     ) : null}
                 </div>
+                {hasLivePreview ? (
+                    <aside className="hidden shrink-0 md:block md:pt-1">
+                        <ProjectLiveLink url={livePreviewUrl!} />
+                    </aside>
+                ) : null}
             </div>
         </section>
     );
