@@ -16,7 +16,6 @@ export const Portfolio = () => {
           iconUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"
           label="My Works"
           title="Projects that were genuinely fun to build."
-          description="Apps and products I've shipped."
           variant="max-w-[650px] md:max-w-[700px]"
         />
         <div className="relative w-full">
