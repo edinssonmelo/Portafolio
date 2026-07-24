@@ -41,8 +41,8 @@ export const AboutPage = () => {
                                 estaba entrando a un mundo completamente nuevo.
                             </p>
                             <p className={bodyText}>
-                                Ese computador dinosaurio me lo regaló mi tía. Tenía instalados
-                                Stronghold Crusader y mi primera Encarta. Curioseé Encarta entera.
+                                Ese computador dinosaurio me lo regaló mi tía. Curiosamente tenía instalados
+                                Stronghold Crusader y mi primera Encarta. Me leí la Encarta entera.
                                 Me abrió una enciclopedia de cosas, juegos y contenido didáctico, y
                                 fue apasionante.
                             </p>
