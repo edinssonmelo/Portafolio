@@ -319,9 +319,9 @@ const projects: Record<string, {
         },
         thingsIDid: "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported operations and incident resolution for end users, ensuring service continuity and quality.",
         story: {
-            hook: "Shipping inside Seguros SURA's SuperApp, the main mobile surface for insurance businesses at scale.",
+            hook: "Working on Seguros SURA's SuperApp, the main iOS and Android app where customers access the company's services.",
             body: [
-                "At SURA I joined one of the strongest teams behind the SuperApp: the main channel where multiple insurance businesses connect with customers on iOS and Android. It was an environment with high engineering standards, modern tools, and real operational pressure.",
+                "At Seguros SURA I worked on the SuperApp team. The SuperApp is the company's main mobile app: the place where customers on iOS and Android access health, mobility, home, wallet, refunds, claims, and other SURA services. It is a large, live product with modern tooling, clear engineering standards, and real operational pressure.",
                 "SURA offers many services across the company, and the SuperApp was the front door for customers. Coordinating with every area and business unit was a real challenge, and it demanded close collaboration every day. I was lucky to work with an excellent team, both on the human side and on the technical side.",
                 "I also spent meaningful time close to production support and end users, resolving incidents and keeping service continuity when problems reached real people. I worked across several areas at SURA (architecture, mobile assistance, the SuperApp, DOCS/controls/OX, and bolsa), but the SuperApp remains the most memorable. I am grateful to Seguros SURA and to Ceiba Software, the consultancy that supported me through that growth.",
             ],
