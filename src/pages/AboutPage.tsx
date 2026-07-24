@@ -49,8 +49,7 @@ export const AboutPage = () => {
                                 problemas y construyendo soluciones.
                             </p>
                             <p className={bodyText}>
-                                También quiero utilizar este espacio para compartir lo que he
-                                aprendido en el camino. Me interesa conectar con personas que estén
+                                También quiero conectar y compartir con personas que estén
                                 construyendo, creciendo y buscando hacer un trabajo con propósito.
                             </p>
                         </div>
