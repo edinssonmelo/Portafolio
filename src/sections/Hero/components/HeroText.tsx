@@ -2,11 +2,10 @@ import { typographyClasses } from "@/config/designTokens";
 
 export const HeroText = () => {
   return (
-    <div className="relative flex w-full max-w-[570px] flex-col items-center justify-center gap-5 py-[15px] text-center md:max-w-[620px] md:items-start md:gap-4 md:text-left">
+    <div className="relative flex w-full max-w-[570px] flex-col items-center justify-center gap-5 py-[15px] text-center md:max-w-[640px] md:items-start md:gap-4 md:text-left">
       <div className="w-full">
         <h1 className={typographyClasses.heroTitle}>
-          <span className="block md:whitespace-nowrap">I&apos;m Edinsson Melo.</span>
-          <span className="block md:whitespace-nowrap">AI Product Builder</span>
+          I&apos;m Edinsson Melo, an AI Product Builder
         </h1>
       </div>
       <div className="w-full space-y-1">

@@ -328,24 +328,22 @@ const getLiveLinkLabel = (url: string) => {
 };
 
 const ProjectLiveLink = ({ url }: { url: string }) => (
-    <section className="relative w-full bg-neutral-100 px-4 sm:px-6 md:px-8 pb-12 md:pb-16">
-        <div className="mx-auto flex max-w-[800px] flex-col items-center gap-3 border-t-2 border-stone-900/10 pt-8">
-            <GradientButton href={url} external>
-                <span className="text-lg font-semibold leading-[19px] tracking-[-0.72px] text-stone-900 font-dm_sans">
-                    {getLiveLinkLabel(url)}
-                </span>
-                <ExternalLink className="h-[19px] w-[19px] shrink-0 text-stone-900" aria-hidden />
-            </GradientButton>
-            <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-stone-600 underline-offset-2 transition-colors hover:text-stone-900 hover:underline font-dm_sans"
-            >
-                {formatLiveSiteLabel(url)}
-            </a>
-        </div>
-    </section>
+    <div className="project-detail-hero-live">
+        <GradientButton href={url} external>
+            <span className="text-base font-semibold leading-[19px] tracking-[-0.64px] text-stone-900 font-dm_sans md:text-lg md:tracking-[-0.72px]">
+                {getLiveLinkLabel(url)}
+            </span>
+            <ExternalLink className="h-[17px] w-[17px] shrink-0 text-stone-900 md:h-[19px] md:w-[19px]" aria-hidden />
+        </GradientButton>
+        <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 block text-right text-xs text-stone-700 underline-offset-2 transition-colors hover:text-stone-900 hover:underline font-dm_sans md:text-sm"
+        >
+            {formatLiveSiteLabel(url)}
+        </a>
+    </div>
 );
 
 const projectDetailStyles = `
@@ -396,6 +394,22 @@ const projectDetailStyles = `
   gap: 25px;
   overflow: visible;
   z-index: 1;
+}
+.project-detail-hero-live {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (max-width: 767px) {
+  .project-detail-hero-live {
+    position: static;
+    align-self: flex-end;
+    margin-bottom: 4px;
+  }
 }
 .project-detail-hero-badge {
   display: flex;
@@ -650,6 +664,9 @@ export const ProjectDetail = () => {
                     <section className="project-detail-hero" data-border="true">
                         <div className="project-detail-hero-container">
                             <div className="project-detail-hero-text">
+                                {hasLivePreview && (
+                                    <ProjectLiveLink url={project.livePreviewUrl} />
+                                )}
                                 <div className="project-detail-hero-badge">
                                     <div className="w-[11px] h-3 flex-shrink-0 flex items-center justify-center">
                                         <img src="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg" alt="" className="w-full h-full" />
@@ -670,10 +687,6 @@ export const ProjectDetail = () => {
                     <ProjectDetailContent project={project} />
 
                     <CaseStudySections sections={buildCaseStudySections(project)} />
-
-                    {hasLivePreview && (
-                        <ProjectLiveLink url={project.livePreviewUrl} />
-                    )}
 
                     <Footer />
                 </div>
