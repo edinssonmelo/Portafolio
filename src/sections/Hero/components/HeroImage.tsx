@@ -9,9 +9,9 @@ export const HeroImage = () => {
         <div className="absolute inset-0 rounded-full md:rounded-[185px] overflow-hidden">
           <img
             sizes="(max-width: 768px) 200px, 246px"
-            src="https://c.animaapp.com/mih2ldgveCT36V/assets/11.png"
+            src="/assets/hero.png"
             alt="Edinsson Melo"
-            className="h-full w-full object-contain rounded-full md:rounded-[185px]"
+            className="h-full w-full rounded-full object-cover object-center md:rounded-[185px]"
           />
         </div>
       </div>
