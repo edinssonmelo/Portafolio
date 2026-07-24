@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from '@/config/seo';
 import { typographyClasses } from "@/config/designTokens";
 
 export const HeroText = () => {
@@ -6,7 +7,7 @@ export const HeroText = () => {
       <div className="w-full">
         <h1 className={`${typographyClasses.heroTitle} sm:text-[34px] md:text-[3.35rem] md:leading-[1.1]`}>
           <span className="block md:whitespace-nowrap">I&apos;m Edinsson Melo</span>
-          <span className="block md:whitespace-nowrap">An AI Product Builder</span>
+          <span className="block md:whitespace-nowrap">{SITE_CONFIG.tagline}</span>
         </h1>
       </div>
       <div className="w-full space-y-1">

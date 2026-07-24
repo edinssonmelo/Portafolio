@@ -13,9 +13,8 @@ export const getPersonSchema = () => {
         '@type': 'Person',
         '@id': PERSON_ID,
         name: 'Edinsson Melo',
-        jobTitle: 'AI Product Builder',
-        description:
-            'AI Software Engineer and AI Product Builder helping companies, startups, founders, and software engineers ship AI-powered SaaS, web, and mobile products.',
+        jobTitle: 'AI Software Engineer',
+        description: SITE_CONFIG.description,
         email: SITE_CONFIG.email,
         url: SITE_CONFIG.url,
         image: SITE_CONFIG.image,
@@ -52,10 +51,6 @@ export const getPersonSchema = () => {
             'TypeScript',
         ],
         hasOccupation: [
-            {
-                '@type': 'Occupation',
-                name: 'AI Product Builder',
-            },
             {
                 '@type': 'Occupation',
                 name: 'AI Software Engineer',

@@ -1,29 +1,12 @@
-import { Link } from 'react-router-dom';
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
 import { PageHeader } from '@/components/PageHeader';
 import { PageSection } from '@/components/PageSection';
+import { SurfaceCard } from '@/components/SurfaceCard';
 import { SITE_CONFIG } from '@/config/seo';
+import { typographyClasses } from '@/config/designTokens';
 
-const FEATURED_PROJECTS = [
-    { slug: 'declaramelo', title: 'Declaramelo' },
-    { slug: 'openwhispr', title: 'OpenWhispr' },
-    { slug: 'wordjet-ai', title: 'Wordjet.ai' },
-    { slug: 'superapp-mobile', title: 'Seguros SURA SuperApp' },
-    { slug: 'bernal-tech-b2b', title: 'Bernal Tech B2B' },
-    { slug: 'overup', title: 'OverUP' },
-] as const;
-
-const SPECIALTIES = [
-    'AI Product Engineering',
-    'SaaS Development',
-    'Fullstack & Mobile Development',
-    'Software Architecture',
-    'MVP Definition & Launch',
-    'AI Training & Mentorship',
-] as const;
-
-const LAST_UPDATED = 'July 2026';
+const bodyText = `${typographyClasses.body} text-stone-800`;
 
 export const AboutPage = () => {
     return (
@@ -33,121 +16,45 @@ export const AboutPage = () => {
                 <PageHeader
                     badge="About"
                     title="Edinsson Melo"
-                    kicker="An AI Product Builder"
-                    description={`AI Software Engineer based in ${SITE_CONFIG.location.city}, ${SITE_CONFIG.location.country}.`}
+                    kicker={SITE_CONFIG.tagline}
+                    description={`${SITE_CONFIG.tagline} based in ${SITE_CONFIG.location.city}, ${SITE_CONFIG.location.country}.`}
                 />
 
-                <PageSection innerClassName="gap-10 md:gap-12">
-                        <div className="space-y-4">
-                            <h2 className="font-cabinet_grotesk text-3xl font-bold text-stone-900">
-                                Short bio
-                            </h2>
-                            <p className="text-lg leading-[30px] text-stone-900">
-                                I&apos;m an AI Software Engineer and AI Product Builder with over 8
-                                years of experience shipping SaaS, web, and mobile products. I work
-                                with companies, startups, founders, and software engineers on
-                                AI-powered products, technical leadership, and AI training.
+                <PageSection>
+                    <SurfaceCard className="px-6 py-8 md:px-10 md:py-10">
+                        <div className="space-y-6">
+                            <p className={bodyText}>
+                                Soy Edinsson Melo, un AI Software Engineer en Colombia.
+                            </p>
+                            <p className={bodyText}>
+                                Uno de los recuerdos que más marcó mi camino fue la primera vez que
+                                tuve un computador frente a mí. Me quedé observando cada detalle de
+                                la pantalla: los íconos, los enlaces, la pequeña casa del navegador
+                                y las páginas que se abrían frente a mí. Sentía que estaba entrando
+                                en un mundo completamente nuevo.
+                            </p>
+                            <p className={bodyText}>
+                                Con el tiempo, esa curiosidad se convirtió en mi profesión. Llevo
+                                más de 10 años en tecnología, aprendiendo, resolviendo
+                                problemas y construyendo soluciones.
+                            </p>
+                            <p className={bodyText}>
+                                También quiero utilizar este espacio para compartir lo que he
+                                aprendido en el camino. Me interesa conectar con personas que estén
+                                construyendo, creciendo y buscando hacer un trabajo con propósito.
                             </p>
                         </div>
 
-                        <div className="space-y-4">
-                            <h2 className="font-cabinet_grotesk text-3xl font-bold text-stone-900">
-                                Background
-                            </h2>
-                            <p className="text-lg leading-[30px] text-stone-900">
-                                I build products end to end: from MVP definition and architecture to
-                                production launch and iteration. My work spans AI-native apps,
-                                enterprise platforms, and mobile products across fintech, insurance,
-                                e-commerce, and consumer technology.
+                        <blockquote className="mt-10 rounded-[12px] border-2 border-stone-900 bg-neutral-50 px-5 py-5">
+                            <p className="font-dm_sans text-base font-semibold italic leading-relaxed text-stone-900 md:text-lg">
+                                &ldquo;Y también que es don de Dios que todo hombre coma y beba, y
+                                goce el bien de toda su labor.&rdquo;
                             </p>
-                            <p className="text-lg leading-[30px] text-stone-900">
-                                I apply AI-assisted and agentic engineering to move faster without
-                                sacrificing quality while integrating LLMs, RAG, agents, and automation
-                                into products that solve real business problems.
-                            </p>
-                            <p className="text-lg leading-[30px] text-stone-900">
-                                Edinsson Melo is a Colombian AI Software Engineer and AI Product
-                                Builder who helps companies and product teams design, build, and ship
-                                digital products with artificial intelligence, automation, and
-                                scalable software architecture.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="font-cabinet_grotesk text-3xl font-bold text-stone-900">
-                                Specialties
-                            </h2>
-                            <ul className="grid gap-2 sm:grid-cols-2">
-                                {SPECIALTIES.map((item) => (
-                                    <li
-                                        key={item}
-                                        className="text-lg leading-[30px] text-stone-900 before:mr-2 before:content-['•']"
-                                    >
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="font-cabinet_grotesk text-3xl font-bold text-stone-900">
-                                Selected projects
-                            </h2>
-                            <ul className="flex flex-col gap-2">
-                                {FEATURED_PROJECTS.map((project) => (
-                                    <li key={project.slug}>
-                                        <Link
-                                            to={`/projects/${project.slug}`}
-                                            className="text-lg font-semibold text-stone-900 underline-offset-2 hover:underline"
-                                        >
-                                            {project.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="font-cabinet_grotesk text-3xl font-bold text-stone-900">
-                                Profiles
-                            </h2>
-                            <ul className="flex flex-col gap-2">
-                                <li>
-                                    <a
-                                        href={SITE_CONFIG.social.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-lg text-stone-900 underline-offset-2 hover:underline"
-                                    >
-                                        LinkedIn
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href={SITE_CONFIG.social.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-lg text-stone-900 underline-offset-2 hover:underline"
-                                    >
-                                        GitHub
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href={SITE_CONFIG.social.instagram}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-lg text-stone-900 underline-offset-2 hover:underline"
-                                    >
-                                        Instagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p className="border-t border-stone-900/10 pt-6 text-sm text-stone-600">
-                            Last updated: {LAST_UPDATED}
-                        </p>
+                            <footer className="mt-3 font-dm_sans text-sm font-semibold text-stone-600">
+                                Eclesiastés 3:13
+                            </footer>
+                        </blockquote>
+                    </SurfaceCard>
                 </PageSection>
             </main>
             <Footer />

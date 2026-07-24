@@ -2,7 +2,7 @@ import type { BlogPost } from '@/data/blog';
 
 export const primerEmpleoSoftwarePost: BlogPost = {
     slug: 'como-conseguir-tu-primer-empleo-en-software-sin-experiencia',
-    title: 'Cómo conseguir tu primer empleo en software sin experiencia: lo que aprendí en más de 10 años',
+    title: 'Cómo conseguir tu primer empleo en software sin experiencia: lo que aprendí en 8 años',
     description:
         'Lecciones reales para conseguir tu primera oportunidad en software sin experiencia laboral: proyectos, redes, sinceridad y un perfil orientado a IA.',
     datePublished: '2026-07-24',
@@ -392,7 +392,7 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'También existen oportunidades en soporte, datos, infraestructura, automatización y producto.',
+            text: 'También existen oportunidades en project management, datos, infraestructura, automatización y producto.',
         },
         {
             type: 'h2',
@@ -435,6 +435,10 @@ export const primerEmpleoSoftwarePost: BlogPost = {
             text: 'La inteligencia artificial puede ayudarte a avanzar más rápido, pero todavía necesitas entender el problema, tomar decisiones y verificar que el resultado esté bien.',
         },
         {
+            type: 'callout',
+            text: 'Algo que aprendí con la IA: sin un ejemplo claro de lo que quieres, casi siempre obtienes algo genérico y sin criterio. No la dejes proponer si buscas calidad. Dile exactamente qué quieres, o muéstrale un ejemplo concreto. Así te ahorras el tiempo que yo perdí probando modelos, prompts y enfoques distintos hasta llegar a la misma conclusión.',
+        },
+        {
             type: 'h2',
             text: '¿Por qué contrataría a alguien sin experiencia?',
         },
@@ -472,7 +476,7 @@ export const primerEmpleoSoftwarePost: BlogPost = {
         },
         {
             type: 'p',
-            text: 'Después de más de diez años desarrollando software, todavía me encuentro con problemas difíciles.',
+            text: 'Después de más de ocho años desarrollando software, todavía me encuentro con problemas difíciles.',
         },
         {
             type: 'p',

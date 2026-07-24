@@ -8,9 +8,10 @@ import { screenshotSrc } from '@/config/screenshotMeta';
 
 export const SITE_CONFIG = {
     name: 'Edinsson Melo',
-    title: 'Edinsson Melo | AI Product Builder',
+    tagline: 'An AI Software Engineer',
+    title: 'Edinsson Melo | AI Software Engineer',
     description:
-        'AI Software Engineer and AI Product Builder with 8+ years of experience. I ship AI-powered SaaS, web, and mobile products for companies, startups, founders, and software engineers.',
+        'An AI Software Engineer with more than 10 years of experience shipping SaaS, web, and mobile products. I build AI-powered solutions for companies, startups, founders, and software engineers.',
     url: 'https://edinssonmelo.com',
     image: 'https://edinssonmelo.com/assets/logo-full.png',
     locale: 'en_US',
@@ -18,7 +19,6 @@ export const SITE_CONFIG = {
     twitterHandle: '@edinssonmelo',
     email: 'edinssonadrian@gmail.com',
     keywords: [
-        'AI Product Builder',
         'AI Software Engineer',
         'software architect',
         'AI SaaS',
@@ -65,16 +65,15 @@ export type SEOConfig = {
 
 export const seoConfig: Record<string, SEOConfig> = {
     '/': {
-        title: 'Edinsson Melo | AI Product Builder',
-        description:
-            'AI Software Engineer and AI Product Builder with 8+ years of experience. I ship AI-powered products, SaaS platforms, and MVPs for companies, startups, founders, and software engineers.',
+        title: SITE_CONFIG.title,
+        description: SITE_CONFIG.description,
         path: '/',
         type: 'website',
     },
     '/about': {
-        title: 'About Edinsson Melo | AI Product Builder',
+        title: 'About Edinsson Melo | AI Software Engineer',
         description:
-            'Learn about Edinsson Melo, an AI Software Engineer and AI Product Builder based in Cúcuta, Colombia. Background, specialties, and selected work.',
+            'Learn about Edinsson Melo, an AI Software Engineer based in Cúcuta, Colombia. Story, background, and writing on software and career.',
         path: '/about',
         type: 'profile',
     },
