@@ -97,7 +97,7 @@ content/blog/media/inbox/
 1. Identifica cada imagen (contenido, contexto del artículo, tu descripción).
 2. Renombra con nombres claros (`semillero-grupo.jpg`, no `IMG_4521.png`).
 3. Mueve a `content/blog/media/[slug-del-articulo]/`.
-4. Copia a `public/blog/[slug-del-articulo]/` (lo que ve el sitio en `/blog/...`).
+4. Copia a `public/blog-assets/[slug-del-articulo]/` (lo que ve el sitio en `/blog-assets/...`).
 5. Registra en `content/blog/media/[slug]/manifest.md` (qué es cada imagen, dónde va en el texto).
 6. Inserta en el borrador y en el post del sitio.
 
@@ -110,8 +110,8 @@ content/blog/media/
 │   ├── manifest.md     ← inventario: archivo, alt, caption, uso
 │   └── *.jpg/png/webp
 
-public/blog/
-└── [slug-articulo]/    ← copia servida por el sitio
+public/blog-assets/
+└── [slug-articulo]/    ← copia servida por el sitio (/blog-assets/...)
 ```
 
 ---

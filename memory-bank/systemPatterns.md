@@ -40,12 +40,13 @@ public/
 ## Routing gotcha
 
 - App route `/projects` must NOT conflict with a physical `public/projects/` folder (caused 403 on Apache/Hostinger). Images live under `/screenshots/`.
+- App route `/blog` must NOT conflict with a physical `public/blog/` folder (nginx 403). Blog images live under `/blog-assets/`.
 
 ## Blog editorial flow
 
 ```text
 ChatGPT (CHATGPT_CONTEXT.md) → sessions/ → Cursor draft → review → published/ + src/data/posts/
-Images: media/inbox/ or chat paste → media/[slug]/ + public/blog/[slug]/ + manifest.md
+Images: media/inbox/ or chat paste → media/[slug]/ + public/blog-assets/[slug]/ + manifest.md
 ```
 
 - Rules: `content/blog/AGENTS.md`, `.cursor/rules/storytelling-blog.mdc`

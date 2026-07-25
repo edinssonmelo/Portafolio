@@ -112,7 +112,7 @@ No redactes todavía el artículo completo, salvo que lo solicite explícitament
 
 ## Continuar sesión editorial en Cursor
 
-Imágenes: el autor puede dejarlas en `content/blog/media/inbox/` o pegarlas en este chat. Organízalas en `content/blog/media/[slug]/`, copia a `public/blog/[slug]/`, actualiza `manifest.md` e insértalas en el borrador y en el post.
+Imágenes: el autor puede dejarlas en `content/blog/media/inbox/` o pegarlas en este chat. Organízalas en `content/blog/media/[slug]/`, copia a `public/blog-assets/[slug]/`, actualiza `manifest.md` e insértalas en el borrador y en el post.
 
 ```
 Trabaja con el sistema editorial definido en `content/blog/AGENTS.md` y con las reglas de `.cursor/rules/storytelling-blog.mdc`.

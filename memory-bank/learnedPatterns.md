@@ -72,3 +72,4 @@ Patterns discovered while building this project. Update when new conventions eme
 
 - `public/.htaccess` and `nginx/default.conf`: `try_files` to `index.html`
 - Explicit rule: `/projects` route must not rewrite static screenshot paths
+- Explicit rule: never create `public/blog/` (conflicts with SPA `/blog`, nginx 403). Use `public/blog-assets/` for blog images

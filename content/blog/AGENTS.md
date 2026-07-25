@@ -67,7 +67,7 @@ Imágenes del blog.
 
 - `inbox/`: el autor suelta archivos sin organizar.
 - `[slug]/`: Cursor organiza por artículo (`manifest.md` + archivos renombrados).
-- `public/blog/[slug]/`: copia servida en el sitio (`/blog/[slug]/...`).
+- `public/blog-assets/[slug]/`: copia servida en el sitio (`/blog-assets/[slug]/...`). No usar `public/blog/` (conflicto con ruta SPA `/blog`, nginx 403).
 
 Ver `content/blog/media/README.md` y `content/blog/system/FLUJO.md`.
 
@@ -326,8 +326,8 @@ Al trabajar con imágenes:
 1. El autor las coloca en `content/blog/media/inbox/` o las pega en el chat de Cursor.
 2. Identificar contenido y contexto; renombrar con nombres descriptivos.
 3. Mover a `content/blog/media/[slug]/` y crear o actualizar `manifest.md`.
-4. Copiar a `public/blog/[slug]/` para el sitio.
+4. Copiar a `public/blog-assets/[slug]/` para el sitio.
 5. Insertar en borrador Markdown y en `src/data/posts/` con bloques `{ type: 'image', src, alt, caption? }`.
-6. `src` siempre como ruta pública: `/blog/[slug]/archivo.jpg`.
+6. `src` siempre como ruta pública: `/blog-assets/[slug]/archivo.jpg`.
 
 No dejar imágenes sueltas en `inbox/` después de organizarlas.

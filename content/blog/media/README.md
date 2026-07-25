@@ -29,9 +29,11 @@ Inventario editorial. Cursor lo mantiene al organizar imágenes.
 | computador-desarmado.jpg | Computador desarmado en la habitación | Mi primer contacto con el hardware | Apertura |
 ```
 
-## public/blog/[slug]/ (sitio)
+## public/blog-assets/[slug]/ (sitio)
 
-Copia servida en producción. URL: `/blog/[slug]/nombre-archivo.jpg`
+Copia servida en producción. URL: `/blog-assets/[slug]/nombre-archivo.jpg`
+
+No usar `public/blog/`: choca con la ruta SPA `/blog` y nginx devuelve 403.
 
 No editar a mano salvo emergencia. Cursor sincroniza desde `content/blog/media/[slug]/`.
 
@@ -40,5 +42,5 @@ No editar a mano salvo emergencia. Cursor sincroniza desde `content/blog/media/[
 Si pegas imágenes en el chat en lugar de usar `inbox/`:
 
 1. Describe brevemente qué muestra cada una (opcional pero ayuda).
-2. Cursor las guardará en `media/[slug]/` y `public/blog/[slug]/`.
+2. Cursor las guardará en `media/[slug]/` y `public/blog-assets/[slug]/`.
 3. Pide explícitamente dónde quieres cada imagen en el texto si tienes preferencia.

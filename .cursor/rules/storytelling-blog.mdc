@@ -22,5 +22,5 @@ Reglas principales:
 - No marques un artículo como publicado sin instrucción explícita.
 - Antes de redactar, identifica la idea central, la tensión y la transformación.
 - Después de una publicación aprobada, actualiza el registro editorial y el contexto para ChatGPT.
-- Imágenes nuevas: `content/blog/media/inbox/` o pegadas en chat → organizar en `media/[slug]/` + `public/blog/[slug]/`. Ver `content/blog/system/FLUJO.md`.
+- Imágenes nuevas: `content/blog/media/inbox/` o pegadas en chat → organizar en `media/[slug]/` + `public/blog-assets/[slug]/`. Ver `content/blog/system/FLUJO.md`.
 - No uses em dashes (`—`) en texto del blog. Ver `AGENTS.md` (raíz) sección Copy style.
