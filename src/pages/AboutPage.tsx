@@ -4,6 +4,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { PageSection } from '@/components/PageSection';
 import { SurfaceCard } from '@/components/SurfaceCard';
 import { SITE_CONFIG } from '@/config/seo';
+import { ProfilePortrait } from '@/components/ProfilePortrait';
 import { typographyClasses } from '@/config/designTokens';
 
 const bodyText = `${typographyClasses.body} text-stone-800`;
@@ -24,11 +25,7 @@ export const AboutPage = () => {
                     <SurfaceCard className="px-6 py-8 md:px-10 md:py-10">
                         <div className="mb-8 flex justify-center">
                             <div className="relative h-[200px] w-[200px] overflow-hidden rounded-full border-2 border-stone-900 md:h-[220px] md:w-[220px]">
-                                <img
-                                    src="/assets/hero.png"
-                                    alt="Edinsson Melo"
-                                    className="h-full w-full object-cover object-center"
-                                />
+                                <ProfilePortrait />
                             </div>
                         </div>
 

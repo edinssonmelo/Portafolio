@@ -50,9 +50,9 @@ export const BlogPostPage = () => {
                         </Link>
                     }
                     footer={
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                             {post.tags.map((tag) => (
-                                <TagChip key={tag} label={tag} />
+                                <TagChip key={tag} label={tag} variant="muted" />
                             ))}
                         </div>
                     }

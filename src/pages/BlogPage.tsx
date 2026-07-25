@@ -61,9 +61,9 @@ export const BlogPage = () => {
                                     {post.description}
                                 </p>
 
-                                <div className="mt-4 flex flex-wrap gap-2">
+                                <div className="mt-3 flex flex-wrap gap-1.5">
                                     {post.tags.map((tag) => (
-                                        <TagChip key={tag} label={tag} />
+                                        <TagChip key={tag} label={tag} variant="muted" />
                                     ))}
                                 </div>
 

@@ -2,9 +2,9 @@ import type { BlogPost } from '@/data/blog';
 
 export const primerEmpleoSoftwarePost: BlogPost = {
     slug: 'como-conseguir-tu-primer-empleo-en-software-sin-experiencia',
-    title: 'Cómo conseguir tu primer empleo en software sin experiencia: lo que aprendí en 8 años',
+    title: '¿Cómo conseguí mi primer empleo en software sin experiencia?',
     description:
-        'Lecciones reales para conseguir tu primera oportunidad en software sin experiencia laboral: proyectos, redes, sinceridad y un perfil orientado a IA.',
+        'Pasé de no tener experiencia laboral a mi primera oportunidad profesional. Consejos prácticos que puedes aplicar hoy: proyectos, fundamentos, sinceridad y cómo prepararte para el mercado actual.',
     datePublished: '2026-07-24',
     dateModified: '2026-07-24',
     tags: ['carrera', 'primer empleo', 'software', 'Colombia', 'IA', 'junior'],
