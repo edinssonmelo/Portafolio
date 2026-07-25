@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import { versionedSrc } from "@/config/publicAssets";
 
 export const Logo = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export const Logo = () => {
       className="relative -ml-0.5 flex shrink-0 cursor-pointer items-center bg-transparent md:-ml-1"
     >
       <img
-        src="/assets/logo-mobile.png"
+        src={versionedSrc("/assets/logo-mobile.png")}
         alt="Edinsson Melo"
         width={1254}
         height={1254}
@@ -32,7 +33,7 @@ export const Logo = () => {
         className="block h-12 w-12 bg-transparent object-contain object-left sm:h-14 sm:w-14 md:hidden"
       />
       <img
-        src="/assets/logo-full.png"
+        src={versionedSrc("/assets/logo-full.png")}
         alt="Edinsson Melo"
         width={1672}
         height={941}

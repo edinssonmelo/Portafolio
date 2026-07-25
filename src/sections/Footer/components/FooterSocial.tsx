@@ -1,5 +1,6 @@
 import { SOCIAL_ICON_BACKGROUND_COLOR } from "@/config/colors";
 import { SITE_CONFIG } from "@/config/seo";
+import { versionedSrc } from "@/config/publicAssets";
 
 const SocialIcon = ({ href, iconSrc, iconAlt, name }: { href: string; iconSrc: string; iconAlt: string; name: string }) => {
   return (
@@ -15,7 +16,7 @@ const SocialIcon = ({ href, iconSrc, iconAlt, name }: { href: string; iconSrc: s
         >
           <div className="h-4 w-4 md:h-[17px] md:w-[17px] flex items-center justify-center overflow-hidden">
             <img
-              src={iconSrc}
+              src={versionedSrc(iconSrc)}
               alt={iconAlt}
               className="h-full w-full object-contain max-w-full"
             />

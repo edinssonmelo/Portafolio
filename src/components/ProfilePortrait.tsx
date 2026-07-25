@@ -2,6 +2,7 @@ import {
     portraitFrameToStyle,
     profilePortraitFrame,
 } from '@/config/profilePortrait';
+import { versionedSrc } from '@/config/publicAssets';
 
 type ProfilePortraitProps = {
     className?: string;
@@ -12,7 +13,7 @@ export const ProfilePortrait = ({ className = '', sizes }: ProfilePortraitProps)
     return (
         <img
             sizes={sizes}
-            src="/assets/hero.png"
+            src={versionedSrc('/assets/hero.png')}
             alt="Edinsson Melo"
             className={`h-full w-full min-h-full min-w-full object-cover ${className}`}
             style={portraitFrameToStyle(profilePortraitFrame)}
