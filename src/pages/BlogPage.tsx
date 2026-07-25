@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { PageSection } from '@/components/PageSection';
 import { SurfaceCard } from '@/components/SurfaceCard';
 import { TagChip } from '@/components/TagChip';
-import { BLOG_POSTS, formatReadingTime } from '@/data/blog';
+import { BLOG_POSTS, formatBlogDate, formatReadingTime } from '@/data/blog';
 
 export const BlogPage = () => {
     return (
@@ -34,11 +34,7 @@ export const BlogPage = () => {
                             >
                                 <div className="flex flex-wrap items-center gap-3 text-sm text-stone-600">
                                     <time dateTime={post.datePublished}>
-                                        {new Date(post.datePublished).toLocaleDateString('en-US', {
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric',
-                                        })}
+                                        {formatBlogDate(post.datePublished)}
                                     </time>
                                     <span aria-hidden="true">·</span>
                                     <span>{formatReadingTime(post)}</span>

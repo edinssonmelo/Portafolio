@@ -6,7 +6,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { PageSection } from '@/components/PageSection';
 import { SurfaceCard } from '@/components/SurfaceCard';
 import { TagChip } from '@/components/TagChip';
-import { formatReadingTime, getBlogPost } from '@/data/blog';
+import { formatBlogDate, formatReadingTime, getBlogPost } from '@/data/blog';
 
 export const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -59,11 +59,7 @@ export const BlogPostPage = () => {
                 >
                     <div className="flex flex-wrap items-center gap-3 text-sm text-stone-600">
                         <time dateTime={post.datePublished}>
-                            {new Date(post.datePublished).toLocaleDateString('en-US', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric',
-                            })}
+                            {formatBlogDate(post.datePublished)}
                         </time>
                         <span aria-hidden="true">·</span>
                         <span>{formatReadingTime(post)}</span>

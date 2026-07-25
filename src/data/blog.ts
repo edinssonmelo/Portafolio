@@ -29,6 +29,20 @@ export const BLOG_POSTS: BlogPost[] = [
 export const getBlogPost = (slug: string) =>
     BLOG_POSTS.find((post) => post.slug === slug);
 
+/** Parse YYYY-MM-DD as local calendar date (avoids UTC off-by-one in Americas). */
+export const formatBlogDate = (
+    date: string,
+    locale = 'en-US',
+    options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    },
+): string => {
+    const [year, month, day] = date.split('-').map(Number);
+    return new Date(year, month - 1, day).toLocaleDateString(locale, options);
+};
+
 const blockToPlainText = (block: BlogBlock): string => {
     switch (block.type) {
         case 'p':
