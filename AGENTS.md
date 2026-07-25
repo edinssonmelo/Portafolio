@@ -39,3 +39,11 @@
 - Identity: **An AI Software Engineer** (`SITE_CONFIG.tagline` in `src/config/seo.ts`; hero, About, and SEO stay in sync)
 - Logos: transparent PNG, `bg-transparent`, no background on `img`
 - Deploy path on server: `/srv/apps/portafolio`
+
+## Storytelling blog (editorial system)
+
+Blog content workflow lives in `content/blog/`. Before creating or editing sessions, drafts, or published Markdown there, read `content/blog/AGENTS.md`. Cursor rule: `.cursor/rules/storytelling-blog.mdc` (applies to `content/blog/**/*`).
+
+- **ChatGPT bridge:** `content/blog/system/CHATGPT_CONTEXT.md` (repo → ChatGPT)
+- **Sessions:** `content/blog/sessions/` (ChatGPT → repo)
+- **Site runtime:** published posts still ship from `src/data/posts/` as TypeScript `BlogBlock` modules

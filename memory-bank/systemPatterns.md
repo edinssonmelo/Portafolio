@@ -21,7 +21,9 @@ src/
   pages/        # Route-level pages (ProjectsPage, ProjectDetail, AboutPage, …)
   components/   # Shared UI (Logo, SectionHeader, SEO, …)
   config/       # seo.ts, schema.ts, colors
-  data/         # blog.ts (static content)
+  data/         # blog.ts + posts/*.ts (runtime BlogBlock content)
+content/
+  blog/         # editorial system: sessions, drafts, published Markdown, system/
 public/
   screenshots/  # Project images (static URLs)
   assets/       # logos, social icons
@@ -38,6 +40,16 @@ public/
 ## Routing gotcha
 
 - App route `/projects` must NOT conflict with a physical `public/projects/` folder (caused 403 on Apache/Hostinger). Images live under `/screenshots/`.
+
+## Blog editorial flow
+
+```text
+ChatGPT (CHATGPT_CONTEXT.md) → sessions/ → Cursor draft → review → published/ + src/data/posts/
+Images: media/inbox/ or chat paste → media/[slug]/ + public/blog/[slug]/ + manifest.md
+```
+
+- Rules: `content/blog/AGENTS.md`, `.cursor/rules/storytelling-blog.mdc`
+- Memory: `system/VOICE.md`, `EDITORIAL_MEMORY.md`, `CONTENT_LEDGER.md`, `CHATGPT_CONTEXT.md`
 
 ## Deploy flow
 

@@ -5,6 +5,47 @@ type BlogBodyProps = {
     blocks: BlogBlock[];
 };
 
+const linkClassName =
+    'font-semibold text-stone-900 underline underline-offset-2 transition-colors hover:text-stone-700';
+
+const renderInlineMarkdown = (text: string) => {
+    const pattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const nodes: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+    let key = 0;
+
+    while ((match = pattern.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            nodes.push(text.slice(lastIndex, match.index));
+        }
+
+        const [, label, href] = match;
+        const isExternal = /^https?:\/\//.test(href);
+
+        nodes.push(
+            <a
+                key={`link-${key++}`}
+                href={href}
+                className={linkClassName}
+                {...(isExternal
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+            >
+                {label}
+            </a>,
+        );
+
+        lastIndex = pattern.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+        nodes.push(text.slice(lastIndex));
+    }
+
+    return nodes.length > 0 ? nodes : text;
+};
+
 export const BlogBody = ({ blocks }: BlogBodyProps) => {
     let h2Index = 0;
 
@@ -43,7 +84,7 @@ export const BlogBody = ({ blocks }: BlogBodyProps) => {
                                 key={index}
                                 className={`${typographyClasses.body} text-stone-800`}
                             >
-                                {block.text}
+                                {renderInlineMarkdown(block.text)}
                             </p>
                         );
                     case 'ul':
@@ -78,6 +119,22 @@ export const BlogBody = ({ blocks }: BlogBodyProps) => {
                                     {block.text}
                                 </p>
                             </blockquote>
+                        );
+                    case 'image':
+                        return (
+                            <figure key={index} className="my-8">
+                                <img
+                                    src={block.src}
+                                    alt={block.alt}
+                                    loading="lazy"
+                                    className="w-full rounded-[12px] border border-stone-200 bg-stone-100"
+                                />
+                                {block.caption ? (
+                                    <figcaption className="mt-3 text-center font-dm_sans text-sm text-stone-600">
+                                        {block.caption}
+                                    </figcaption>
+                                ) : null}
+                            </figure>
                         );
                     default:
                         return null;

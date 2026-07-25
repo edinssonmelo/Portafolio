@@ -17,9 +17,11 @@
 - [x] Screenshot updates: Declaramelo hero/features, Bernal dashboard
 - [x] `AGENTS.md`: commit + push after every meaningful task
 - [x] YouTube social link (@EdinssonMelo) in nav, footer, and schema
+- [x] Storytelling blog editorial system (`content/blog/`, CHATGPT_CONTEXT bridge, Cursor rule)
 
 ## Pending
 
+- [ ] First ChatGPT editorial session + migrate primer post Markdown to `content/blog/published/`
 - [ ] Search Console / Bing manual setup
 - [ ] LinkedIn/GitHub bio alignment
 - [ ] Optional: favicon refresh from new EM logo

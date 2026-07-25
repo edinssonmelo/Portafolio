@@ -9,6 +9,7 @@
 
 ## Recent changes
 
+- Storytelling blog editorial system: `content/blog/` (sessions, drafts, published, system files), `content/blog/AGENTS.md`, `.cursor/rules/storytelling-blog.mdc`; `FLUJO.md` guide; `media/inbox/` + `public/blog/` for images; `BlogBlock` image type
 - About: story-first bio (first PC, Encarta, Stronghold + YouTube link, Chilean mentor → AI Software Engineer); hero photo; 8 years
 - YouTube channel (@EdinssonMelo) in header/footer social icons + schema `sameAs`
 - PWA manifest `display: browser` so mobile browsers open the site normally (no install-app prompt)
@@ -24,6 +25,7 @@
 
 ## Next steps (user-driven)
 
+- First editorial session in ChatGPT (audio/idea → `content/blog/sessions/`) to refine `VOICE.md`
 - Google Search Console / Bing sitemap submission (manual)
 - Align LinkedIn/GitHub bio with site identity
 

@@ -1,0 +1,26 @@
+---
+description: Reglas para crear, editar y administrar contenidos del sistema de storytelling
+globs: "content/blog/**/*"
+alwaysApply: false
+---
+
+Antes de crear o modificar contenido dentro de `content/blog/`, lee `content/blog/AGENTS.md`.
+
+Consulta también, según la tarea:
+
+@content/blog/system/VOICE.md
+@content/blog/system/EDITORIAL_MEMORY.md
+@content/blog/system/CONTENT_LEDGER.md
+@content/blog/system/CHATGPT_CONTEXT.md
+
+Reglas principales:
+
+- No inventes experiencias, datos personales ni resultados.
+- Conserva la trazabilidad entre sesiones, borradores y publicaciones.
+- Trata los archivos de `sessions/` como material fuente.
+- No actualices `VOICE.md` por una sola observación no confirmada.
+- No marques un artículo como publicado sin instrucción explícita.
+- Antes de redactar, identifica la idea central, la tensión y la transformación.
+- Después de una publicación aprobada, actualiza el registro editorial y el contexto para ChatGPT.
+- Imágenes nuevas: `content/blog/media/inbox/` o pegadas en chat → organizar en `media/[slug]/` + `public/blog/[slug]/`. Ver `content/blog/system/FLUJO.md`.
+- No uses em dashes (`—`) en texto del blog. Ver `AGENTS.md` (raíz) sección Copy style.

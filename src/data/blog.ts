@@ -1,4 +1,5 @@
 import { primerEmpleoSoftwarePost } from '@/data/posts/primer-empleo-software';
+import { lanzarAppSinSuscripcionesPost } from '@/data/posts/lanzar-app-sin-suscripciones';
 
 export type BlogBlock =
     | { type: 'p'; text: string }
@@ -6,7 +7,8 @@ export type BlogBlock =
     | { type: 'h3'; text: string }
     | { type: 'ul'; items: string[] }
     | { type: 'ol'; items: string[] }
-    | { type: 'callout'; text: string };
+    | { type: 'callout'; text: string }
+    | { type: 'image'; src: string; alt: string; caption?: string };
 
 export type BlogPost = {
     slug: string;
@@ -19,7 +21,10 @@ export type BlogPost = {
     body: BlogBlock[];
 };
 
-export const BLOG_POSTS: BlogPost[] = [primerEmpleoSoftwarePost];
+export const BLOG_POSTS: BlogPost[] = [
+    lanzarAppSinSuscripcionesPost,
+    primerEmpleoSoftwarePost,
+];
 
 export const getBlogPost = (slug: string) =>
     BLOG_POSTS.find((post) => post.slug === slug);
@@ -34,6 +39,8 @@ const blockToPlainText = (block: BlogBlock): string => {
         case 'ul':
         case 'ol':
             return block.items.join(' ');
+        case 'image':
+            return [block.alt, block.caption].filter(Boolean).join(' ');
         default:
             return '';
     }
