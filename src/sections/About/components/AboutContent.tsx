@@ -15,7 +15,7 @@ export const AboutContent = () => {
         to="/about"
         className="font-dm_sans text-base font-semibold text-stone-900 underline-offset-2 hover:underline"
       >
-        Read full profile →
+        Read my story →
       </Link>
     </div>
   );

@@ -18,7 +18,6 @@ export const AboutPage = () => {
                     badge="About"
                     title="Edinsson Melo"
                     kicker={SITE_CONFIG.tagline}
-                    description={`Based in ${SITE_CONFIG.location.city}, ${SITE_CONFIG.location.country}.`}
                 />
 
                 <PageSection>
@@ -31,25 +30,27 @@ export const AboutPage = () => {
 
                         <div className="space-y-6">
                             <p className={bodyText}>
-                                Uno de los recuerdos que más marcó mi camino fue la primera vez que
-                                tuve un computador frente a mí. Recuerdo ver una pestaña de Google
-                                abierta, y me pareció sencillamente intrigante: la casita del
-                                navegador, los enlaces y todos los íconos que había ahí. Sentía que
-                                estaba entrando a un mundo completamente nuevo.
+                                Edinsson Adrian Melo Calvo es Software Engineer con trayectoria en el sector empresarial. Actualmente se especializa en desarrollo de software (AI-Native), Agentic AI y Workflows
+                                automatizados.
                             </p>
                             <p className={bodyText}>
-                                Ese computador dinosaurio me lo regaló mi tía. Curiosamente tenía instalados
-                                Stronghold Crusader y mi primera Encarta. Me leí la Encarta entera.
-                                Me abrió una enciclopedia de cosas, juegos y contenido didáctico, y
-                                fue apasionante.
+                                Para entender quién es en realidad, hay que volver al principio.
                             </p>
                             <p className={bodyText}>
-                                Stronghold Crusader era un juego de estrategia: construir una
-                                economía y cuidar un castillo. Todavía recuerdo las frases:
-                                &ldquo;Falta madera, mi Señor&rdquo;, &ldquo;Se necesita
-                                oro&rdquo;, &ldquo;La gente se va del castillo, mi Señor&rdquo;.
-                                Llegué a jugar como Expert Player. Puedes ver un partido mío de dos
-                                expertos con una estrategia ya desarrollada en{' '}
+                                Uno de los recuerdos que más marcó su camino fue la primera vez que
+                                tuvo un computador frente a él. Vio el buscador de Google y
+                                le pareció sencillamente intrigante: la casita del navegador, los
+                                enlaces y todos los íconos que había ahí. Lo que hizo volar su imaginación, de todo lo que podía haber detrás de eso.
+                            </p>
+                            <p className={bodyText}>
+                                Ese computador posteriormente se lo regaló su tía. Curiosamente tenía
+                                instalados Stronghold Crusader y su primera Encarta. Se leyó la Encarta
+                                entera. Le abrió una enciclopedia de cosas, juegos y contenido
+                                didáctico que estimuló y abrió un mundo nuevo para él.
+                            </p>
+                            <p className={bodyText}>
+                                Stronghold Crusader era un juego de estrategia que consistía en aprovechar los recursos disponibles para construir un imperio. Llegó a
+                                jugar como Expert Player. Puedes ver un Gameplay en{' '}
                                 <a
                                     href="https://www.youtube.com/watch?v=vb8bto2vaaA"
                                     target="_blank"
@@ -61,31 +62,14 @@ export const AboutPage = () => {
                                 .
                             </p>
                             <p className={bodyText}>
-                                Ese juego me enseñó mucho. En general quienes jugaban eran de
-                                Europa, pero tuve un maestro de Chile que me enseñó casi todo. Así
-                                me fui adentrando en la tecnología.
+                                Esa curiosidad no se fue. Con el tiempo se convirtió en su obsesión,
+                                conllevándolo a adentrarse profundamente en este campo. 
                             </p>
                             <p className={bodyText}>
-                                Esa curiosidad no se fue. Con el tiempo se convirtió en mi
-                                profesión. Hoy soy AI Software Engineer en Colombia, y llevo más de
-                                8 años desarrollando software, resolviendo problemas y construyendo
-                                productos.
-                            </p>
-                            <p className={bodyText}>
-                                Mi deseo es conectar, compartir y servir a personas y empresas que
-                                estén construyendo, creciendo y buscando dar propósito a su trabajo.
+                                Se identifica como una persona
+                                que busca una vida con más propósito y servicio.
                             </p>
                         </div>
-
-                        <blockquote className="mt-10 rounded-[12px] border-2 border-stone-900 bg-neutral-50 px-5 py-5">
-                            <p className="font-dm_sans text-base font-semibold italic leading-relaxed text-stone-900 md:text-lg">
-                                &ldquo;Y también que es don de Dios que todo hombre coma y beba, y
-                                goce el bien de toda su labor.&rdquo;
-                            </p>
-                            <footer className="mt-3 font-dm_sans text-sm font-semibold text-stone-600">
-                                Eclesiastés 3:13
-                            </footer>
-                        </blockquote>
                     </SurfaceCard>
                 </PageSection>
             </main>

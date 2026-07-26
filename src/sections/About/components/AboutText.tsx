@@ -3,17 +3,13 @@ import { typographyClasses } from "@/config/designTokens";
 export const AboutText = () => {
   return (
     <div className="relative flex w-full flex-col gap-4 overflow-hidden">
-      <h2 className={`text-left ${typographyClasses.sectionTitle}`}>Biography</h2>
       <div className="flex flex-col gap-3 md:gap-4">
         <p className={typographyClasses.body}>
-          I&apos;m an AI Software Engineer with more than 8 years of experience.
-          I work with companies, startups, founders, and software engineers to ship
-          AI-powered SaaS, web, and mobile products.
+          Software Engineer with more than 8 years in technology. Today I focus on
+          agents, AI-native apps, and automated workflows.
         </p>
-        <p className={typographyClasses.body}>
-          From MVP definition to production launch, I combine software
-          architecture, AI integration, and product thinking to build tools
-          that solve real business problems.
+        <p className={`${typographyClasses.body} text-stone-600`}>
+          The story of how I got here starts with an old PC and a lot of curiosity.
         </p>
       </div>
     </div>

@@ -13,7 +13,7 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
       setActiveSection(hashSection);
     }
 
-    const sections = ['home', 'services', 'about', 'portfolio', 'contact'];
+    const sections = ['home', 'services', 'portfolio', 'contact'];
 
     // Función para detectar qué sección está visible
     const handleScroll = () => {
@@ -57,6 +57,7 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
     };
   }, [location]);
 
+  const isAboutActive = location.pathname === '/about';
   const isBlogActive =
     location.pathname === '/blog' || location.pathname.startsWith('/blog/');
 
@@ -64,7 +65,7 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
     <nav className={`flex items-center justify-center gap-[35px] ${className}`}>
       <NavLink href="#home" text="Home" isActive={activeSection === 'home'} />
       <NavLink href="#services" text="Services" isActive={activeSection === 'services'} />
-      <NavLink href="#about" text="About" isActive={activeSection === 'about'} />
+      <NavLink href="/about" text="About" isActive={isAboutActive} />
       <NavLink href="#portfolio" text="Portfolio" isActive={activeSection === 'portfolio'} />
       <NavLink href="/blog" text="Blog" isActive={isBlogActive} />
       <NavLink href="#contact" text="Contact" isActive={activeSection === 'contact'} />

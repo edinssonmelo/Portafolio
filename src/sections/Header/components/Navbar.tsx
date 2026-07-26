@@ -165,7 +165,7 @@ export const Navbar = () => {
               {/* Mobile Nav Links */}
               <MobileNavLink href="#home" text="Home" onClick={handleNavClick} />
               <MobileNavLink href="#services" text="Services" onClick={handleNavClick} />
-              <MobileNavLink href="#about" text="About" onClick={handleNavClick} />
+              <MobileNavLink href="/about" text="About" onClick={handleNavClick} />
               <MobileNavLink href="#portfolio" text="Portfolio" onClick={handleNavClick} />
               <MobileNavLink href="/blog" text="Blog" onClick={handleNavClick} />
               <MobileNavLink href="#contact" text="Contact" onClick={handleNavClick} />

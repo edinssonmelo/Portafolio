@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { Services } from "@/sections/Services";
-import { About } from "@/sections/About";
 import { Testimonials } from "@/sections/Testimonials";
 import { Portfolio } from "@/sections/Portfolio";
 import { Stats } from "@/sections/Stats";
@@ -30,9 +29,8 @@ const HomePage = () => {
         <div className="static box-content caret-black shrink h-auto w-auto left-auto top-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-8 md:w-full md:left-0 md:top-[84px]"></div>
         <Hero />
         <Services />
-        <About />
-        <Testimonials />
         <Portfolio />
+        <Testimonials />
         <Stats />
         {/* <Badges /> */}
         <CTAContact />

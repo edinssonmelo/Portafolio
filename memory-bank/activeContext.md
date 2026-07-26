@@ -10,7 +10,7 @@
 ## Recent changes
 
 - Storytelling blog editorial system: `content/blog/`; `public/blog-assets/` for images (never `public/blog/`, SPA 403)
-- About: story-first bio (first PC, Encarta, Stronghold + YouTube link, Chilean mentor → AI Software Engineer); hero photo; 8 years
+- Home: About section removed; Portfolio (My Works) follows Services; full bio on `/about` only
 - YouTube channel (@EdinssonMelo) in header/footer social icons + schema `sameAs`
 - PWA manifest `display: browser` so mobile browsers open the site normally (no install-app prompt)
 - Blog post title: 8 años (not 10); AI callout on prompting with examples
