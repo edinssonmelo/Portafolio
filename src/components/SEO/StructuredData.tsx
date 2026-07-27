@@ -81,7 +81,7 @@ export const StructuredData = () => {
         breadcrumbItems.push(
             { name: 'Blog', url: `${SITE_CONFIG.url}/${lang}/blog` },
             {
-                name: blogPost.title,
+                name: blogPost.title[lang] ?? blogPost.title[blogPost.lang],
                 url: `${SITE_CONFIG.url}/${lang}/blog/${blogPost.slug}`,
             }
         );
@@ -89,7 +89,18 @@ export const StructuredData = () => {
 
     const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
     const profilePageSchema = subpath === '/about' ? getProfilePageSchema() : null;
-    const blogPostingSchema = blogPost ? getBlogPostingSchema(blogPost, lang) : null;
+    const blogPostingSchema = blogPost
+        ? getBlogPostingSchema(
+              {
+                  title: blogPost.title[lang] ?? blogPost.title[blogPost.lang],
+                  description: blogPost.description[lang] ?? blogPost.description[blogPost.lang],
+                  slug: blogPost.slug,
+                  datePublished: blogPost.datePublished,
+                  dateModified: blogPost.dateModified,
+              },
+              lang,
+          )
+        : null;
 
     return (
         <>

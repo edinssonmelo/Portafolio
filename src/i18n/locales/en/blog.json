@@ -1,0 +1,14 @@
+{
+  "page": {
+    "badge": "Blog",
+    "title": "Writing on building software",
+    "description": "Notes on building software, AI products, and career lessons from more than a decade shipping in production.",
+    "emptyState": "Articles are on the way. Topics will cover AI-first MVPs, SaaS architecture, and lessons from products I've shipped."
+  },
+  "post": {
+    "notFound": "Article not found",
+    "backToBlog": "← Back to Blog",
+    "relatedLinks": "If you're building your portfolio, you can see how I did mine in <projectsLink>Projects</projectsLink> and read more about my background in <aboutLink>About</aboutLink>.",
+    "badge": "Blog"
+  }
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { GradientButton } from "@/components/GradientButton";
@@ -9,6 +10,7 @@ import { ProjectStory, type ProjectStoryData } from "@/components/ProjectStory";
 import { PageHeader } from "@/components/PageHeader";
 import { PageSection } from "@/components/PageSection";
 import { getScreenshotMeta, isMobileScreenshot, screenshotSrc } from "@/config/screenshotMeta";
+import { useLocale } from '@/hooks/useLocale';
 
 // Project data - in a real app, this would come from an API or CMS
 const projects: Record<string, {
@@ -132,32 +134,21 @@ const projects: Record<string, {
     },
     "wordjet-ai": {
         title: "Wordjet.ai",
-        subtitle: "AI writing workspace for marketing agencies. Create briefs, articles, essays, and content calendars with research and market study tools built in.",
+        subtitle: "", // loaded from i18n
         livePreviewUrl: "#",
-        aboutText: "Wordjet is an AI assisted writing workspace built for marketing teams and agencies. It helps teams move from research to publishable content faster with tools for briefs, articles, essays, content planning, and market study workflows inside one editor.",
+        aboutText: "",
         date: "Jan 2025",
         client: "WordJet.ai",
         services: ["AI", "SaaS", "Fullstack"],
-        projectDetails: "Built the product landing, writing workspace, Jet AI assistant, project organization, and research oriented workflows for marketing content production.",
-        outcome:
-            "A focused writing product that helps marketing teams turn research into briefs, articles, and client-ready content faster.",
+        projectDetails: "",
+        outcome: undefined,
         testimonial: {
-            quote: "A focused writing product that helps marketing teams turn research into briefs, articles, and client ready content much faster.",
+            quote: "",
             author: "WordJet Team",
             role: "Product"
         },
-        thingsIDid: "Developed the AI writing workspace, embedded assistant, editor experience, and marketing research flows for briefs, articles, essays, and content production.",
-        story: {
-            hook: "An AI writing workspace for marketing teams: from market research to briefs, copy, and social-ready formats.",
-            body: [
-                "Wordjet was designed for agencies and marketers who live in documents: briefs, outlines, market research, articles, and the social formats that come from a solid base. One editor, AI-assisted workflows, and a path from research to publishable output.",
-                "The vision was ambitious: consolidate research, writing, and repurposing in a single workspace. I built the landing, editor, Jet AI assistant, and content production flows before the partnership with a marketing specialist did not work out.",
-                "The project is paused for now, not because the idea was weak, but because the product needed deep domain expertise on the business side. It remains a direction I may return to. It is a strong proof of building complex AI product surfaces for marketing teams.",
-            ],
-            stack: ["AI", "SaaS", "Fullstack"],
-            pullQuote:
-                "A focused writing product that helps marketing teams turn research into briefs, articles, and client-ready content much faster.",
-        },
+        thingsIDid: "",
+        story: undefined, // loaded from i18n
         mainImage: "/screenshots/wordjet-landing.png",
         images: [
             "/screenshots/wordjet-landing.png",
@@ -168,41 +159,20 @@ const projects: Record<string, {
     },
     "overup": {
         title: "OverUP",
-        subtitle: "E-commerce store for OverUP, a Colombian oversized streetwear brand with catalog, product pages, and checkout.",
+        subtitle: "",
         livePreviewUrl: "https://overup.store/",
-        aboutText: "OverUP is an online store for oversized streetwear in Colombia. The shop brings together brand storytelling, product catalog, product detail pages, and a smooth purchase flow for customers.",
+        aboutText: "",
         date: "2024",
         client: "OverUP",
         services: ["E-commerce", "Web", "Shopify"],
-        projectDetails: "Built the storefront experience with hero landing, featured products, product detail pages, size selection, and checkout flow for a streetwear brand.",
+        projectDetails: "",
         testimonial: {
-            quote: "A clean store that reflects the brand and makes shopping oversized streetwear feel simple.",
+            quote: "",
             author: "OverUP",
             role: "Brand"
         },
-        thingsIDid: "Developed the e-commerce experience including landing page, catalog, product pages, cart, and checkout flow.",
-        story: {
-            hook: "An urban streetwear store born from entrepreneurship in Medellín, with brand, catalog, and checkout in one place.",
-            body: [
-                <>
-                    OverUP started as a small venture with my wife and a friend from school: oversized
-                    streetwear with real brand energy, sold online and on{" "}
-                    <a
-                        href="https://www.instagram.com/overup.official/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-semibold text-stone-900 underline-offset-2 hover:underline"
-                    >
-                        Instagram @overup.official
-                    </a>
-                    . I built the e-commerce experience: landing, catalog, product pages, and purchase
-                    flow.
-                </>,
-                "The brand had momentum in Medellín. After we moved to Cúcuta, the mismatch hurt us: Cúcuta is much hotter, and most of what we had produced was streetwear built for cooler weather like Medellín's. A lot of inventory did not move, and we took heavy losses. The textile market was also getting harder with global competition.",
-                "We were honest with ourselves: we were no longer motivated to keep manufacturing clothes. Garment production is a demanding, often exhausting sector. We closed OverUP. It was not the outcome we wanted, but it left a real lesson about business, timing, and knowing when to step back.",
-            ],
-            stack: ["E-commerce", "Web", "Shopify"],
-        },
+        thingsIDid: "",
+        story: undefined,
         mainImage: "/screenshots/overup-hero.png",
         images: [
             "/screenshots/overup-hero.png",
@@ -214,30 +184,20 @@ const projects: Record<string, {
     },
     declaramelo: {
         title: "Declaramelo",
-        subtitle: "Online income tax filing in Colombia with expert accountants, free tools, and a guided DIAN declaration flow.",
+        subtitle: "",
         livePreviewUrl: "https://www.declaramelo.com/",
-        aboutText: "Declaramelo helps individuals in Colombia file their income tax return online with confidence. The platform combines free self service tools, expert accountant review, and a clear step by step flow to declare before DIAN.",
+        aboutText: "",
         date: "2025",
         client: "Declaramelo",
         services: ["Fullstack", "Web", "Product"],
-        projectDetails: "Built the landing experience, filing deadline tools, onboarding flow, and core product surfaces for an online tax declaration service in Colombia.",
+        projectDetails: "",
         testimonial: {
-            quote: "A clear, trustworthy experience that makes a complex tax process feel simple and guided.",
+            quote: "",
             author: "Declaramelo",
             role: "Product"
         },
-        thingsIDid: "Developed the web platform including hero, tools, onboarding, and declaration support flows for Colombian taxpayers.",
-        story: {
-            hook: "A financial ally for Colombians who need expert help filing income tax with DIAN.",
-            body: [
-                "Declaramelo was born from a simple need: people facing their annual income tax declaration in Colombia need more than a form. They need a trusted accountant who can answer questions, clarify their situation, and guide them through a process tied to the state.",
-                "Every person's finances are different. The product treats each case with care, pairing modern technology with human expertise so a rigorous process feels approachable. Free tools, guided flows, and accountant support help users declare with confidence.",
-                "It is a young startup still growing, focused today on individuals, with a path toward serving companies too. The goal has stayed the same: offer great service, keep the best talent available, and be the ally people trust with their declaration.",
-            ],
-            stack: ["Fullstack", "Web", "Product"],
-            pullQuote:
-                "A clear, trustworthy experience that makes a complex tax process feel simple and guided.",
-        },
+        thingsIDid: "",
+        story: undefined,
         mainImage: "/screenshots/declaramelo-hero.png",
         images: [
             "/screenshots/declaramelo-hero.png",
@@ -249,30 +209,20 @@ const projects: Record<string, {
     },
     "bernal-tech-b2b": {
         title: "Bernal Tech B2B",
-        subtitle: "Wholesale B2B portal for a Colombian car mat and automotive accessories manufacturer.",
+        subtitle: "",
         livePreviewUrl: "https://bernaltechtienda.com/pages/contact?view=portal-embed",
-        aboutText: "Bernal Tech B2B is a wholesale portal for allied businesses in Colombia. It connects manufacturing operations with B2B buyers through secure login, a large product catalog, quotes, orders, analytics, and customer support workflows.",
+        aboutText: "",
         date: "2026",
         client: "Bernal Tech",
         services: ["B2B", "Web", "Fullstack"],
-        projectDetails: "Built the wholesale portal with ally authentication, admin dashboard, catalog with filters across 3,000+ SKUs, product detail flows, quotes, orders, analytics, and PQRS support.",
+        projectDetails: "",
         testimonial: {
-            quote: "A professional B2B experience that makes wholesale ordering faster and easier for our allied clients.",
+            quote: "",
             author: "Bernal Tech",
             role: "Operations"
         },
-        thingsIDid: "Developed the B2B portal including login, dashboard, catalog, product pages, quotes, and operational modules for wholesale clients.",
-        story: {
-            hook: "A wholesale portal that turns a decade-strong manufacturer's catalog into a guided B2B buying experience.",
-            body: [
-                "Bernal Tech manufactures automotive floor mats and accessories for every type of vehicle. Their wholesale allies needed more than a product list. They wanted a personalized flow: choose a product line, brand, and vehicle model across more than 4,000 SKUs.",
-                "We built a robust platform with role-based admin, catalog management, analytics, quotations, and notifications, from quote through dispatch and delivery. The client invested heavily in product photography; the portal made that catalog searchable, organized, and easy to order from.",
-                "Exclusive to wholesale clients, the system is live in production. Allies have welcomed the experience, and it has become a strong digital channel for a company with more than ten years in the market.",
-            ],
-            stack: ["B2B", "Web", "Fullstack"],
-            pullQuote:
-                "A professional B2B experience that makes wholesale ordering faster and easier for our allied clients.",
-        },
+        thingsIDid: "",
+        story: undefined,
         mainImage: "/screenshots/bernal-dashboard.png",
         images: [
             "/screenshots/bernal-dashboard.png",
@@ -285,30 +235,20 @@ const projects: Record<string, {
     },
     openwhispr: {
         title: "OpenWhispr",
-        subtitle: "AI native macOS desktop app to transcribe meetings, save them, and analyze them while you stay focused on the conversation.",
+        subtitle: "",
         livePreviewUrl: "https://openwhispr.rootoz.com/",
-        aboutText: "OpenWhispr is an AI native desktop app for Mac built around meeting transcription. It helps you capture conversations, keep them organized, and review or analyze what was said without breaking your flow during the meeting.",
+        aboutText: "",
         date: "2026",
         client: "OpenWhispr",
         services: ["AI", "Desktop", "Product"],
-        projectDetails: "Built the product landing, beta download flow, waitlist, and feedback surfaces for an AI native macOS app focused on meeting transcription, storage, and analysis.",
+        projectDetails: "",
         testimonial: {
-            quote: "A focused AI native experience that makes meeting transcription, storage, and review feel simple from day one.",
+            quote: "",
             author: "OpenWhispr",
             role: "Product"
         },
-        thingsIDid: "Developed the marketing site, beta onboarding, waitlist capture, and product messaging for an AI native macOS meeting transcription app.",
-        story: {
-            hook: "An AI meeting assistant built to keep context when planning, brainstorming, and shipping real work.",
-            body: [
-                "OpenWhispr started in my own workflow. Planning sessions and brainstorming meetings generate ideas fast, but details slip. I needed a way to capture conversations, keep them organized, and revisit them later for summaries, insights, and follow-ups.",
-                "The app transcribes meetings, stores them by category, and helps surface what matters for the next conversation: anticipating questions, tracking decisions, and supporting leadership workflows from deep planning sessions to daily standups.",
-                "It is in early beta on Mac, with Windows planned. I built it for myself first and plan to open-source it: a capable meeting assistant I wanted to exist and to share with others working in AI-heavy, context-rich environments.",
-            ],
-            stack: ["AI", "Desktop", "Product"],
-            pullQuote:
-                "A focused AI native experience that makes meeting transcription, storage, and review feel simple from day one.",
-        },
+        thingsIDid: "",
+        story: undefined,
         mainImage: "/screenshots/openwhispr-hero.png",
         images: [
             "/screenshots/openwhispr-hero.png",
@@ -320,30 +260,20 @@ const projects: Record<string, {
     },
     "superapp-mobile": {
         title: "SuperApp Mobile",
-        subtitle: "Part of the team behind Seguros SURA's enterprise SuperApp on iOS and Android, serving millions of insurance customers in Colombia.",
+        subtitle: "",
         livePreviewUrl: "https://play.google.com/store/apps/details?id=co.com.sura.seguros&hl=es_CO",
-        aboutText: "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA. It is a cross platform iOS and Android app used at scale for insurance services, benefits, and daily customer operations.",
+        aboutText: "",
         date: "2022 – 2024",
         client: "Seguros SURA",
         services: ["Mobile", "Flutter", "iOS", "Android"],
-        projectDetails: "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported live operations and incident resolution for end users to keep service continuity and quality high.",
+        projectDetails: "",
         testimonial: {
-            quote: "Strong contribution inside a large mobile product team, shipping features and keeping the live SuperApp stable for users.",
+            quote: "",
             author: "Seguros SURA",
             role: "Mobile"
         },
-        thingsIDid: "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported operations and incident resolution for end users, ensuring service continuity and quality.",
-        story: {
-            hook: "Working on Seguros SURA's SuperApp, the main iOS and Android app where customers access the company's services.",
-            body: [
-                "At Seguros SURA I worked on the SuperApp team. The SuperApp is the company's main mobile app: the place where customers on iOS and Android access health, mobility, home, wallet, refunds, claims, and other SURA services. It is a large, live product with modern tooling, clear engineering standards, and real operational pressure.",
-                "SURA offers many services across the company, and the SuperApp was the front door for customers. Coordinating with every area and business unit was a real challenge, and it demanded close collaboration every day. I was lucky to work with an excellent team, both on the human side and on the technical side.",
-                "My work at SURA through Ceiba Software grew over time. Earlier I helped build a SOX-compliant portal for monitoring transactional operations and controls, CapabilitiesApp for internal workforce and skills management, and integrations for mobile assistance with providers such as Konecta and Medallia. On the SuperApp I later developed features across Health, Mobility, Home, Wallet, Refunds, and Claims, and supported operations and incident resolution for end users in production. I am grateful to Seguros SURA and to Ceiba Software for that experience.",
-            ],
-            stack: ["Mobile", "Flutter", "iOS", "Android"],
-            pullQuote:
-                "Strong contribution inside a large mobile product team, shipping features and keeping the live SuperApp stable for users.",
-        },
+        thingsIDid: "",
+        story: undefined,
         mainImage: "/screenshots/sura-explora.png",
         images: [
             "/screenshots/sura-ingresa.png",
@@ -358,47 +288,95 @@ const projects: Record<string, {
     }
 };
 
-const buildProjectStory = (project: {
+type I18nProjectData = {
     subtitle: string;
     aboutText: string;
     thingsIDid: string;
     projectDetails: string;
-    services: string[];
     outcome?: string;
-    testimonial: { quote: string };
-    story?: ProjectStoryData;
-}): ProjectStoryData => {
+    story?: {
+        hook: string;
+        body: string[];
+        pullQuote?: string;
+    };
+};
+
+const getI18nProjectData = (
+    slug: string,
+    t: (key: string, opts?: Record<string, unknown>) => unknown,
+): I18nProjectData | null => {
+    if (!['declaramelo', 'openwhispr', 'bernal-tech-b2b', 'wordjet-ai', 'superapp-mobile', 'overup'].includes(slug)) {
+        return null;
+    }
+    const story = t(`data.${slug}.story`, { returnObjects: true }) as I18nProjectData['story'] | undefined;
+    return {
+        subtitle: t(`data.${slug}.subtitle`) as string,
+        aboutText: t(`data.${slug}.aboutText`) as string,
+        thingsIDid: t(`data.${slug}.thingsIDid`) as string,
+        projectDetails: t(`data.${slug}.projectDetails`) as string,
+        outcome: (t(`data.${slug}.outcome`, { defaultValue: undefined }) as string | undefined),
+        story: story && typeof story === 'object' && Array.isArray(story.body) ? story : undefined,
+    };
+};
+
+const buildProjectStory = (
+    project: {
+        title: string;
+        subtitle: string;
+        aboutText: string;
+        thingsIDid: string;
+        projectDetails: string;
+        services: string[];
+        outcome?: string;
+        testimonial: { quote: string };
+        story?: ProjectStoryData;
+    },
+    i18nData: I18nProjectData | null,
+): ProjectStoryData => {
+    if (i18nData?.story) {
+        return {
+            hook: i18nData.story.hook,
+            body: i18nData.story.body,
+            stack: project.services,
+            pullQuote: i18nData.story.pullQuote,
+        };
+    }
     if (project.story) {
         return project.story;
     }
 
-    const outcome = project.outcome ?? project.testimonial.quote;
+    const outcome = project.outcome ?? i18nData?.outcome ?? project.testimonial.quote;
+    const hook = i18nData?.subtitle ?? project.subtitle;
+    const body = [
+        i18nData?.aboutText ?? project.aboutText,
+        i18nData?.thingsIDid ?? project.thingsIDid,
+        i18nData?.projectDetails ?? project.projectDetails,
+        outcome,
+    ].filter((p) => p.trim().length > 0);
 
     return {
-        hook: project.subtitle,
-        body: [project.aboutText, project.thingsIDid, project.projectDetails, outcome].filter(
-            (p) => p.trim().length > 0
-        ),
+        hook,
+        body,
         stack: project.services,
-        pullQuote: project.testimonial.quote,
+        pullQuote: project.testimonial.quote || undefined,
     };
 };
 
-const getLiveLinkLabel = (url: string) => {
+const getLiveLinkLabel = (url: string, t: (key: string) => string) => {
     try {
         if (new URL(url).hostname.includes("play.google.com")) {
-            return "View on Google Play";
+            return t('detail.viewOnGooglePlay');
         }
     } catch {
-        return "Visit live site";
+        return t('detail.viewLive');
     }
-    return "Visit live site";
+    return t('detail.viewLive');
 };
 
-const ProjectLiveLink = ({ url }: { url: string }) => (
+const ProjectLiveLink = ({ url, t }: { url: string; t: (key: string) => string }) => (
     <GradientButton href={url} external>
         <span className="text-base font-semibold leading-[19px] tracking-[-0.64px] text-stone-900 font-dm_sans md:text-lg md:tracking-[-0.72px]">
-            {getLiveLinkLabel(url)}
+            {getLiveLinkLabel(url, t)}
         </span>
         <ExternalLink className="h-[17px] w-[17px] shrink-0 text-stone-900 md:h-[19px] md:w-[19px]" aria-hidden />
     </GradientButton>
@@ -411,6 +389,7 @@ const PROJECT_CAROUSEL_BTN_CLASS =
 const ProjectDetailContent = ({
     project,
     livePreviewUrl,
+    t,
 }: {
     project: {
         title: string;
@@ -421,6 +400,7 @@ const ProjectDetailContent = ({
         imageFrameClassName?: string;
     };
     livePreviewUrl?: string;
+    t: ReturnType<typeof useTranslation>['t'];
 }) => {
     const slides =
         project.images && project.images.length > 0
@@ -480,7 +460,7 @@ const ProjectDetailContent = ({
             <div className="relative mx-auto w-full max-w-[800px]">
                 {hasLivePreview ? (
                     <div className="mb-3 flex justify-end md:absolute md:left-full md:top-0 md:z-10 md:mb-0 md:ml-3">
-                        <ProjectLiveLink url={livePreviewUrl!} />
+                        <ProjectLiveLink url={livePreviewUrl!} t={t} />
                     </div>
                 ) : null}
                 <div className="flex flex-col items-center gap-4">
@@ -569,8 +549,8 @@ const ProjectDetailContent = ({
 
                     <p className="text-sm text-stone-600 font-dm_sans">
                         {slideCount > 1
-                            ? "Tap an image to view it in full size"
-                            : "Tap the image to view it in full size"}
+                            ? t('detail.tapToView.plural')
+                            : t('detail.tapToView.single')}
                     </p>
 
                     {slideCount > 1 ? (
@@ -594,6 +574,8 @@ const ProjectDetailContent = ({
 
 export const ProjectDetail = () => {
     const { slug } = useParams<{ slug: string }>();
+    const { t } = useTranslation('projects');
+    const { to } = useLocale();
     const project = slug != null && slug !== "" ? projects[slug] : null;
     const hasLivePreview = Boolean(project?.livePreviewUrl && project.livePreviewUrl !== "#");
 
@@ -603,15 +585,18 @@ export const ProjectDetail = () => {
                 <div className="box-border caret-transparent">
                     <Header />
                     <div className="flex flex-col items-center justify-center gap-6 px-6 py-20">
-                        <h1 className="text-stone-900 text-3xl font-bold font-cabinet_grotesk">Project Not Found</h1>
-                        <p className="text-stone-700 text-lg font-dm_sans">The project you're looking for doesn't exist.</p>
-                        <Link to="/projects" className="text-blue-700 font-dm_sans font-semibold hover:underline">← Back to Projects</Link>
+                        <h1 className="text-stone-900 text-3xl font-bold font-cabinet_grotesk">{t('detail.notFoundTitle')}</h1>
+                        <p className="text-stone-700 text-lg font-dm_sans">{t('detail.notFoundMessage')}</p>
+                        <Link to={to('/projects')} className="text-blue-700 font-dm_sans font-semibold hover:underline">{t('detail.backToProjects')}</Link>
                     </div>
                     <Footer />
                 </div>
             </div>
         );
     }
+
+    const i18nData = slug ? getI18nProjectData(slug, t as (key: string, opts?: Record<string, unknown>) => unknown) : null;
+    const localizedSubtitle = i18nData?.subtitle ?? project.subtitle;
 
     return (
         <>
@@ -620,18 +605,19 @@ export const ProjectDetail = () => {
 
                 <main>
                     <PageHeader
-                        badge="Project"
+                        badge={t('detail.badge')}
                         title={project.title}
-                        description={project.subtitle}
+                        description={localizedSubtitle}
                     />
 
                     {/* Image carousel */}
                     <ProjectDetailContent
-                        project={project}
+                        project={{ ...project, subtitle: localizedSubtitle }}
                         livePreviewUrl={hasLivePreview ? project.livePreviewUrl : undefined}
+                        t={t}
                     />
 
-                    <ProjectStory story={buildProjectStory(project)} />
+                    <ProjectStory story={buildProjectStory(project, i18nData)} />
                 </main>
 
                 <Footer />

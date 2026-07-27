@@ -1,0 +1,116 @@
+{
+  "page": {
+    "badge": "My Works",
+    "title": "Projects that were genuinely fun to build.",
+    "description": "Apps and products I've shipped."
+  },
+  "detail": {
+    "badge": "Project",
+    "notFoundTitle": "Project Not Found",
+    "notFoundMessage": "The project you're looking for doesn't exist.",
+    "backToProjects": "← Back to Projects",
+    "aboutThisProject": "About this project",
+    "builtWith": "Built with",
+    "tapToView": {
+      "single": "Tap the image to view it in full size",
+      "plural": "Tap an image to view it in full size"
+    },
+    "previous": "Previous project",
+    "next": "Next project",
+    "viewLive": "Visit live site",
+    "viewOnGooglePlay": "View on Google Play"
+  },
+  "data": {
+    "declaramelo": {
+      "subtitle": "Online income tax filing in Colombia with expert accountants, free tools, and a guided DIAN declaration flow.",
+      "aboutText": "Declaramelo helps individuals in Colombia file their income tax return online with confidence. The platform combines free self service tools, expert accountant review, and a clear step by step flow to declare before DIAN.",
+      "thingsIDid": "Developed the web platform including hero, tools, onboarding, and declaration support flows for Colombian taxpayers.",
+      "projectDetails": "Built the landing experience, filing deadline tools, onboarding flow, and core product surfaces for an online tax declaration service in Colombia.",
+      "story": {
+        "hook": "A financial ally for Colombians who need expert help filing income tax with DIAN.",
+        "body": [
+          "Declaramelo was born from a simple need: people facing their annual income tax declaration in Colombia need more than a form. They need a trusted accountant who can answer questions, clarify their situation, and guide them through a process tied to the state.",
+          "Every person's finances are different. The product treats each case with care, pairing modern technology with human expertise so a rigorous process feels approachable. Free tools, guided flows, and accountant support help users declare with confidence.",
+          "It is a young startup still growing, focused today on individuals, with a path toward serving companies too. The goal has stayed the same: offer great service, keep the best talent available, and be the ally people trust with their declaration."
+        ],
+        "pullQuote": "A clear, trustworthy experience that makes a complex tax process feel simple and guided."
+      }
+    },
+    "openwhispr": {
+      "subtitle": "AI native macOS desktop app to transcribe meetings, save them, and analyze them while you stay focused on the conversation.",
+      "aboutText": "OpenWhispr is an AI native desktop app for Mac built around meeting transcription. It helps you capture conversations, keep them organized, and review or analyze what was said without breaking your flow during the meeting.",
+      "thingsIDid": "Developed the marketing site, beta onboarding, waitlist capture, and product messaging for an AI native macOS meeting transcription app.",
+      "projectDetails": "Built the product landing, beta download flow, waitlist, and feedback surfaces for an AI native macOS app focused on meeting transcription, storage, and analysis.",
+      "story": {
+        "hook": "An AI meeting assistant built to keep context when planning, brainstorming, and shipping real work.",
+        "body": [
+          "OpenWhispr started in my own workflow. Planning sessions and brainstorming meetings generate ideas fast, but details slip. I needed a way to capture conversations, keep them organized, and revisit them later for summaries, insights, and follow-ups.",
+          "The app transcribes meetings, stores them by category, and helps surface what matters for the next conversation: anticipating questions, tracking decisions, and supporting leadership workflows from deep planning sessions to daily standups.",
+          "It is in early beta on Mac, with Windows planned. I built it for myself first and plan to open-source it: a capable meeting assistant I wanted to exist and to share with others working in AI-heavy, context-rich environments."
+        ],
+        "pullQuote": "A focused AI native experience that makes meeting transcription, storage, and review feel simple from day one."
+      }
+    },
+    "bernal-tech-b2b": {
+      "subtitle": "Wholesale B2B portal for a Colombian car mat and automotive accessories manufacturer.",
+      "aboutText": "Bernal Tech B2B is a wholesale portal for allied businesses in Colombia. It connects manufacturing operations with B2B buyers through secure login, a large product catalog, quotes, orders, analytics, and customer support workflows.",
+      "thingsIDid": "Developed the B2B portal including login, dashboard, catalog, product pages, quotes, and operational modules for wholesale clients.",
+      "projectDetails": "Built the wholesale portal with ally authentication, admin dashboard, catalog with filters across 3,000+ SKUs, product detail flows, quotes, orders, analytics, and PQRS support.",
+      "story": {
+        "hook": "A wholesale portal that turns a decade-strong manufacturer's catalog into a guided B2B buying experience.",
+        "body": [
+          "Bernal Tech manufactures automotive floor mats and accessories for every type of vehicle. Their wholesale allies needed more than a product list. They wanted a personalized flow: choose a product line, brand, and vehicle model across more than 4,000 SKUs.",
+          "We built a robust platform with role-based admin, catalog management, analytics, quotations, and notifications, from quote through dispatch and delivery. The client invested heavily in product photography; the portal made that catalog searchable, organized, and easy to order from.",
+          "Exclusive to wholesale clients, the system is live in production. Allies have welcomed the experience, and it has become a strong digital channel for a company with more than ten years in the market."
+        ],
+        "pullQuote": "A professional B2B experience that makes wholesale ordering faster and easier for our allied clients."
+      }
+    },
+    "wordjet-ai": {
+      "subtitle": "AI writing workspace for marketing agencies. Create briefs, articles, essays, and content calendars with research and market study tools built in.",
+      "aboutText": "Wordjet is an AI assisted writing workspace built for marketing teams and agencies. It helps teams move from research to publishable content faster with tools for briefs, articles, essays, content planning, and market study workflows inside one editor.",
+      "thingsIDid": "Developed the AI writing workspace, embedded assistant, editor experience, and marketing research flows for briefs, articles, essays, and content production.",
+      "projectDetails": "Built the product landing, writing workspace, Jet AI assistant, project organization, and research oriented workflows for marketing content production.",
+      "outcome": "A focused writing product that helps marketing teams turn research into briefs, articles, and client-ready content faster.",
+      "story": {
+        "hook": "An AI writing workspace for marketing teams: from market research to briefs, copy, and social-ready formats.",
+        "body": [
+          "Wordjet was designed for agencies and marketers who live in documents: briefs, outlines, market research, articles, and the social formats that come from a solid base. One editor, AI-assisted workflows, and a path from research to publishable output.",
+          "The vision was ambitious: consolidate research, writing, and repurposing in a single workspace. I built the landing, editor, Jet AI assistant, and content production flows before the partnership with a marketing specialist did not work out.",
+          "The project is paused for now, not because the idea was weak, but because the product needed deep domain expertise on the business side. It remains a direction I may return to. It is a strong proof of building complex AI product surfaces for marketing teams."
+        ],
+        "pullQuote": "A focused writing product that helps marketing teams turn research into briefs, articles, and client-ready content much faster."
+      }
+    },
+    "superapp-mobile": {
+      "subtitle": "Part of the team behind Seguros SURA's enterprise SuperApp on iOS and Android, serving millions of insurance customers in Colombia.",
+      "aboutText": "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA. It is a cross platform iOS and Android app used at scale for insurance services, benefits, and daily customer operations.",
+      "thingsIDid": "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported operations and incident resolution for end users, ensuring service continuity and quality.",
+      "projectDetails": "Developed mobile features for the SURA SuperApp across Health, Mobility, Home, Wallet, Refunds, and Claims. Supported live operations and incident resolution for end users to keep service continuity and quality high.",
+      "story": {
+        "hook": "Working on Seguros SURA's SuperApp, the main iOS and Android app where customers access the company's services.",
+        "body": [
+          "At Seguros SURA I worked on the SuperApp team. The SuperApp is the company's main mobile app: the place where customers on iOS and Android access health, mobility, home, wallet, refunds, claims, and other SURA services. It is a large, live product with modern tooling, clear engineering standards, and real operational pressure.",
+          "SURA offers many services across the company, and the SuperApp was the front door for customers. Coordinating with every area and business unit was a real challenge, and it demanded close collaboration every day. I was lucky to work with an excellent team, both on the human side and on the technical side.",
+          "My work at SURA through Ceiba Software grew over time. Earlier I helped build a SOX-compliant portal for monitoring transactional operations and controls, CapabilitiesApp for internal workforce and skills management, and integrations for mobile assistance with providers such as Konecta and Medallia. On the SuperApp I later developed features across Health, Mobility, Home, Wallet, Refunds, and Claims, and supported operations and incident resolution for end users in production. I am grateful to Seguros SURA and to Ceiba Software for that experience."
+        ],
+        "pullQuote": "Strong contribution inside a large mobile product team, shipping features and keeping the live SuperApp stable for users."
+      }
+    },
+    "overup": {
+      "subtitle": "E-commerce store for OverUP, a Colombian oversized streetwear brand with catalog, product pages, and checkout.",
+      "aboutText": "OverUP is an online store for oversized streetwear in Colombia. The shop brings together brand storytelling, product catalog, product detail pages, and a smooth purchase flow for customers.",
+      "thingsIDid": "Developed the e-commerce experience including landing page, catalog, product pages, cart, and checkout flow.",
+      "projectDetails": "Built the storefront experience with hero landing, featured products, product detail pages, size selection, and checkout flow for a streetwear brand.",
+      "story": {
+        "hook": "An urban streetwear store born from entrepreneurship in Medellín, with brand, catalog, and checkout in one place.",
+        "body": [
+          "OverUP started as a small venture with my wife and a friend from school: oversized streetwear with real brand energy, sold online and on Instagram @overup.official. I built the e-commerce experience: landing, catalog, product pages, and purchase flow.",
+          "The brand had momentum in Medellín. After we moved to Cúcuta, the mismatch hurt us: Cúcuta is much hotter, and most of what we had produced was streetwear built for cooler weather like Medellín's. A lot of inventory did not move, and we took heavy losses. The textile market was also getting harder with global competition.",
+          "We were honest with ourselves: we were no longer motivated to keep manufacturing clothes. Garment production is a demanding, often exhausting sector. We closed OverUP. It was not the outcome we wanted, but it left a real lesson about business, timing, and knowing when to step back."
+        ],
+        "pullQuote": "A clean store that reflects the brand and makes shopping oversized streetwear feel simple."
+      }
+    }
+  }
+}

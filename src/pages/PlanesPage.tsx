@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { PageHeader } from "@/components/PageHeader";
@@ -220,110 +221,74 @@ const planesStyles = `
 }
 `;
 
-const plans = [
-    {
-        id: "essential",
-        image: "/planes/1.png",
-        name: "Essential",
-        price: "1000000",
-        priceDisplay: "$1.000.000 COP",
-        description: "Presencia Digital",
-        popular: false
-    },
-    {
-        id: "professional",
-        image: "/planes/2.png",
-        name: "Professional",
-        price: "2300000",
-        priceDisplay: "$2.300.000 COP",
-        description: "Potencia tu negocio",
-        popular: true
-    },
-    {
-        id: "premium",
-        image: "/planes/3.png",
-        name: "Premium",
-        price: "4400000",
-        priceDisplay: "$4.400.000 COP",
-        description: "Vende sin límites",
-        popular: false
-    }
-];
-
-const planDetails = {
-    essential: {
-        dominioHosting: "1 año",
-        certificadoSSL: "1 año",
-        paginas: "3 páginas",
-        diseño: "Diseño esencial de marca",
-        cargaProductos: "Sí",
-        redesSociales: "Sí",
-        pedidosWhatsApp: "Sólo WhatsApp",
-        optimizacionSEO: "SEO esencial",
-        pagosOnline: "No",
-        carritoCompras: "No",
-        panelAdmin: "No",
-        pasarelaPago: "No",
-        chatbot: "No",
-        soporteTecnico: "2 semanas",
-        usuarioIdeal: "Negocios que necesitan una presencia digital básica"
-    },
-    professional: {
-        dominioHosting: "2 años",
-        certificadoSSL: "2 años",
-        paginas: "5 páginas",
-        diseño: "Diseño profesional + responsive",
-        cargaProductos: "Sí",
-        redesSociales: "Sí",
-        pedidosWhatsApp: "Sí",
-        optimizacionSEO: "SEO profesional",
-        pagosOnline: "Sí",
-        carritoCompras: "No",
-        panelAdmin: "No",
-        pasarelaPago: "No",
-        chatbot: "No",
-        soporteTecnico: "2 meses",
-        usuarioIdeal: "Negocios en crecimiento que buscan mejorar su presencia y ventas online"
-    },
-    premium: {
-        dominioHosting: "4 años",
-        certificadoSSL: "4 años",
-        paginas: "7 páginas",
-        diseño: "Diseño premium personalizado",
-        cargaProductos: "Sí",
-        redesSociales: "Sí",
-        pedidosWhatsApp: "Sí",
-        optimizacionSEO: "SEO premium",
-        pagosOnline: "Sí",
-        carritoCompras: "Sí",
-        panelAdmin: "Sí",
-        pasarelaPago: "Sí",
-        chatbot: "Sí",
-        soporteTecnico: "6 meses",
-        usuarioIdeal: "Empresas que requieren e-commerce completo y soporte avanzado"
-    }
-};
-
-const handlePlanClick = (planName: string) => {
+const handlePlanClick = (planName: string, t: (key: string, opts?: Record<string, unknown>) => string) => {
     window.open(
-        getWhatsAppLink(`Hola, estoy interesad@ en el plan ${planName}`),
+        getWhatsAppLink(t('whatsapp', { plan: planName })),
         "_blank",
         "noopener,noreferrer",
     );
 };
 
-// Generate Schema.org structured data for plans
-const getPlansSchema = () => {
-    return {
+const DEFAULT_SELECTED_PLAN_ID = "professional";
+
+export const PlanesPage = () => {
+    const { t } = useTranslation('planes');
+    const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null);
+    const [hoveredPlanId, setHoveredPlanId] = useState<string | null>(null);
+
+    const plans = [
+        {
+            id: "essential" as const,
+            image: "/planes/1.png",
+            name: t('plans.essential.name'),
+            price: "1000000",
+            priceDisplay: t('plans.essential.priceDisplay'),
+            description: t('plans.essential.description'),
+            popular: false
+        },
+        {
+            id: "professional" as const,
+            image: "/planes/2.png",
+            name: t('plans.professional.name'),
+            price: "2300000",
+            priceDisplay: t('plans.professional.priceDisplay'),
+            description: t('plans.professional.description'),
+            popular: true
+        },
+        {
+            id: "premium" as const,
+            image: "/planes/3.png",
+            name: t('plans.premium.name'),
+            price: "4400000",
+            priceDisplay: t('plans.premium.priceDisplay'),
+            description: t('plans.premium.description'),
+            popular: false
+        }
+    ];
+
+    const planDetails = {
+        essential: t('details.essential', { returnObjects: true }) as Record<string, string>,
+        professional: t('details.professional', { returnObjects: true }) as Record<string, string>,
+        premium: t('details.premium', { returnObjects: true }) as Record<string, string>,
+    };
+
+    const showPreselected = selectedPlanId === null && hoveredPlanId === null;
+
+    useEffect(() => {
+        // Scroll to top when component mounts
+        window.scrollTo(0, 0);
+    }, []);
+
+    const plansSchema = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Planes de Desarrollo Web',
-        description: 'Planes de desarrollo web y branding digital para empresas y emprendedores',
+        name: t('schema.name'),
+        description: t('schema.description'),
         itemListElement: plans.map((plan, index) => ({
             '@type': 'Product',
             position: index + 1,
             name: `Plan ${plan.name}`,
-            description: planDetails[plan.id as keyof typeof planDetails].usuarioIdeal,
+            description: planDetails[plan.id].usuarioIdeal,
             offers: {
                 '@type': 'Offer',
                 price: plan.price,
@@ -338,26 +303,10 @@ const getPlansSchema = () => {
             }
         }))
     };
-};
-
-const DEFAULT_SELECTED_PLAN_ID = "professional";
-
-export const PlanesPage = () => {
-    const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null);
-    const [hoveredPlanId, setHoveredPlanId] = useState<string | null>(null);
-
-    const showPreselected = selectedPlanId === null && hoveredPlanId === null;
-
-    useEffect(() => {
-        // Scroll to top when component mounts
-        window.scrollTo(0, 0);
-    }, []);
-
-    const plansSchema = getPlansSchema();
 
     const onPlanCardClick = (planId: string, planName: string) => {
         setSelectedPlanId(planId);
-        handlePlanClick(planName);
+        handlePlanClick(planName, t);
     };
 
     return (
@@ -371,9 +320,9 @@ export const PlanesPage = () => {
 
                 <main>
                     <PageHeader
-                        badge="Plans"
-                        title="Web Development Plans"
-                        description="I offer comprehensive web development packages designed to help businesses establish and grow their digital presence."
+                        badge={t('page.badge')}
+                        title={t('page.title')}
+                        description={t('page.description')}
                     />
 
                     <PageSection width="wide">
@@ -388,7 +337,7 @@ export const PlanesPage = () => {
                                         onMouseLeave={() => setHoveredPlanId(null)}
                                     >
                                         {plan.popular && (
-                                            <div className="most-popular-belt">Most Popular</div>
+                                            <div className="most-popular-belt">{t('mostPopular')}</div>
                                         )}
                                         <img
                                             src={plan.image}
@@ -402,12 +351,12 @@ export const PlanesPage = () => {
 
                             {/* SEO Content - Structured Data for Google */}
                             <div className="seo-content">
-                                <p className="comparison-table-hint">Desliza para ver todos los planes</p>
+                                <p className="comparison-table-hint">{t('tableHint')}</p>
                                 <div className="comparison-table-wrapper">
                                     <table className="comparison-table">
                                         <thead>
                                             <tr>
-                                                <th>Característica</th>
+                                                <th>{t('table.feature')}</th>
                                                 <th>Essential</th>
                                                 <th>Professional</th>
                                                 <th>Premium</th>
@@ -415,103 +364,103 @@ export const PlanesPage = () => {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><strong>Precio</strong></td>
-                                                <td>$1.000.000 COP</td>
-                                                <td>$2.300.000 COP</td>
-                                                <td>$4.400.000 COP</td>
+                                                <td><strong>{t('table.price')}</strong></td>
+                                                <td>{t('plans.essential.priceDisplay')}</td>
+                                                <td>{t('plans.professional.priceDisplay')}</td>
+                                                <td>{t('plans.premium.priceDisplay')}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Objetivo Principal</strong></td>
-                                                <td>Presencia Digital</td>
-                                                <td>Potencia tu negocio</td>
-                                                <td>Vende sin límites</td>
+                                                <td><strong>{t('table.mainGoal')}</strong></td>
+                                                <td>{t('plans.essential.description')}</td>
+                                                <td>{t('plans.professional.description')}</td>
+                                                <td>{t('plans.premium.description')}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Dominio + Hosting</strong></td>
+                                                <td><strong>{t('table.domainHosting')}</strong></td>
                                                 <td>{planDetails.essential.dominioHosting}</td>
                                                 <td>{planDetails.professional.dominioHosting}</td>
                                                 <td>{planDetails.premium.dominioHosting}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Certificado SSL</strong></td>
+                                                <td><strong>{t('table.ssl')}</strong></td>
                                                 <td>{planDetails.essential.certificadoSSL}</td>
                                                 <td>{planDetails.professional.certificadoSSL}</td>
                                                 <td>{planDetails.premium.certificadoSSL}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Número de Páginas</strong></td>
+                                                <td><strong>{t('table.pages')}</strong></td>
                                                 <td>{planDetails.essential.paginas}</td>
                                                 <td>{planDetails.professional.paginas}</td>
                                                 <td>{planDetails.premium.paginas}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Diseño</strong></td>
+                                                <td><strong>{t('table.design')}</strong></td>
                                                 <td>{planDetails.essential.diseño}</td>
                                                 <td>{planDetails.professional.diseño}</td>
                                                 <td>{planDetails.premium.diseño}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Carga de Productos</strong></td>
+                                                <td><strong>{t('table.productUpload')}</strong></td>
                                                 <td>{planDetails.essential.cargaProductos}</td>
                                                 <td>{planDetails.professional.cargaProductos}</td>
                                                 <td>{planDetails.premium.cargaProductos}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Redes Sociales</strong></td>
+                                                <td><strong>{t('table.socialMedia')}</strong></td>
                                                 <td>{planDetails.essential.redesSociales}</td>
                                                 <td>{planDetails.professional.redesSociales}</td>
                                                 <td>{planDetails.premium.redesSociales}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Pedidos vía WhatsApp & Web</strong></td>
+                                                <td><strong>{t('table.ordersWhatsapp')}</strong></td>
                                                 <td>{planDetails.essential.pedidosWhatsApp}</td>
                                                 <td>{planDetails.professional.pedidosWhatsApp}</td>
                                                 <td>{planDetails.premium.pedidosWhatsApp}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Optimización SEO</strong></td>
+                                                <td><strong>{t('table.seo')}</strong></td>
                                                 <td>{planDetails.essential.optimizacionSEO}</td>
                                                 <td>{planDetails.professional.optimizacionSEO}</td>
                                                 <td>{planDetails.premium.optimizacionSEO}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Integración de Pagos</strong></td>
+                                                <td><strong>{t('table.onlinePayments')}</strong></td>
                                                 <td>{planDetails.essential.pagosOnline}</td>
                                                 <td>{planDetails.professional.pagosOnline}</td>
                                                 <td>{planDetails.premium.pagosOnline}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Carrito de Compras</strong></td>
+                                                <td><strong>{t('table.cart')}</strong></td>
                                                 <td>{planDetails.essential.carritoCompras}</td>
                                                 <td>{planDetails.professional.carritoCompras}</td>
                                                 <td>{planDetails.premium.carritoCompras}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Panel Administrativo</strong></td>
+                                                <td><strong>{t('table.adminPanel')}</strong></td>
                                                 <td>{planDetails.essential.panelAdmin}</td>
                                                 <td>{planDetails.professional.panelAdmin}</td>
                                                 <td>{planDetails.premium.panelAdmin}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Pasarela de Pago</strong></td>
+                                                <td><strong>{t('table.paymentGateway')}</strong></td>
                                                 <td>{planDetails.essential.pasarelaPago}</td>
                                                 <td>{planDetails.professional.pasarelaPago}</td>
                                                 <td>{planDetails.premium.pasarelaPago}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Asistente Chatbot</strong></td>
+                                                <td><strong>{t('table.chatbot')}</strong></td>
                                                 <td>{planDetails.essential.chatbot}</td>
                                                 <td>{planDetails.professional.chatbot}</td>
                                                 <td>{planDetails.premium.chatbot}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Soporte Técnico</strong></td>
+                                                <td><strong>{t('table.support')}</strong></td>
                                                 <td>{planDetails.essential.soporteTecnico}</td>
                                                 <td>{planDetails.professional.soporteTecnico}</td>
                                                 <td>{planDetails.premium.soporteTecnico}</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Caso de Uso</strong></td>
+                                                <td><strong>{t('table.useCase')}</strong></td>
                                                 <td>{planDetails.essential.usuarioIdeal}</td>
                                                 <td>{planDetails.professional.usuarioIdeal}</td>
                                                 <td>{planDetails.premium.usuarioIdeal}</td>

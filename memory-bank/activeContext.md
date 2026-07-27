@@ -17,7 +17,7 @@
 - **Hero portrait perf**: `hero.png` was 9.2MB (5116×6400); `npm run optimize:images` generates WebP srcset (560w ~15KB). `ProfilePortrait` uses `<picture>` + preload on home LCP. Unused `hero1–7` drafts removed from `public/assets/`.
 - SEO/manifest/schema/index.html aligned to Sr. Software Engineer primary + multi-role keywords for indexing
 - `PageHeader` + `PageSection` on About, Projects, Plans, Blog, project detail
-- Blog: `BlogBlock` model, first post, nav link, sitemap
+- **Site fully bilingual ES/EN** (react-i18next): browser-language detection, routes under `/es/` and `/en/`, LanguageSwitcher in header/footer, hreflang + locale-prefixed canonicals, nginx 301 for legacy unprefixed URLs, sitemap with `xhtml:link` alternates. Blog posts are `{es,en}` localized and both posts translated to English. Technical terms (Software Engineer, SaaS, MVP, Fullstack, CTO, LLM, RAG) stay in English in both locales.
 
 ## Agent workflow
 

@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { useEffect } from "react";
 
 export const CotizacionPage = () => {
+    const { t } = useTranslation('cotizacion');
+
     useEffect(() => {
         // Scroll to top when component mounts
         window.scrollTo(0, 0);
@@ -20,19 +23,19 @@ export const CotizacionPage = () => {
                         <div className="flex flex-col gap-0 w-full">
                             <img
                                 src="/cotizaciones/c1.png"
-                                alt="Cotización Sistema Barber - Parte 1"
+                                alt={t('altQuote', { n: 1 })}
                                 className="w-full h-auto object-contain"
                                 loading="lazy"
                             />
                             <img
                                 src="/cotizaciones/c2.png"
-                                alt="Cotización Sistema Barber - Parte 2"
+                                alt={t('altQuote', { n: 2 })}
                                 className="w-full h-auto object-contain"
                                 loading="lazy"
                             />
                             <img
                                 src="/cotizaciones/c3.png"
-                                alt="Cotización Sistema Barber - Parte 3"
+                                alt={t('altQuote', { n: 3 })}
                                 className="w-full h-auto object-contain"
                                 loading="lazy"
                             />
@@ -45,4 +48,3 @@ export const CotizacionPage = () => {
         </div>
     );
 };
-

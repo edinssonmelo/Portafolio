@@ -1,5 +1,6 @@
 import { primerEmpleoSoftwarePost } from '@/data/posts/primer-empleo-software';
 import { lanzarAppSinSuscripcionesPost } from '@/data/posts/lanzar-app-sin-suscripciones';
+import type { AppLanguage } from '@/i18n';
 
 export type BlogBlock =
     | { type: 'p'; text: string }
@@ -10,15 +11,20 @@ export type BlogBlock =
     | { type: 'callout'; text: string }
     | { type: 'image'; src: string; alt: string; caption?: string };
 
+export type Localized<T> = {
+    es: T;
+    en: T;
+};
+
 export type BlogPost = {
     slug: string;
-    title: string;
-    description: string;
     datePublished: string;
     dateModified: string;
-    tags: string[];
-    lang: 'es' | 'en';
-    body: BlogBlock[];
+    tags: Localized<string[]>;
+    lang: 'es' | 'en'; // primary/original language
+    title: Localized<string>;
+    description: Localized<string>;
+    body: Localized<BlogBlock[]>;
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -28,6 +34,19 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const getBlogPost = (slug: string) =>
     BLOG_POSTS.find((post) => post.slug === slug);
+
+export const getLocalizedPost = (slug: string, lang: AppLanguage) => {
+    const post = getBlogPost(slug);
+    if (!post) return undefined;
+    return {
+        ...post,
+        title: post.title[lang] ?? post.title[post.lang],
+        description: post.description[lang] ?? post.description[post.lang],
+        tags: post.tags[lang] ?? post.tags[post.lang],
+        body: post.body[lang] ?? post.body[post.lang],
+        displayLang: (post.body[lang] ? lang : post.lang) as AppLanguage,
+    };
+};
 
 /** Parse YYYY-MM-DD as local calendar date (avoids UTC off-by-one in Americas). */
 export const formatBlogDate = (
@@ -60,8 +79,8 @@ const blockToPlainText = (block: BlogBlock): string => {
     }
 };
 
-export const getReadingMinutes = (post: BlogPost): number => {
-    const words = post.body
+export const getReadingMinutes = (body: BlogBlock[]): number => {
+    const words = body
         .map(blockToPlainText)
         .join(' ')
         .trim()
@@ -71,7 +90,7 @@ export const getReadingMinutes = (post: BlogPost): number => {
     return Math.max(1, Math.ceil(words / 200));
 };
 
-export const formatReadingTime = (post: BlogPost): string => {
-    const minutes = getReadingMinutes(post);
-    return `${minutes} min read`;
+export const formatReadingTime = (body: BlogBlock[], lang: AppLanguage = 'en'): string => {
+    const minutes = getReadingMinutes(body);
+    return lang === 'es' ? `${minutes} min de lectura` : `${minutes} min read`;
 };

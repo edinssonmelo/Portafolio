@@ -19,6 +19,7 @@
 - [x] YouTube social link (@EdinssonMelo) in nav, footer, and schema
 - [x] Storytelling blog editorial system (`content/blog/`, CHATGPT_CONTEXT bridge, Cursor rule)
 - [x] Hero portrait image optimization (WebP srcset, preload LCP, `optimize:images` script)
+- [x] Site fully bilingual ES/EN (react-i18next, locale-prefixed routes, hreflang, translated blog posts)
 
 ## Pending
 

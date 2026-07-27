@@ -61,6 +61,7 @@ Patterns discovered while building this project. Update when new conventions eme
 - Project images: use native aspect via `src/config/screenshotMeta.ts`; never force `aspect-[16/9]` on mismatched screenshots
 - When replacing files in `public/assets/` or `public/screenshots/` with the same filename, use `versionedSrc()` from `publicAssets.ts`. Each deploy injects a new `__APP_BUILD_ID__` (git SHA or timestamp) into `?v=` query params. Nginx must not mark `/assets/` as `immutable` (only hashed `index-*.js/css`).
 - **Portrait / hero photos**: drop high-res source in `public/assets/hero.png`, then run `npm run optimize:images`. Script writes `-280`/`-560` WebP+PNG variants; `ProfilePortrait` serves `<picture>` with srcset. Do not commit unused draft hero files (multi-MB bloat).
+- **i18n copy**: new user-facing text goes in `src/i18n/locales/{en,es}/<namespace>.json`, then `useTranslation('<namespace>')` in the component. Internal links use `useLocale().to()` so the locale prefix is never dropped. Blog posts: add both `es` and `en` entries to `title`/`description`/`tags`/`body` in `src/data/posts/*.ts`.
 - SURA mobile shots are 140×296px. Display at native width, centered (no upscale)
 
 ## Deploy

@@ -1,0 +1,14 @@
+{
+  "page": {
+    "badge": "Blog",
+    "title": "Escribiendo sobre construcción de software",
+    "description": "Notas sobre construir software, productos de IA y lecciones de carrera de más de una década entregando en producción.",
+    "emptyState": "Los artículos están en camino. Los temas cubrirán MVPs AI-first, arquitectura SaaS y lecciones de productos que he entregado."
+  },
+  "post": {
+    "notFound": "Artículo no encontrado",
+    "backToBlog": "← Volver al Blog",
+    "relatedLinks": "Si estás construyendo tu portafolio, puedes ver cómo lo hice yo en <projectsLink>Proyectos</projectsLink> y leer más sobre mi trayectoria en <aboutLink>Acerca de</aboutLink>.",
+    "badge": "Blog"
+  }
+}

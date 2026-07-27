@@ -1,0 +1,92 @@
+{
+  "page": {
+    "badge": "Plans",
+    "title": "Web Development Plans",
+    "description": "I offer comprehensive web development packages designed to help businesses establish and grow their digital presence."
+  },
+  "schema": {
+    "name": "Web Development Plans",
+    "description": "Web development and digital branding plans for companies and entrepreneurs"
+  },
+  "whatsapp": "Hi, I'm interested in the {{plan}} plan",
+  "mostPopular": "Most Popular",
+  "tableHint": "Scroll to see all plans",
+  "plans": {
+    "essential": { "name": "Essential", "priceDisplay": "$1,000,000 COP", "description": "Digital Presence" },
+    "professional": { "name": "Professional", "priceDisplay": "$2,300,000 COP", "description": "Boost your business" },
+    "premium": { "name": "Premium", "priceDisplay": "$4,400,000 COP", "description": "Sell without limits" }
+  },
+  "table": {
+    "feature": "Feature",
+    "price": "Price",
+    "mainGoal": "Main Goal",
+    "domainHosting": "Domain + Hosting",
+    "ssl": "SSL Certificate",
+    "pages": "Number of Pages",
+    "design": "Design",
+    "productUpload": "Product Upload",
+    "socialMedia": "Social Media",
+    "ordersWhatsapp": "Orders via WhatsApp & Web",
+    "seo": "SEO Optimization",
+    "onlinePayments": "Payment Integration",
+    "cart": "Shopping Cart",
+    "adminPanel": "Admin Panel",
+    "paymentGateway": "Payment Gateway",
+    "chatbot": "Chatbot Assistant",
+    "support": "Technical Support",
+    "useCase": "Use Case"
+  },
+  "details": {
+    "essential": {
+      "dominioHosting": "1 year",
+      "certificadoSSL": "1 year",
+      "paginas": "3 pages",
+      "diseño": "Essential brand design",
+      "cargaProductos": "Yes",
+      "redesSociales": "Yes",
+      "pedidosWhatsApp": "WhatsApp only",
+      "optimizacionSEO": "Essential SEO",
+      "pagosOnline": "No",
+      "carritoCompras": "No",
+      "panelAdmin": "No",
+      "pasarelaPago": "No",
+      "chatbot": "No",
+      "soporteTecnico": "2 weeks",
+      "usuarioIdeal": "Businesses that need a basic digital presence"
+    },
+    "professional": {
+      "dominioHosting": "2 years",
+      "certificadoSSL": "2 years",
+      "paginas": "5 pages",
+      "diseño": "Professional + responsive design",
+      "cargaProductos": "Yes",
+      "redesSociales": "Yes",
+      "pedidosWhatsApp": "Yes",
+      "optimizacionSEO": "Professional SEO",
+      "pagosOnline": "Yes",
+      "carritoCompras": "No",
+      "panelAdmin": "No",
+      "pasarelaPago": "No",
+      "chatbot": "No",
+      "soporteTecnico": "2 months",
+      "usuarioIdeal": "Growing businesses looking to improve their online presence and sales"
+    },
+    "premium": {
+      "dominioHosting": "4 years",
+      "certificadoSSL": "4 years",
+      "paginas": "7 pages",
+      "diseño": "Custom premium design",
+      "cargaProductos": "Yes",
+      "redesSociales": "Yes",
+      "pedidosWhatsApp": "Yes",
+      "optimizacionSEO": "Premium SEO",
+      "pagosOnline": "Yes",
+      "carritoCompras": "Yes",
+      "panelAdmin": "Yes",
+      "pasarelaPago": "Yes",
+      "chatbot": "Yes",
+      "soporteTecnico": "6 months",
+      "usuarioIdeal": "Companies that require complete e-commerce and advanced support"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "page": {
+    "badge": "Planes",
+    "title": "Planes de Desarrollo Web",
+    "description": "Ofrezco paquetes integrales de desarrollo web diseñados para ayudar a los negocios a establecer y hacer crecer su presencia digital."
+  },
+  "schema": {
+    "name": "Planes de Desarrollo Web",
+    "description": "Planes de desarrollo web y branding digital para empresas y emprendedores"
+  },
+  "whatsapp": "Hola, estoy interesad@ en el plan {{plan}}",
+  "mostPopular": "Más Popular",
+  "tableHint": "Desliza para ver todos los planes",
+  "plans": {
+    "essential": { "name": "Essential", "priceDisplay": "$1.000.000 COP", "description": "Presencia Digital" },
+    "professional": { "name": "Professional", "priceDisplay": "$2.300.000 COP", "description": "Potencia tu negocio" },
+    "premium": { "name": "Premium", "priceDisplay": "$4.400.000 COP", "description": "Vende sin límites" }
+  },
+  "table": {
+    "feature": "Característica",
+    "price": "Precio",
+    "mainGoal": "Objetivo Principal",
+    "domainHosting": "Dominio + Hosting",
+    "ssl": "Certificado SSL",
+    "pages": "Número de Páginas",
+    "design": "Diseño",
+    "productUpload": "Carga de Productos",
+    "socialMedia": "Redes Sociales",
+    "ordersWhatsapp": "Pedidos vía WhatsApp & Web",
+    "seo": "Optimización SEO",
+    "onlinePayments": "Integración de Pagos",
+    "cart": "Carrito de Compras",
+    "adminPanel": "Panel Administrativo",
+    "paymentGateway": "Pasarela de Pago",
+    "chatbot": "Asistente Chatbot",
+    "support": "Soporte Técnico",
+    "useCase": "Caso de Uso"
+  },
+  "details": {
+    "essential": {
+      "dominioHosting": "1 año",
+      "certificadoSSL": "1 año",
+      "paginas": "3 páginas",
+      "diseño": "Diseño esencial de marca",
+      "cargaProductos": "Sí",
+      "redesSociales": "Sí",
+      "pedidosWhatsApp": "Sólo WhatsApp",
+      "optimizacionSEO": "SEO esencial",
+      "pagosOnline": "No",
+      "carritoCompras": "No",
+      "panelAdmin": "No",
+      "pasarelaPago": "No",
+      "chatbot": "No",
+      "soporteTecnico": "2 semanas",
+      "usuarioIdeal": "Negocios que necesitan una presencia digital básica"
+    },
+    "professional": {
+      "dominioHosting": "2 años",
+      "certificadoSSL": "2 años",
+      "paginas": "5 páginas",
+      "diseño": "Diseño profesional + responsive",
+      "cargaProductos": "Sí",
+      "redesSociales": "Sí",
+      "pedidosWhatsApp": "Sí",
+      "optimizacionSEO": "SEO profesional",
+      "pagosOnline": "Sí",
+      "carritoCompras": "No",
+      "panelAdmin": "No",
+      "pasarelaPago": "No",
+      "chatbot": "No",
+      "soporteTecnico": "2 meses",
+      "usuarioIdeal": "Negocios en crecimiento que buscan mejorar su presencia y ventas online"
+    },
+    "premium": {
+      "dominioHosting": "4 años",
+      "certificadoSSL": "4 años",
+      "paginas": "7 páginas",
+      "diseño": "Diseño premium personalizado",
+      "cargaProductos": "Sí",
+      "redesSociales": "Sí",
+      "pedidosWhatsApp": "Sí",
+      "optimizacionSEO": "SEO premium",
+      "pagosOnline": "Sí",
+      "carritoCompras": "Sí",
+      "panelAdmin": "Sí",
+      "pasarelaPago": "Sí",
+      "chatbot": "Sí",
+      "soporteTecnico": "6 meses",
+      "usuarioIdeal": "Empresas que requieren e-commerce completo y soporte avanzado"
+    }
+  }
+}

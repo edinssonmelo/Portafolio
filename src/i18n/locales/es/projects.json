@@ -1,0 +1,116 @@
+{
+  "page": {
+    "badge": "Mis Trabajos",
+    "title": "Proyectos que genuinamente disfruté construir.",
+    "description": "Apps y productos que he entregado."
+  },
+  "detail": {
+    "badge": "Proyecto",
+    "notFoundTitle": "Proyecto no encontrado",
+    "notFoundMessage": "El proyecto que buscas no existe.",
+    "backToProjects": "← Volver a Proyectos",
+    "aboutThisProject": "Sobre este proyecto",
+    "builtWith": "Construido con",
+    "tapToView": {
+      "single": "Toca la imagen para verla en tamaño completo",
+      "plural": "Toca una imagen para verla en tamaño completo"
+    },
+    "previous": "Proyecto anterior",
+    "next": "Siguiente proyecto",
+    "viewLive": "Visitar sitio en vivo",
+    "viewOnGooglePlay": "Ver en Google Play"
+  },
+  "data": {
+    "declaramelo": {
+      "subtitle": "Declaración de renta en línea en Colombia con contadores expertos, herramientas gratuitas y un flujo guiado de declaración ante la DIAN.",
+      "aboutText": "Declaramelo ayuda a personas en Colombia a presentar su declaración de renta en línea con confianza. La plataforma combina herramientas gratuitas de autoservicio, revisión de contadores expertos y un flujo paso a paso claro para declarar ante la DIAN.",
+      "thingsIDid": "Desarrollé la plataforma web incluyendo el hero, herramientas, onboarding y flujos de soporte a la declaración para contribuyentes colombianos.",
+      "projectDetails": "Construí la experiencia de landing, herramientas de fechas límite de declaración, flujo de onboarding y superficies de producto centrales para un servicio de declaración de renta en línea en Colombia.",
+      "story": {
+        "hook": "Un aliado financiero para colombianos que necesitan ayuda experta para declarar renta ante la DIAN.",
+        "body": [
+          "Declaramelo nació de una necesidad simple: las personas que enfrentan su declaración de renta anual en Colombia necesitan más que un formulario. Necesitan un contador de confianza que pueda responder preguntas, aclarar su situación y guiarlas por un proceso ligado al Estado.",
+          "Las finanzas de cada persona son diferentes. El producto trata cada caso con cuidado, combinando tecnología moderna con expertise humano para que un proceso riguroso se sienta accesible. Herramientas gratuitas, flujos guiados y soporte de contadores ayudan a los usuarios a declarar con confianza.",
+          "Es una startup joven que sigue creciendo, enfocada hoy en personas naturales, con camino a servir también a empresas. El objetivo se ha mantenido igual: ofrecer un gran servicio, mantener el mejor talento disponible y ser el aliado en el que la gente confía con su declaración."
+        ],
+        "pullQuote": "Una experiencia clara y confiable que hace que un proceso tributario complejo se sienta simple y guiado."
+      }
+    },
+    "openwhispr": {
+      "subtitle": "App de escritorio AI-native para macOS para transcribir reuniones, guardarlas y analizarlas mientras te mantienes enfocado en la conversación.",
+      "aboutText": "OpenWhispr es una app de escritorio AI-native para Mac centrada en la transcripción de reuniones. Te ayuda a capturar conversaciones, mantenerlas organizadas y revisar o analizar lo que se dijo sin romper tu flujo durante la reunión.",
+      "thingsIDid": "Desarrollé el sitio de marketing, onboarding de beta, captura de waitlist y mensajería de producto para una app de transcripción de reuniones AI-native para macOS.",
+      "projectDetails": "Construí el landing de producto, flujo de descarga de beta, waitlist y superficies de feedback para una app AI-native de macOS enfocada en transcripción, almacenamiento y análisis de reuniones.",
+      "story": {
+        "hook": "Un asistente de reuniones con IA construido para mantener contexto al planear, hacer brainstorming y entregar trabajo real.",
+        "body": [
+          "OpenWhispr empezó en mi propio flujo de trabajo. Las sesiones de planeación y las reuniones de brainstorming generan ideas rápido, pero los detalles se pierden. Necesitaba una forma de capturar conversaciones, mantenerlas organizadas y revisarlas después para resúmenes, insights y seguimientos.",
+          "La app transcribe reuniones, las guarda por categoría y ayuda a sacar lo que importa para la próxima conversación: anticipar preguntas, rastrear decisiones y apoyar workflows de liderazgo desde sesiones profundas de planeación hasta standups diarios.",
+          "Está en beta temprana en Mac, con Windows planeado. La construí para mí primero y planeo abrirla como open source: un asistente de reuniones capaz que quería que existiera y compartir con otros que trabajan en entornos ricos en contexto e IA."
+        ],
+        "pullQuote": "Una experiencia AI-native enfocada que hace que la transcripción, almacenamiento y revisión de reuniones se sienta simple desde el primer día."
+      }
+    },
+    "bernal-tech-b2b": {
+      "subtitle": "Portal B2B mayorista para un fabricante colombiano de tapetes y accesorios para carro.",
+      "aboutText": "Bernal Tech B2B es un portal mayorista para negocios aliados en Colombia. Conecta operaciones de manufactura con compradores B2B a través de login seguro, un catálogo amplio de productos, cotizaciones, pedidos, analítica y flujos de atención al cliente.",
+      "thingsIDid": "Desarrollé el portal B2B incluyendo login, dashboard, catálogo, páginas de producto, cotizaciones y módulos operativos para clientes mayoristas.",
+      "projectDetails": "Construí el portal mayorista con autenticación de aliados, dashboard de administración, catálogo con filtros entre más de 3.000 SKUs, flujos de detalle de producto, cotizaciones, pedidos, analítica y soporte PQRS.",
+      "story": {
+        "hook": "Un portal mayorista que convierte el catálogo de un fabricante con más de una década en una experiencia de compra B2B guiada.",
+        "body": [
+          "Bernal Tech fabrica tapetes y accesorios automotrices para todo tipo de vehículo. Sus aliados mayoristas necesitaban más que una lista de productos. Querían un flujo personalizado: elegir línea de producto, marca y modelo de vehículo entre más de 4.000 SKUs.",
+          "Construimos una plataforma robusta con administración por roles, gestión de catálogo, analítica, cotizaciones y notificaciones, desde la cotización hasta el despacho y la entrega. El cliente invirtió mucho en fotografía de producto; el portal hizo ese catálogo buscable, organizado y fácil de pedir.",
+          "Exclusivo para clientes mayoristas, el sistema está en producción. Los aliados han recibido bien la experiencia, y se ha convertido en un canal digital fuerte para una empresa con más de diez años en el mercado."
+        ],
+        "pullQuote": "Una experiencia B2B profesional que hace que pedir al por mayor sea más rápido y fácil para nuestros clientes aliados."
+      }
+    },
+    "wordjet-ai": {
+      "subtitle": "Workspace de escritura con IA para agencias de marketing. Crea briefs, artículos, ensayos y calendarios de contenido con herramientas de investigación y estudio de mercado integradas.",
+      "aboutText": "Wordjet es un workspace de escritura asistida por IA construido para equipos de marketing y agencias. Ayuda a los equipos a pasar de la investigación al contenido publicable más rápido con herramientas para briefs, artículos, ensayos, planificación de contenido y workflows de estudio de mercado dentro de un solo editor.",
+      "thingsIDid": "Desarrollé el workspace de escritura con IA, el asistente embebido, la experiencia del editor y los flujos de investigación de marketing para briefs, artículos, ensayos y producción de contenido.",
+      "projectDetails": "Construí el landing de producto, el workspace de escritura, el asistente Jet AI, la organización de proyectos y los workflows orientados a investigación para producción de contenido de marketing.",
+      "outcome": "Un producto de escritura enfocado que ayuda a los equipos de marketing a convertir investigación en briefs, artículos y contenido listo para clientes más rápido.",
+      "story": {
+        "hook": "Un workspace de escritura con IA para equipos de marketing: de la investigación de mercado a briefs, copy y formatos listos para redes.",
+        "body": [
+          "Wordjet fue diseñado para agencias y marketers que viven en documentos: briefs, outlines, investigación de mercado, artículos y los formatos sociales que salen de una base sólida. Un editor, workflows asistidos por IA y un camino de la investigación a la salida publicable.",
+          "La visión era ambiciosa: consolidar investigación, escritura y repurposing en un solo workspace. Construí el landing, el editor, el asistente Jet AI y los flujos de producción de contenido antes de que la alianza con un especialista en marketing no funcionara.",
+          "El proyecto está pausado por ahora, no porque la idea fuera débil, sino porque el producto necesitaba expertise de dominio profundo en el lado del negocio. Sigue siendo una dirección a la que puedo volver. Es una prueba sólida de construir superficies de producto de IA complejas para equipos de marketing."
+        ],
+        "pullQuote": "Un producto de escritura enfocado que ayuda a los equipos de marketing a convertir investigación en briefs, artículos y contenido listo para clientes mucho más rápido."
+      }
+    },
+    "superapp-mobile": {
+      "subtitle": "Parte del equipo detrás de la SuperApp empresarial de Seguros SURA en iOS y Android, sirviendo a millones de clientes de seguros en Colombia.",
+      "aboutText": "Contribuí a uno de los productos móviles de seguros más grandes de Colombia como parte del equipo SuperApp de Seguros SURA. Es una app multiplataforma iOS y Android usada a escala para servicios de seguros, beneficios y operaciones diarias de clientes.",
+      "thingsIDid": "Desarrollé funciones móviles para la SuperApp de SURA en Salud, Movilidad, Hogar, Billetera, Reembolsos y Siniestros. Apoyé operaciones en vivo y resolución de incidentes para usuarios finales, asegurando continuidad y calidad del servicio.",
+      "projectDetails": "Desarrollé funciones móviles para la SuperApp de SURA en Salud, Movilidad, Hogar, Billetera, Reembolsos y Siniestros. Apoyé operaciones en vivo y resolución de incidentes para usuarios finales para mantener alta la continuidad y calidad del servicio.",
+      "story": {
+        "hook": "Trabajando en la SuperApp de Seguros SURA, la app principal de iOS y Android donde los clientes acceden a los servicios de la compañía.",
+        "body": [
+          "En Seguros SURA trabajé en el equipo SuperApp. La SuperApp es la app móvil principal de la compañía: el lugar donde los clientes en iOS y Android acceden a salud, movilidad, hogar, billetera, reembolsos, siniestros y otros servicios de SURA. Es un producto grande y en vivo con herramientas modernas, estándares de ingeniería claros y presión operativa real.",
+          "SURA ofrece muchos servicios en toda la compañía, y la SuperApp era la puerta de entrada para los clientes. Coordinar con cada área y unidad de negocio era un reto real, y exigía colaboración cercana todos los días. Tuve la suerte de trabajar con un equipo excelente, tanto en lo humano como en lo técnico.",
+          "Mi trabajo en SURA a través de Ceiba Software creció con el tiempo. Antes ayudé a construir un portal SOX-compliant para monitoreo de operaciones transaccionales y controles, CapabilitiesApp para gestión interna de talento y habilidades, e integraciones para asistencia móvil con proveedores como Konecta y Medallia. En la SuperApp después desarrollé funciones en Salud, Movilidad, Hogar, Billetera, Reembolsos y Siniestros, y apoyé operaciones y resolución de incidentes para usuarios finales en producción. Estoy agradecido con Seguros SURA y con Ceiba Software por esa experiencia."
+        ],
+        "pullQuote": "Contribución sólida dentro de un equipo de producto móvil grande, entregando funciones y manteniendo estable la SuperApp en vivo para los usuarios."
+      }
+    },
+    "overup": {
+      "subtitle": "Tienda e-commerce para OverUP, una marca colombiana de streetwear oversized con catálogo, páginas de producto y checkout.",
+      "aboutText": "OverUP es una tienda online de streetwear oversized en Colombia. La tienda reúne storytelling de marca, catálogo de productos, páginas de detalle de producto y un flujo de compra fluido para los clientes.",
+      "thingsIDid": "Desarrollé la experiencia e-commerce incluyendo landing page, catálogo, páginas de producto, carrito y flujo de checkout.",
+      "projectDetails": "Construí la experiencia de storefront con hero landing, productos destacados, páginas de detalle de producto, selección de tallas y flujo de checkout para una marca de streetwear.",
+      "story": {
+        "hook": "Una tienda de streetwear urbano nacida del emprendimiento en Medellín, con marca, catálogo y checkout en un solo lugar.",
+        "body": [
+          "OverUP empezó como un pequeño emprendimiento con mi esposa y un amigo del colegio: streetwear oversized con energía de marca real, vendido online y en Instagram @overup.official. Construí la experiencia e-commerce: landing, catálogo, páginas de producto y flujo de compra.",
+          "La marca tenía momentum en Medellín. Después de mudarnos a Cúcuta, el desajuste nos pegó: Cúcuta es mucho más caliente, y la mayoría de lo que habíamos producido era streetwear hecho para clima más frío como el de Medellín. Mucho inventario no se movió, y tuvimos pérdidas fuertes. El mercado textil también se estaba poniendo más difícil con la competencia global.",
+          "Fuimos honestos con nosotros mismos: ya no estábamos motivados para seguir fabricando ropa. La producción de prendas es un sector exigente, a menudo agotador. Cerramos OverUP. No fue el resultado que queríamos, pero dejó una lección real sobre negocios, timing y saber cuándo dar un paso atrás."
+        ],
+        "pullQuote": "Una tienda limpia que refleja la marca y hace que comprar streetwear oversized se sienta simple."
+      }
+    }
+  }
+}
