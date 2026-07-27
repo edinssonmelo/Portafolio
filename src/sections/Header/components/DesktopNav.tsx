@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import { NavLink } from "@/sections/Header/components/NavLink";
+import { useLocale } from '@/hooks/useLocale';
 
 export const DesktopNav = ({ className = "" }: { className?: string }) => {
   const [activeSection, setActiveSection] = useState<string>("home");
   const location = useLocation();
+  const { t } = useTranslation('common');
+  const { to } = useLocale();
 
   useEffect(() => {
     // Si hay un hash en la URL, usarlo como sección activa inicial
@@ -57,18 +61,18 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
     };
   }, [location]);
 
-  const isAboutActive = location.pathname === '/about';
+  const isAboutActive = location.pathname === to('/about');
   const isBlogActive =
-    location.pathname === '/blog' || location.pathname.startsWith('/blog/');
+    location.pathname === to('/blog') || location.pathname.startsWith(`${to('/blog')}/`);
 
   return (
     <nav className={`flex items-center justify-center gap-[35px] ${className}`}>
-      <NavLink href="#home" text="Home" isActive={activeSection === 'home'} />
-      <NavLink href="#services" text="Services" isActive={activeSection === 'services'} />
-      <NavLink href="/about" text="About" isActive={isAboutActive} />
-      <NavLink href="#portfolio" text="Portfolio" isActive={activeSection === 'portfolio'} />
-      <NavLink href="/blog" text="Blog" isActive={isBlogActive} />
-      <NavLink href="#contact" text="Contact" isActive={activeSection === 'contact'} />
+      <NavLink href="#home" text={t('nav.home')} isActive={activeSection === 'home'} />
+      <NavLink href="#services" text={t('nav.services')} isActive={activeSection === 'services'} />
+      <NavLink href={to('/about')} text={t('nav.about')} isActive={isAboutActive} />
+      <NavLink href="#portfolio" text={t('nav.portfolio')} isActive={activeSection === 'portfolio'} />
+      <NavLink href={to('/blog')} text={t('nav.blog')} isActive={isBlogActive} />
+      <NavLink href="#contact" text={t('nav.contact')} isActive={activeSection === 'contact'} />
     </nav>
   );
 };

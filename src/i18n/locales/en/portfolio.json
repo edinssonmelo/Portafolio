@@ -1,0 +1,33 @@
+{
+  "header": {
+    "label": "My Works",
+    "title": "Projects that were genuinely fun to build.",
+    "ctaAll": "See All Works"
+  },
+  "projects": {
+    "declaramelo": {
+      "title": "Declaramelo",
+      "description": "Declaramelo helps individuals in Colombia file income tax online with confidence. It combines free self service tools, expert accountant review, and a clear step by step flow to declare before DIAN."
+    },
+    "openwhispr": {
+      "title": "OpenWhispr",
+      "description": "OpenWhispr is an AI native desktop app for Mac built around meeting transcription. It helps you capture conversations, keep them organized, and review or analyze what was said without breaking your flow during the meeting."
+    },
+    "bernal-tech-b2b": {
+      "title": "Bernal Tech B2B",
+      "description": "Bernal Tech B2B connects manufacturing operations with allied buyers in Colombia through secure login, a large product catalog, quotes, orders, analytics, and customer support workflows."
+    },
+    "wordjet-ai": {
+      "title": "Wordjet.ai",
+      "description": "Wordjet is an AI assisted writing workspace for marketing teams and agencies. It helps move from research to publishable content with tools for briefs, articles, essays, content planning, and market study workflows."
+    },
+    "superapp-mobile": {
+      "title": "SuperApp Mobile",
+      "description": "I contributed to one of Colombia's largest insurance mobile products as part of the SuperApp team at Seguros SURA, building features across Health, Mobility, Home, Wallet, Refunds, and Claims while supporting live operations for end users."
+    },
+    "overup": {
+      "title": "OverUP",
+      "description": "OverUP is an online store for oversized streetwear in Colombia. The shop brings together brand storytelling, product catalog, product detail pages, and a smooth purchase flow for customers."
+    }
+  }
+}

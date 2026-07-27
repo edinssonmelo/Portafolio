@@ -1,38 +1,39 @@
+import { useTranslation } from 'react-i18next';
 import { GradientButton } from "@/components/GradientButton";
 import { ServiceCard } from "@/sections/Services/components/ServiceCard";
-
-const SERVICES = [
-  {
-    iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-12.svg",
-    iconVariant: "md:w-[34px]",
-    title: "From Idea to MVP",
-    description:
-      "I turn ideas into clear, testable MVPs. I define what matters, build fast, and help teams learn from real users early.",
-  },
-  {
-    iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-13.svg",
-    iconVariant: "",
-    title: "Technical Leadership",
-    description:
-      "Architecture, alignment, and delivery for growing products. Enterprise judgment and startup speed for sound technical decisions.",
-  },
-  {
-    iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-14.svg",
-    iconVariant: "md:w-10",
-    title: "Fullstack Development (Web / Mobile)",
-    description:
-      "Fullstack development with Node.js, React, Python, and cloud. Built to launch fast, test with users, and iterate toward production.",
-  },
-  {
-    iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-15.svg",
-    iconVariant: "",
-    title: "AI Product Engineering",
-    description:
-      "LLMs, RAG, agents, and workflow automation inside real products. I design and ship AI features that deliver measurable value.",
-  },
-] as const;
+import { useLocale } from '@/hooks/useLocale';
 
 export const ServiceGrid = () => {
+  const { t } = useTranslation('services');
+  const { to } = useLocale();
+
+  const SERVICES = [
+    {
+      iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-12.svg",
+      iconVariant: "md:w-[34px]",
+      title: t('items.ideaToMvp.title'),
+      description: t('items.ideaToMvp.description'),
+    },
+    {
+      iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-13.svg",
+      iconVariant: "",
+      title: t('items.technicalLeadership.title'),
+      description: t('items.technicalLeadership.description'),
+    },
+    {
+      iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-14.svg",
+      iconVariant: "md:w-10",
+      title: t('items.fullstack.title'),
+      description: t('items.fullstack.description'),
+    },
+    {
+      iconUrl: "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-15.svg",
+      iconVariant: "",
+      title: t('items.aiProduct.title'),
+      description: t('items.aiProduct.description'),
+    },
+  ];
+
   return (
     <div className="relative flex w-full max-w-[1140px] flex-col items-center gap-8 md:gap-10">
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:gap-6">
@@ -47,9 +48,9 @@ export const ServiceGrid = () => {
           />
         ))}
       </div>
-      <GradientButton to="/projects">
+      <GradientButton to={to('/projects')}>
         <span className="font-dm_sans text-lg font-semibold leading-[19px] tracking-[-0.72px] text-stone-900">
-          Check Portfolio
+          {t('ctaPortfolio')}
         </span>
       </GradientButton>
     </div>

@@ -1,20 +1,22 @@
 /**
  * Schema.org Structured Data Configuration
  * JSON-LD schemas for better SEO and rich snippets
+ * Text content lives in i18n locale files (src/i18n/locales/{lang}/seo.json)
  */
 
+import type { TFunction } from 'i18next';
 import { SITE_CONFIG } from './seo';
 
 export const PERSON_ID = `${SITE_CONFIG.url}/#person`;
 
-export const getPersonSchema = () => {
+export const getPersonSchema = (t: TFunction<'seo'>) => {
     return {
         '@context': 'https://schema.org',
         '@type': 'Person',
         '@id': PERSON_ID,
         name: 'Edinsson Melo',
-        jobTitle: 'AI Software Engineer',
-        description: SITE_CONFIG.description,
+        jobTitle: t('schema.jobTitle'),
+        description: t('site.description'),
         email: SITE_CONFIG.email,
         url: SITE_CONFIG.url,
         image: SITE_CONFIG.image,
@@ -52,14 +54,16 @@ export const getPersonSchema = () => {
             'TypeScript',
         ],
         hasOccupation: [
-            {
-                '@type': 'Occupation',
-                name: 'AI Software Engineer',
-            },
-            {
-                '@type': 'Occupation',
-                name: 'Software Architect',
-            },
+            { '@type': 'Occupation', name: 'Sr. Software Engineer' },
+            { '@type': 'Occupation', name: 'AI Software Engineer' },
+            { '@type': 'Occupation', name: 'AI Product Engineer' },
+            { '@type': 'Occupation', name: 'AI Engineer' },
+            { '@type': 'Occupation', name: 'Forward Deployed Engineer' },
+            { '@type': 'Occupation', name: 'Fullstack Engineer' },
+            { '@type': 'Occupation', name: 'Mobile Engineer' },
+            { '@type': 'Occupation', name: 'Frontend Engineer' },
+            { '@type': 'Occupation', name: 'CTO' },
+            { '@type': 'Occupation', name: 'Software Architect' },
         ],
         alumniOf: [
             {
@@ -83,14 +87,14 @@ export const getProfilePageSchema = () => {
     };
 };
 
-export const getWebSiteSchema = () => {
+export const getWebSiteSchema = (t: TFunction<'seo'>, lang: string) => {
     return {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: SITE_CONFIG.name,
         url: SITE_CONFIG.url,
-        description: SITE_CONFIG.description,
-        inLanguage: 'en',
+        description: t('site.description'),
+        inLanguage: lang,
         author: {
             '@id': PERSON_ID,
         },
@@ -98,20 +102,19 @@ export const getWebSiteSchema = () => {
             '@type': 'SearchAction',
             target: {
                 '@type': 'EntryPoint',
-                urlTemplate: `${SITE_CONFIG.url}/projects?search={search_term_string}`,
+                urlTemplate: `${SITE_CONFIG.url}/${lang}/projects?search={search_term_string}`,
             },
             'query-input': 'required name=search_term_string',
         },
     };
 };
 
-export const getProfessionalServiceSchema = () => {
+export const getProfessionalServiceSchema = (t: TFunction<'seo'>) => {
     return {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
-        name: 'Edinsson Melo | AI Product Engineering',
-        description:
-            'AI product engineering, startup MVP development, technical leadership, and fullstack software for companies, founders, and product teams. Specializing in AI agents, SaaS, web/mobile apps, and enterprise integrations.',
+        name: t('schema.professionalServiceName'),
+        description: t('schema.professionalServiceDescription'),
         provider: {
             '@id': PERSON_ID,
         },
@@ -140,15 +143,16 @@ export const getBlogPostingSchema = (post: {
     slug: string;
     datePublished: string;
     dateModified: string;
-}) => {
+}, lang: string) => {
     return {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: post.title,
         description: post.description,
-        url: `${SITE_CONFIG.url}/blog/${post.slug}`,
+        url: `${SITE_CONFIG.url}/${lang}/blog/${post.slug}`,
         datePublished: post.datePublished,
         dateModified: post.dateModified,
+        inLanguage: lang,
         author: {
             '@id': PERSON_ID,
         },
@@ -157,7 +161,7 @@ export const getBlogPostingSchema = (post: {
         },
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${SITE_CONFIG.url}/blog/${post.slug}`,
+            '@id': `${SITE_CONFIG.url}/${lang}/blog/${post.slug}`,
         },
     };
 };

@@ -1,0 +1,13 @@
+{
+  "notFound": {
+    "title": "Page not found",
+    "home": "Home",
+    "projects": "Projects"
+  },
+  "boundary": {
+    "title": "Something went wrong",
+    "message": "We couldn't load this page.",
+    "home": "Home",
+    "projects": "Projects"
+  }
+}

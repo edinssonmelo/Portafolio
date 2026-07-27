@@ -9,6 +9,7 @@ export const HeroImage = () => {
       <div className="absolute left-1/2 top-1/2 z-10 flex h-[200px] w-[200px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full min-[1104px]:left-[calc(50.084%_-_123px)] min-[1104px]:top-[calc(47.4432%_-_123px)] min-[1104px]:h-[246px] min-[1104px]:w-[246px] min-[1104px]:translate-x-0 min-[1104px]:translate-y-0 min-[1104px]:rounded-[185px] after:pointer-events-none after:absolute after:inset-0 after:rounded-full after:border-2 after:border-neutral-800 min-[1104px]:after:rounded-[185px]">
         <div className="absolute inset-0 overflow-hidden rounded-full min-[1104px]:rounded-[185px]">
           <ProfilePortrait
+            priority
             sizes="(max-width: 1103px) 200px, 246px"
             className="rounded-full min-[1104px]:rounded-[185px]"
           />

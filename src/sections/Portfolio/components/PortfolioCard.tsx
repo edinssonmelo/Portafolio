@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import { isMobileScreenshot, screenshotSrc } from "@/config/screenshotMeta";
 import { typographyClasses } from "@/config/designTokens";
 
@@ -37,6 +38,7 @@ export type PortfolioCardProps = {
 };
 
 export const PortfolioCard = (props: PortfolioCardProps) => {
+  const { t } = useTranslation('common');
   const [expanded, setExpanded] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -144,7 +146,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
                   onClick={() => setExpanded((open) => !open)}
                   className={`ml-0.5 inline ${portfolioLinkClassName}`}
                 >
-                  {expanded ? "Show less" : "Read more"}
+                  {expanded ? t('buttons.showLess') : t('buttons.readMore')}
                 </button>
               </>
             ) : null}
@@ -155,7 +157,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
           to={routePath}
           className="group inline-flex w-fit items-center gap-2 text-base tracking-[-0.36px] font-dm_sans md:text-lg"
         >
-          <span className={portfolioLinkClassName}>View Case Study</span>
+          <span className={portfolioLinkClassName}>{t('buttons.viewCaseStudy')}</span>
           <ArrowRight
             className="h-[18px] w-[18px] shrink-0 text-stone-900 transition-transform group-hover:translate-x-1"
             strokeWidth={2.25}

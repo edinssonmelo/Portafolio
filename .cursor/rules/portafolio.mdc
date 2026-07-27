@@ -9,7 +9,7 @@ Before non-trivial changes, read `memory-bank/` (especially `activeContext.md`, 
 
 ## Must-know
 
-- **Identity**: An AI Software Engineer (`SITE_CONFIG.tagline` in `src/config/seo.ts`)
+- **Identity**: A Sr. Software Engineer (`SITE_CONFIG.tagline` in `src/config/seo.ts`). Secondary roles in `SITE_ROLE_KEYWORDS` for SEO/schema only.
 - **Logos**: transparent PNG only. `bg-transparent` on Logo component; no background on logo `img`
 - **Screenshots**: `public/screenshots/`. Never `public/projects/`
 - **Deploy**: push to `main` auto-deploys via self-hosted runner on ai-server (`/srv/apps/portafolio`)

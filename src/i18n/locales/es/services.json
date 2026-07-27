@@ -1,0 +1,25 @@
+{
+  "header": {
+    "label": "Mis Servicios",
+    "title": "AI Product Engineering, <br />Startups &amp; Technical Leadership"
+  },
+  "items": {
+    "ideaToMvp": {
+      "title": "De la idea al MVP",
+      "description": "Convierto ideas en MVPs claros y testeables. Defino lo que importa, construyo rápido y ayudo a los equipos a aprender de usuarios reales desde temprano."
+    },
+    "technicalLeadership": {
+      "title": "Technical Leadership",
+      "description": "Arquitectura, alineación y entrega para productos en crecimiento. Criterio de empresa grande con velocidad de startup para decisiones técnicas sólidas."
+    },
+    "fullstack": {
+      "title": "Fullstack Development (Web / Mobile)",
+      "description": "Desarrollo fullstack con Node.js, React, Python y cloud. Construido para lanzar rápido, probar con usuarios e iterar hacia producción."
+    },
+    "aiProduct": {
+      "title": "AI Product Engineering",
+      "description": "LLMs, RAG, agentes y automatización de workflows dentro de productos reales. Diseño y entrego funciones de IA que aportan valor medible."
+    }
+  },
+  "ctaPortfolio": "Ver portafolio"
+}

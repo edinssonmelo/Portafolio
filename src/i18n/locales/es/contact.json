@@ -1,0 +1,24 @@
+{
+  "ctaCard": {
+    "title": "Hablemos",
+    "description": "Hablemos de tu producto, tu idea de startup o de cómo la IA puede acelerar tu roadmap. Agenda una llamada corta.",
+    "button": "Agendar una llamada"
+  },
+  "section": {
+    "badge": "Contacto",
+    "title": "¿Tienes un proyecto en mente? Conversemos."
+  },
+  "form": {
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre *",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Correo electrónico *",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto *",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "sent": "¡Mensaje enviado correctamente!",
+    "failed": "No se pudo enviar el mensaje.",
+    "error": "Error al enviar el mensaje."
+  }
+}

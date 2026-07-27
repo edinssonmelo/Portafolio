@@ -1,0 +1,13 @@
+{
+  "notFound": {
+    "title": "Página no encontrada",
+    "home": "Inicio",
+    "projects": "Proyectos"
+  },
+  "boundary": {
+    "title": "Algo salió mal",
+    "message": "No pudimos cargar esta página.",
+    "home": "Inicio",
+    "projects": "Proyectos"
+  }
+}

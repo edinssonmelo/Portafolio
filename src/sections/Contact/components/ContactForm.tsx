@@ -1,17 +1,19 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { GradientButton } from "@/components/GradientButton";
 import { Field, TextAreaField } from "@/components/Field";
 
 const FORMSPREE_URL = "https://formspree.io/f/mqedzkko";
 
 export const ContactForm = () => {
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
     Name: "",
     Email: "",
     Message: "",
   });
-  const [status, setStatus] = useState("");
-  const isSending = status === "Sending...";
+  const [statusKey, setStatusKey] = useState<'sending' | 'sent' | 'failed' | 'error' | null>(null);
+  const isSending = statusKey === 'sending';
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -25,7 +27,7 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatusKey('sending');
 
     try {
       const response = await fetch(FORMSPREE_URL, {
@@ -41,14 +43,14 @@ export const ContactForm = () => {
       });
 
       if (response.ok) {
-        setStatus("Message sent successfully!");
+        setStatusKey('sent');
         setFormData({ Name: "", Email: "", Message: "" });
       } else {
-        setStatus("Failed to send message.");
+        setStatusKey('failed');
       }
     } catch (error) {
       console.error("Error:", error);
-      setStatus("Error sending message.");
+      setStatusKey('error');
     }
   };
 
@@ -59,27 +61,27 @@ export const ContactForm = () => {
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
         <Field
-          label="Name"
+          label={t('form.nameLabel')}
           name="Name"
-          placeholder="Your name *"
+          placeholder={t('form.namePlaceholder')}
           value={formData.Name}
           onChange={handleChange}
           required
         />
         <Field
-          label="Email"
+          label={t('form.emailLabel')}
           name="Email"
           type="email"
-          placeholder="Email address *"
+          placeholder={t('form.emailPlaceholder')}
           value={formData.Email}
           onChange={handleChange}
           required
         />
       </div>
       <TextAreaField
-        label="Message"
+        label={t('form.messageLabel')}
         name="Message"
-        placeholder="Tell me about your project *"
+        placeholder={t('form.messagePlaceholder')}
         value={formData.Message}
         onChange={handleChange}
         required
@@ -87,12 +89,12 @@ export const ContactForm = () => {
       <div className="flex w-full flex-col items-center gap-4 md:gap-5">
         <GradientButton type="submit" disabled={isSending}>
           <span className="text-lg font-semibold tracking-[-0.72px] leading-[19px] text-stone-900 font-dm_sans">
-            {isSending ? "Sending..." : "Submit"}
+            {isSending ? t('form.sending') : t('form.submit')}
           </span>
         </GradientButton>
       </div>
-      {status && !isSending ? (
-        <p className="text-center text-sm text-stone-700 font-dm_sans">{status}</p>
+      {statusKey && !isSending ? (
+        <p className="text-center text-sm text-stone-700 font-dm_sans">{t(`form.${statusKey}`)}</p>
       ) : null}
     </form>
   );

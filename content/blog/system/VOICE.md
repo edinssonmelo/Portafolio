@@ -5,7 +5,7 @@
 ## Identidad
 
 - Primera persona, cercana y directa.
-- Ingeniero de software con enfoque en IA. Identidad del sitio: **An AI Software Engineer**.
+- Ingeniero de software con enfoque en IA. Identidad del sitio: **A Sr. Software Engineer** (roles AI/Fullstack/Mobile como secundarios en SEO).
 - Tono humilde, concreto, sin estilo de agencia ni motivación vacía.
 - Fe en Dios presente en el hero del sitio (intencional; no eliminar sin solicitud del autor).
 

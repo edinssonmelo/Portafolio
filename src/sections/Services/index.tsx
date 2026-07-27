@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { layoutClasses } from "@/config/designTokens";
 import { SectionHeader } from "@/components/SectionHeader";
 import { BlurEllipses } from "@/components/BlurEllipses";
@@ -5,6 +6,8 @@ import { servicesEllipses } from "@/config/blurEllipses";
 import { ServiceGrid } from "@/sections/Services/components/ServiceGrid";
 
 export const Services = () => {
+  const { t } = useTranslation('services');
+
   return (
     <section
       id="services"
@@ -13,8 +16,8 @@ export const Services = () => {
       <div className={`${layoutClasses.sectionInner} relative z-10`}>
         <SectionHeader
           iconUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"
-          label="My Services"
-          title="AI Product Engineering, <br />Startups &amp; Technical Leadership"
+          label={t('header.label')}
+          title={t('header.title')}
           showBreak={true}
           variant="max-w-[650px] md:max-w-[720px]"
         />

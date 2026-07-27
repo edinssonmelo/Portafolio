@@ -60,6 +60,7 @@ Patterns discovered while building this project. Update when new conventions eme
 - **No em dashes (`—`)** in user-facing copy. Use periods, commas, colons, or parentheses instead
 - Project images: use native aspect via `src/config/screenshotMeta.ts`; never force `aspect-[16/9]` on mismatched screenshots
 - When replacing files in `public/assets/` or `public/screenshots/` with the same filename, use `versionedSrc()` from `publicAssets.ts`. Each deploy injects a new `__APP_BUILD_ID__` (git SHA or timestamp) into `?v=` query params. Nginx must not mark `/assets/` as `immutable` (only hashed `index-*.js/css`).
+- **Portrait / hero photos**: drop high-res source in `public/assets/hero.png`, then run `npm run optimize:images`. Script writes `-280`/`-560` WebP+PNG variants; `ProfilePortrait` serves `<picture>` with srcset. Do not commit unused draft hero files (multi-MB bloat).
 - SURA mobile shots are 140×296px. Display at native width, centered (no upscale)
 
 ## Deploy

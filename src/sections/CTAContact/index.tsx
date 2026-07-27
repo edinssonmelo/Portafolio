@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { layoutClasses, typographyClasses } from "@/config/designTokens";
 import { BlurEllipses } from "@/components/BlurEllipses";
 import { ctaContactEllipses } from "@/config/blurEllipses";
@@ -9,6 +10,8 @@ import { SectionBadge } from "@/components/SectionBadge";
 const SECTION_ICON = "https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg";
 
 export const CTAContact = () => {
+  const { t } = useTranslation('contact');
+
   return (
     <section
       id="contact"
@@ -26,9 +29,9 @@ export const CTAContact = () => {
 
           <SurfaceCard className="w-full px-6 py-7 md:px-8 md:py-8">
             <div className="flex flex-col items-center gap-4 md:gap-5">
-              <SectionBadge label="Contact" iconUrl={SECTION_ICON} />
+              <SectionBadge label={t('section.badge')} iconUrl={SECTION_ICON} />
               <h2 className={`max-w-[440px] text-center ${typographyClasses.sectionTitle}`}>
-                Got a project in mind? Let&apos;s get in touch.
+                {t('section.title')}
               </h2>
               <ContactForm />
             </div>

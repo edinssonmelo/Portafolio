@@ -1,0 +1,77 @@
+{
+  "site": {
+    "tagline": "Un Sr. Software Engineer",
+    "title": "Edinsson Melo | Sr. Software Engineer",
+    "description": "Un Sr. Software Engineer con más de 8 años de experiencia entregando productos SaaS, web y móviles. También trabaja como AI Software Engineer, AI Product Engineer, AI Engineer, Fullstack, Mobile, Frontend, CTO y Forward Deployed Engineer para empresas, startups, founders y equipos de producto.",
+    "keywords": "Sr. Software Engineer, AI Software Engineer, AI Product Engineer, AI Engineer, Forward Deployed Engineer, Fullstack Engineer, Mobile Engineer, Frontend Engineer, CTO, Software Architect, AI SaaS, MVP development, LLM, RAG, Colombia, Edinsson Melo"
+  },
+  "routes": {
+    "home": {
+      "title": "Edinsson Melo | Sr. Software Engineer",
+      "description": "Un Sr. Software Engineer con más de 8 años de experiencia entregando productos SaaS, web y móviles. También trabaja como AI Software Engineer, AI Product Engineer, AI Engineer, Fullstack, Mobile, Frontend, CTO y Forward Deployed Engineer."
+    },
+    "about": {
+      "title": "Acerca de Edinsson Melo | Sr. Software Engineer",
+      "description": "Conoce a Edinsson Melo, un Sr. Software Engineer y AI Engineer basado en Cúcuta, Colombia. Historia, trayectoria y escritura sobre software y carrera."
+    },
+    "blog": {
+      "title": "Blog | Edinsson Melo",
+      "description": "Artículos sobre desarrollo de producto AI-first, arquitectura SaaS, construcción de MVPs e ingeniería de software por Edinsson Melo."
+    },
+    "projects": {
+      "title": "Proyectos | Edinsson Melo",
+      "description": "Apps y productos que he entregado: Declaramelo, OpenWhispr, Bernal Tech B2B, Wordjet.ai, Seguros SURA SuperApp, OverUP y más."
+    },
+    "cotizacion-sistema-barber": {
+      "title": "Cotización Sistema Barber - Edinsson Melo",
+      "description": "Cotización detallada para el desarrollo del Sistema Barber. Incluye especificaciones técnicas, alcance del proyecto y propuesta de valor."
+    },
+    "planes": {
+      "title": "Planes de Desarrollo Web - Essential, Professional, Premium | Edinsson Melo",
+      "description": "Planes de desarrollo web y branding digital: Essential ($1.000.000 COP), Professional ($2.300.000 COP), Premium ($4.400.000 COP). Los servicios incluyen dominio, hosting, SSL, SEO, e-commerce y más."
+    }
+  },
+  "manifest": {
+    "name": "Edinsson Melo | Sr. Software Engineer",
+    "description": "Un Sr. Software Engineer y AI Engineer entregando productos SaaS, web y móviles."
+  },
+  "schema": {
+    "jobTitle": "Sr. Software Engineer",
+    "professionalServiceName": "Edinsson Melo | Sr. Software Engineer",
+    "professionalServiceDescription": "AI product engineering, desarrollo de MVPs para startups, technical leadership y software fullstack para empresas, founders y equipos de producto. Especializado en agentes de IA, SaaS, apps web/móviles e integraciones empresariales."
+  },
+  "projectSeo": {
+    "declaramelo": {
+      "title": "Declaramelo | Edinsson Melo",
+      "description": "Plataforma de declaración de renta en línea para Colombia con contadores expertos, herramientas gratuitas y un flujo guiado de declaración ante la DIAN."
+    },
+    "openwhispr": {
+      "title": "OpenWhispr | Edinsson Melo",
+      "description": "App de escritorio AI-native para macOS para transcribir reuniones, guardarlas y analizarlas con facilidad."
+    },
+    "bernal-tech-b2b": {
+      "title": "Bernal Tech B2B | Edinsson Melo",
+      "description": "Portal B2B mayorista para un fabricante colombiano de tapetes para carro con catálogo, cotizaciones, pedidos y dashboard de administración."
+    },
+    "wordjet-ai": {
+      "title": "Wordjet.ai | Edinsson Melo",
+      "description": "Workspace de escritura con IA para agencias de marketing para crear briefs, artículos, ensayos e investigación de mercado."
+    },
+    "superapp-mobile": {
+      "title": "Seguros SURA SuperApp | Edinsson Melo",
+      "description": "Contribución móvil a la SuperApp de Seguros SURA en iOS y Android en Salud, Movilidad, Hogar, Billetera, Reembolsos y Siniestros."
+    },
+    "overup": {
+      "title": "OverUP | Edinsson Melo",
+      "description": "Tienda e-commerce de streetwear oversized con catálogo, páginas de producto y checkout para OverUP en Colombia."
+    }
+  },
+  "blogPostMeta": null,
+  "breadcrumb": {
+    "projects": "Proyectos",
+    "about": "Acerca de",
+    "cotizacion": "Cotización Sistema Barber",
+    "planes": "Planes",
+    "project": "Proyecto"
+  }
+}

@@ -1,103 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- Home -->
   <url>
-    <loc>https://edinssonmelo.com/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- About -->
   <url>
-    <loc>https://edinssonmelo.com/about</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://edinssonmelo.com/es/about</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/about"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/about"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Blog index -->
   <url>
-    <loc>https://edinssonmelo.com/blog</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://edinssonmelo.com/es/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/blog"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/blog"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog posts -->
   <url>
-    <loc>https://edinssonmelo.com/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://edinssonmelo.com/es/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/blog/de-verdad-necesitas-pagar-veinte-suscripciones-para-lanzar-una-app"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/es/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Projects index -->
   <url>
-    <loc>https://edinssonmelo.com/blog/como-conseguir-tu-primer-empleo-en-software-sin-experiencia</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://edinssonmelo.com/es/projects</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://edinssonmelo.com/projects</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Project details -->
   <url>
-    <loc>https://edinssonmelo.com/projects/wordjet-ai</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/projects/declaramelo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/declaramelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/declaramelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/declaramelo"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/declaramelo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/declaramelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/declaramelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/declaramelo"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://edinssonmelo.com/projects/overup</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/projects/openwhispr</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/openwhispr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/openwhispr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/openwhispr"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/openwhispr</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/openwhispr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/openwhispr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/openwhispr"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://edinssonmelo.com/projects/declaramelo</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/projects/bernal-tech-b2b</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/bernal-tech-b2b"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/bernal-tech-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/bernal-tech-b2b"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/bernal-tech-b2b</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/bernal-tech-b2b"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/bernal-tech-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/bernal-tech-b2b"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://edinssonmelo.com/projects/bernal-tech-b2b</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/projects/wordjet-ai</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/wordjet-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/wordjet-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/wordjet-ai"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/wordjet-ai</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/wordjet-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/wordjet-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/wordjet-ai"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://edinssonmelo.com/projects/openwhispr</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/projects/superapp-mobile</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/superapp-mobile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/superapp-mobile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/superapp-mobile"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/superapp-mobile</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/superapp-mobile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/superapp-mobile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/superapp-mobile"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://edinssonmelo.com/projects/superapp-mobile</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/projects/overup</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/overup"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/overup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/overup"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/overup</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/overup"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/overup"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/overup"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Planes -->
   <url>
-    <loc>https://edinssonmelo.com/planes</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/planes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/planes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/planes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/planes"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/planes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/planes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/planes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/planes"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Cotización -->
   <url>
-    <loc>https://edinssonmelo.com/cotizacion/sistema-barber</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://edinssonmelo.com/es/cotizacion/sistema-barber</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/cotizacion/sistema-barber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/cotizacion/sistema-barber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/cotizacion/sistema-barber"/>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/cotizacion/sistema-barber</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/cotizacion/sistema-barber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/cotizacion/sistema-barber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/cotizacion/sistema-barber"/>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

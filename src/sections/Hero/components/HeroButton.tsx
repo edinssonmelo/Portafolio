@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 export const HeroButton = () => {
+  const { t } = useTranslation('hero');
+
   return (
     <div className="relative z-10 box-border caret-transparent shrink-0">
       <button className="relative content-center items-center bg-transparent caret-transparent gap-x-2.5 flex flex-col h-min justify-center gap-y-2.5 text-center w-min p-0">
@@ -8,7 +12,7 @@ export const HeroButton = () => {
         >
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
             <p className="text-stone-900 text-lg font-semibold box-border caret-transparent tracking-[-0.72px] leading-[19px] text-left text-nowrap font-dm_sans">
-              See my work
+              {t('ctaWork')}
             </p>
           </div>
         </a>

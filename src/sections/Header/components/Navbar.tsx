@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import { Logo } from "@/components/Logo";
 import { DesktopNav } from "@/sections/Header/components/DesktopNav";
 import { NavActions } from "@/sections/Header/components/NavActions";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useLocale } from '@/hooks/useLocale';
 
 const MobileNavLink = ({ href, text, onClick }: { href: string; text: string; onClick: () => void }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { lang } = useLocale();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -20,8 +24,8 @@ const MobileNavLink = ({ href, text, onClick }: { href: string; text: string; on
     const sectionId = href.replace(/^\.\/#/, '').replace(/^#/, '');
 
     // Si estamos en otra página, navegar primero a home
-    if (location.pathname !== '/') {
-      navigate(`/#${sectionId}`, { replace: false });
+    if (location.pathname !== `/${lang}`) {
+      navigate(`/${lang}#${sectionId}`, { replace: false });
     } else {
       // Si ya estamos en home, hacer scroll directamente
       const element = document.getElementById(sectionId);
@@ -60,6 +64,8 @@ const MobileNavLink = ({ href, text, onClick }: { href: string; text: string; on
 };
 
 export const Navbar = () => {
+  const { t } = useTranslation('common');
+  const { to } = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Prevent body scroll when mobile menu is open
@@ -141,8 +147,11 @@ export const Navbar = () => {
             {/* Desktop Navigation - hidden on mobile */}
             <DesktopNav className="hidden md:flex" />
 
-            {/* Desktop Social Icons - hidden on mobile */}
-            <NavActions className="hidden md:flex" />
+            {/* Desktop Social Icons + language switcher - hidden on mobile */}
+            <div className="hidden md:flex items-center gap-3">
+              <NavActions />
+              <LanguageSwitcher dark />
+            </div>
           </div>
 
           {/* Mobile Dropdown Menu */}
@@ -163,12 +172,17 @@ export const Navbar = () => {
           >
             <div className="flex flex-col gap-4 px-4 pt-2 pb-4">
               {/* Mobile Nav Links */}
-              <MobileNavLink href="#home" text="Home" onClick={handleNavClick} />
-              <MobileNavLink href="#services" text="Services" onClick={handleNavClick} />
-              <MobileNavLink href="/about" text="About" onClick={handleNavClick} />
-              <MobileNavLink href="#portfolio" text="Portfolio" onClick={handleNavClick} />
-              <MobileNavLink href="/blog" text="Blog" onClick={handleNavClick} />
-              <MobileNavLink href="#contact" text="Contact" onClick={handleNavClick} />
+              <MobileNavLink href="#home" text={t('nav.home')} onClick={handleNavClick} />
+              <MobileNavLink href="#services" text={t('nav.services')} onClick={handleNavClick} />
+              <MobileNavLink href={to('/about')} text={t('nav.about')} onClick={handleNavClick} />
+              <MobileNavLink href="#portfolio" text={t('nav.portfolio')} onClick={handleNavClick} />
+              <MobileNavLink href={to('/blog')} text={t('nav.blog')} onClick={handleNavClick} />
+              <MobileNavLink href="#contact" text={t('nav.contact')} onClick={handleNavClick} />
+
+              {/* Mobile language switcher */}
+              <div className="mt-2 flex justify-center opacity-100">
+                <LanguageSwitcher dark />
+              </div>
 
               {/* Mobile Social Icons */}
               <div className="mt-2 opacity-100">

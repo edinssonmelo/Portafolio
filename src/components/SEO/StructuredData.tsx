@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
     getPersonSchema,
     getProfilePageSchema,
@@ -9,78 +10,86 @@ import {
 } from '@/config/schema';
 import { SITE_CONFIG } from '@/config/seo';
 import { getBlogPost } from '@/data/blog';
+import { useLocale } from '@/hooks/useLocale';
 
 export const StructuredData = () => {
     const location = useLocation();
+    const { t } = useTranslation('seo');
+    const { lang } = useLocale();
 
-    const personSchema = getPersonSchema();
-    const websiteSchema = getWebSiteSchema();
-    const professionalServiceSchema = getProfessionalServiceSchema();
+    const segments = location.pathname.split('/').filter(Boolean);
+    const subpath = `/${segments.slice(1).join('/')}`;
+
+    const personSchema = getPersonSchema(t);
+    const websiteSchema = getWebSiteSchema(t, lang);
+    const professionalServiceSchema = getProfessionalServiceSchema(t);
 
     const breadcrumbItems = [{ name: 'Home', url: SITE_CONFIG.url }];
 
-    if (location.pathname === '/projects') {
+    if (subpath === '/projects') {
         breadcrumbItems.push({
-            name: 'Projects',
-            url: `${SITE_CONFIG.url}/projects`,
+            name: t('breadcrumb.projects', { defaultValue: 'Projects' }),
+            url: `${SITE_CONFIG.url}/${lang}/projects`,
         });
     }
 
-    if (location.pathname === '/about') {
+    if (subpath === '/about') {
         breadcrumbItems.push({
-            name: 'About',
-            url: `${SITE_CONFIG.url}/about`,
+            name: t('breadcrumb.about', { defaultValue: 'About' }),
+            url: `${SITE_CONFIG.url}/${lang}/about`,
         });
     }
 
-    if (location.pathname === '/blog') {
+    if (subpath === '/blog') {
         breadcrumbItems.push({
             name: 'Blog',
-            url: `${SITE_CONFIG.url}/blog`,
+            url: `${SITE_CONFIG.url}/${lang}/blog`,
         });
     }
 
-    if (location.pathname === '/cotizacion/sistema-barber') {
+    if (subpath === '/cotizacion/sistema-barber') {
         breadcrumbItems.push({
-            name: 'Cotización Sistema Barber',
-            url: `${SITE_CONFIG.url}/cotizacion/sistema-barber`,
+            name: t('breadcrumb.cotizacion', { defaultValue: 'Barber System Quote' }),
+            url: `${SITE_CONFIG.url}/${lang}/cotizacion/sistema-barber`,
         });
     }
 
-    if (location.pathname === '/planes') {
+    if (subpath === '/planes') {
         breadcrumbItems.push({
-            name: 'Planes',
-            url: `${SITE_CONFIG.url}/planes`,
+            name: t('breadcrumb.planes', { defaultValue: 'Plans' }),
+            url: `${SITE_CONFIG.url}/${lang}/planes`,
         });
     }
 
-    const projectMatch = location.pathname.match(/^\/projects\/([^/]+)$/);
+    const projectMatch = subpath.match(/^\/projects\/([^/]+)$/);
     if (projectMatch) {
         breadcrumbItems.push(
-            { name: 'Projects', url: `${SITE_CONFIG.url}/projects` },
             {
-                name: 'Project',
-                url: `${SITE_CONFIG.url}/projects/${projectMatch[1]}`,
+                name: t('breadcrumb.projects', { defaultValue: 'Projects' }),
+                url: `${SITE_CONFIG.url}/${lang}/projects`,
+            },
+            {
+                name: t('breadcrumb.project', { defaultValue: 'Project' }),
+                url: `${SITE_CONFIG.url}/${lang}/projects/${projectMatch[1]}`,
             }
         );
     }
 
-    const blogMatch = location.pathname.match(/^\/blog\/([^/]+)$/);
+    const blogMatch = subpath.match(/^\/blog\/([^/]+)$/);
     const blogPost = blogMatch ? getBlogPost(blogMatch[1]) : undefined;
     if (blogPost) {
         breadcrumbItems.push(
-            { name: 'Blog', url: `${SITE_CONFIG.url}/blog` },
+            { name: 'Blog', url: `${SITE_CONFIG.url}/${lang}/blog` },
             {
                 name: blogPost.title,
-                url: `${SITE_CONFIG.url}/blog/${blogPost.slug}`,
+                url: `${SITE_CONFIG.url}/${lang}/blog/${blogPost.slug}`,
             }
         );
     }
 
     const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
-    const profilePageSchema =
-        location.pathname === '/about' ? getProfilePageSchema() : null;
-    const blogPostingSchema = blogPost ? getBlogPostingSchema(blogPost) : null;
+    const profilePageSchema = subpath === '/about' ? getProfilePageSchema() : null;
+    const blogPostingSchema = blogPost ? getBlogPostingSchema(blogPost, lang) : null;
 
     return (
         <>

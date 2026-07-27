@@ -36,7 +36,7 @@
 
 ## Must-know
 
-- Identity: **An AI Software Engineer** (`SITE_CONFIG.tagline` in `src/config/seo.ts`; hero, About, and SEO stay in sync)
+- Identity: **A Sr. Software Engineer** (`SITE_CONFIG.tagline` in `src/config/seo.ts`; hero, About, and SEO stay in sync). AI/Fullstack/Mobile roles in `SITE_ROLE_KEYWORDS` for meta/schema only.
 - Logos: transparent PNG, `bg-transparent`, no background on `img`
 - Deploy path on server: `/srv/apps/portafolio`
 

@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { NAV_ACTIVE_COLOR, NAV_HOVER_COLOR } from "@/config/colors";
+import { useLocale } from '@/hooks/useLocale';
 
 export type NavLinkProps = {
   href: string;
@@ -10,6 +11,7 @@ export type NavLinkProps = {
 export const NavLink = (props: NavLinkProps) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { to, lang } = useLocale();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -22,8 +24,8 @@ export const NavLink = (props: NavLinkProps) => {
     const sectionId = props.href.replace(/^\.\/#/, '').replace(/^#/, '');
 
     // Si estamos en otra página, navegar primero a home
-    if (location.pathname !== '/') {
-      navigate(`/#${sectionId}`, { replace: false });
+    if (location.pathname !== `/${lang}`) {
+      navigate(`/${lang}#${sectionId}`, { replace: false });
     } else {
       // Si ya estamos en home, hacer scroll directamente
       scrollToSection(sectionId);

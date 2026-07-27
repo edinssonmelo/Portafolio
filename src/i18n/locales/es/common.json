@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "portfolio": "Portafolio",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© 2026 Edinsson Melo. Todos los derechos reservados.",
+    "contactTitle": "Contacto",
+    "contactLine": "Contáctame por <emailLink>email</emailLink> o <waLink>WhatsApp</waLink>.",
+    "location": "Cúcuta, Colombia",
+    "buyMeACoffee": "Cómprame un café"
+  },
+  "langSwitch": {
+    "label": "Idioma",
+    "toSpanish": "Español",
+    "toEnglish": "English"
+  },
+  "buttons": {
+    "viewCaseStudy": "Ver caso de estudio",
+    "visitLiveSite": "Visitar sitio en vivo",
+    "backToBlog": "Volver al blog",
+    "readArticle": "Leer artículo",
+    "readMore": "Leer más",
+    "showLess": "Mostrar menos",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "readingTime": "{{minutes}} min de lectura"
+}

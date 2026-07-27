@@ -1,15 +1,17 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { versionedSrc } from "@/config/publicAssets";
+import { useLocale } from '@/hooks/useLocale';
 
 export const Logo = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { to } = useLocale();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
 
-    if (location.pathname !== "/") {
-      navigate("/");
+    if (location.pathname !== to('/')) {
+      navigate(to('/'));
     } else {
       window.scrollTo({
         top: 0,

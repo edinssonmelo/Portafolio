@@ -1,22 +1,25 @@
+import { useTranslation } from 'react-i18next';
 import { SurfaceCard } from "@/components/SurfaceCard";
 import { StatItem } from "@/sections/Stats/components/StatItem";
 
 export const StatsGrid = () => {
+  const { t } = useTranslation('stats');
+
   return (
     <SurfaceCard className="relative z-[1] w-full max-w-[900px] p-6 md:p-8">
       <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-4">
         <StatItem
           value="100"
           suffix="%"
-          description="Satisfied happy customers"
+          description={t('customers')}
         />
         <StatItem
           value="8"
           description={
             <>
-              Years of work
+              {t('experienceLine1')}
               <br />
-              experience
+              {t('experienceLine2')}
             </>
           }
         />
@@ -24,9 +27,9 @@ export const StatsGrid = () => {
           value="+50"
           description={
             <>
-              Successful
+              {t('projectsLine1')}
               <br />
-              projects done
+              {t('projectsLine2')}
             </>
           }
         />
@@ -34,9 +37,9 @@ export const StatsGrid = () => {
           value="+10"
           description={
             <>
-              Software Awards
+              {t('awardsLine1')}
               <br />
-              Received
+              {t('awardsLine2')}
             </>
           }
         />

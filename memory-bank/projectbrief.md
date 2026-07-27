@@ -14,7 +14,7 @@ Personal portfolio and product site for **Edinsson Melo** at [edinssonmelo.com](
 | Field | Value |
 |-------|-------|
 | Primary line | AI Product Builder |
-| Profession | AI Software Engineer |
+| Profession | Sr. Software Engineer (primary); AI Software Engineer, AI Product Engineer, Fullstack, Mobile, CTO, etc. (SEO secondary) |
 | Audience | Companies first; also startups, founders, software engineers |
 
 ## Key routes

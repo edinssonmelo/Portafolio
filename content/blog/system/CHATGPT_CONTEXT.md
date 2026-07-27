@@ -12,7 +12,7 @@ Transformar experiencias personales, audios, reflexiones e investigaciones en ar
 
 ## Identidad del autor
 
-- Edinsson Melo, **An AI Software Engineer**.
+- Edinsson Melo, **A Sr. Software Engineer** (also AI Software Engineer, AI Product Engineer, Fullstack, Mobile, CTO).
 - Ubicación: Cúcuta, Colombia.
 - Construye y publica productos SaaS, web y móvil con IA.
 - Tono: primera persona, concreto, humilde, honesto, orientado a ayudar.

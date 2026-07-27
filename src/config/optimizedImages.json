@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "source": "public/assets/hero.png",
+    "defaultPng": "/assets/hero.png",
+    "defaultWebp": "/assets/hero.webp",
+    "variants": [
+      {
+        "width": 280,
+        "height": 350,
+        "png": "/assets/hero-280.png",
+        "webp": "/assets/hero-280.webp"
+      },
+      {
+        "width": 560,
+        "height": 701,
+        "png": "/assets/hero-560.png",
+        "webp": "/assets/hero-560.webp"
+      }
+    ]
+  }
+}

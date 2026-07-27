@@ -1,34 +1,22 @@
 /**
  * SEO Configuration
  * Centralized SEO settings for all routes
+ * Text content lives in i18n locale files (src/i18n/locales/{lang}/seo.json)
  */
 
-import { getBlogPost } from '@/data/blog';
-import { screenshotSrc } from '@/config/screenshotMeta';
+import type { TFunction } from 'i18next';
 
 export const SITE_CONFIG = {
     name: 'Edinsson Melo',
-    tagline: 'An AI Software Engineer',
-    title: 'Edinsson Melo | AI Software Engineer',
-    description:
-        'An AI Software Engineer with more than 8 years of experience shipping SaaS, web, and mobile products. I build AI-powered solutions for companies, startups, founders, and software engineers.',
     url: 'https://edinssonmelo.com',
     image: 'https://edinssonmelo.com/assets/logo-full.png',
-    locale: 'en_US',
+    locale: {
+        es: 'es_CO',
+        en: 'en_US',
+    } as const,
     type: 'website',
     twitterHandle: '@edinssonmelo',
     email: 'edinssonadrian@gmail.com',
-    keywords: [
-        'AI Software Engineer',
-        'software architect',
-        'AI SaaS',
-        'MVP development',
-        'fullstack developer',
-        'LLM',
-        'RAG',
-        'Colombia',
-        'Edinsson Melo',
-    ].join(', '),
     location: {
         city: 'Cúcuta',
         country: 'Colombia',
@@ -64,100 +52,54 @@ export type SEOConfig = {
     noindex?: boolean;
 };
 
-export const seoConfig: Record<string, SEOConfig> = {
-    '/': {
-        title: SITE_CONFIG.title,
-        description: SITE_CONFIG.description,
-        path: '/',
-        type: 'website',
-    },
-    '/about': {
-        title: 'About Edinsson Melo | AI Software Engineer',
-        description:
-            'Learn about Edinsson Melo, an AI Software Engineer based in Cúcuta, Colombia. Story, background, and writing on software and career.',
-        path: '/about',
-        type: 'profile',
-    },
-    '/blog': {
-        title: 'Blog | Edinsson Melo',
-        description:
-            'Articles on AI-first product development, SaaS architecture, MVP building, and software engineering by Edinsson Melo.',
-        path: '/blog',
-        type: 'website',
-    },
-    '/projects': {
-        title: 'Projects | Edinsson Melo',
-        description:
-            'Apps and products I have shipped: Declaramelo, OpenWhispr, Bernal Tech B2B, Wordjet.ai, Seguros SURA SuperApp, OverUP, and more.',
-        path: '/projects',
-        type: 'website',
-    },
-    '/cotizacion/sistema-barber': {
-        title: 'Cotización Sistema Barber - Edinsson Melo',
-        description:
-            'Cotización detallada para el desarrollo del Sistema Barber. Incluye especificaciones técnicas, alcance del proyecto y propuesta de valor.',
-        path: '/cotizacion/sistema-barber',
-        type: 'website',
-    },
-    '/planes': {
-        title: 'Planes de Desarrollo Web - Essential, Professional, Premium | Edinsson Melo',
-        description:
-            'Planes de desarrollo web y branding digital: Essential ($1.000.000 COP), Professional ($2.300.000 COP), Premium ($4.400.000 COP). Servicios incluyen dominio, hosting, SSL, SEO, e-commerce y más.',
-        path: '/planes',
-        type: 'website',
-    },
+type RouteKey =
+    | 'home'
+    | 'about'
+    | 'blog'
+    | 'projects'
+    | 'cotizacion-sistema-barber'
+    | 'planes';
+
+const ROUTE_KEYS: Record<string, RouteKey> = {
+    '/': 'home',
+    '/about': 'about',
+    '/blog': 'blog',
+    '/projects': 'projects',
+    '/cotizacion/sistema-barber': 'cotizacion-sistema-barber',
+    '/planes': 'planes',
 };
 
-export const projectSeoConfig: Record<string, SEOConfig> = {
-    declaramelo: {
-        title: 'Declaramelo | Edinsson Melo',
-        description:
-            'Online tax filing platform for Colombia with expert accountants, free tools, and a guided DIAN declaration flow.',
-        path: '/projects/declaramelo',
-        image: screenshotSrc('https://edinssonmelo.com/screenshots/declaramelo-hero.png'),
-    },
-    openwhispr: {
-        title: 'OpenWhispr | Edinsson Melo',
-        description:
-            'AI native macOS desktop app to transcribe meetings, save them, and analyze them with ease.',
-        path: '/projects/openwhispr',
-        image: screenshotSrc('https://edinssonmelo.com/screenshots/openwhispr-hero.png'),
-    },
-    'bernal-tech-b2b': {
-        title: 'Bernal Tech B2B | Edinsson Melo',
-        description:
-            'Wholesale B2B portal for a Colombian car mat manufacturer with catalog, quotes, orders, and admin dashboard.',
-        path: '/projects/bernal-tech-b2b',
-        image: screenshotSrc('https://edinssonmelo.com/screenshots/bernal-dashboard.png'),
-    },
-    'wordjet-ai': {
-        title: 'Wordjet.ai | Edinsson Melo',
-        description:
-            'AI writing workspace for marketing agencies to create briefs, articles, essays, and market research.',
-        path: '/projects/wordjet-ai',
-        image: screenshotSrc('https://edinssonmelo.com/screenshots/wordjet-landing.png'),
-    },
-    'superapp-mobile': {
-        title: 'Seguros SURA SuperApp | Edinsson Melo',
-        description:
-            'Mobile contribution to Seguros SURA SuperApp on iOS and Android across Health, Mobility, Home, Wallet, Refunds, and Claims.',
-        path: '/projects/superapp-mobile',
-        image: screenshotSrc('https://edinssonmelo.com/screenshots/sura-explora.png'),
-    },
-    overup: {
-        title: 'OverUP | Edinsson Melo',
-        description:
-            'Oversized streetwear e-commerce store with catalog, product pages, and checkout for OverUP in Colombia.',
-        path: '/projects/overup',
-        image: screenshotSrc('https://edinssonmelo.com/screenshots/overup-hero.png'),
-    },
+const PROJECT_SLUGS = [
+    'declaramelo',
+    'openwhispr',
+    'bernal-tech-b2b',
+    'wordjet-ai',
+    'superapp-mobile',
+    'overup',
+] as const;
+
+const PROJECT_SCREENSHOTS: Record<(typeof PROJECT_SLUGS)[number], string> = {
+    'declaramelo': 'https://edinssonmelo.com/screenshots/declaramelo-hero.png',
+    'openwhispr': 'https://edinssonmelo.com/screenshots/openwhispr-hero.png',
+    'bernal-tech-b2b': 'https://edinssonmelo.com/screenshots/bernal-dashboard.png',
+    'wordjet-ai': 'https://edinssonmelo.com/screenshots/wordjet-landing.png',
+    'superapp-mobile': 'https://edinssonmelo.com/screenshots/sura-explora.png',
+    'overup': 'https://edinssonmelo.com/screenshots/overup-hero.png',
 };
 
-export const getSEOConfig = (pathname: string): SEOConfig => {
-    const blogMatch = pathname.match(/^\/blog\/([^/]+)$/);
+export const getSEOConfig = (
+    pathname: string,
+    t: TFunction<'seo'>,
+): SEOConfig => {
+    const segments = pathname.split('/').filter(Boolean);
+    const subpath = `/${segments.slice(1).join('/')}`;
+
+    const blogMatch = subpath.match(/^\/blog\/([^/]+)$/);
     if (blogMatch) {
         const slug = blogMatch[1];
-        const post = getBlogPost(slug);
+        const post = t('blogPostMeta', { defaultValue: null, returnObjects: true, slug }) as
+            | { title: string; description: string }
+            | null;
         if (post) {
             return {
                 title: `${post.title} | Edinsson Melo`,
@@ -168,18 +110,28 @@ export const getSEOConfig = (pathname: string): SEOConfig => {
         }
     }
 
-    const projectMatch = pathname.match(/^\/projects\/([^/]+)$/);
+    const projectMatch = subpath.match(/^\/projects\/([^/]+)$/);
     if (projectMatch) {
-        const slug = projectMatch[1];
-        const projectSeo = projectSeoConfig[slug];
-        if (projectSeo) {
-            return { ...projectSeo, path: pathname };
+        const slug = projectMatch[1] as (typeof PROJECT_SLUGS)[number];
+        if (PROJECT_SLUGS.includes(slug)) {
+            const title = t(`projectSeo.${slug}.title`, { defaultValue: '' });
+            const description = t(`projectSeo.${slug}.description`, { defaultValue: '' });
+            if (title && description) {
+                return {
+                    title,
+                    description,
+                    path: pathname,
+                    image: PROJECT_SCREENSHOTS[slug],
+                };
+            }
         }
     }
 
-    const config = seoConfig[pathname] || seoConfig['/'];
+    const routeKey = ROUTE_KEYS[subpath] ?? 'home';
     return {
-        ...config,
-        path: pathname === '/' ? '/' : pathname,
+        title: t(`routes.${routeKey}.title`),
+        description: t(`routes.${routeKey}.description`),
+        path: pathname,
+        type: 'website',
     };
 };

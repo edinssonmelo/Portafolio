@@ -1,0 +1,33 @@
+{
+  "header": {
+    "label": "Mis Trabajos",
+    "title": "Proyectos que genuinamente disfruté construir.",
+    "ctaAll": "Ver todos los trabajos"
+  },
+  "projects": {
+    "declaramelo": {
+      "title": "Declaramelo",
+      "description": "Declaramelo ayuda a personas en Colombia a presentar su declaración de renta en línea con confianza. Combina herramientas gratuitas de autoservicio, revisión de contadores expertos y un flujo paso a paso claro para declarar ante la DIAN."
+    },
+    "openwhispr": {
+      "title": "OpenWhispr",
+      "description": "OpenWhispr es una app de escritorio AI-native para Mac centrada en la transcripción de reuniones. Te ayuda a capturar conversaciones, mantenerlas organizadas y revisar o analizar lo que se dijo sin romper tu flujo durante la reunión."
+    },
+    "bernal-tech-b2b": {
+      "title": "Bernal Tech B2B",
+      "description": "Bernal Tech B2B conecta operaciones de manufactura con compradores aliados en Colombia a través de login seguro, un catálogo amplio de productos, cotizaciones, pedidos, analítica y flujos de atención al cliente."
+    },
+    "wordjet-ai": {
+      "title": "Wordjet.ai",
+      "description": "Wordjet es un workspace de escritura asistida por IA para equipos de marketing y agencias. Ayuda a pasar de la investigación al contenido publicable con herramientas para briefs, artículos, ensayos, planificación de contenido y estudios de mercado."
+    },
+    "superapp-mobile": {
+      "title": "SuperApp Mobile",
+      "description": "Contribuí a uno de los productos móviles de seguros más grandes de Colombia como parte del equipo SuperApp de Seguros SURA, construyendo funciones en Salud, Movilidad, Hogar, Billetera, Reembolsos y Siniestros mientras apoyaba la operación en vivo para usuarios finales."
+    },
+    "overup": {
+      "title": "OverUP",
+      "description": "OverUP es una tienda online de streetwear oversized en Colombia. La tienda reúne storytelling de marca, catálogo de productos, páginas de detalle y un flujo de compra fluido para los clientes."
+    }
+  }
+}

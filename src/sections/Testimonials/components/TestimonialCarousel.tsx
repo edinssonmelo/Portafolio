@@ -1,37 +1,27 @@
 import { useRef, useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import { TestimonialCard } from "@/sections/Testimonials/components/TestimonialCard";
 
 const CAROUSEL_BTN_CLASS =
   "flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-none bg-yellow-300 cursor-pointer md:h-[50px] md:w-[50px]";
 
 export const TestimonialCarousel = () => {
+  const { t } = useTranslation('testimonials');
   const carouselRef = useRef<HTMLUListElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const currentIndexRef = useRef(0);
-  const testimonials = [
-    {
-      name: "Testimonial 1",
-      quote:
-        '"The experience was incredible and very kind. I will keep hiring him."',
-      authorName: "William L.",
-      authorTitle: "Digital Learning Facilitator",
-    },
-    {
-      name: "Testimonial 2",
-      quote:
-        '"Great work! He was attentive throughout the entire process and resolved all the questions we had both during and after the project."',
-      authorName: "Umberto S.",
-      authorTitle: "Computer Science Student",
-    },
-    {
-      name: "Testimonial 3",
-      quote:
-        '"Excellent work with Edinsson. Always very cordial and transparent with the progress."',
-      authorName: "David J.",
-      authorTitle: "Marketing Specialist",
-    },
-  ];
+  const items = t('items', { returnObjects: true }) as Array<{
+    quote: string;
+    authorName: string;
+    authorTitle: string;
+  }>;
+  const testimonials = items.map((item, index) => ({
+    name: `Testimonial ${index + 1}`,
+    quote: item.quote,
+    authorName: item.authorName,
+    authorTitle: item.authorTitle,
+  }));
 
   const scrollToIndex = (index: number) => {
     if (carouselRef.current) {

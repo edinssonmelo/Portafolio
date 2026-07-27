@@ -1,5 +1,6 @@
-import { Routes, Route, useLocation, Outlet } from "react-router-dom";
+import { Routes, Route, useLocation, useParams, Outlet, Navigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { Services } from "@/sections/Services";
@@ -20,6 +21,48 @@ import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEO/SEOHead";
 import { StructuredData } from "@/components/SEO/StructuredData";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+
+const SUPPORTED = ['es', 'en'] as const;
+
+const LocaleLayout = () => {
+  const { lang } = useParams<{ lang: string }>();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (lang && SUPPORTED.includes(lang as 'es' | 'en')) {
+      if (i18n.resolvedLanguage !== lang) {
+        void i18n.changeLanguage(lang);
+      }
+      document.documentElement.lang = lang;
+    }
+  }, [lang, i18n]);
+
+  if (!lang || !SUPPORTED.includes(lang as 'es' | 'en')) {
+    return <NotFound />;
+  }
+
+  return <Outlet />;
+};
+
+const RootRedirect = () => {
+  const { i18n } = useTranslation();
+  const detected = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
+  const target = SUPPORTED.includes(detected as 'es' | 'en') ? detected : 'en';
+  return <Navigate to={`/${target}`} replace />;
+};
+
+const NotFound = () => {
+  const { t } = useTranslation('errors');
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-neutral-100 px-6">
+      <h1 className="text-stone-900 text-2xl font-bold font-cabinet_grotesk">{t('notFound.title')}</h1>
+      <div className="flex gap-4">
+        <Link to="/" className="text-blue-700 font-dm_sans font-semibold hover:underline">{t('notFound.home')}</Link>
+        <Link to="/projects" className="text-blue-700 font-dm_sans font-semibold hover:underline">{t('notFound.projects')}</Link>
+      </div>
+    </div>
+  );
+};
 
 const HomePage = () => {
   return (
@@ -86,31 +129,27 @@ export const App = () => {
         <ScrollToHash />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={
-            <div className="relative flex w-full min-w-0 flex-col overflow-x-clip">
-              <HomePage />
-            </div>
-          } />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<Outlet />}>
-            <Route index element={<BlogPage />} />
-            <Route path=":slug" element={<BlogPostPage />} />
-          </Route>
-          <Route path="/projects" element={<Outlet />}>
-            <Route index element={<ProjectsPage />} />
-            <Route path=":slug" element={<ErrorBoundary><ProjectDetail /></ErrorBoundary>} />
-          </Route>
-          <Route path="/cotizacion/sistema-barber" element={<CotizacionPage />} />
-          <Route path="/planes" element={<PlanesPage />} />
-          <Route path="*" element={
-            <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-neutral-100 px-6">
-              <h1 className="text-stone-900 text-2xl font-bold font-cabinet_grotesk">Page not found</h1>
-              <div className="flex gap-4">
-                <Link to="/" className="text-blue-700 font-dm_sans font-semibold hover:underline">Home</Link>
-                <Link to="/projects" className="text-blue-700 font-dm_sans font-semibold hover:underline">Projects</Link>
+          <Route path="/" element={<RootRedirect />} />
+          <Route path="/:lang" element={<LocaleLayout />}>
+            <Route index element={
+              <div className="relative flex w-full min-w-0 flex-col overflow-x-clip">
+                <HomePage />
               </div>
-            </div>
-          } />
+            } />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="blog" element={<Outlet />}>
+              <Route index element={<BlogPage />} />
+              <Route path=":slug" element={<BlogPostPage />} />
+            </Route>
+            <Route path="projects" element={<Outlet />}>
+              <Route index element={<ProjectsPage />} />
+              <Route path=":slug" element={<ErrorBoundary><ProjectDetail /></ErrorBoundary>} />
+            </Route>
+            <Route path="cotizacion/sistema-barber" element={<CotizacionPage />} />
+            <Route path="planes" element={<PlanesPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <div className="box-border caret-transparent"></div>
       </div>

@@ -1,11 +1,16 @@
+import { useTranslation } from 'react-i18next';
 import { layoutClasses } from "@/config/designTokens";
 import { SectionHeader } from "@/components/SectionHeader";
 import { GradientButton } from "@/components/GradientButton";
 import { BlurEllipses } from "@/components/BlurEllipses";
 import { portfolioEllipses } from "@/config/blurEllipses";
 import { PortfolioGrid } from "@/sections/Portfolio/components/PortfolioGrid";
+import { useLocale } from '@/hooks/useLocale';
 
 export const Portfolio = () => {
+  const { t } = useTranslation('portfolio');
+  const { to } = useLocale();
+
   return (
     <section
       id="portfolio"
@@ -14,8 +19,8 @@ export const Portfolio = () => {
       <div className={`${layoutClasses.sectionInner} relative`}>
         <SectionHeader
           iconUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"
-          label="My Works"
-          title="Projects that were genuinely fun to build."
+          label={t('header.label')}
+          title={t('header.title')}
           variant="max-w-[650px] md:max-w-[700px]"
         />
         <div className="relative w-full">
@@ -27,9 +32,9 @@ export const Portfolio = () => {
           </div>
           <div className="relative z-10 flex flex-col items-center gap-10 md:gap-12">
             <PortfolioGrid limit={4} enableHoverGallery />
-            <GradientButton to="/projects">
+            <GradientButton to={to('/projects')}>
               <span className="font-dm_sans text-lg font-semibold leading-[19px] tracking-[-0.72px] text-stone-900">
-                See All Works
+                {t('header.ctaAll')}
               </span>
             </GradientButton>
           </div>

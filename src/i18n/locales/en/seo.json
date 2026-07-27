@@ -1,0 +1,77 @@
+{
+  "site": {
+    "tagline": "A Sr. Software Engineer",
+    "title": "Edinsson Melo | Sr. Software Engineer",
+    "description": "A Sr. Software Engineer with more than 8 years of experience shipping SaaS, web, and mobile products. Also working as an AI Software Engineer, AI Product Engineer, AI Engineer, Fullstack, Mobile, Frontend, CTO, and Forward Deployed Engineer for companies, startups, founders, and product teams.",
+    "keywords": "Sr. Software Engineer, AI Software Engineer, AI Product Engineer, AI Engineer, Forward Deployed Engineer, Fullstack Engineer, Mobile Engineer, Frontend Engineer, CTO, Software Architect, AI SaaS, MVP development, LLM, RAG, Colombia, Edinsson Melo"
+  },
+  "routes": {
+    "home": {
+      "title": "Edinsson Melo | Sr. Software Engineer",
+      "description": "A Sr. Software Engineer with more than 8 years of experience shipping SaaS, web, and mobile products. Also working as an AI Software Engineer, AI Product Engineer, AI Engineer, Fullstack, Mobile, Frontend, CTO, and Forward Deployed Engineer."
+    },
+    "about": {
+      "title": "About Edinsson Melo | Sr. Software Engineer",
+      "description": "Learn about Edinsson Melo, a Sr. Software Engineer and AI Engineer based in Cúcuta, Colombia. Story, background, and writing on software and career."
+    },
+    "blog": {
+      "title": "Blog | Edinsson Melo",
+      "description": "Articles on AI-first product development, SaaS architecture, MVP building, and software engineering by Edinsson Melo."
+    },
+    "projects": {
+      "title": "Projects | Edinsson Melo",
+      "description": "Apps and products I have shipped: Declaramelo, OpenWhispr, Bernal Tech B2B, Wordjet.ai, Seguros SURA SuperApp, OverUP, and more."
+    },
+    "cotizacion-sistema-barber": {
+      "title": "Barber System Quote - Edinsson Melo",
+      "description": "Detailed quote for the Barber System development. Includes technical specifications, project scope, and value proposition."
+    },
+    "planes": {
+      "title": "Web Development Plans - Essential, Professional, Premium | Edinsson Melo",
+      "description": "Web development and digital branding plans: Essential ($1,000,000 COP), Professional ($2,300,000 COP), Premium ($4,400,000 COP). Services include domain, hosting, SSL, SEO, e-commerce, and more."
+    }
+  },
+  "manifest": {
+    "name": "Edinsson Melo | Sr. Software Engineer",
+    "description": "A Sr. Software Engineer and AI Engineer shipping SaaS, web, and mobile products."
+  },
+  "schema": {
+    "jobTitle": "Sr. Software Engineer",
+    "professionalServiceName": "Edinsson Melo | Sr. Software Engineer",
+    "professionalServiceDescription": "AI product engineering, startup MVP development, technical leadership, and fullstack software for companies, founders, and product teams. Specializing in AI agents, SaaS, web/mobile apps, and enterprise integrations."
+  },
+  "projectSeo": {
+    "declaramelo": {
+      "title": "Declaramelo | Edinsson Melo",
+      "description": "Online tax filing platform for Colombia with expert accountants, free tools, and a guided DIAN declaration flow."
+    },
+    "openwhispr": {
+      "title": "OpenWhispr | Edinsson Melo",
+      "description": "AI native macOS desktop app to transcribe meetings, save them, and analyze them with ease."
+    },
+    "bernal-tech-b2b": {
+      "title": "Bernal Tech B2B | Edinsson Melo",
+      "description": "Wholesale B2B portal for a Colombian car mat manufacturer with catalog, quotes, orders, and admin dashboard."
+    },
+    "wordjet-ai": {
+      "title": "Wordjet.ai | Edinsson Melo",
+      "description": "AI writing workspace for marketing agencies to create briefs, articles, essays, and market research."
+    },
+    "superapp-mobile": {
+      "title": "Seguros SURA SuperApp | Edinsson Melo",
+      "description": "Mobile contribution to Seguros SURA SuperApp on iOS and Android across Health, Mobility, Home, Wallet, Refunds, and Claims."
+    },
+    "overup": {
+      "title": "OverUP | Edinsson Melo",
+      "description": "Oversized streetwear e-commerce store with catalog, product pages, and checkout for OverUP in Colombia."
+    }
+  },
+  "blogPostMeta": null,
+  "breadcrumb": {
+    "projects": "Projects",
+    "about": "About",
+    "cotizacion": "Barber System Quote",
+    "planes": "Plans",
+    "project": "Project"
+  }
+}
