@@ -2,7 +2,7 @@
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
-    "about": "Acerca de",
+    "about": "Biografía",
     "portfolio": "Portafolio",
     "blog": "Blog",
     "contact": "Contacto"
@@ -11,11 +11,12 @@
     "copyright": "© 2026 Edinsson Melo. Todos los derechos reservados.",
     "contactTitle": "Contacto",
     "contactLine": "Contáctame por <emailLink>email</emailLink> o <waLink>WhatsApp</waLink>.",
-    "location": "Cúcuta, Colombia",
     "buyMeACoffee": "Cómprame un café"
   },
   "langSwitch": {
     "label": "Idioma",
+    "english": "English",
+    "spanish": "Español",
     "toSpanish": "Español",
     "toEnglish": "English"
   },

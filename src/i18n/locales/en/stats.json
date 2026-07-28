@@ -1,9 +1,43 @@
 {
-  "customers": "Satisfied happy customers",
-  "experienceLine1": "Years of work",
-  "experienceLine2": "experience",
-  "projectsLine1": "Successful",
-  "projectsLine2": "projects done",
-  "awardsLine1": "Software Awards",
-  "awardsLine2": "Received"
+  "section": {
+    "label": "Achievements",
+    "title": "Certifications and recognitions"
+  },
+  "credentials": {
+    "viewCredential": "View credential",
+    "azureFundamentals": {
+      "title": "Microsoft Certified: Azure Fundamentals",
+      "subtitle": "Credly Badge",
+      "detail": "Microsoft"
+    },
+    "icpc": {
+      "title": "ICPC South America-North Finals 2021",
+      "subtitle": "Contestant · The 2021 ICPC South America-North Finals",
+      "detail": "Rank 24 · Honorable Mention",
+      "viewProfile": "View ICPC profile"
+    },
+    "topcoderTco19": {
+      "title": "TCO19 South America",
+      "subtitle": "Qualified · Buenos Aires, Argentina",
+      "detail": "Topcoder 2019",
+      "openStory": "Read story",
+      "modal": {
+        "close": "Close",
+        "viewProfile": "View Topcoder profile",
+        "storyP1": "TCO19 South America was a regional competitive programming event within Topcoder's international circuit. Qualifying and participating was an incredible opportunity. I was surrounded by extraordinarily talented people, and having the chance to connect with them, learn, compete, and experience that environment firsthand sparked in me a strong desire to keep improving, shift my mindset, and take my professional growth more seriously."
+      }
+    },
+    "facebookHackerCup2020": {
+      "title": "Facebook Colombia Hack 2020",
+      "subtitle": "Qualified · Bogotá",
+      "detail": "Facebook",
+      "openStory": "Read story",
+      "modal": {
+        "close": "Close",
+        "viewPublication": "View UFPS publication",
+        "storyP1": "Facebook Colombia Hack 2020 was a hackathon organized by Facebook in Bogotá that brought together selected students from across the country to solve programming challenges, collaborate in teams, and exchange knowledge.",
+        "storyP2": "I qualified to participate based on my performance in Facebook Hacker Cup. During the event, I teamed up with friends from UTP, whom I especially value because we had also shared the experience of attending the 2019 Competitive Programming Bootcamp in Córdoba, Argentina."
+      }
+    }
+  }
 }

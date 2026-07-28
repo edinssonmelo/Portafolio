@@ -6,7 +6,7 @@ export const AboutImage = () => {
           <img
             sizes="(max-width: 768px) 260px, 380px"
             src="https://c.animaapp.com/mih2ldgveCT36V/assets/20.png"
-            alt="Edinsson Melo - Fullstack Developer based in Colombia"
+            alt="Edinsson Melo - Sr. Software Engineer"
             className="h-full w-full rounded-full object-cover md:object-contain"
           />
         </div>

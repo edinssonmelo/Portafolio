@@ -18,7 +18,6 @@ export const SITE_CONFIG = {
     twitterHandle: '@edinssonmelo',
     email: 'edinssonadrian@gmail.com',
     location: {
-        city: 'Cúcuta',
         country: 'Colombia',
     },
     social: {
@@ -27,7 +26,6 @@ export const SITE_CONFIG = {
         linkedin: 'https://www.linkedin.com/in/edinssonmelo',
         youtube: 'https://www.youtube.com/@EdinssonMelo',
         workana: 'https://www.workana.com/freelancer/4ec35c01fc86a61b905efce11c420353',
-        codeforces: 'https://codeforces.com/profile/Mackenzie',
         buymeacoffee: 'https://buymeacoffee.com/edinssonmelo',
     },
 } as const;

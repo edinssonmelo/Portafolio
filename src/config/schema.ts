@@ -22,7 +22,6 @@ export const getPersonSchema = (t: TFunction<'seo'>) => {
         image: SITE_CONFIG.image,
         address: {
             '@type': 'PostalAddress',
-            addressLocality: SITE_CONFIG.location.city,
             addressCountry: SITE_CONFIG.location.country,
         },
         sameAs: [
@@ -31,7 +30,6 @@ export const getPersonSchema = (t: TFunction<'seo'>) => {
             SITE_CONFIG.social.linkedin,
             SITE_CONFIG.social.youtube,
             SITE_CONFIG.social.workana,
-            SITE_CONFIG.social.codeforces,
             SITE_CONFIG.social.buymeacoffee,
         ],
         knowsAbout: [
@@ -119,8 +117,8 @@ export const getProfessionalServiceSchema = (t: TFunction<'seo'>) => {
             '@id': PERSON_ID,
         },
         areaServed: {
-            '@type': 'Country',
-            name: 'Colombia',
+            '@type': 'Place',
+            name: 'Worldwide',
         },
         serviceType: [
             'AI Product Engineering',

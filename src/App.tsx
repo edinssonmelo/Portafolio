@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
-import { Services } from "@/sections/Services";
 import { Testimonials } from "@/sections/Testimonials";
 import { Portfolio } from "@/sections/Portfolio";
 import { Stats } from "@/sections/Stats";
@@ -71,7 +70,6 @@ const HomePage = () => {
       <div className="relative flex w-full min-w-0 flex-col overflow-x-clip">
         <div className="static box-content caret-black shrink h-auto w-auto left-auto top-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-8 md:w-full md:left-0 md:top-[84px]"></div>
         <Hero />
-        <Services />
         <Portfolio />
         <Testimonials />
         <Stats />

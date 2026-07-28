@@ -30,9 +30,6 @@ export const FooterContact = () => {
                         }}
                     />
                 </p>
-                <p className="text-black text-sm md:text-stone-700 md:text-base font-dm_sans">
-                    {t('footer.location')}
-                </p>
             </div>
         </div>
     );

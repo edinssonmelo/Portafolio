@@ -35,7 +35,7 @@ export const NavActions = ({ className = "" }: { className?: string }) => {
   return (
     <nav className={`flex items-center justify-center gap-3 ${className}`}>
       <SocialIcon href={SITE_CONFIG.social.github} iconSrc="/assets/github-icon.png" iconAlt="GitHub" name="GitHub" />
-      <SocialIcon href={SITE_CONFIG.social.codeforces} iconSrc="/assets/codeforces-icon.svg" iconAlt="Codeforces" name="Codeforces" />
+      <SocialIcon href={SITE_CONFIG.social.instagram} iconSrc="/assets/ig-icon.svg" iconAlt="Instagram" name="Instagram" />
       <SocialIcon href={SITE_CONFIG.social.linkedin} iconSrc="/assets/linkedin-icon.png" iconAlt="LinkedIn" name="LinkedIn" />
       <SocialIcon href={SITE_CONFIG.social.youtube} iconSrc="/assets/youtube-icon.svg" iconAlt="YouTube" name="YouTube" />
     </nav>

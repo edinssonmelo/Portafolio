@@ -11,11 +11,12 @@
     "copyright": "© 2026 Edinsson Melo. All rights reserved.",
     "contactTitle": "Contact",
     "contactLine": "Reach me by <emailLink>email</emailLink> or <waLink>WhatsApp</waLink>.",
-    "location": "Cúcuta, Colombia",
     "buyMeACoffee": "Buy me a Coffee"
   },
   "langSwitch": {
     "label": "Language",
+    "english": "English",
+    "spanish": "Español",
     "toSpanish": "Español",
     "toEnglish": "English"
   },

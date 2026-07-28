@@ -1,8 +1,8 @@
 {
   "header": {
-    "label": "My Works",
-    "title": "Projects that were genuinely fun to build.",
-    "ctaAll": "See All Works"
+    "label": "Projects",
+    "title": "Projects that tell a story along my journey.",
+    "ctaAll": "View all projects"
   },
   "projects": {
     "declaramelo": {

@@ -1,6 +1,6 @@
 {
   "site": {
-    "tagline": "Un Sr. Software Engineer",
+    "tagline": "Sr. Software Engineer",
     "title": "Edinsson Melo | Sr. Software Engineer",
     "description": "Un Sr. Software Engineer con más de 8 años de experiencia entregando productos SaaS, web y móviles. También trabaja como AI Software Engineer, AI Product Engineer, AI Engineer, Fullstack, Mobile, Frontend, CTO y Forward Deployed Engineer para empresas, startups, founders y equipos de producto.",
     "keywords": "Sr. Software Engineer, AI Software Engineer, AI Product Engineer, AI Engineer, Forward Deployed Engineer, Fullstack Engineer, Mobile Engineer, Frontend Engineer, CTO, Software Architect, AI SaaS, MVP development, LLM, RAG, Colombia, Edinsson Melo"
@@ -11,8 +11,8 @@
       "description": "Un Sr. Software Engineer con más de 8 años de experiencia entregando productos SaaS, web y móviles. También trabaja como AI Software Engineer, AI Product Engineer, AI Engineer, Fullstack, Mobile, Frontend, CTO y Forward Deployed Engineer."
     },
     "about": {
-      "title": "Acerca de Edinsson Melo | Sr. Software Engineer",
-      "description": "Conoce a Edinsson Melo, un Sr. Software Engineer y AI Engineer basado en Cúcuta, Colombia. Historia, trayectoria y escritura sobre software y carrera."
+      "title": "Biografía de Edinsson Melo | Sr. Software Engineer",
+      "description": "Conoce a Edinsson Melo, Sr. Software Engineer y AI Engineer. Historia, trayectoria y escritura sobre software y carrera."
     },
     "blog": {
       "title": "Blog | Edinsson Melo",
@@ -69,7 +69,7 @@
   "blogPostMeta": null,
   "breadcrumb": {
     "projects": "Proyectos",
-    "about": "Acerca de",
+    "about": "Biografía",
     "cotizacion": "Cotización Sistema Barber",
     "planes": "Planes",
     "project": "Proyecto"

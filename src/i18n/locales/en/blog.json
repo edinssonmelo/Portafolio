@@ -1,7 +1,7 @@
 {
   "page": {
     "badge": "Blog",
-    "title": "Writing on building software",
+    "title": "Lessons learned as a Software Engineer",
     "description": "Notes on building software, AI products, and career lessons from more than a decade shipping in production.",
     "emptyState": "Articles are on the way. Topics will cover AI-first MVPs, SaaS architecture, and lessons from products I've shipped."
   },

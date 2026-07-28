@@ -34,6 +34,11 @@
 - Use periods, commas, colons, or parentheses instead. Avoid joining clauses with an em dash (e.g. prefer "teams: from research" or two short sentences).
 - Applies to new and edited site text. Internal docs should also avoid em dashes for consistency.
 
+## i18n parity
+
+- Every user-facing string in `src/i18n/locales/en/` must have an equivalent key and meaning in `src/i18n/locales/es/` (and vice versa). Same namespaces, same structure, same number of blocks (e.g. if ES has one story paragraph, EN has one; do not leave extra paragraphs in one locale).
+- When adding or removing copy in one locale, update the other in the same change.
+
 ## Must-know
 
 - Identity: **A Sr. Software Engineer** (`SITE_CONFIG.tagline` in `src/config/seo.ts`; hero, About, and SEO stay in sync). AI/Fullstack/Mobile roles in `SITE_ROLE_KEYWORDS` for meta/schema only.

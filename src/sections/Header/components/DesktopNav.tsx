@@ -17,7 +17,7 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
       setActiveSection(hashSection);
     }
 
-    const sections = ['home', 'services', 'portfolio', 'contact'];
+    const sections = ['home', 'portfolio', 'contact'];
 
     // Función para detectar qué sección está visible
     const handleScroll = () => {
@@ -68,7 +68,6 @@ export const DesktopNav = ({ className = "" }: { className?: string }) => {
   return (
     <nav className={`flex items-center justify-center gap-[35px] ${className}`}>
       <NavLink href="#home" text={t('nav.home')} isActive={activeSection === 'home'} />
-      <NavLink href="#services" text={t('nav.services')} isActive={activeSection === 'services'} />
       <NavLink href={to('/about')} text={t('nav.about')} isActive={isAboutActive} />
       <NavLink href="#portfolio" text={t('nav.portfolio')} isActive={activeSection === 'portfolio'} />
       <NavLink href={to('/blog')} text={t('nav.blog')} isActive={isBlogActive} />
