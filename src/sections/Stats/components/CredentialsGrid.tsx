@@ -12,7 +12,7 @@ export const CredentialsGrid = () => {
 
     return (
         <>
-            <SurfaceCard className="relative z-[1] w-full overflow-hidden p-6 md:p-8">
+            <SurfaceCard className="relative z-[1] w-full p-6 md:p-8">
                 <div className="mb-6 flex justify-center md:mb-8">
                     <SectionHeader
                         iconUrl="https://c.animaapp.com/mih2ldgveCT36V/assets/icon-4.svg"

@@ -87,8 +87,8 @@ export const ContactForm = () => {
         required
       />
       <div className="flex w-full flex-col items-center gap-4 md:gap-5">
-        <GradientButton type="submit" disabled={isSending}>
-          <span className="text-lg font-semibold tracking-[-0.72px] leading-[19px] text-stone-900 font-dm_sans">
+        <GradientButton type="submit" disabled={isSending} className="w-full max-w-[320px] sm:max-w-none sm:w-auto">
+          <span className="font-dm_sans text-base font-semibold leading-snug tracking-[-0.4px] text-stone-900 sm:text-lg sm:leading-[19px] sm:tracking-[-0.72px]">
             {isSending ? t('form.sending') : t('form.submit')}
           </span>
         </GradientButton>
