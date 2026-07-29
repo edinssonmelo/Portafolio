@@ -117,6 +117,7 @@ def optimize_recipe(recipe: ImageRecipe) -> dict:
 
     return {
         "source": str(recipe.source.relative_to(ROOT)),
+        "revision": int(recipe.source.stat().st_mtime),
         "defaultPng": f"/assets/{recipe.source.name}",
         "defaultWebp": f"/assets/{stem}.webp",
         "variants": variants,

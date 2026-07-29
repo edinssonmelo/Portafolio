@@ -1,6 +1,7 @@
 {
   "hero": {
     "source": "public/assets/hero.png",
+    "revision": 1785306848,
     "defaultPng": "/assets/hero.png",
     "defaultWebp": "/assets/hero.webp",
     "variants": [
@@ -12,7 +13,7 @@
       },
       {
         "width": 560,
-        "height": 701,
+        "height": 700,
         "png": "/assets/hero-560.png",
         "webp": "/assets/hero-560.webp"
       }
