@@ -5,6 +5,8 @@
  */
 
 import type { TFunction } from 'i18next';
+import { getBlogPost } from '@/data/blog';
+import type { AppLanguage } from '@/i18n';
 
 export const SITE_CONFIG = {
     name: 'Edinsson Melo',
@@ -95,13 +97,17 @@ export const getSEOConfig = (
     const blogMatch = subpath.match(/^\/blog\/([^/]+)$/);
     if (blogMatch) {
         const slug = blogMatch[1];
-        const post = t('blogPostMeta', { defaultValue: null, returnObjects: true, slug }) as
-            | { title: string; description: string }
-            | null;
-        if (post) {
+        const blogPost = getBlogPost(slug);
+        if (blogPost) {
+            const lang = (segments[0] === 'es' || segments[0] === 'en'
+                ? segments[0]
+                : 'en') as AppLanguage;
+            const title = blogPost.title[lang] ?? blogPost.title[blogPost.lang];
+            const description =
+                blogPost.description[lang] ?? blogPost.description[blogPost.lang];
             return {
-                title: `${post.title} | Edinsson Melo`,
-                description: post.description,
+                title: `${title} | Edinsson Melo`,
+                description,
                 path: pathname,
                 type: 'article',
             };
