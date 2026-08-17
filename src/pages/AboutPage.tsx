@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
 import { PageHeader } from '@/components/PageHeader';
@@ -36,16 +36,20 @@ export const AboutPage = () => {
                             <p className={bodyText}>{t('bio.p3')}</p>
                             <p className={bodyText}>{t('bio.p4')}</p>
                             <p className={bodyText}>
-                                {t('bio.p5a')}{' '}
-                                <a
-                                    href="https://www.youtube.com/watch?v=vb8bto2vaaA"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="font-semibold text-stone-900 underline underline-offset-2 hover:text-stone-700"
-                                >
-                                    YouTube
-                                </a>
-                                .
+                                <Trans
+                                    i18nKey="bio.p5"
+                                    ns="about"
+                                    components={{
+                                        link: (
+                                            <a
+                                                href="https://www.youtube.com/watch?v=vb8bto2vaaA"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="font-semibold text-stone-900 underline underline-offset-2 hover:text-stone-700"
+                                            />
+                                        ),
+                                    }}
+                                />
                             </p>
                             <p className={bodyText}>{t('bio.p6')}</p>
                             <p className={bodyText}>{t('bio.p7')}</p>
