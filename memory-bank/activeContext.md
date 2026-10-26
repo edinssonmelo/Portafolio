@@ -53,3 +53,10 @@
 - Large real captures from June 21 historical BetPlay/Pinnacle snapshots, lightbox and optional animated screenshot walkthrough. Removed the unrelated Aviator simulation.
 - Shows source integration, FastAPI, canonical data, rule-based analytics and frontend delivery as experience relevant to prediction APIs. Does not claim ML accuracy, predictive confidence, AWS latency or 90% coverage without validation.
 - User explicitly requested publication in the latest message, superseding the earlier no-production restriction.
+
+
+## Simplified BotPlay interactive showcase (2026-10-26)
+
+- Replaced long screenshot sections with one responsive interactive dashboard: matched events, opposite-outcome odds and calculated illustrative margins.
+- Fictional data is explicit, updates every 3.5 seconds, with pause/reset, sport filters and selected-opportunity detail. No network calls, betting, live access or prediction claims.
+- Three short workflow captions replace the previous detailed explanation. ES/EN parity preserved.

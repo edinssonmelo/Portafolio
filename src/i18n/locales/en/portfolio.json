@@ -31,7 +31,7 @@
     },
     "botplay": {
       "title": "BotPlay Radar",
-      "description": "Sports analytics bot for BetPlay and Pinnacle. Captures odds, matches events, compares markets and generates rule-based signals through a Python and FastAPI backend."
+      "description": "Two platforms. One clear view of the market. A bot that matches events, compares odds and brings opportunities into focus."
     }
   }
 }

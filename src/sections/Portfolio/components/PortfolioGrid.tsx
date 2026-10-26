@@ -17,8 +17,8 @@ export const PortfolioGrid = ({
   const PORTFOLIO_PROJECTS = [
     {
       href: to('/projects/botplay'),
-      imageUrl: '/screenshots/botplay-01-monitor.png',
-      galleryImages: ['/screenshots/botplay-01-monitor.png', '/screenshots/botplay-03-pinnacle.png'],
+      imageUrl: '/screenshots/botplay-demo.png',
+      galleryImages: ['/screenshots/botplay-demo.png'],
       title: t('projects.botplay.title'),
       description: t('projects.botplay.description'),
     },

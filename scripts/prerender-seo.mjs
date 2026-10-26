@@ -36,7 +36,7 @@ const PROJECT_SLUGS = [
 ];
 
 const PROJECT_SCREENSHOTS = {
-  botplay: `${siteUrl}/screenshots/botplay-01-monitor.png`,
+  botplay: `${siteUrl}/screenshots/botplay-demo.png`,
   declaramelo: `${siteUrl}/screenshots/declaramelo-hero.png`,
   openwhispr: `${siteUrl}/screenshots/openwhispr-hero.png`,
   'bernal-tech-b2b': `${siteUrl}/screenshots/bernal-dashboard.png`,

@@ -113,40 +113,61 @@
       }
     }
   },
-  "botplay": {
-    "badge": "Proyecto de ingeniería",
-    "subtitle": "Bot de análisis deportivo para BetPlay y Pinnacle. Captura cuotas, empareja partidos, compara mercados y genera señales mediante un backend en Python y FastAPI.",
-    "walkthrough": "El bot en funcionamiento",
-    "play": "▶ Reproducir recorrido",
-    "pause": "Pausar recorrido",
-    "walkthroughAlt": "Recorrido de las pantallas reales de BotPlay con BetPlay y Pinnacle",
-    "captureNote": "Capturas reales de la aplicación usando snapshots históricos del 21 de junio de 2026. La animación recorre estas capturas; no representa una conexión activa. Por eso se conservan las advertencias de antigüedad y los bloqueos de validación.",
-    "overview": "Desarrollé BotPlay para convertir datos de dos plataformas en un análisis que se puede inspeccionar: qué evento corresponde a cuál, qué cuotas llegaron, qué mercados están disponibles y cuándo una señal debe descartarse. El frontend permite seguir ese proceso y el backend expone los resultados mediante una API.",
-    "screens": [
+  "botplayDemo": {
+    "back": "Todos los proyectos",
+    "project": "Showcase interactivo",
+    "lead": "Dos plataformas. Una visión clara del mercado. Un bot que empareja eventos, compara cuotas y pone las oportunidades a la vista.",
+    "demoLabel": "Panel interactivo de BotPlay con datos simulados",
+    "simulated": "DATOS SIMULADOS",
+    "pause": "Pausar simulación",
+    "play": "Reanudar simulación",
+    "reset": "Reiniciar demo",
+    "workspace": "TU ESPACIO DE ANÁLISIS",
+    "radarTitle": "El mercado, de un vistazo.",
+    "radarLead": "Eventos emparejados. Cuotas comparadas. Señales claras.",
+    "demoSources": "Fuentes de demo · sin conexión real",
+    "matched": "Eventos emparejados",
+    "sameEvent": "En ambas plataformas",
+    "opportunities": "Oportunidades",
+    "detected": "Señales por reglas",
+    "bestSpread": "Mejor margen ilustrativo",
+    "illustrative": "Cálculo de demo",
+    "opportunityList": "Radar de oportunidades",
+    "updating": "Simulación activa",
+    "paused": "Simulación pausada",
+    "filter": "Filtrar eventos de demo por deporte",
+    "all": "Todos",
+    "football": "Fútbol",
+    "tennis": "Tenis",
+    "basketball": "Básquet",
+    "spread": "Margen ilustrativo",
+    "matchedShort": "Emparejado",
+    "engine": "Motor de reglas · simulación",
+    "update": "Actualización",
+    "signal": "Oportunidad seleccionada",
+    "combinedSpread": "Margen combinado de cuotas",
+    "spreadExplanation": "Calculado con las dos cuotas mostradas para resultados opuestos en esta demo simplificada de dos resultados.",
+    "movement": "Movimiento ilustrativo",
+    "sample": "Serie de ejemplo",
+    "chartAlt": "Serie ilustrativa de cuotas, no datos históricos del mercado",
+    "ruleBased": "Emparejado y comparado",
+    "ruleNote": "Dos fuentes · selecciones opuestas",
+    "demoNote": "Simulación interactiva con eventos y cuotas ficticios. Sin apuestas ni acceso real a las plataformas.",
+    "how": "Cómo funciona BotPlay",
+    "steps": [
       {
-        "title": "Un mismo partido en BetPlay y Pinnacle",
-        "body": "El monitor reconoce el evento en ambas plataformas, conserva los identificadores originales y muestra el estado de cada fuente. El porcentaje de matching indica confianza en que se trata del mismo partido, no probabilidad de ganar."
+        "title": "Conecta las fuentes.",
+        "body": "BetPlay mediante Kambi. Pinnacle mediante Arcadia."
       },
       {
-        "title": "BetPlay: cuotas y mercados suspendidos",
-        "body": "El bot obtiene datos de BetPlay mediante Kambi y normaliza sus cuotas. En esta captura distingue una selección abierta de otra suspendida, para evitar tratar un mercado bloqueado como una oportunidad disponible."
+        "title": "Encuentra el mismo evento.",
+        "body": "Normaliza nombres, mercados y selecciones entre plataformas."
       },
       {
-        "title": "Pinnacle: mercados y líneas de un evento",
-        "body": "La integración con Pinnacle (Arcadia) organiza moneyline, hándicaps y totales para inspeccionar las selecciones de cada evento. En este snapshot se muestran 22 grupos y 109 selecciones del partido elegido."
-      },
-      {
-        "title": "Validación antes de emitir una señal",
-        "body": "El comparador revisa si las selecciones y mercados son equivalentes y registra los eventos en un timeline. Los datos incompletos, desactualizados o incompatibles quedan señalados. En este ejemplo histórico el evento se bloquea y no se ofrece una oportunidad válida."
+        "title": "Destaca la señal.",
+        "body": "Compara cuotas y valida los datos antes de mostrar una oportunidad."
       }
     ],
-    "relevanceTitle": "Experiencia aplicable a una API de predicciones",
-    "relevance": "Este proyecto demuestra la parte de ingeniería necesaria para llevar un motor de análisis a una aplicación: integrar fuentes externas, normalizar entradas, ejecutar reglas, exponer resultados e informar al frontend. Es experiencia directamente aplicable a un servicio de predicción consumido por React Native.",
-    "experience": [
-      "Python y FastAPI: separación entre captura, matching, comparación, validación y endpoints REST.",
-      "Procesamiento de datos: modelos canónicos, reglas determinísticas, puntuaciones de calidad y pruebas existentes de cálculos y matching.",
-      "Entrega al frontend: API de consulta, actualizaciones mediante SSE, estado de fuentes y trazabilidad de señales."
-    ],
-    "scope": "Alcance actual: análisis de cuotas y detección de señales mediante reglas. BotPlay no demuestra un modelo ML validado para predecir ganadores. Un endpoint de predicción y confianza, Docker/AWS, la latencia inferior a 2 segundos y una cobertura del 90 % serían entregables y métricas a implementar y verificar para un nuevo proyecto."
+    "scope": "Desarrollado con Python y FastAPI. Esta demo rediseñada ilustra el flujo de matching y análisis por reglas de BotPlay; no predice resultados ni garantiza ganancias."
   }
 }
