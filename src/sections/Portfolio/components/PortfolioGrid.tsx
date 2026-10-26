@@ -12,13 +12,13 @@ export const PortfolioGrid = ({
   enableHoverGallery = false,
 }: PortfolioGridProps) => {
   const { t } = useTranslation('portfolio');
-  const { to, lang } = useLocale();
+  const { to } = useLocale();
 
   const PORTFOLIO_PROJECTS = [
     {
-      href: `/showcase/botplay/${lang === 'es' ? 'es.html' : 'index.html'}`,
-      imageUrl: '/showcase/botplay/assets/botplay-monitor.png',
-      galleryImages: ['/showcase/botplay/assets/botplay-monitor.png', '/showcase/botplay/assets/botplay-markets.png'],
+      href: to('/projects/botplay'),
+      imageUrl: '/screenshots/botplay-01-monitor.png',
+      galleryImages: ['/screenshots/botplay-01-monitor.png', '/screenshots/botplay-03-pinnacle.png'],
       title: t('projects.botplay.title'),
       description: t('projects.botplay.description'),
     },

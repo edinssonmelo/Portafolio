@@ -31,7 +31,7 @@
     },
     "botplay": {
       "title": "BotPlay Radar",
-      "description": "Sports-data monitoring with Python and FastAPI. Real screenshots, source validation and an interactive Aviator concept using simulated data."
+      "description": "Sports analytics bot for BetPlay and Pinnacle. Captures odds, matches events, compares markets and generates rule-based signals through a Python and FastAPI backend."
     }
   }
 }

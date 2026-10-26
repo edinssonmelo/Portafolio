@@ -26,6 +26,7 @@ const ROUTE_KEYS = {
 };
 
 const PROJECT_SLUGS = [
+  'botplay',
   'declaramelo',
   'openwhispr',
   'bernal-tech-b2b',
@@ -35,6 +36,7 @@ const PROJECT_SLUGS = [
 ];
 
 const PROJECT_SCREENSHOTS = {
+  botplay: `${siteUrl}/screenshots/botplay-01-monitor.png`,
   declaramelo: `${siteUrl}/screenshots/declaramelo-hero.png`,
   openwhispr: `${siteUrl}/screenshots/openwhispr-hero.png`,
   'bernal-tech-b2b': `${siteUrl}/screenshots/bernal-dashboard.png`,

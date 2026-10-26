@@ -8,6 +8,11 @@ export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
 > = {
+    "botplay-01-monitor.png": { width: 1265, height: 712 },
+    "botplay-02-betplay.png": { width: 1265, height: 712 },
+    "botplay-03-pinnacle.png": { width: 1265, height: 712 },
+    "botplay-04-validation.png": { width: 1265, height: 712 },
+    "botplay-walkthrough.gif": { width: 1265, height: 712 },
     "declaramelo-hero.png": { width: 1024, height: 580 },
     "declaramelo-features.png": { width: 1024, height: 580 },
     "declaramelo-process.png": { width: 1024, height: 580 },

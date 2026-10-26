@@ -68,6 +68,10 @@
     "overup": {
       "title": "OverUP | Edinsson Melo",
       "description": "Tienda e-commerce de streetwear oversized con catálogo, páginas de producto y checkout para OverUP en Colombia."
+    },
+    "botplay": {
+      "title": "BotPlay Radar: BetPlay & Pinnacle | Edinsson Melo",
+      "description": "Bot de análisis deportivo para BetPlay y Pinnacle. Captura cuotas, empareja partidos, compara mercados y genera señales mediante un backend en Python y FastAPI."
     }
   },
   "blogPostMeta": null,

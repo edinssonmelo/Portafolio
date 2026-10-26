@@ -112,5 +112,41 @@
         "pullQuote": "A clean store that reflects the brand and makes shopping oversized streetwear feel simple."
       }
     }
+  },
+  "botplay": {
+    "badge": "Engineering project",
+    "subtitle": "Sports analytics bot for BetPlay and Pinnacle. Captures odds, matches events, compares markets and generates rule-based signals through a Python and FastAPI backend.",
+    "walkthrough": "See the bot in action",
+    "play": "▶ Play walkthrough",
+    "pause": "Pause walkthrough",
+    "walkthroughAlt": "Actual BotPlay screens showing BetPlay and Pinnacle",
+    "captureNote": "Actual application screenshots using historical snapshots from June 21, 2026. The animation cycles through these captures; it is not a live connection. Stale-data warnings and validation blocks remain visible.",
+    "overview": "I built BotPlay to turn data from two platforms into an inspectable analysis: which events match, which odds arrived, which markets are available and when a signal should be rejected. The frontend makes that process visible, while the backend exposes the results through an API.",
+    "screens": [
+      {
+        "title": "The same event across BetPlay and Pinnacle",
+        "body": "The monitor identifies the event on both platforms, retains the original IDs and displays each source’s status. The matching percentage describes confidence that these are the same event, not the probability of winning."
+      },
+      {
+        "title": "BetPlay: odds and suspended markets",
+        "body": "The bot ingests BetPlay data through Kambi and normalizes its odds. This capture distinguishes an open selection from a suspended one, preventing a blocked market from being treated as an available opportunity."
+      },
+      {
+        "title": "Pinnacle: event markets and lines",
+        "body": "The Pinnacle (Arcadia) integration organizes moneyline, handicaps and totals so selections can be inspected per event. This snapshot shows 22 groups and 109 selections for the selected match."
+      },
+      {
+        "title": "Validate before generating a signal",
+        "body": "The comparator checks market and selection equivalence and records events in a timeline. Incomplete, stale or incompatible data is flagged. In this historical example, the event is blocked and no valid opportunity is presented."
+      }
+    ],
+    "relevanceTitle": "Relevant experience for a prediction API",
+    "relevance": "This project demonstrates the engineering needed to bring an analysis engine into an application: integrate external sources, normalize inputs, execute rules, expose results and update the frontend. That experience transfers directly to a prediction service consumed by React Native.",
+    "experience": [
+      "Python and FastAPI: separate ingestion, matching, comparison, validation and REST endpoints.",
+      "Data processing: canonical models, deterministic rules, quality scores and existing calculation and matching tests.",
+      "Frontend delivery: query APIs, SSE updates, source health and traceable signals."
+    ],
+    "scope": "Current scope: odds analysis and rule-based signal detection. BotPlay does not demonstrate a validated ML model for predicting winners. A prediction-and-confidence endpoint, Docker/AWS deployment, sub-two-second latency and 90% test coverage would be deliverables and metrics to implement and verify for a new project."
   }
 }

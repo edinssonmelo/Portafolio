@@ -39,3 +39,11 @@
 - Added a bilingual static case study at /showcase/botplay/index.html (EN) and es.html (ES), linked first in the portfolio grid.
 - Three actual BotPlay UI captures use built-in mock data. Existing validation warnings remain visible; no live gambling data or credentials included.
 - Distinguishes existing sports monitoring, timeline and alert code from proposed Aviator and WhatsApp integrations. Browser-only synthetic round demo, no prediction claims.
+
+
+## BotPlay portfolio revision (2026-10-26)
+
+- Replaced the standalone marketing design with a native /en/projects/botplay and /es/projects/botplay page using existing portfolio primitives.
+- Large real captures from June 21 historical BetPlay/Pinnacle snapshots, lightbox and optional animated screenshot walkthrough. Removed the unrelated Aviator simulation.
+- Shows source integration, FastAPI, canonical data, rule-based analytics and frontend delivery as experience relevant to prediction APIs. Does not claim ML accuracy, predictive confidence, AWS latency or 90% coverage without validation.
+- User explicitly requested publication in the latest message, superseding the earlier no-production restriction.
