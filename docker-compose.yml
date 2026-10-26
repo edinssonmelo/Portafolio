@@ -26,7 +26,26 @@ services:
       - traefik.http.routers.portafolio.rule=Host(`edinssonmelo.com`) || Host(`www.edinssonmelo.com`)
       - traefik.http.routers.portafolio.entrypoints=web
       - traefik.http.services.portafolio.loadbalancer.server.port=80
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: portafolio-api:latest
+    container_name: portafolio-api
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://postgres:bc49738e9a5c6ec173ed1606f97767a2fb67a58be4d9367b@postgres:5432/postgres
+      ADMIN_SECRET: edinsson2026
+    networks:
+      - net_internal
+      - net_data
 
 networks:
   net_internal:
+    external: true
+  net_data:
     external: true
