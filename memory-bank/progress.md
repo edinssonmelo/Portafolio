@@ -61,3 +61,9 @@
 - Fixed BotPlay home/project cover and social image: actual original app screenshot, no portfolio header.
 - Ran original BotPlay FastAPI/matching/opportunity engine with labeled synthetic tennis fixtures. Captured populated live/prematch radar and cross-platform matching. No source changes to BotPlay, live accounts or credentials.
 - Two-image gallery is primary, with enlargement; redesigned interactive concept is optional and collapsed. Real app UI and test data are distinguished explicitly.
+
+
+## Standard BotPlay project template (2026-10-26)
+
+- Latest user correction: use exactly the same project detail format as other projects. BotPlay now uses the existing ProjectDetail, PageHeader, image carousel/lightbox and ProjectStory components.
+- Removed the bespoke page, dashboard simulation and special stylesheet. Two original app screenshots remain, with concise bilingual description, pipeline and stack. Home cover stays the actual populated original radar screenshot.

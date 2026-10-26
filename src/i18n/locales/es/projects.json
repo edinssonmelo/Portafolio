@@ -111,69 +111,21 @@
         ],
         "pullQuote": "Una tienda limpia que refleja la marca y hace que comprar streetwear oversized se sienta simple."
       }
-    }
-  },
-  "botplayDemo": {
-    "back": "Todos los proyectos",
-    "project": "Showcase interactivo",
-    "lead": "Dos plataformas. Una visión clara del mercado. Un bot que empareja eventos, compara cuotas y pone las oportunidades a la vista.",
-    "demoLabel": "Panel interactivo de BotPlay con datos simulados",
-    "simulated": "DATOS SIMULADOS",
-    "pause": "Pausar simulación",
-    "play": "Reanudar simulación",
-    "reset": "Reiniciar demo",
-    "workspace": "TU ESPACIO DE ANÁLISIS",
-    "radarTitle": "El mercado, de un vistazo.",
-    "radarLead": "Eventos emparejados. Cuotas comparadas. Señales claras.",
-    "demoSources": "Fuentes de demo · sin conexión real",
-    "matched": "Eventos emparejados",
-    "sameEvent": "En ambas plataformas",
-    "opportunities": "Oportunidades",
-    "detected": "Señales por reglas",
-    "bestSpread": "Mejor margen ilustrativo",
-    "illustrative": "Cálculo de demo",
-    "opportunityList": "Radar de oportunidades",
-    "updating": "Simulación activa",
-    "paused": "Simulación pausada",
-    "filter": "Filtrar eventos de demo por deporte",
-    "all": "Todos",
-    "football": "Fútbol",
-    "tennis": "Tenis",
-    "basketball": "Básquet",
-    "spread": "Margen ilustrativo",
-    "matchedShort": "Emparejado",
-    "engine": "Motor de reglas · simulación",
-    "update": "Actualización",
-    "signal": "Oportunidad seleccionada",
-    "combinedSpread": "Margen combinado de cuotas",
-    "spreadExplanation": "Calculado con las dos cuotas mostradas para resultados opuestos en esta demo simplificada de dos resultados.",
-    "movement": "Movimiento ilustrativo",
-    "sample": "Serie de ejemplo",
-    "chartAlt": "Serie ilustrativa de cuotas, no datos históricos del mercado",
-    "ruleBased": "Emparejado y comparado",
-    "ruleNote": "Dos fuentes · selecciones opuestas",
-    "demoNote": "Simulación interactiva con eventos y cuotas ficticios. Sin apuestas ni acceso real a las plataformas.",
-    "how": "Cómo funciona BotPlay",
-    "steps": [
-      {
-        "title": "Conecta las fuentes.",
-        "body": "BetPlay mediante Kambi. Pinnacle mediante Arcadia."
-      },
-      {
-        "title": "Encuentra el mismo evento.",
-        "body": "Normaliza nombres, mercados y selecciones entre plataformas."
-      },
-      {
-        "title": "Destaca la señal.",
-        "body": "Compara cuotas y valida los datos antes de mostrar una oportunidad."
+    },
+    "botplay": {
+      "subtitle": "Bot de análisis deportivo que conecta BetPlay y Pinnacle, compara cuotas y detecta oportunidades con Python y FastAPI.",
+      "aboutText": "Desarrollé BotPlay para reunir datos de BetPlay (Kambi) y Pinnacle (Arcadia) en un mismo panel de análisis.",
+      "thingsIDid": "Construí la captura de datos, el emparejamiento de eventos, el comparador de cuotas, la API y el dashboard.",
+      "projectDetails": "El flujo separa la captura, normalización, matching, comparación y validación antes de mostrar una oportunidad.",
+      "outcome": "Monitoreo en vivo y prepartido con alertas e inspección por evento.",
+      "story": {
+        "hook": "De dos fuentes de datos a una oportunidad verificable.",
+        "body": [
+          "BotPlay analiza las cuotas de Pinnacle como referencia y las contrasta con BetPlay para identificar diferencias y oportunidades. El radar reúne los eventos en vivo y prepartido en una sola vista.",
+          "Construí el flujo completo: captura de datos, normalización de mercados, emparejamiento de partidos, comparación de cuotas y validación de señales. Python y FastAPI exponen el análisis por API, mientras el dashboard se actualiza mediante SSE.",
+          "Las imágenes muestran la aplicación original y su motor funcionando con datos de prueba. Las etiquetas MOCK y DEMO identifican ese escenario. La primera captura muestra las oportunidades calculadas; la segunda, el matching entre plataformas."
+        ]
       }
-    ],
-    "scope": "Desarrollado con Python y FastAPI. Esta demo rediseñada ilustra el flujo de matching y análisis por reglas de BotPlay; no predice resultados ni garantiza ganancias.",
-    "realTitle": "BotPlay en funcionamiento",
-    "captureRadar": "Radar de oportunidades",
-    "captureMatching": "Matching entre plataformas",
-    "enlarge": "Ampliar captura de la aplicación",
-    "captureNote": "Capturas de la aplicación original ejecutando su motor con datos de prueba. Las etiquetas MOCK / DEMO identifican el escenario simulado; no es una sesión de apuestas en vivo.",
-    "optionalDemo": "Probar también el concepto interactivo"
+    }
   }
 }

@@ -31,7 +31,7 @@
     },
     "botplay": {
       "title": "BotPlay Radar",
-      "description": "Dos plataformas. Una visión clara del mercado. Un bot que empareja eventos, compara cuotas y pone las oportunidades a la vista."
+      "description": "Bot de análisis deportivo que conecta BetPlay y Pinnacle, compara cuotas y detecta oportunidades con Python y FastAPI."
     }
   }
 }

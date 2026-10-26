@@ -111,69 +111,21 @@
         ],
         "pullQuote": "A clean store that reflects the brand and makes shopping oversized streetwear feel simple."
       }
-    }
-  },
-  "botplayDemo": {
-    "back": "All projects",
-    "project": "Interactive project showcase",
-    "lead": "Two platforms. One clear view of the market. A bot that matches events, compares odds and brings opportunities into focus.",
-    "demoLabel": "BotPlay interactive dashboard with simulated data",
-    "simulated": "SIMULATED DATA",
-    "pause": "Pause simulation",
-    "play": "Resume simulation",
-    "reset": "Reset demo",
-    "workspace": "YOUR ANALYSIS WORKSPACE",
-    "radarTitle": "The market, at a glance.",
-    "radarLead": "Matched events. Compared odds. Clear signals.",
-    "demoSources": "Demo feeds · no live connection",
-    "matched": "Matched events",
-    "sameEvent": "Across both platforms",
-    "opportunities": "Opportunities",
-    "detected": "Rule-based signals",
-    "bestSpread": "Best illustrative margin",
-    "illustrative": "Demo calculation",
-    "opportunityList": "Opportunity radar",
-    "updating": "Simulation running",
-    "paused": "Simulation paused",
-    "filter": "Filter demo events by sport",
-    "all": "All sports",
-    "football": "Football",
-    "tennis": "Tennis",
-    "basketball": "Basketball",
-    "spread": "Illustrative margin",
-    "matchedShort": "Matched",
-    "engine": "Rules engine · simulation",
-    "update": "Update",
-    "signal": "Selected opportunity",
-    "combinedSpread": "Combined odds margin",
-    "spreadExplanation": "Calculated from the two displayed odds for opposite outcomes in this simplified two-outcome demo.",
-    "movement": "Illustrative movement",
-    "sample": "Sample series",
-    "chartAlt": "Illustrative sample odds movement, not historical market data",
-    "ruleBased": "Matched and compared",
-    "ruleNote": "Two sources · opposite selections",
-    "demoNote": "Interactive simulation using fictional events and odds. No bets or live platform access.",
-    "how": "How BotPlay works",
-    "steps": [
-      {
-        "title": "Connect the sources.",
-        "body": "BetPlay through Kambi. Pinnacle through Arcadia."
-      },
-      {
-        "title": "Find the same event.",
-        "body": "Normalize names, markets and selections across platforms."
-      },
-      {
-        "title": "Surface the signal.",
-        "body": "Compare odds and validate data before highlighting an opportunity."
+    },
+    "botplay": {
+      "subtitle": "Sports analytics bot connecting BetPlay and Pinnacle to compare odds and detect opportunities with Python and FastAPI.",
+      "aboutText": "I built BotPlay to bring BetPlay (Kambi) and Pinnacle (Arcadia) data into one analysis dashboard.",
+      "thingsIDid": "Built the ingestion pipeline, event matching, odds comparison, API and monitoring dashboard.",
+      "projectDetails": "The workflow separates ingestion, normalization, matching, comparison and validation before surfacing an opportunity.",
+      "outcome": "Live and prematch monitoring with alerts and event inspection.",
+      "story": {
+        "hook": "From two data sources to a verifiable opportunity.",
+        "body": [
+          "BotPlay analyzes Pinnacle odds as a reference and compares them with BetPlay to identify differences and opportunities. The radar brings live and prematch events into one view.",
+          "I built the full workflow: data ingestion, market normalization, event matching, odds comparison and signal validation. Python and FastAPI expose the analysis through an API, while the dashboard updates through SSE.",
+          "The images show the original application and its engine running with test data. MOCK and DEMO labels identify that scenario. The first capture shows calculated opportunities; the second shows cross-platform event matching."
+        ]
       }
-    ],
-    "scope": "Built with Python and FastAPI. This redesigned demo illustrates BotPlay’s matching and rule-based analysis workflow; it does not predict match results or guarantee returns.",
-    "realTitle": "BotPlay in action",
-    "captureRadar": "Opportunity radar",
-    "captureMatching": "Cross-platform matching",
-    "enlarge": "Enlarge application screenshot",
-    "captureNote": "Screenshots of the original application running its engine with test data. MOCK / DEMO labels identify the simulated scenario; this is not a live betting session.",
-    "optionalDemo": "Also try the interactive concept"
+    }
   }
 }

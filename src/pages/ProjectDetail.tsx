@@ -46,6 +46,21 @@ const projects: Record<string, {
         image: string;
     };
 }> = {
+    "botplay": {
+        title: "BotPlay Radar",
+        subtitle: "Sports data analysis across BetPlay and Pinnacle, built with Python and FastAPI.",
+        livePreviewUrl: "",
+        aboutText: "A bot that captures odds from BetPlay and Pinnacle, matches events and identifies opportunities through rule-based analysis.",
+        date: "2026",
+        client: "Personal project",
+        services: ["Python", "FastAPI", "REST API", "SSE", "Data integration"],
+        projectDetails: "Source ingestion, canonical market normalization, event matching, odds comparison, validation and opportunity alerts.",
+        testimonial: { quote: "", author: "", role: "" },
+        thingsIDid: "Built the ingestion pipeline, analysis engines, API and monitoring dashboard.",
+        mainImage: "/screenshots/botplay-app-radar.png",
+        images: ["/screenshots/botplay-app-radar.png", "/screenshots/botplay-app-matching.png"],
+    },
+
     "snowlake-social-media-website": {
         title: "Snowlake Social Media Website",
         subtitle: "Snowlake is a sleek, product-driven site for a social media platform, built with clean UI and scalable Framer CMS.",
@@ -305,7 +320,7 @@ const getI18nProjectData = (
     slug: string,
     t: (key: string, opts?: Record<string, unknown>) => unknown,
 ): I18nProjectData | null => {
-    if (!['declaramelo', 'openwhispr', 'bernal-tech-b2b', 'wordjet-ai', 'superapp-mobile', 'overup'].includes(slug)) {
+    if (!['botplay', 'declaramelo', 'openwhispr', 'bernal-tech-b2b', 'wordjet-ai', 'superapp-mobile', 'overup'].includes(slug)) {
         return null;
     }
     const story = t(`data.${slug}.story`, { returnObjects: true }) as I18nProjectData['story'] | undefined;

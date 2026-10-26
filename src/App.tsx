@@ -10,7 +10,6 @@ import { Stats } from "@/sections/Stats";
 import { CTAContact } from "@/sections/CTAContact";
 import { Footer } from "@/sections/Footer";
 import { ProjectsPage } from "@/pages/ProjectsPage";
-import { BotPlayPage } from '@/pages/BotPlayPage';
 import { ProjectDetail } from "@/pages/ProjectDetail";
 import { AboutPage } from "@/pages/AboutPage";
 import { BlogPage } from "@/pages/BlogPage";
@@ -143,7 +142,6 @@ export const App = () => {
             </Route>
             <Route path="projects" element={<Outlet />}>
               <Route index element={<ProjectsPage />} />
-              <Route path="botplay" element={<BotPlayPage />} />
               <Route path=":slug" element={<ErrorBoundary><ProjectDetail /></ErrorBoundary>} />
             </Route>
             <Route path="cotizacion/sistema-barber" element={<CotizacionPage />} />
