@@ -5,6 +5,8 @@ import { Activity, ArrowLeft, ArrowUpRight, Check, ChevronRight, Pause, Play, Ro
 import { Header } from '@/sections/Header';
 import { Footer } from '@/sections/Footer';
 import { useLocale } from '@/hooks/useLocale';
+import { ProjectImageLightbox } from '@/components/ProjectImageLightbox';
+import { screenshotSrc } from '@/config/screenshotMeta';
 import './BotPlayPage.css';
 
 type DemoMatch = { id: string; sport: string; league: string; home: string; away: string; initials: [string,string]; score: string; minute: string; odds: [number, number]; color: string };
@@ -22,6 +24,9 @@ export const BotPlayPage = () => {
   const tr = (key: string) => t(`botplayDemo.${key}`);
   const [running, setRunning] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const [tick, setTick] = useState(0);
+  const [capture, setCapture] = useState(0);
+  const [lightbox, setLightbox] = useState<number | null>(null);
+  const captures = ['/screenshots/botplay-app-radar.png', '/screenshots/botplay-app-matching.png'];
   const [sport, setSport] = useState('all');
   const [selected, setSelected] = useState('football');
   useEffect(() => { if (!running) return; const timer = window.setInterval(() => setTick(n => n + 1), 3500); return () => window.clearInterval(timer); }, [running]);
@@ -37,6 +42,12 @@ export const BotPlayPage = () => {
         <Link to={to('/projects')} className="bp-back"><ArrowLeft size={14}/>{tr('back')}</Link>
         <div className="bp-heading"><div><p className="bp-kicker">PYTHON / FASTAPI / REAL-TIME DATA</p><h1>BotPlay <span>Radar</span></h1><p className="bp-lead">{tr('lead')}</p></div><span className="bp-project-label">{tr('project')}</span></div>
       </div>
+      <section className="bp-real-captures" aria-label={tr('realTitle')}>
+        <div className="bp-captures-heading"><h2>{tr('realTitle')}</h2><div>{[0,1].map(i => <button type="button" key={i} aria-pressed={capture === i} onClick={() => setCapture(i)}>{tr(i === 0 ? 'captureRadar' : 'captureMatching')}</button>)}</div></div>
+        <button type="button" className="bp-capture-image" onClick={() => setLightbox(capture)} aria-label={tr('enlarge')}><img src={screenshotSrc(captures[capture])} alt={tr(capture === 0 ? 'captureRadar' : 'captureMatching')} width={1265} height={712}/></button>
+        <p>{tr('captureNote')}</p>
+      </section>
+      <details className="bp-optional-demo"><summary>{tr('optionalDemo')}</summary>
       <section className="bp-console" aria-label={tr('demoLabel')}>
         <div className="bp-console-header"><div className="bp-console-brand"><span className="bp-icon"><Activity size={21}/></span><div><strong>BotPlay</strong><span>MARKET RADAR</span></div></div><div className="bp-demo-badge"><span/>{tr('simulated')}</div><div className="bp-controls"><button onClick={() => setRunning(!running)} aria-label={tr(running ? 'pause' : 'play')} title={tr(running ? 'pause' : 'play')}>{running ? <Pause size={15}/> : <Play size={15}/>}</button><button onClick={reset} aria-label={tr('reset')} title={tr('reset')}><RotateCcw size={15}/></button></div></div>
         <div className="bp-console-body">
@@ -63,11 +74,13 @@ export const BotPlayPage = () => {
           <div className="bp-console-note"><span>{tr('demoNote')}</span><span>BetPlay × Pinnacle</span></div>
         </div>
       </section>
+      </details>
       <section className="bp-how" aria-label={tr('how')}>
         {[0,1,2].map(i => <div key={i}><span>0{i+1}</span><div><h2>{tr(`steps.${i}.title`)}</h2><p>{tr(`steps.${i}.body`)}</p></div></div>)}
       </section>
       <p className="bp-bottom-note">{tr('scope')}</p>
     </main>
     <Footer />
+    {lightbox !== null && <ProjectImageLightbox images={captures} initialIndex={lightbox} title="BotPlay Radar" onClose={() => setLightbox(null)} />}
   </div>;
 };

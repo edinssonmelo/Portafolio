@@ -8,6 +8,8 @@ export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
 > = {
+    "botplay-app-radar.png": { width: 1265, height: 712 },
+    "botplay-app-matching.png": { width: 1265, height: 712 },
     "botplay-demo.png": { width: 899, height: 658 },
     "botplay-01-monitor.png": { width: 1265, height: 712 },
     "botplay-02-betplay.png": { width: 1265, height: 712 },

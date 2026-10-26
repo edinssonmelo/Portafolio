@@ -54,3 +54,10 @@
 - Replaced long screenshot sections with one responsive interactive dashboard: matched events, opposite-outcome odds and calculated illustrative margins.
 - Fictional data is explicit, updates every 3.5 seconds, with pause/reset, sport filters and selected-opportunity detail. No network calls, betting, live access or prediction claims.
 - Three short workflow captions replace the previous detailed explanation. ES/EN parity preserved.
+
+
+## Actual application captures (2026-10-26)
+
+- Fixed BotPlay home/project cover and social image: actual original app screenshot, no portfolio header.
+- Ran original BotPlay FastAPI/matching/opportunity engine with labeled synthetic tennis fixtures. Captured populated live/prematch radar and cross-platform matching. No source changes to BotPlay, live accounts or credentials.
+- Two-image gallery is primary, with enlargement; redesigned interactive concept is optional and collapsed. Real app UI and test data are distinguished explicitly.

@@ -168,6 +168,12 @@
         "body": "Compare odds and validate data before highlighting an opportunity."
       }
     ],
-    "scope": "Built with Python and FastAPI. This redesigned demo illustrates BotPlay’s matching and rule-based analysis workflow; it does not predict match results or guarantee returns."
+    "scope": "Built with Python and FastAPI. This redesigned demo illustrates BotPlay’s matching and rule-based analysis workflow; it does not predict match results or guarantee returns.",
+    "realTitle": "BotPlay in action",
+    "captureRadar": "Opportunity radar",
+    "captureMatching": "Cross-platform matching",
+    "enlarge": "Enlarge application screenshot",
+    "captureNote": "Screenshots of the original application running its engine with test data. MOCK / DEMO labels identify the simulated scenario; this is not a live betting session.",
+    "optionalDemo": "Also try the interactive concept"
   }
 }

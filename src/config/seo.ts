@@ -88,7 +88,7 @@ const PROJECT_SCREENSHOTS: Record<(typeof PROJECT_SLUGS)[number], string> = {
     'wordjet-ai': 'https://edinssonmelo.com/screenshots/wordjet-landing.png',
     'superapp-mobile': 'https://edinssonmelo.com/screenshots/sura-explora.png',
     'overup': 'https://edinssonmelo.com/screenshots/overup-hero.png',
-    'botplay': 'https://edinssonmelo.com/screenshots/botplay-demo.png',
+    'botplay': 'https://edinssonmelo.com/screenshots/botplay-app-radar.png',
 };
 
 export const getSEOConfig = (

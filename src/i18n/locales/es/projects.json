@@ -168,6 +168,12 @@
         "body": "Compara cuotas y valida los datos antes de mostrar una oportunidad."
       }
     ],
-    "scope": "Desarrollado con Python y FastAPI. Esta demo rediseñada ilustra el flujo de matching y análisis por reglas de BotPlay; no predice resultados ni garantiza ganancias."
+    "scope": "Desarrollado con Python y FastAPI. Esta demo rediseñada ilustra el flujo de matching y análisis por reglas de BotPlay; no predice resultados ni garantiza ganancias.",
+    "realTitle": "BotPlay en funcionamiento",
+    "captureRadar": "Radar de oportunidades",
+    "captureMatching": "Matching entre plataformas",
+    "enlarge": "Ampliar captura de la aplicación",
+    "captureNote": "Capturas de la aplicación original ejecutando su motor con datos de prueba. Las etiquetas MOCK / DEMO identifican el escenario simulado; no es una sesión de apuestas en vivo.",
+    "optionalDemo": "Probar también el concepto interactivo"
   }
 }
