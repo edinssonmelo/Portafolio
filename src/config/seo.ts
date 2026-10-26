@@ -58,7 +58,8 @@ type RouteKey =
     | 'blog'
     | 'projects'
     | 'cotizacion-sistema-barber'
-    | 'planes';
+    | 'planes'
+    | 'servidor-asterisk';
 
 const ROUTE_KEYS: Record<string, RouteKey> = {
     '/': 'home',
@@ -67,6 +68,7 @@ const ROUTE_KEYS: Record<string, RouteKey> = {
     '/projects': 'projects',
     '/cotizacion/sistema-barber': 'cotizacion-sistema-barber',
     '/planes': 'planes',
+    '/servidor-asterisk': 'servidor-asterisk',
 };
 
 const PROJECT_SLUGS = [

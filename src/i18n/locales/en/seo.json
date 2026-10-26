@@ -29,6 +29,10 @@
     "planes": {
       "title": "Web Development Plans - Essential, Professional, Premium | Edinsson Melo",
       "description": "Web development and digital branding plans: Essential ($1,000,000 COP), Professional ($2,300,000 COP), Premium ($4,400,000 COP). Services include domain, hosting, SSL, SEO, e-commerce, and more."
+    },
+    "servidor-asterisk": {
+      "title": "Asterisk & Zoiper Dedicated Server Subscription | Edinsson Melo",
+      "description": "Dedicated 24/7 private server for Asterisk & Zoiper VoIP telephony bridging. Continuous monitoring, maintenance, and expert technical support."
     }
   },
   "manifest": {

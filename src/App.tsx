@@ -16,6 +16,7 @@ import { BlogPage } from "@/pages/BlogPage";
 import { BlogPostPage } from "@/pages/BlogPostPage";
 import { CotizacionPage } from "@/pages/CotizacionPage";
 import { PlanesPage } from "@/pages/PlanesPage";
+import { ServidorAsteriskPage } from "@/pages/ServidorAsteriskPage";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEO/SEOHead";
 import { StructuredData } from "@/components/SEO/StructuredData";
@@ -145,8 +146,10 @@ export const App = () => {
             </Route>
             <Route path="cotizacion/sistema-barber" element={<CotizacionPage />} />
             <Route path="planes" element={<PlanesPage />} />
+            <Route path="servidor-asterisk" element={<ServidorAsteriskPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="/servidor-asterisk" element={<Navigate to="/es/servidor-asterisk" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <div className="box-border caret-transparent"></div>

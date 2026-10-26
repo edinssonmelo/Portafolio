@@ -22,6 +22,7 @@ const ROUTE_KEYS = {
   '/projects': 'projects',
   '/cotizacion/sistema-barber': 'cotizacion-sistema-barber',
   '/planes': 'planes',
+  '/servidor-asterisk': 'servidor-asterisk',
 };
 
 const PROJECT_SLUGS = [
