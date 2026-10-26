@@ -167,9 +167,9 @@ app.post('/api/send-email', async (req, res) => {
     }
 });
 
-// Serve React App
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// Fallback 404 for unknown API routes
+app.use((req, res) => {
+    res.status(404).json({ ok: false, error: 'Ruta no encontrada en la API.' });
 });
 
 app.listen(PORT, () => {
