@@ -32,3 +32,10 @@
 
 - Logo black box on production if old assets cached: redeploy clears it; logos must stay `bg-transparent`
 - SURA screenshots native resolution is small (140px wide): display uses native size, no upscale
+
+
+## BotPlay showcase (2026-10-26)
+
+- Added a bilingual static case study at /showcase/botplay/index.html (EN) and es.html (ES), linked first in the portfolio grid.
+- Three actual BotPlay UI captures use built-in mock data. Existing validation warnings remain visible; no live gambling data or credentials included.
+- Distinguishes existing sports monitoring, timeline and alert code from proposed Aviator and WhatsApp integrations. Browser-only synthetic round demo, no prediction claims.

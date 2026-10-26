@@ -12,9 +12,16 @@ export const PortfolioGrid = ({
   enableHoverGallery = false,
 }: PortfolioGridProps) => {
   const { t } = useTranslation('portfolio');
-  const { to } = useLocale();
+  const { to, lang } = useLocale();
 
   const PORTFOLIO_PROJECTS = [
+    {
+      href: `/showcase/botplay/${lang === 'es' ? 'es.html' : 'index.html'}`,
+      imageUrl: '/showcase/botplay/assets/botplay-monitor.png',
+      galleryImages: ['/showcase/botplay/assets/botplay-monitor.png', '/showcase/botplay/assets/botplay-markets.png'],
+      title: t('projects.botplay.title'),
+      description: t('projects.botplay.description'),
+    },
     {
       href: to('/projects/declaramelo'),
       imageUrl: "/screenshots/declaramelo-hero.png",

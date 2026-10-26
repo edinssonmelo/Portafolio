@@ -28,6 +28,10 @@
     "overup": {
       "title": "OverUP",
       "description": "OverUP is an online store for oversized streetwear in Colombia. The shop brings together brand storytelling, product catalog, product detail pages, and a smooth purchase flow for customers."
+    },
+    "botplay": {
+      "title": "BotPlay Radar",
+      "description": "Sports-data monitoring with Python and FastAPI. Real screenshots, source validation and an interactive Aviator concept using simulated data."
     }
   }
 }

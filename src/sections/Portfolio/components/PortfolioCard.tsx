@@ -77,9 +77,15 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
     return () => window.clearInterval(timer);
   }, [isHovering, canCycle, images.length]);
 
+  const isStaticCaseStudy = routePath.endsWith('.html');
+  const openCaseStudy = () => {
+    if (isStaticCaseStudy) window.location.assign(routePath);
+    else navigate(routePath);
+  };
+
   const handleImageClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate(routePath);
+    openCaseStudy();
   };
 
   const handleMouseEnter = () => {
@@ -99,7 +105,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
         role="button"
         tabIndex={0}
         onClick={handleImageClick}
-        onKeyDown={(e) => e.key === "Enter" && navigate(routePath)}
+        onKeyDown={(e) => e.key === "Enter" && openCaseStudy()}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className="relative flex aspect-[16/9] w-full cursor-pointer items-center justify-center overflow-hidden rounded-[20px] border-2 border-teal-300 bg-neutral-100"
@@ -132,7 +138,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
       <div className="relative z-10 flex w-full flex-col gap-3 md:gap-4">
         <div className="flex flex-col gap-2">
           <h3 className={typographyClasses.cardTitle}>
-            <Link to={routePath} className={portfolioLinkClassName}>
+            <Link to={routePath} reloadDocument={isStaticCaseStudy} className={portfolioLinkClassName}>
               {props.title}
             </Link>
           </h3>
@@ -155,6 +161,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
 
         <Link
           to={routePath}
+          reloadDocument={isStaticCaseStudy}
           className="group inline-flex w-fit items-center gap-2 text-base tracking-[-0.36px] font-dm_sans md:text-lg"
         >
           <span className={portfolioLinkClassName}>{t('buttons.viewCaseStudy')}</span>
