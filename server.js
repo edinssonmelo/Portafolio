@@ -72,7 +72,7 @@ app.post('/api/suscripciones', async (req, res) => {
                 fecha_inicio, fecha_fin, dias_vigencia, estado, mp_link, notas
             ) VALUES (
                 $1, $2, $3, $4, $5, $6,
-                CURRENT_DATE, CURRENT_DATE + ($7 || ' days')::interval, $7, 'activo', $8, $9
+                CURRENT_DATE, (CURRENT_DATE + ($7 * INTERVAL '1 day'))::date, $7, 'activo', $8, $9
             ) RETURNING 
                 id, nombre, email, telefono, empresa_proyecto, plan, monto_cop, 
                 fecha_inicio, fecha_fin, dias_vigencia, estado, mp_link, created_at;
