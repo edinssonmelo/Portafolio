@@ -184,7 +184,7 @@ const projects: Record<string, {
             "/screenshots/wordjet-editor.png"
         ],
         nextProject: { slug: "superapp-mobile", title: "SuperApp Mobile", image: "/screenshots/sura-explora.png" },
-        previousProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-dashboard.png" }
+        previousProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-catalog.png" }
     },
     "overup": {
         title: "OverUP",
@@ -252,11 +252,11 @@ const projects: Record<string, {
         },
         thingsIDid: "",
         story: undefined,
-        mainImage: "/screenshots/bernal-dashboard.png",
+        mainImage: "/screenshots/bernal-catalog.png",
         images: [
-            "/screenshots/bernal-dashboard.png",
-            "/screenshots/bernal-login.png",
             "/screenshots/bernal-catalog.png",
+            "/screenshots/bernal-login.png",
+            "/screenshots/bernal-dashboard.png",
             "/screenshots/bernal-product.png"
         ],
         previousProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-product-demo-current.png" },
@@ -285,7 +285,7 @@ const projects: Record<string, {
             "/screenshots/openwhispr-desktop-current.png",
         ],
         previousProject: { slug: "declaramelo", title: "Declaramelo", image: "/screenshots/declaramelo-hero.png" },
-        nextProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-dashboard.png" }
+        nextProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-catalog.png" }
     },
     "superapp-mobile": {
         title: "SuperApp Mobile",

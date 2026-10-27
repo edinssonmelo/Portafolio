@@ -41,7 +41,7 @@ const PROJECT_SCREENSHOTS = {
   botplay: `${siteUrl}/screenshots/botplay-app-radar.png`,
   declaramelo: `${siteUrl}/screenshots/declaramelo-hero.png`,
   openwhispr: `${siteUrl}/screenshots/openwhispr-product-demo-current.png`,
-  'bernal-tech-b2b': `${siteUrl}/screenshots/bernal-dashboard.png`,
+  'bernal-tech-b2b': `${siteUrl}/screenshots/bernal-catalog.png`,
   'wordjet-ai': `${siteUrl}/screenshots/wordjet-landing.png`,
   'superapp-mobile': `${siteUrl}/screenshots/sura-explora.png`,
   overup: `${siteUrl}/screenshots/overup-hero.png`,

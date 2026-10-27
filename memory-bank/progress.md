@@ -100,3 +100,8 @@
 
 - Home now shows six projects: BotPlay, OpenWhispr, PCStore, Bernal Tech B2B, Wordjet.ai, then Declaramelo.
 - Added the two requested existing projects to the visible home selection and placed Declaramelo last in that selection.
+
+
+## Bernal Tech cover (2026-10-26)
+
+- Promoted the catalog screenshot (previously third) to home card, project first slide, related-project previews and social metadata. Other gallery images retained.

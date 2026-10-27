@@ -44,11 +44,11 @@ export const PortfolioGrid = ({
     },
     {
       href: to('/projects/bernal-tech-b2b'),
-      imageUrl: "/screenshots/bernal-dashboard.png",
+      imageUrl: "/screenshots/bernal-catalog.png",
       galleryImages: [
-        "/screenshots/bernal-dashboard.png",
-        "/screenshots/bernal-login.png",
         "/screenshots/bernal-catalog.png",
+        "/screenshots/bernal-login.png",
+        "/screenshots/bernal-dashboard.png",
         "/screenshots/bernal-product.png",
       ],
       imageSizes: "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
