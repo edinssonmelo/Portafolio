@@ -90,7 +90,7 @@ const PROJECT_SCREENSHOTS: Record<(typeof PROJECT_SLUGS)[number], string> = {
     'superapp-mobile': 'https://edinssonmelo.com/screenshots/sura-explora.png',
     'overup': 'https://edinssonmelo.com/screenshots/overup-hero.png',
     'botplay': 'https://edinssonmelo.com/screenshots/botplay-app-radar.png',
-    'pcstore': 'https://edinssonmelo.com/screenshots/pcstore-landing.png',
+    'pcstore': 'https://edinssonmelo.com/screenshots/pcstore-configurator.png',
 };
 
 export const getSEOConfig = (

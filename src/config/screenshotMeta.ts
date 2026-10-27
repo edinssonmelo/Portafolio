@@ -8,6 +8,7 @@ export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
 > = {
+    "pcstore-ultra.png": { width: 3024, height: 1572 },
     "pcstore-setups.png": { width: 3004, height: 1948 },
     "pcstore-landing.png": { width: 3022, height: 1964 },
     "pcstore-configurator.png": { width: 3024, height: 1662 },

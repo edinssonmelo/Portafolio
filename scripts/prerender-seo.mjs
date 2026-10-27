@@ -37,7 +37,7 @@ const PROJECT_SLUGS = [
 ];
 
 const PROJECT_SCREENSHOTS = {
-  pcstore: `${siteUrl}/screenshots/pcstore-landing.png`,
+  pcstore: `${siteUrl}/screenshots/pcstore-configurator.png`,
   botplay: `${siteUrl}/screenshots/botplay-app-radar.png`,
   declaramelo: `${siteUrl}/screenshots/declaramelo-hero.png`,
   openwhispr: `${siteUrl}/screenshots/openwhispr-product-demo-current.png`,

@@ -82,3 +82,9 @@
 - Three original user screenshots: landing cover, setup catalog and Profesional component configurator. Native dimensions preserved.
 - Featured after OpenWhispr so it appears on the home grid; added bilingual copy, live link, SEO/social image, prerender routes and sitemap entries.
 - Reviewed live PCStore landing and Profesional detail to ground copy in visible functionality. No new claims about implementation stack or checkout/payment support.
+
+
+## PCStore cover framing (2026-10-26)
+
+- Configurator screenshot is now the home card, project first slide and social preview. Its native aspect ratio is close to the shared 16:9 card, reducing empty framing.
+- Added the new user-supplied Ultra image as slide 2; setups remain slide 3. Shared card/template unchanged.

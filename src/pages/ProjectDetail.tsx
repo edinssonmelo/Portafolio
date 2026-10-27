@@ -57,8 +57,8 @@ const projects: Record<string, {
         projectDetails: "Setup catalog, component galleries, configurable builds and quote request flow.",
         testimonial: { quote: "", author: "", role: "" },
         thingsIDid: "Built the storefront experience around curated setups and detailed component selection.",
-        mainImage: "/screenshots/pcstore-landing.png",
-        images: ["/screenshots/pcstore-landing.png", "/screenshots/pcstore-setups.png", "/screenshots/pcstore-configurator.png"],
+        mainImage: "/screenshots/pcstore-configurator.png",
+        images: ["/screenshots/pcstore-configurator.png", "/screenshots/pcstore-ultra.png", "/screenshots/pcstore-setups.png"],
     },
     "botplay": {
         title: "BotPlay Radar",
