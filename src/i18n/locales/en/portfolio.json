@@ -32,6 +32,10 @@
     "botplay": {
       "title": "BotPlay Radar",
       "description": "Sports analytics bot connecting BetPlay and Pinnacle to compare odds and detect opportunities with Python and FastAPI."
+    },
+    "pcstore": {
+      "title": "PCStore",
+      "description": "A platform to choose a PC, explore curated setups and customize components before requesting a quote."
     }
   }
 }

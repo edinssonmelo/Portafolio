@@ -46,6 +46,20 @@ const projects: Record<string, {
         image: string;
     };
 }> = {
+    pcstore: {
+        title: "PCStore",
+        subtitle: "Custom PC storefront with curated setups, component selection and quote requests.",
+        livePreviewUrl: "https://pcstore.edinssonmelo.com/",
+        aboutText: "A visual storefront for choosing, customizing and requesting a quote for a PC.",
+        date: "2026",
+        client: "PCStore",
+        services: ["Web", "Product", "PC configurator"],
+        projectDetails: "Setup catalog, component galleries, configurable builds and quote request flow.",
+        testimonial: { quote: "", author: "", role: "" },
+        thingsIDid: "Built the storefront experience around curated setups and detailed component selection.",
+        mainImage: "/screenshots/pcstore-landing.png",
+        images: ["/screenshots/pcstore-landing.png", "/screenshots/pcstore-setups.png", "/screenshots/pcstore-configurator.png"],
+    },
     "botplay": {
         title: "BotPlay Radar",
         subtitle: "Sports data analysis across BetPlay and Pinnacle, built with Python and FastAPI.",
@@ -320,7 +334,7 @@ const getI18nProjectData = (
     slug: string,
     t: (key: string, opts?: Record<string, unknown>) => unknown,
 ): I18nProjectData | null => {
-    if (!['botplay', 'declaramelo', 'openwhispr', 'bernal-tech-b2b', 'wordjet-ai', 'superapp-mobile', 'overup'].includes(slug)) {
+    if (!['pcstore', 'botplay', 'declaramelo', 'openwhispr', 'bernal-tech-b2b', 'wordjet-ai', 'superapp-mobile', 'overup'].includes(slug)) {
         return null;
     }
     const story = t(`data.${slug}.story`, { returnObjects: true }) as I18nProjectData['story'] | undefined;

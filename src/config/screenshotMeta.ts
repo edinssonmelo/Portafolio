@@ -8,6 +8,10 @@ export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
 > = {
+    "pcstore-setups.png": { width: 3004, height: 1948 },
+    "pcstore-landing.png": { width: 3022, height: 1964 },
+    "pcstore-configurator.png": { width: 3024, height: 1662 },
+
     "openwhispr-landing-current.png": { width: 1280, height: 720 },
     "openwhispr-product-demo-current.png": { width: 1280, height: 720 },
     "openwhispr-desktop-current.png": { width: 2400, height: 1432 },

@@ -32,6 +32,10 @@
     "botplay": {
       "title": "BotPlay Radar",
       "description": "Bot de análisis deportivo que conecta BetPlay y Pinnacle, compara cuotas y detecta oportunidades con Python y FastAPI."
+    },
+    "pcstore": {
+      "title": "PCStore",
+      "description": "Plataforma para elegir un PC, explorar setups y personalizar componentes antes de solicitar una cotización."
     }
   }
 }

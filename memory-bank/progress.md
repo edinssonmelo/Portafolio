@@ -74,3 +74,11 @@
 - Captured the current openwhispr.rootoz.com landing and its transcription/local-AI interface simulation.
 - Product simulation is now the card, detail and social preview image; gallery also includes the landing and user-supplied desktop session-history screenshot. Original attachment preserved without edits.
 - Shared project template unchanged. Native image dimensions registered, new asset filenames avoid stale cached images.
+
+
+## PCStore portfolio project (2026-10-26)
+
+- Added /es/projects/pcstore and /en/projects/pcstore using the shared project detail template.
+- Three original user screenshots: landing cover, setup catalog and Profesional component configurator. Native dimensions preserved.
+- Featured after OpenWhispr so it appears on the home grid; added bilingual copy, live link, SEO/social image, prerender routes and sitemap entries.
+- Reviewed live PCStore landing and Profesional detail to ground copy in visible functionality. No new claims about implementation stack or checkout/payment support.

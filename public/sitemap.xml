@@ -278,4 +278,22 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://edinssonmelo.com/es/projects/pcstore</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/pcstore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/pcstore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/pcstore"/>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://edinssonmelo.com/en/projects/pcstore</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://edinssonmelo.com/es/projects/pcstore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edinssonmelo.com/en/projects/pcstore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edinssonmelo.com/en/projects/pcstore"/>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -72,6 +72,10 @@
     "botplay": {
       "title": "BotPlay Radar: BetPlay & Pinnacle | Edinsson Melo",
       "description": "Bot de análisis deportivo para BetPlay y Pinnacle. Captura cuotas, empareja partidos, compara mercados y genera señales mediante un backend en Python y FastAPI."
+    },
+    "pcstore": {
+      "title": "PCStore | Edinsson Melo",
+      "description": "Plataforma para elegir un PC, explorar setups y personalizar componentes antes de solicitar una cotización."
     }
   },
   "blogPostMeta": null,

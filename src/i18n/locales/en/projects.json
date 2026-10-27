@@ -126,6 +126,21 @@
           "The images show the original application and its engine running with test data. MOCK and DEMO labels identify that scenario. The first capture shows calculated opportunities; the second shows cross-platform event matching."
         ]
       }
+    },
+    "pcstore": {
+      "subtitle": "A platform to choose a PC, explore curated setups and customize components before requesting a quote.",
+      "aboutText": "PCStore brings prebuilt systems and component selection into a visual storefront.",
+      "thingsIDid": "Built the catalog, system detail and component customization experience.",
+      "projectDetails": "Landing page, setup catalog, component gallery, configuration and quote requests.",
+      "outcome": "A clear path from choosing a system to requesting a quote.",
+      "story": {
+        "hook": "Choose a setup. Make it yours. Get a quote.",
+        "body": [
+          "PCStore presents Essential, Profesional and Ultra systems as starting points for finding a PC based on use and budget. The landing page and setup imagery make the options easy to explore visually.",
+          "Each system has a gallery and a breakdown of its components. Visitors can inspect parts, change options and review the configuration’s value before requesting a quote.",
+          "I built the experience around that journey: discover the system, understand what it includes and customize it. Availability, assembly, delivery and the final price are confirmed during the quote process."
+        ]
+      }
     }
   }
 }

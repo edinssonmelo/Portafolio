@@ -26,6 +26,7 @@ const ROUTE_KEYS = {
 };
 
 const PROJECT_SLUGS = [
+  'pcstore',
   'botplay',
   'declaramelo',
   'openwhispr',
@@ -36,6 +37,7 @@ const PROJECT_SLUGS = [
 ];
 
 const PROJECT_SCREENSHOTS = {
+  pcstore: `${siteUrl}/screenshots/pcstore-landing.png`,
   botplay: `${siteUrl}/screenshots/botplay-app-radar.png`,
   declaramelo: `${siteUrl}/screenshots/declaramelo-hero.png`,
   openwhispr: `${siteUrl}/screenshots/openwhispr-product-demo-current.png`,

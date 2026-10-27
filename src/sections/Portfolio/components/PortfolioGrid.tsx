@@ -49,6 +49,13 @@ export const PortfolioGrid = ({
       description: t('projects.openwhispr.description'),
     },
     {
+      href: to('/projects/pcstore'),
+      imageUrl: '/screenshots/pcstore-landing.png',
+      galleryImages: ['/screenshots/pcstore-landing.png', '/screenshots/pcstore-setups.png', '/screenshots/pcstore-configurator.png'],
+      title: t('projects.pcstore.title'),
+      description: t('projects.pcstore.description'),
+    },
+    {
       href: to('/projects/bernal-tech-b2b'),
       imageUrl: "/screenshots/bernal-dashboard.png",
       galleryImages: [

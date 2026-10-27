@@ -126,6 +126,21 @@
           "Las imágenes muestran la aplicación original y su motor funcionando con datos de prueba. Las etiquetas MOCK y DEMO identifican ese escenario. La primera captura muestra las oportunidades calculadas; la segunda, el matching entre plataformas."
         ]
       }
+    },
+    "pcstore": {
+      "subtitle": "Plataforma para elegir un PC, explorar setups y personalizar componentes antes de solicitar una cotización.",
+      "aboutText": "PCStore reúne equipos armados y selección de componentes en una experiencia visual.",
+      "thingsIDid": "Desarrollé la experiencia de catálogo, detalle de equipos y personalización de componentes.",
+      "projectDetails": "Landing, catálogo de setups, galería de piezas, selección de componentes y solicitud de cotización.",
+      "outcome": "Un recorrido claro desde la elección del equipo hasta la cotización.",
+      "story": {
+        "hook": "Elige un setup. Hazlo tuyo. Cotiza.",
+        "body": [
+          "PCStore presenta equipos Essential, Profesional y Ultra como punto de partida para encontrar un PC según el uso y el presupuesto. La landing y las imágenes de los setups permiten explorar las opciones de forma visual.",
+          "Cada equipo tiene una galería y un desglose de sus componentes. Desde esa misma vista se pueden revisar las piezas, cambiar opciones y consultar el valor de la configuración antes de solicitar una cotización.",
+          "Construí una experiencia centrada en ese recorrido: descubrir el equipo, entender qué incluye y personalizarlo. La disponibilidad, el armado, la entrega y el precio final se confirman durante la cotización."
+        ]
+      }
     }
   }
 }
