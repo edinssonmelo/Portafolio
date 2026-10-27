@@ -31,7 +31,7 @@ export const Portfolio = () => {
             <BlurEllipses ellipses={portfolioEllipses} />
           </div>
           <div className="relative z-10 flex flex-col items-center gap-10 md:gap-12">
-            <PortfolioGrid limit={4} enableHoverGallery />
+            <PortfolioGrid limit={6} enableHoverGallery />
             <GradientButton to={to('/projects')}>
               <span className="font-dm_sans text-lg font-semibold leading-[19px] tracking-[-0.72px] text-stone-900">
                 {t('header.ctaAll')}

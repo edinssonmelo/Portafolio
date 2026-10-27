@@ -23,19 +23,6 @@ export const PortfolioGrid = ({
       description: t('projects.botplay.description'),
     },
     {
-      href: to('/projects/declaramelo'),
-      imageUrl: "/screenshots/declaramelo-hero.png",
-      galleryImages: [
-        "/screenshots/declaramelo-hero.png",
-        "/screenshots/declaramelo-features.png",
-        "/screenshots/declaramelo-process.png",
-      ],
-      imageSizes: "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
-      imageVariant: "",
-      title: t('projects.declaramelo.title'),
-      description: t('projects.declaramelo.description'),
-    },
-    {
       href: to('/projects/openwhispr'),
       imageUrl: "/screenshots/openwhispr-product-demo-current.png",
       galleryImages: [
@@ -80,6 +67,19 @@ export const PortfolioGrid = ({
       imageVariant: "",
       title: t('projects.wordjet-ai.title'),
       description: t('projects.wordjet-ai.description'),
+    },
+    {
+      href: to('/projects/declaramelo'),
+      imageUrl: "/screenshots/declaramelo-hero.png",
+      galleryImages: [
+        "/screenshots/declaramelo-hero.png",
+        "/screenshots/declaramelo-features.png",
+        "/screenshots/declaramelo-process.png",
+      ],
+      imageSizes: "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
+      imageVariant: "",
+      title: t('projects.declaramelo.title'),
+      description: t('projects.declaramelo.description'),
     },
     {
       href: to('/projects/superapp-mobile'),

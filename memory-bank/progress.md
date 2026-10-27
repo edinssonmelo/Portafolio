@@ -94,3 +94,9 @@
 
 - Replaced the setups gallery image with the latest user attachment, without the site header. Removed Ultra from detail and hover galleries.
 - Final gallery: configurator cover, then updated three-setups capture. New filename avoids stale cached image.
+
+
+## Home project selection (2026-10-26)
+
+- Home now shows six projects: BotPlay, OpenWhispr, PCStore, Bernal Tech B2B, Wordjet.ai, then Declaramelo.
+- Added the two requested existing projects to the visible home selection and placed Declaramelo last in that selection.
