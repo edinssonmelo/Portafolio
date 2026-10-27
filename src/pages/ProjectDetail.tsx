@@ -220,7 +220,7 @@ const projects: Record<string, {
             "/screenshots/declaramelo-process.png"
         ],
         previousProject: { slug: "overup", title: "OverUP", image: "/screenshots/overup-hero.png" },
-        nextProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-hero.png" }
+        nextProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-product-demo-current.png" }
     },
     "bernal-tech-b2b": {
         title: "Bernal Tech B2B",
@@ -245,7 +245,7 @@ const projects: Record<string, {
             "/screenshots/bernal-catalog.png",
             "/screenshots/bernal-product.png"
         ],
-        previousProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-hero.png" },
+        previousProject: { slug: "openwhispr", title: "OpenWhispr", image: "/screenshots/openwhispr-product-demo-current.png" },
         nextProject: { slug: "wordjet-ai", title: "Wordjet.ai", image: "/screenshots/wordjet-landing.png" }
     },
     openwhispr: {
@@ -264,11 +264,11 @@ const projects: Record<string, {
         },
         thingsIDid: "",
         story: undefined,
-        mainImage: "/screenshots/openwhispr-hero.png",
+        mainImage: "/screenshots/openwhispr-product-demo-current.png",
         images: [
-            "/screenshots/openwhispr-hero.png",
-            "/screenshots/openwhispr-meetings.png",
-            "/screenshots/openwhispr-transcription.png",
+            "/screenshots/openwhispr-product-demo-current.png",
+            "/screenshots/openwhispr-landing-current.png",
+            "/screenshots/openwhispr-desktop-current.png",
         ],
         previousProject: { slug: "declaramelo", title: "Declaramelo", image: "/screenshots/declaramelo-hero.png" },
         nextProject: { slug: "bernal-tech-b2b", title: "Bernal Tech B2B", image: "/screenshots/bernal-dashboard.png" }

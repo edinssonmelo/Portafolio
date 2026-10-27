@@ -37,11 +37,11 @@ export const PortfolioGrid = ({
     },
     {
       href: to('/projects/openwhispr'),
-      imageUrl: "/screenshots/openwhispr-hero.png",
+      imageUrl: "/screenshots/openwhispr-product-demo-current.png",
       galleryImages: [
-        "/screenshots/openwhispr-hero.png",
-        "/screenshots/openwhispr-meetings.png",
-        "/screenshots/openwhispr-transcription.png",
+        "/screenshots/openwhispr-product-demo-current.png",
+        "/screenshots/openwhispr-landing-current.png",
+        "/screenshots/openwhispr-desktop-current.png",
       ],
       imageSizes: "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
       imageVariant: "",

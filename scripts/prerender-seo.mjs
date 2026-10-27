@@ -38,7 +38,7 @@ const PROJECT_SLUGS = [
 const PROJECT_SCREENSHOTS = {
   botplay: `${siteUrl}/screenshots/botplay-app-radar.png`,
   declaramelo: `${siteUrl}/screenshots/declaramelo-hero.png`,
-  openwhispr: `${siteUrl}/screenshots/openwhispr-hero.png`,
+  openwhispr: `${siteUrl}/screenshots/openwhispr-product-demo-current.png`,
   'bernal-tech-b2b': `${siteUrl}/screenshots/bernal-dashboard.png`,
   'wordjet-ai': `${siteUrl}/screenshots/wordjet-landing.png`,
   'superapp-mobile': `${siteUrl}/screenshots/sura-explora.png`,

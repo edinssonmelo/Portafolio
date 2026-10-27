@@ -8,6 +8,10 @@ export const SCREENSHOT_META: Record<
     string,
     { width: number; height: number }
 > = {
+    "openwhispr-landing-current.png": { width: 1280, height: 720 },
+    "openwhispr-product-demo-current.png": { width: 1280, height: 720 },
+    "openwhispr-desktop-current.png": { width: 2400, height: 1432 },
+
     "botplay-app-radar.png": { width: 1265, height: 712 },
     "botplay-app-matching.png": { width: 1265, height: 712 },
     "botplay-demo.png": { width: 899, height: 658 },

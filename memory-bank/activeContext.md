@@ -73,3 +73,10 @@
 
 - Latest user correction: use exactly the same project detail format as other projects. BotPlay now uses the existing ProjectDetail, PageHeader, image carousel/lightbox and ProjectStory components.
 - Removed the bespoke page, dashboard simulation and special stylesheet. Two original app screenshots remain, with concise bilingual description, pipeline and stack. Home cover stays the actual populated original radar screenshot.
+
+
+## OpenWhispr screenshots refreshed (2026-10-26)
+
+- Captured the current openwhispr.rootoz.com landing and its transcription/local-AI interface simulation.
+- Product simulation is now the card, detail and social preview image; gallery also includes the landing and user-supplied desktop session-history screenshot. Original attachment preserved without edits.
+- Shared project template unchanged. Native image dimensions registered, new asset filenames avoid stale cached images.

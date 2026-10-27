@@ -83,7 +83,7 @@ const PROJECT_SLUGS = [
 
 const PROJECT_SCREENSHOTS: Record<(typeof PROJECT_SLUGS)[number], string> = {
     'declaramelo': 'https://edinssonmelo.com/screenshots/declaramelo-hero.png',
-    'openwhispr': 'https://edinssonmelo.com/screenshots/openwhispr-hero.png',
+    'openwhispr': 'https://edinssonmelo.com/screenshots/openwhispr-product-demo-current.png',
     'bernal-tech-b2b': 'https://edinssonmelo.com/screenshots/bernal-dashboard.png',
     'wordjet-ai': 'https://edinssonmelo.com/screenshots/wordjet-landing.png',
     'superapp-mobile': 'https://edinssonmelo.com/screenshots/sura-explora.png',
