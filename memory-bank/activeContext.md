@@ -94,3 +94,9 @@
 
 - Configurator screenshot is now the home card, project first slide and social preview. Its native aspect ratio is close to the shared 16:9 card, reducing empty framing.
 - Added the new user-supplied Ultra image as slide 2; setups remain slide 3. Shared card/template unchanged.
+
+
+## PCStore gallery reduced (2026-10-26)
+
+- Replaced the setups gallery image with the latest user attachment, without the site header. Removed Ultra from detail and hover galleries.
+- Final gallery: configurator cover, then updated three-setups capture. New filename avoids stale cached image.

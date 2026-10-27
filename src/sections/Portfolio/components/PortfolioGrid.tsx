@@ -51,7 +51,7 @@ export const PortfolioGrid = ({
     {
       href: to('/projects/pcstore'),
       imageUrl: '/screenshots/pcstore-configurator.png',
-      galleryImages: ['/screenshots/pcstore-configurator.png', '/screenshots/pcstore-ultra.png', '/screenshots/pcstore-setups.png'],
+      galleryImages: ['/screenshots/pcstore-configurator.png', '/screenshots/pcstore-setups-updated.png'],
       title: t('projects.pcstore.title'),
       description: t('projects.pcstore.description'),
     },
