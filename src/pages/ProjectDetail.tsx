@@ -46,13 +46,27 @@ const projects: Record<string, {
         image: string;
     };
 }> = {
+    melobot: {
+        title: "MeloBot",
+        subtitle: "Official WhatsApp Cloud API workflow engine with live Chat-to-Flow sync and sandbox simulator.",
+        livePreviewUrl: "https://melobot.ai/",
+        aboutText: "MeloBot is an AI-native WhatsApp workflow platform that lets businesses design, test in sandbox, and run official customer routines without code.",
+        date: "2026",
+        client: "MeloBot",
+        services: ["AI Automation", "WhatsApp Cloud API", "React Flow", "MCP", "SaaS"],
+        projectDetails: "Declarative JSON workflow engine, live Chat-to-Flow synchronization, sandbox simulator, Meta Tech Provider onboarding, and HITL approval guardrails.",
+        testimonial: { quote: "", author: "", role: "" },
+        thingsIDid: "Architected the workflow engine, visual builder, sandbox simulator, and official Meta Cloud API integration.",
+        mainImage: "/screenshots/melobot-landing.png",
+        images: ["/screenshots/melobot-landing.png"],
+    },
     pcstore: {
-        title: "PCStore",
+        title: "Eternal Gaming",
         subtitle: "Custom PC storefront with curated setups, component selection and quote requests.",
-        livePreviewUrl: "https://pcstore.edinssonmelo.com/",
+        livePreviewUrl: "https://eternalgaming.com.co/",
         aboutText: "A visual storefront for choosing, customizing and requesting a quote for a PC.",
         date: "2026",
-        client: "PCStore",
+        client: "Eternal Gaming",
         services: ["Web", "Product", "PC configurator"],
         projectDetails: "Setup catalog, component galleries, configurable builds and quote request flow.",
         testimonial: { quote: "", author: "", role: "" },

@@ -21,6 +21,22 @@
     "viewOnGooglePlay": "View on Google Play"
   },
   "data": {
+    "melobot": {
+      "subtitle": "Official WhatsApp Cloud API workflow engine with live Chat-to-Flow sync and sandbox simulator.",
+      "aboutText": "MeloBot is an AI-native WhatsApp workflow platform that lets businesses design, test in sandbox, and run official customer routines without code.",
+      "thingsIDid": "Architected the declarative JSON workflow engine, React Flow visual canvas, sandbox simulator, and official Meta Cloud API integration.",
+      "projectDetails": "Chat-to-Flow bidirectional sync, atomic workflow nodes, zero-cost sandbox simulation, Meta Tech Provider onboarding, and HITL publishing guardrails.",
+      "outcome": "Live Meta-approved platform connecting official WhatsApp Business lines without per-message markups.",
+      "story": {
+        "hook": "From natural-language business routines to deterministic WhatsApp workflows in minutes.",
+        "body": [
+          "Businesses run their daily operations on WhatsApp, yet most automation tools break between rigid chatbots and fragile custom scripts.",
+          "MeloBot unifies a natural-language builder with a live visual flow graph and an instant sandbox simulator over one declarative JSON engine. Every change goes through Draft, Simulate, and explicit human approval before touching live customers.",
+          "Built natively on the official WhatsApp Business Cloud API (Meta Tech Provider), MeloBot lets companies onboard their own number cleanly and run reliable customer workflows without hidden messaging markups."
+        ],
+        "pullQuote": "Describe the routine, test it live in sandbox, and ship it on official WhatsApp Cloud API."
+      }
+    },
     "declaramelo": {
       "subtitle": "Online income tax filing in Colombia with expert accountants, free tools, and a guided DIAN declaration flow.",
       "aboutText": "Declaramelo helps individuals in Colombia file their income tax return online with confidence. The platform combines free self service tools, expert accountant review, and a clear step by step flow to declare before DIAN.",

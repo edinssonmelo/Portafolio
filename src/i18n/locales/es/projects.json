@@ -21,6 +21,22 @@
     "viewOnGooglePlay": "Ver en Google Play"
   },
   "data": {
+    "melobot": {
+      "subtitle": "Motor oficial sobre WhatsApp Business Cloud API con sincronización en vivo Chat ↔ Flujo y simulador en sandbox.",
+      "aboutText": "MeloBot es una plataforma AI-native para WhatsApp Business que permite diseñar, probar en sandbox y operar rutinas oficiales con clientes sin programar.",
+      "thingsIDid": "Diseñé la arquitectura del motor declarativo JSON, el lienzo visual en React Flow, el simulador en sandbox y la integración oficial con Meta Cloud API.",
+      "projectDetails": "Sincronización bidireccional Chat ↔ Flujo, nodos atómicos determinísticos, simulación sin costo Meta, onboarding oficial Tech Provider y aprobación humana antes de publicar.",
+      "outcome": "Plataforma aprobada por Meta en producción para conectar líneas oficiales sin recargos por mensaje.",
+      "story": {
+        "hook": "De rutinas descritas en español a flujos determinísticos en WhatsApp oficial en minutos.",
+        "body": [
+          "Las empresas operan su día a día en WhatsApp, pero suelen quedar atrapadas entre bots rígidos que frustran al cliente o scripts frágiles difíciles de mantener.",
+          "MeloBot unifica un constructor conversacional con un grafo visual en vivo y un simulador instantáneo sobre un mismo motor JSON declarativo. Cada cambio pasa por Borrador, Simulación y aprobación humana explícita antes de salir a producción.",
+          "Construido de forma nativa sobre la WhatsApp Business Cloud API oficial (Meta Tech Provider), permite que cada empresa conecte su propio número y automatice atención y seguimiento sin recargos ocultos."
+        ],
+        "pullQuote": "Describe la rutina, pruébala en vivo en el simulador y publícala sobre WhatsApp oficial."
+      }
+    },
     "declaramelo": {
       "subtitle": "Declaración de renta en línea en Colombia con contadores expertos, herramientas gratuitas y un flujo guiado de declaración ante la DIAN.",
       "aboutText": "Declaramelo ayuda a personas en Colombia a presentar su declaración de renta en línea con confianza. La plataforma combina herramientas gratuitas de autoservicio, revisión de contadores expertos y un flujo paso a paso claro para declarar ante la DIAN.",

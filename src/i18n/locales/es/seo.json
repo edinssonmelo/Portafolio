@@ -45,6 +45,10 @@
     "professionalServiceDescription": "AI product engineering, desarrollo de MVPs para startups, technical leadership y software fullstack para empresas, founders y equipos de producto. Especializado en agentes de IA, SaaS, apps web/móviles e integraciones empresariales."
   },
   "projectSeo": {
+    "melobot": {
+      "title": "MeloBot | Edinsson Melo",
+      "description": "Motor oficial sobre WhatsApp Business Cloud API con sincronización Chat ↔ Flujo, simulador en sandbox y publicación controlada."
+    },
     "declaramelo": {
       "title": "Declaramelo | Edinsson Melo",
       "description": "Plataforma de declaración de renta en línea para Colombia con contadores expertos, herramientas gratuitas y un flujo guiado de declaración ante la DIAN."

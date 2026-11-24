@@ -5,6 +5,10 @@
     "ctaAll": "Ver todos los proyectos"
   },
   "projects": {
+    "melobot": {
+      "title": "MeloBot",
+      "description": "Motor oficial sobre WhatsApp Business Cloud API con sincronización en vivo Chat ↔ flujo visual, simulador en sandbox y publicación controlada."
+    },
     "declaramelo": {
       "title": "Declaramelo",
       "description": "Declaramelo ayuda a personas en Colombia a presentar su declaración de renta en línea con confianza. Combina herramientas gratuitas de autoservicio, revisión de contadores expertos y un flujo paso a paso claro para declarar ante la DIAN."

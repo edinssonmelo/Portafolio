@@ -16,11 +16,13 @@ export const PortfolioGrid = ({
 
   const PORTFOLIO_PROJECTS = [
     {
-      href: to('/projects/botplay'),
-      imageUrl: '/screenshots/botplay-app-radar.png',
-      galleryImages: ['/screenshots/botplay-app-radar.png', '/screenshots/botplay-app-matching.png'],
-      title: t('projects.botplay.title'),
-      description: t('projects.botplay.description'),
+      href: to('/projects/melobot'),
+      imageUrl: '/screenshots/melobot-landing.png',
+      galleryImages: ['/screenshots/melobot-landing.png'],
+      imageSizes: "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
+      imageVariant: "",
+      title: t('projects.melobot.title'),
+      description: t('projects.melobot.description'),
     },
     {
       href: to('/projects/openwhispr'),
@@ -105,6 +107,13 @@ export const PortfolioGrid = ({
       imageVariant: "",
       title: t('projects.overup.title'),
       description: t('projects.overup.description'),
+    },
+    {
+      href: to('/projects/botplay'),
+      imageUrl: '/screenshots/botplay-app-radar.png',
+      galleryImages: ['/screenshots/botplay-app-radar.png', '/screenshots/botplay-app-matching.png'],
+      title: t('projects.botplay.title'),
+      description: t('projects.botplay.description'),
     },
   ];
 

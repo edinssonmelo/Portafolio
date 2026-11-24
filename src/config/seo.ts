@@ -72,6 +72,7 @@ const ROUTE_KEYS: Record<string, RouteKey> = {
 };
 
 const PROJECT_SLUGS = [
+    'melobot',
     'pcstore',
     'botplay',
     'declaramelo',
