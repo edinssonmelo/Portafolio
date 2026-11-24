@@ -22,19 +22,19 @@
   },
   "data": {
     "melobot": {
-      "subtitle": "Motor oficial sobre WhatsApp Business Cloud API con sincronización en vivo Chat ↔ Flujo y simulador en sandbox.",
-      "aboutText": "MeloBot es una plataforma AI-native para WhatsApp Business que permite diseñar, probar en sandbox y operar rutinas oficiales con clientes sin programar.",
-      "thingsIDid": "Diseñé la arquitectura del motor declarativo JSON, el lienzo visual en React Flow, el simulador en sandbox y la integración oficial con Meta Cloud API.",
-      "projectDetails": "Sincronización bidireccional Chat ↔ Flujo, nodos atómicos determinísticos, simulación sin costo Meta, onboarding oficial Tech Provider y aprobación humana antes de publicar.",
-      "outcome": "Plataforma aprobada por Meta en producción para conectar líneas oficiales sin recargos por mensaje.",
+      "subtitle": "Convierte tu WhatsApp en un canal 24/7 de ventas y operación: elimina cuellos de botella, automatiza la atención y cierra más clientes.",
+      "aboutText": "MeloBot ayuda a las empresas a dejar de perder clientes, cotizaciones y horas en chats manuales de WhatsApp. Tu equipo automatiza la atención, califica prospectos y ejecuta seguimientos puntuales—ahorrando más de 10 horas semanales sin perder el control humano.",
+      "thingsIDid": "Diseñé y construí la plataforma completa para que dueños de negocio conviertan su operación diaria en rutinas automáticas de WhatsApp, prueben cada respuesta antes de publicarla y escalen ventas sin inflar nómina.",
+      "projectDetails": "Atención automatizada 24/7, calificación instantánea de prospectos, recordatorios y seguimiento de cotizaciones, pruebas en vivo antes de lanzar y conexión oficial a WhatsApp sin recargos ocultos.",
+      "outcome": "Respuestas en segundos, ventas recuperadas y más de 10 horas operativas ahorradas por semana sobre WhatsApp oficial.",
       "story": {
-        "hook": "De rutinas descritas en español a flujos determinísticos en WhatsApp oficial en minutos.",
+        "hook": "Deja de perder ventas y horas en chats desordenados de WhatsApp.",
         "body": [
-          "Las empresas operan su día a día en WhatsApp, pero suelen quedar atrapadas entre bots rígidos que frustran al cliente o scripts frágiles difíciles de mantener.",
-          "MeloBot unifica un constructor conversacional con un grafo visual en vivo y un simulador instantáneo sobre un mismo motor JSON declarativo. Cada cambio pasa por Borrador, Simulación y aprobación humana explícita antes de salir a producción.",
-          "Construido de forma nativa sobre la WhatsApp Business Cloud API oficial (Meta Tech Provider), permite que cada empresa conecte su propio número y automatice atención y seguimiento sin recargos ocultos."
+          "Las empresas en crecimiento mueven sus ventas y atención por WhatsApp, pero responder todo a mano crea cuellos de botella costosos: demoras, cotizaciones olvidadas y clientes que se enfrían.",
+          "MeloBot convierte mensajes repetitivos, notas de voz y seguimientos en rutinas automáticas confiables. El dueño describe cómo quiere atender a sus clientes, prueba la conversación exacta en vivo antes de publicarla y conserva aprobación humana en decisiones clave.",
+          "Conectado directo a WhatsApp Business oficial con 0% recargos ocultos por mensaje, MeloBot permite responder en segundos, recuperar ventas perdidas y crecer en operación sin sumar carga manual."
         ],
-        "pullQuote": "Describe la rutina, pruébala en vivo en el simulador y publícala sobre WhatsApp oficial."
+        "pullQuote": "Automatiza la atención, elimina cuellos de botella operativos y cierra más ventas directo en tu WhatsApp oficial."
       }
     },
     "declaramelo": {

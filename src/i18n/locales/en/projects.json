@@ -22,19 +22,19 @@
   },
   "data": {
     "melobot": {
-      "subtitle": "Official WhatsApp Cloud API workflow engine with live Chat-to-Flow sync and sandbox simulator.",
-      "aboutText": "MeloBot is an AI-native WhatsApp workflow platform that lets businesses design, test in sandbox, and run official customer routines without code.",
-      "thingsIDid": "Architected the declarative JSON workflow engine, React Flow visual canvas, sandbox simulator, and official Meta Cloud API integration.",
-      "projectDetails": "Chat-to-Flow bidirectional sync, atomic workflow nodes, zero-cost sandbox simulation, Meta Tech Provider onboarding, and HITL publishing guardrails.",
-      "outcome": "Live Meta-approved platform connecting official WhatsApp Business lines without per-message markups.",
+      "subtitle": "Turn WhatsApp into a 24/7 sales and operations channel—eliminating bottlenecks, automating support, and closing more deals.",
+      "aboutText": "MeloBot helps businesses stop losing leads, quotes, and hours to manual WhatsApp chats. Teams automate customer support, qualify buyers, and run reliable follow-ups on official WhatsApp—saving 10+ hours a week while keeping full human control.",
+      "thingsIDid": "Designed and built the full platform so business owners can turn daily operations into automated WhatsApp routines, test every reply before going live, and scale sales without adding headcount.",
+      "projectDetails": "Instant lead qualification, 24/7 automated support, scheduled payment and quote follow-ups, live sandbox testing before launch, and direct official WhatsApp connection with zero message markups.",
+      "outcome": "Faster response times, recovered sales opportunities, and 10+ operational hours saved per week on official WhatsApp.",
       "story": {
-        "hook": "From natural-language business routines to deterministic WhatsApp workflows in minutes.",
+        "hook": "Stop losing sales and hours inside chaotic WhatsApp chats.",
         "body": [
-          "Businesses run their daily operations on WhatsApp, yet most automation tools break between rigid chatbots and fragile custom scripts.",
-          "MeloBot unifies a natural-language builder with a live visual flow graph and an instant sandbox simulator over one declarative JSON engine. Every change goes through Draft, Simulate, and explicit human approval before touching live customers.",
-          "Built natively on the official WhatsApp Business Cloud API (Meta Tech Provider), MeloBot lets companies onboard their own number cleanly and run reliable customer workflows without hidden messaging markups."
+          "Growing businesses run their sales and customer service on WhatsApp, but manual replies create costly bottlenecks: slow response times, forgotten quotes, and lost deals.",
+          "MeloBot turns repetitive messages, voice notes, and follow-ups into reliable automated routines. Business owners describe how they want to serve customers, test the exact conversation live before publishing, and keep human approval for critical moments.",
+          "Connected directly to official WhatsApp Business with zero hidden messaging markups, MeloBot helps teams respond in seconds, recover missed revenue, and scale operations without hiring extra staff."
         ],
-        "pullQuote": "Describe the routine, test it live in sandbox, and ship it on official WhatsApp Cloud API."
+        "pullQuote": "Automate customer support, eliminate operational bottlenecks, and close more sales—directly on official WhatsApp."
       }
     },
     "declaramelo": {

@@ -7,7 +7,7 @@
   "projects": {
     "melobot": {
       "title": "MeloBot",
-      "description": "Official WhatsApp Cloud API workflow engine with live Chat-to-Flow sync, sandbox simulator, and human-in-the-loop publishing guardrails."
+      "description": "Eliminate operational bottlenecks on WhatsApp. MeloBot automates customer support, organizes daily follow-ups, and helps businesses close more sales in minutes—without hidden Meta markups."
     },
     "declaramelo": {
       "title": "Declaramelo",
