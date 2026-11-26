@@ -17,8 +17,8 @@ export const PortfolioGrid = ({
   const PORTFOLIO_PROJECTS = [
     {
       href: to('/projects/melobot'),
-      imageUrl: '/screenshots/melobot-landing.png',
-      galleryImages: ['/screenshots/melobot-landing.png'],
+      imageUrl: '/screenshots/melobot-home.png',
+      galleryImages: ['/screenshots/melobot-home.png', '/screenshots/melobot-demo.png'],
       imageSizes: "max((min(max(100vw - 60px, 1px), 1140px) - 40px) / 2, 50px)",
       imageVariant: "",
       title: t('projects.melobot.title'),

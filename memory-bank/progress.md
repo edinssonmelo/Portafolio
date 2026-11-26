@@ -2,6 +2,8 @@
 
 ## Completed
 
+- [x] Updated the MeloBot project with production captures of the landing and demo form, plus bilingual project copy.
+
 - [x] Docker deploy on ai-server (Traefik + Cloudflare Tunnel)
 - [x] Screenshots moved to `/screenshots/` (SPA `/projects` fix)
 - [x] Identity copy: AI Product Builder, Projects copy, `/about`, schema

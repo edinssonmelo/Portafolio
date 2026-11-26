@@ -22,11 +22,11 @@
   },
   "data": {
     "melobot": {
-      "subtitle": "Turn WhatsApp into a 24/7 sales and operations channel—eliminating bottlenecks, automating support, and closing more deals.",
-      "aboutText": "MeloBot helps businesses stop losing leads, quotes, and hours to manual WhatsApp chats. Teams automate customer support, qualify buyers, and run reliable follow-ups on official WhatsApp—saving 10+ hours a week while keeping full human control.",
+      "subtitle": "Customer support and sales follow-up automation for WhatsApp.",
+      "aboutText": "MeloBot brings customer support, lead qualification, and sales follow-up together on WhatsApp.",
       "thingsIDid": "Designed and built the full platform so business owners can turn daily operations into automated WhatsApp routines, test every reply before going live, and scale sales without adding headcount.",
       "projectDetails": "Instant lead qualification, 24/7 automated support, scheduled payment and quote follow-ups, live sandbox testing before launch, and direct official WhatsApp connection with zero message markups.",
-      "outcome": "Faster response times, recovered sales opportunities, and 10+ operational hours saved per week on official WhatsApp.",
+      "outcome": "The landing page introduces the product and captures demo requests with context about each business.",
       "story": {
         "hook": "Stop losing sales and hours inside chaotic WhatsApp chats.",
         "body": [

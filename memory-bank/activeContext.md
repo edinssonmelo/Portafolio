@@ -9,6 +9,8 @@
 
 ## Recent changes
 
+- Updated the MeloBot project with production captures of the landing and demo form, plus bilingual project copy.
+
 - Meta Business domain verification: `facebook-domain-verification` meta tag in `index.html` (static `<head>`, not React/Helmet) for www.edinssonmelo.com
 - Storytelling blog editorial system: `content/blog/`; `public/blog-assets/` for images (never `public/blog/`, SPA 403)
 - Home: About section removed; Portfolio (My Works) follows Services; full bio on `/about` only

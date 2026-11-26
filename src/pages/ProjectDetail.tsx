@@ -48,17 +48,17 @@ const projects: Record<string, {
 }> = {
     melobot: {
         title: "MeloBot",
-        subtitle: "Turn WhatsApp into a 24/7 sales and operations channel—eliminating bottlenecks, automating support, and closing more deals.",
+        subtitle: "Customer support and sales follow-up automation for WhatsApp.",
         livePreviewUrl: "https://melobot.ai/",
-        aboutText: "MeloBot helps businesses stop losing leads, quotes, and hours to manual WhatsApp chats. Teams automate customer support, qualify buyers, and run reliable follow-ups on official WhatsApp—saving 10+ hours a week while keeping full human control.",
+        aboutText: "MeloBot brings customer support, lead qualification, and sales follow-up together on WhatsApp.",
         date: "2026",
         client: "MeloBot",
         services: ["AI Automation", "WhatsApp Cloud API", "React Flow", "MCP", "SaaS"],
         projectDetails: "Instant lead qualification, 24/7 automated support, scheduled payment and quote follow-ups, live sandbox testing before launch, and direct official WhatsApp connection with zero message markups.",
         testimonial: { quote: "", author: "", role: "" },
         thingsIDid: "Designed and built the full platform so business owners can turn daily operations into automated WhatsApp routines, test every reply before going live, and scale sales without adding headcount.",
-        mainImage: "/screenshots/melobot-landing.png",
-        images: ["/screenshots/melobot-landing.png"],
+        mainImage: "/screenshots/melobot-home.png",
+        images: ["/screenshots/melobot-home.png", "/screenshots/melobot-demo.png"],
     },
     pcstore: {
         title: "Eternal Gaming",
